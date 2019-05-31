@@ -1,0 +1,18 @@
+environment:
+  matrix:
+    - node_version: 'stable'
+
+branches:
+  only:
+    - master
+
+install:
+  - ps: Install-Product node $env:node_version
+
+test_script:
+  - npm run setup
+
+cache:
+  - ./node_modules -> package.json
+
+build: off

@@ -1,0 +1,41 @@
+<!-- Intro to raw React APIs -->
+<body>
+  <div id="root"></div>
+  <!-- 🐨 remove this line
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  🐨 remove this line -->
+  <script type="text/javascript">
+    const rootElement = document.getElementById('root')
+
+    // You're going to re-implement this code using React!
+    // These three lines are similar to React.createElement
+    const element = document.createElement('div')
+    element.textContent = 'Hello World'
+    element.className = 'container'
+    // This is similar to ReactDOM.render
+    rootElement.appendChild(element)
+
+    // Let's convert this to use React! But don't worry, we wont be doing any JSX
+    // just yet... You're going to use raw React APIs here. The two script tags
+    // at the top of the page bring in two global variables we can use:
+    // - React: responsible for creating react elements
+    // - ReactDOM: responsible for render react elements to the DOM
+    //
+    // Here's a simple example of the API:
+    //
+    // const elementProps = {id: 'element-id', children: 'Hello world!'}
+    // const elementType = 'h1'
+    // const reactElement = React.createElement(elementType, elementProps)
+    // ReactDOM.render(reactElement, rootElement)
+    //
+    // 🐨 Please re-implement the regular document.createElement code above
+    // with these React API calls
+
+    /*
+    🦉 Elaboration & Feedback
+    After the instruction, copy the URL below into your browser and fill out the form:
+    http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Raw%20React&em=
+    */
+  </script>
+</body>

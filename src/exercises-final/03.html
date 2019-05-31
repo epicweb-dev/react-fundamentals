@@ -1,0 +1,11 @@
+<!-- Using JSX -->
+<body>
+  <div id="root"></div>
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  <script src="../babel.js"></script>
+  <script type="text/babel">
+    const element = <div className="container">Hello World</div>
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>

@@ -1,0 +1,47 @@
+<!-- Using JSX -->
+<body>
+  <div id="root"></div>
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  <!-- 🐨 remove this line
+  <script src="../babel.js"></script>
+  🐨 remove this line -->
+  <script type="text/javascript">
+    // 🐨 on the script tag above, change `type="text/javascript"`
+    // to `type="text/babel"` so babel will transpile and run this code.
+
+    // You're going to re-implement this using JSX!
+    const element = React.createElement('div', {
+      className: 'container',
+      children: 'Hello World',
+    })
+
+    // JSX is more intuitive than the raw React API and is easier to understand
+    // when reading the code. It's fairly simple syntactic sugar on top of the
+    // raw React APIs:
+    //
+    // const ui = <h1 id="greeting">Hey there</h1>
+    //
+    // ↓ ↓ ↓ ↓ converts to ↓ ↓ ↓ ↓
+    //
+    // const ui = React.createElement('h1', {id: 'greeting', children: 'Hey there'})
+    //
+    // Because JSX is not actually JavaScript, you have to convert it using
+    // something called a code transpiler. Babel is one such tool.
+    //
+    // 🐨 Above, remove the indicated lines and update the script tag's type. Then
+    // please refactor the React API calls into JSX.
+    //
+    // 💰 there are a few subtle differences between JSX and HTML. One such
+    // difference is how you apply a class to an element in JSX is by using
+    // `className` rather than `class`!
+
+    ReactDOM.render(element, document.getElementById('root'))
+
+    /*
+    🦉 Elaboration & Feedback
+    After the instruction, copy the URL below into your browser and fill out the form:
+    http://ws.kcd.im/?ws=React%20Fundamentals%20&e=JSX&em=
+    */
+  </script>
+</body>

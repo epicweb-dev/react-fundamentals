@@ -1,0 +1,16 @@
+sudo: false
+language: node_js
+node_js: stable
+install: echo "Installation happens in the setup script"
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+branches:
+  only:
+    - master
+script:
+  - npm run setup
+after_success:
+  - npx codecov

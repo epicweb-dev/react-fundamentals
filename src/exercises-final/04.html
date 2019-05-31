@@ -1,0 +1,21 @@
+<!-- Creating custom components -->
+<body>
+  <div id="root"></div>
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  <script src="../babel.js"></script>
+  <script type="text/babel">
+    // This is a custom component!
+    function Message({children}) {
+      return <div className="message">{children}</div>
+    }
+    const element = (
+      <div className="container">
+        <Message>Hello World</Message>
+        <Message>Goodbye World</Message>
+      </div>
+    )
+
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
