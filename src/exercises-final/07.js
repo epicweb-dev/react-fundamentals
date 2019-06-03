@@ -1,8 +1,8 @@
 // Dynamic Forms
 import React from 'react'
 
-function UsernameForm({onSubmitUsername, getErrorMessage}) {
-  const [error, setError] = React.useState(getErrorMessage(''))
+function UsernameForm({onSubmitUsername}) {
+  const [error, setError] = React.useState(false)
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -10,7 +10,8 @@ function UsernameForm({onSubmitUsername, getErrorMessage}) {
   }
 
   function handleChange(event) {
-    setError(getErrorMessage(event.target.value))
+    const isLowerCase = event.target.value === event.target.value.toLowerCase()
+    setError(isLowerCase ? null : 'Username must be lower case')
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -31,21 +32,9 @@ function UsernameForm({onSubmitUsername, getErrorMessage}) {
 
 function Usage() {
   const onSubmitUsername = username => console.log('username', username)
-  function getErrorMessage(value) {
-    if (value.length < 3) {
-      return `Value must be at least 3 characters, but is only ${value.length}`
-    }
-    if (!value.includes('s')) {
-      return `Value does not include "s" but it should!`
-    }
-    return null
-  }
   return (
     <div style={{minWidth: 400}}>
-      <UsernameForm
-        onSubmitUsername={onSubmitUsername}
-        getErrorMessage={getErrorMessage}
-      />
+      <UsernameForm onSubmitUsername={onSubmitUsername} />
     </div>
   )
 }
