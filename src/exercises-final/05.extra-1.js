@@ -1,4 +1,6 @@
-// Additional styling examples (composing the style prop and className)
+// Styling
+// 💯 Custom component that encapsulates styling
+
 import React from 'react'
 
 function Box({style, size, className = '', ...otherProps}) {

@@ -1,4 +1,5 @@
 // Styling
+
 import React from 'react'
 
 const smallBox = (
