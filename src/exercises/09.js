@@ -23,22 +23,36 @@ function App() {
   return (
     <div>
       <button disabled={items.length >= allItems.length} onClick={addItem}>
-        +
+        add item
       </button>
-      {items.map(i => (
-        // 🐨 this div needs a key. Set it to i.id
-        <div>
-          <button onClick={() => removeItem(i)}>-</button>
-          {i.value}:
-          <input defaultValue={i.value} />
-        </div>
-      ))}
+      <ul style={{listStyle: 'none', paddingLeft: 0}}>
+        {items.map(item => (
+          // 🐨 this needs a key. Set it to i.id
+          <li>
+            <button onClick={() => removeItem(item)}>remove</button>{' '}
+            <label htmlFor={`${item.value}-input`}>{item.value}</label>{' '}
+            <input id={`${item.value}-input`} defaultValue={item.value} />
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
 
 function Usage() {
-  return <App />
+  return (
+    <div
+      style={{
+        height: 200,
+        width: 400,
+        backgroundColor: '#eee',
+        borderRadius: 4,
+        padding: 20,
+      }}
+    >
+      <App />
+    </div>
+  )
 }
 Usage.title = 'Rendering Arrays: the key prop'
 

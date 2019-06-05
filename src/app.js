@@ -11,13 +11,13 @@ const pages = files.reduce((p, filename, index, fullArray) => {
   Object.assign(final, {
     previous: fullArray[index - 1],
     next: fullArray[index + 1],
-    isolatedPath: `/isolated/exercises-final/${filename}.js`,
+    isolatedPath: `/isolated/exercises-final/${filename}`,
   })
   const exercise = require(`./exercises/${filename}.js`)
   Object.assign(exercise, {
     previous: fullArray[index - 1],
     next: fullArray[index + 1],
-    isolatedPath: `/isolated/exercises/${filename}.js`,
+    isolatedPath: `/isolated/exercises/${filename}`,
   })
   p[filename] = {
     exercise,
