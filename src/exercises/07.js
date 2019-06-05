@@ -18,7 +18,7 @@ function UsernameForm({onSubmitUsername, getErrorMessage}) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    onSubmitUsername(event.target.elements.username.value)
+    onSubmitUsername(event.target.elements.usernameInput.value)
   }
 
   // 🐨 create a `handleChange` function that takes the value of the input and
@@ -31,13 +31,15 @@ function UsernameForm({onSubmitUsername, getErrorMessage}) {
   // 🐨 add an `onChange` handler to the `input`
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name-input">Username:</label>
-      <input
-        id="name-input"
-        type="text"
-        name="username"
-        // 🐨 add your onChange handler here
-      />
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input
+          id="usernameInput"
+          type="text"
+
+          // 🐨 add your onChange handler here
+        />
+      </div>
       {/* 🐨 if there's an error, then render it in a div here */}
       {/* 🐨 add a disabled prop to this button that's set to true if there's an error */}
       <button type="submit">Submit</button>
@@ -45,9 +47,19 @@ function UsernameForm({onSubmitUsername, getErrorMessage}) {
   )
 }
 
-// Don't make changes to the Usage component. It's here to show you how your
-// component is intended to be used and is used in the tests.
-// You can make all the tests pass by updating the code above.
+/*
+🦉 Elaboration & Feedback
+After the instruction, copy the URL below into your browser and fill out the form:
+http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Dynamic%20Forms&em=
+*/
+
+////////////////////////////////////////////////////////////////////
+//                                                                //
+//                 Don't make changes below here.                 //
+// But do look at it to see how your code is intended to be used. //
+//                                                                //
+////////////////////////////////////////////////////////////////////
+
 function Usage() {
   const onSubmitUsername = username => console.log('username', username)
   function getErrorMessage(value) {

@@ -15,14 +15,15 @@ function UsernameForm({onSubmitUsername}) {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name-input">Username:</label>
-      <input
-        id="name-input"
-        type="text"
-        name="username"
-        onChange={handleChange}
-        value={username}
-      />
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input
+          id="usernameInput"
+          type="text"
+          onChange={handleChange}
+          value={username}
+        />
+      </div>
       <button type="submit">Submit</button>
     </form>
   )

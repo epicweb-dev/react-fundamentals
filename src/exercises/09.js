@@ -1,4 +1,4 @@
-// Rendering Arrays
+// Rendering Lists
 
 import React from 'react'
 
@@ -39,6 +39,19 @@ function App() {
   )
 }
 
+/*
+🦉 Elaboration & Feedback
+After the instruction, copy the URL below into your browser and fill out the form:
+http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Rendering%20Lists&em=
+*/
+
+////////////////////////////////////////////////////////////////////
+//                                                                //
+//                 Don't make changes below here.                 //
+// But do look at it to see how your code is intended to be used. //
+//                                                                //
+////////////////////////////////////////////////////////////////////
+
 function Usage() {
   return (
     <div
@@ -54,6 +67,6 @@ function Usage() {
     </div>
   )
 }
-Usage.title = 'Rendering Arrays: the key prop'
+Usage.title = 'Rendering Lists'
 
 export default Usage

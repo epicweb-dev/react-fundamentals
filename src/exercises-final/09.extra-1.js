@@ -1,3 +1,6 @@
+// Rendering Lists
+// 💯 Focus Demo
+
 import React from 'react'
 
 function FocusDemo() {
@@ -78,6 +81,6 @@ function shuffle(originalArray) {
 function Usage() {
   return <FocusDemo />
 }
-Usage.title = 'Rendering Arrays: the key prop'
+Usage.title = 'Rendering Lists'
 
 export default Usage

@@ -1,4 +1,4 @@
-// Rendering Arrays
+// Rendering Lists
 
 import React from 'react'
 
@@ -53,6 +53,6 @@ function Usage() {
     </div>
   )
 }
-Usage.title = 'Rendering Arrays: the key prop'
+Usage.title = 'Rendering Lists'
 
 export default Usage

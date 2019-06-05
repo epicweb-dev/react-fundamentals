@@ -7,7 +7,7 @@ function UsernameForm({onSubmitUsername}) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    onSubmitUsername(event.target.elements.username.value)
+    onSubmitUsername(event.target.elements.usernameInput.value)
   }
 
   function handleChange(event) {
@@ -16,13 +16,10 @@ function UsernameForm({onSubmitUsername}) {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name-input">Username:</label>
-      <input
-        id="name-input"
-        type="text"
-        name="username"
-        onChange={handleChange}
-      />
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input id="usernameInput" type="text" onChange={handleChange} />
+      </div>
       <div style={{color: 'red'}}>{error}</div>
       <button disabled={Boolean(error)} type="submit">
         Submit
