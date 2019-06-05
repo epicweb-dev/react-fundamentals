@@ -13,16 +13,16 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "@testing-library/react": "^8.0.1",
     "history": "^4.9.0",
     "jest-dom": "^3.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "@testing-library/react": "^8.0.1",
     "stop-runaway-react-effects": "^1.2.0"
   },
   "devDependencies": {
     "cross-spawn": "^6.0.5",
-    "husky": "^2.3.0",
+    "husky": "^2.4.0",
     "inquirer": "^6.3.1",
     "is-ci": "^2.0.0",
     "npm-run-all": "^4.1.3",
