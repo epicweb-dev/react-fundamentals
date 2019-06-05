@@ -53,6 +53,10 @@
 - `npm run start`
 - `npm run test`
 
+NOTE: The first few exercises you'll need to open the HTML files directly in the
+browser. You should be able to do this by selecting the "Open File" menu option
+from your browser and selecting the HTML file you wish to open.
+
 ## Asking Questions
 
 Please do ask! Interrupt me. If you have an unrelated question, please ask on
