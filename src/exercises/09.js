@@ -10,7 +10,7 @@ const allItems = [
 ]
 
 function App() {
-  const [items, setItems] = React.useState([])
+  const [items, setItems] = React.useState(allItems)
 
   function addItem() {
     setItems([...items, allItems.find(i => !items.includes(i))])
