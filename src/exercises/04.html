@@ -6,29 +6,18 @@
   <script src="../react-dom.development.js"></script>
   <script src="../babel.js"></script>
   <script type="text/babel">
+    // 🐨 Make a function called `message` which returns the JSX we want to share
+
+    // 🐨 use that function in place of the divs below with:
+    // {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
     const element = (
       <div className="container">
         <div className="message">Hello World</div>
         <div className="message">Goodbye World</div>
       </div>
     )
-    // Just like in regular JavaScript, you often want to share code which you do
-    // using functions. If you want to share JSX, you can do that as well. In React
-    // we call these functions components and they have some special properties.
-    //
-    // Let's say in the example above we want to share the code for both
-    // "Hello World" and "Goodbye World". The part we want to share is:
-    // <div className="message">{message}</div>
-    //
-    // So we need to make a function which accepts the message. Remember that any
-    // JavaScript expression can go in between the `{` and the `}`.
-    //
-    // 🐨 So go ahead and make a function which returns the JSX we want to share,
-    // then use that function in place of the spans above with:
-    // {messageJSX('Hello World')} {messageJSX('Goodbye World')}
-    //
-    // This is only the first step to making actual React components. We'll do
-    // the rest together.
+
+    // This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
 
     // P.S. Please don't forget to ask me about React Fragments here!!

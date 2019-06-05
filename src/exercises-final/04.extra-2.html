@@ -1,4 +1,5 @@
 <!-- Creating custom components -->
+<!-- 💯 using a custom component with JSX -->
 
 <body>
   <div id="root"></div>
@@ -6,15 +7,15 @@
   <script src="../react-dom.development.js"></script>
   <script src="../babel.js"></script>
   <script type="text/babel">
-    // NOTE: this is NOT being used as a component. We're not quite there yet.
-    function message({children}) {
+    // This is being used as a component 🎉
+    function Message({children}) {
       return <div className="message">{children}</div>
     }
 
     const element = (
       <div className="container">
-        {message({children: 'Hello World'})}
-        {message({children: 'Goodbye World'})}
+        <Message>Hello World</Message>
+        <Message>Goodbye World</Message>
       </div>
     )
 
