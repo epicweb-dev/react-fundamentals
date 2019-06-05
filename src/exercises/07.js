@@ -2,33 +2,26 @@
 
 import React from 'react'
 
-// If we want our form to be dynamic, we'll need a few things:
-// 1. Component state to store the dynamic values (an error message in our case)
-// 2. A change handler on the input so we know what the value is as the user changes it
-//
-// In our usage example below, we're provided a prop called `getErrorMessage`.
-// This serves as our simple validation. If it returns a string, that's an error
-// message we should display below the input. We'll store this value in state
-// and use that to know whether to render the message as well as whether to
-// disable the submit button.
-
-function UsernameForm({onSubmitUsername, getErrorMessage}) {
+function UsernameForm({onSubmitUsername}) {
   // 🐨 add some state (with React.useState) for the error.
-  // 💰 initialize it to whatever comes back from `getErrorMessage('')`
+  // 💰 const [error, setError] = React.useState(null)
 
   function handleSubmit(event) {
     event.preventDefault()
     onSubmitUsername(event.target.elements.usernameInput.value)
   }
 
-  // 🐨 create a `handleChange` function that takes the value of the input and
-  // updates the `error` state to whatever is returned from `getErrorMessage`
-  // with the input's value.
-  // 💰 remember that your change handler will get called with an event that
-  // has a `target` property that references the DOM node that is responsible
-  // for the event, so you can get the value from event.target.value
+  // 🐨 create a `handleChange` function that accepts the change `event` and
+  // uses `event.target.value` to get the value of the input
+  // 💰 remember this event will be triggered on the input, not the form
 
-  // 🐨 add an `onChange` handler to the `input`
+  // 🐨 use the value of the input to determine whether there's an error
+  // 💰 There's an error if the user typed any upper-case characters
+  // 💰 You can check this really easily via `const isValid = value === value.toLowerCase()`
+
+  // 🐨 if there's an error, set the error state to 'Username must be lower case'
+  // 💰 setError(isValid ? null : 'Username must be lower case')
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -36,7 +29,6 @@ function UsernameForm({onSubmitUsername, getErrorMessage}) {
         <input
           id="usernameInput"
           type="text"
-
           // 🐨 add your onChange handler here
         />
       </div>
@@ -62,21 +54,9 @@ http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Dynamic%20Forms&em=
 
 function Usage() {
   const onSubmitUsername = username => console.log('username', username)
-  function getErrorMessage(value) {
-    if (value.length < 3) {
-      return `Value must be at least 3 characters, but is only ${value.length}`
-    }
-    if (!value.includes('s')) {
-      return `Value does not include "s" but it should!`
-    }
-    return null
-  }
   return (
     <div style={{minWidth: 400}}>
-      <UsernameForm
-        onSubmitUsername={onSubmitUsername}
-        getErrorMessage={getErrorMessage}
-      />
+      <UsernameForm onSubmitUsername={onSubmitUsername} />
     </div>
   )
 }
