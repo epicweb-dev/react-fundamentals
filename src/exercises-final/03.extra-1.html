@@ -1,0 +1,15 @@
+<!-- Using JSX -->
+<!-- 💯 interpolate className and children -->
+
+<body>
+  <div id="root"></div>
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  <script src="../babel.js"></script>
+  <script type="text/babel">
+    const children = 'Hello World'
+    const className = 'container'
+    const element = <div className={className}>{children}</div>
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>

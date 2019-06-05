@@ -1,0 +1,16 @@
+<!-- Using JSX -->
+<!-- 💯 spread props -->
+
+<body>
+  <div id="root"></div>
+  <script src="../react.development.js"></script>
+  <script src="../react-dom.development.js"></script>
+  <script src="../babel.js"></script>
+  <script type="text/babel">
+    const children = 'Hello World'
+    const className = 'container'
+    const props = {children, className}
+    const element = <div {...props} />
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
