@@ -13,6 +13,7 @@ function UsernameForm({onSubmitUsername}) {
   function handleChange(event) {
     setUsername(event.target.value.toLowerCase())
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
