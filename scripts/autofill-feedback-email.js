@@ -4,7 +4,6 @@ const inquirer = require('inquirer')
 const replace = require('replace-in-file')
 const isCI = require('is-ci')
 const spawn = require('cross-spawn')
-const {EOL} = require('os')
 
 if (isCI) {
   console.log(`Not running autofill feedback as we're on CI`)
@@ -39,8 +38,8 @@ if (isCI) {
     }
     const options = {
       files: [path.join(__dirname, '..', 'src/**/*.js')],
-      from: `&em=${EOL}`,
-      to: `&em=${encodeURIComponent(email)}${EOL}`,
+      from: /&em=\r?\n/,
+      to: `&em=${email}\n`,
     }
 
     replace(options).then(
