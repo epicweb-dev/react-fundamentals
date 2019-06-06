@@ -1,5 +1,10 @@
 // Styling
 
+/*
+For the rest of the exercises, you can now run things locally with `npm start`
+or on codesandbox: https://codesandbox.io/s/github/kentcdodds/react-fundamentals
+*/
+
 import React from 'react'
 
 // 💰 Use the className for the size and style (backgroundColor) for the color
