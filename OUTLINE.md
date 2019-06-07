@@ -84,3 +84,11 @@ Please do ask! Interrupt me. If you have an unrelated question, please ask on
 - **Dominic the Document** 📜 "Docs links"
 - **Berry the Bomb** 💣 "Remove this code"
 - **Alfred the Alert** 🚨 "Extra helpful in test errors"
+
+## Workshop Feedback
+
+Each exercise has an Elaboration and Feedback link. Please fill that out after
+the exercise and instruction.
+
+At the end of the workshop, please go to this URL to give overall feedback.
+Thank you! https://kcd.im/rf-ws-feedback
