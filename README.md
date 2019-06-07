@@ -27,14 +27,15 @@ The more prepared you are for the workshop, the better it will go for you.
 
 ## Workshop Outline
 
-Here are the patterns we'll be covering:
+Here are the topics we'll be covering:
 
-- Context Controller
-- Compound Components
-- State Reducers
-- Controlled Props
-- Prop Collections
-- Prop Getters
+- Create DOM with JavaScript, React, and JSX
+- Create Custom Components
+- Styling
+- Simple Forms (form submission)
+- Dynamic Forms (client-side form validation)
+- Controlled Forms (form state management)
+- Rendering Lists of Data
 
 ## System Requirements
 
