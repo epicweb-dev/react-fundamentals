@@ -18,6 +18,12 @@ following:
 - [ ] Setup the project (follow the setup instructions below) (~5 minutes)
 - [ ] Install and setup [Zoom](https://zoom.us) on the computer you will be
       using (~5 minutes)
+- [ ] Watch
+      [Use Zoom for KCD Workshops](https://egghead.io/lessons/egghead-use-zoom-for-kcd-workshops)
+      (~8 minutes).
+- [ ] Watch
+      [Setup and Logistics for KCD Workshops](https://egghead.io/lessons/egghead-setup-and-logistics-for-kcd-workshops)
+      (~24 minutes). Please do NOT skip this step.
 - [ ] Attend my
       [Modern JavaScript Workshop](https://kentcdodds.com/workshops/modern-javascript)
       or have the equivalent experience with modern JavaScript APIs.
