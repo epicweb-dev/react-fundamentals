@@ -1,27 +1,38 @@
 import React from 'react'
-import ReactDOMServer from 'react-dom/server.browser'
-import prettyFormat from 'pretty-format'
+import chalk from 'chalk'
+import {render, prettyDOM} from '@testing-library/react'
 import Usage from '../exercises-final/05'
 // import Usage from '../exercises/05'
 
-const {DOMElement, DOMCollection} = prettyFormat.plugins
+test('renders the correct styles new', () => {
+  const {container, getByText, getAllByText} = render(<Usage />)
+  const allBoxes = getAllByText(/box/i)
 
-// TODO: Improve this test...
-expect.addSnapshotSerializer({
-  test: val => typeof val === 'string',
-  print: val => val,
-})
+  try {
+    allBoxes.forEach(box => expect(box).toHaveClass('box'))
+  } catch (error) {
+    //
+    //
+    //
+    // these comment lines are just here to keep the next line out of the codeframe
+    // so it doesn't confuse people when they see the error message twice.
+    error.message = `🚨  ${chalk.red(
+      `One of the boxes is missing the className "box"`,
+    )}\n\n${prettyDOM(container)}`
 
-test('renders the correct styles', () => {
-  // we're doing this renderToStaticMarkup business because
-  // for some reason rendering it like normally doesn't give
-  // us the style props correctly.
-  const html = ReactDOMServer.renderToStaticMarkup(<Usage />)
-  const div = document.createElement('div')
-  div.innerHTML = html
+    throw error
+  }
 
-  const formattedHTML = prettyFormat(div.firstChild, {
-    plugins: [DOMElement, DOMCollection],
-  })
-  expect(formattedHTML).toMatchSnapshot()
+  const small = getByText(/small/i)
+  const medium = getByText(/medium/i)
+  const large = getByText(/large/i)
+
+  expect(small).toHaveClass('box--small')
+  expect(small).toHaveStyle('background-color: lightblue;')
+
+  expect(medium).toHaveClass('box--medium')
+  expect(medium).toHaveStyle('background-color: pink;')
+
+  expect(large).toHaveClass('box--large')
+  expect(large).toHaveStyle('background-color: orange;')
 })
