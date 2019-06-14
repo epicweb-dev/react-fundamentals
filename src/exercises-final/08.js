@@ -31,7 +31,7 @@ function UsernameForm({onSubmitUsername}) {
 }
 
 function Usage() {
-  const onSubmitUsername = username => console.log('username', username)
+  const onSubmitUsername = username => console.info('username', username)
   return (
     <div style={{minWidth: 400}}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />

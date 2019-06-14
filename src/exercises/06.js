@@ -41,7 +41,7 @@ http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Basic%20Forms&em=
 ////////////////////////////////////////////////////////////////////
 
 function Usage() {
-  const onSubmitUsername = username => console.log('username', username)
+  const onSubmitUsername = username => console.info('username', username)
   return <UsernameForm onSubmitUsername={onSubmitUsername} />
 }
 Usage.title = 'Basic Forms'

@@ -4,11 +4,11 @@ import Usage from '../exercises-final/07'
 // import Usage from '../exercises/07'
 
 beforeAll(() => {
-  jest.spyOn(console, 'log').mockImplementation(() => {})
+  jest.spyOn(console, 'info').mockImplementation(() => {})
 })
 
 beforeEach(() => {
-  console.log.mockClear()
+  console.info.mockClear()
 })
 
 test('calls the onSubmitUsername handler when the submit is fired', () => {
@@ -25,6 +25,6 @@ test('calls the onSubmitUsername handler when the submit is fired', () => {
   fireEvent.change(input, {target: {value}})
   fireEvent.click(submit)
 
-  expect(console.log).toHaveBeenCalledWith('username', input.value)
-  expect(console.log).toHaveBeenCalledTimes(1)
+  expect(console.info).toHaveBeenCalledWith('username', input.value)
+  expect(console.info).toHaveBeenCalledTimes(1)
 })
