@@ -14,7 +14,7 @@ import React from 'react'
 // 💰 Here are the available class names: box, box--large, box--medium, box--small
 
 // 🐨 add a style prop to each of them as well so their background color
-// matches what the text says it should be.
+// matches what the text says it should be as well as `fontStyle: 'italic'`
 const smallBox = <div>small lightblue box</div>
 const mediumBox = <div>medium pink box</div>
 const largeBox = <div>large orange box</div>

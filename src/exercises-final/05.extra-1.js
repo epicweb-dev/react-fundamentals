@@ -9,7 +9,7 @@ function Box({style, size, className = '', ...otherProps}) {
   return (
     <div
       className={`box ${className} ${sizeClassName}`}
-      style={{paddingLeft: 20, ...style}}
+      style={{fontStyle: 'italic', ...style}}
       {...otherProps}
     />
   )
