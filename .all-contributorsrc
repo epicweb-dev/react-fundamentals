@@ -21,6 +21,15 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "jdorfman",
+      "name": "Justin Dorfman",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/398230?v=4",
+      "profile": "https://stackshare.io/jdorfman/decisions",
+      "contributions": [
+        "fundingFinding"
+      ]
     }
   ]
 }
