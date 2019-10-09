@@ -1,3 +1,9 @@
+<p align="center">
+<a href="https://codefund.io/properties/512/visit-sponsor">
+<img src="https://codefund.io/properties/512/sponsor" />
+</a>
+</p>
+
 # React Fundamentals
 
 👋 hi there! My name is [Kent C. Dodds](https://kentcdodds.com)! This is a
