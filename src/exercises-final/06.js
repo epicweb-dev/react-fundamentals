@@ -23,6 +23,5 @@ function Usage() {
   const onSubmitUsername = username => console.info('username', username)
   return <UsernameForm onSubmitUsername={onSubmitUsername} />
 }
-Usage.title = 'Basic Forms'
 
 export default Usage

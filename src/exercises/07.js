@@ -60,6 +60,5 @@ function Usage() {
     </div>
   )
 }
-Usage.title = 'Dynamic Forms'
 
 export default Usage

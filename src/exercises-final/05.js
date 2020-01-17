@@ -36,6 +36,5 @@ function Usage() {
     </div>
   )
 }
-Usage.title = 'Styling'
 
 export default Usage

@@ -1,7 +1,9 @@
 import './hacks'
+import 'normalize.css/normalize.css'
 import './styles.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './app'
+import MainApp from './app'
 
-ReactDOM.render(<App />, document.getElementById('⚛'))
+const rootEl = document.getElementById('⚛')
+ReactDOM.render(<MainApp />, rootEl)

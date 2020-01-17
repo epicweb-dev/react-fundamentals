@@ -53,6 +53,5 @@ function Usage() {
     </div>
   )
 }
-Usage.title = 'Rendering Lists'
 
 export default Usage

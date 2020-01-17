@@ -82,6 +82,5 @@ function shuffle(originalArray) {
 function Usage() {
   return <FocusDemo />
 }
-Usage.title = 'Rendering Lists'
 
 export default Usage

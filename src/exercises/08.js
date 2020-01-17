@@ -54,6 +54,5 @@ function Usage() {
     </div>
   )
 }
-Usage.title = 'Controlled Forms'
 
 export default Usage
