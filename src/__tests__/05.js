@@ -1,12 +1,12 @@
 import React from 'react'
 import chalk from 'chalk'
-import {render, prettyDOM} from '@testing-library/react'
-import Usage from '../exercises-final/05'
-// import Usage from '../exercises/05'
+import {render, screen, prettyDOM} from '@testing-library/react'
+import Usage from '../final/05'
+// import Usage from '../exercise/05'
 
 test('renders the correct styles new', () => {
-  const {container, getByText, getAllByText} = render(<Usage />)
-  const allBoxes = getAllByText(/box/i)
+  const {container} = render(<Usage />)
+  const allBoxes = screen.getAllByText(/box/i)
 
   try {
     allBoxes.forEach(box => expect(box).toHaveClass('box'))
@@ -38,9 +38,9 @@ test('renders the correct styles new', () => {
     throw error
   }
 
-  const small = getByText(/small/i)
-  const medium = getByText(/medium/i)
-  const large = getByText(/large/i)
+  const small = screen.getByText(/small/i)
+  const medium = screen.getByText(/medium/i)
+  const large = screen.getByText(/large/i)
 
   expect(small).toHaveClass('box--small')
   expect(small).toHaveStyle('background-color: lightblue;')

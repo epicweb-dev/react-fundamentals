@@ -1,19 +1,30 @@
-var path = require('path')
-var pkg = require(path.join(process.cwd(), 'package.json'))
+var spawnSync = require('child_process').spawnSync
 
-// if you install it then this should be require('workshop-setup')
-// but that... doesn't really make sense.
-require('./workshop-setup')
-  .setup(pkg.engines)
-  .then(
-    () => {
-      console.log(`💯  You're all set up! 👏`)
-    },
-    error => {
-      console.error(`🚨  There was a problem:`)
-      console.error(error)
-      console.error(
-        `\nIf you would like to just ignore this error, then feel free to do so and install dependencies as you normally would in "${process.cwd()}". Just know that things may not work properly if you do...`,
-      )
-    },
+console.log('▶️  Starting workshop setup...')
+
+var error = spawnSync('npx --version', {shell: true})
+  .stderr.toString()
+  .trim()
+if (error) {
+  console.error(
+    '🚨  npx is not available on this computer. Please install npm@5.2.0 or greater',
   )
+  throw error
+}
+
+var result = spawnSync(
+  'npx "https://gist.github.com/kentcdodds/bb452ffe53a5caa3600197e1d8005733" -q',
+  {stdio: 'inherit', shell: true},
+)
+
+if (result.status === 0) {
+  console.log('✅  Workshop setup complete...')
+} else {
+  process.exit(result.status)
+}
+
+/*
+eslint
+  no-var: "off",
+  "vars-on-top": "off",
+*/

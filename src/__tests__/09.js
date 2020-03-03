@@ -1,18 +1,18 @@
 import React from 'react'
-import {render, fireEvent, within} from '@testing-library/react'
-import Usage from '../exercises-final/09'
-// import Usage from '../exercises/09'
+import {render, screen, fireEvent, within} from '@testing-library/react'
+import Usage from '../final/09'
+// import Usage from '../exercise/09'
 
 test('renders', () => {
-  const {getByText, getByLabelText, container} = render(<Usage />)
-  const plus = getByText(/add item/i)
+  const {container} = render(<Usage />)
+  const plus = screen.getByText(/add item/i)
   fireEvent.click(plus)
   fireEvent.click(plus)
   fireEvent.click(plus)
   fireEvent.click(plus)
 
-  const orangeInput = getByLabelText(/orange/i)
-  const orangeContainer = getByText(/orange/i).closest('li')
+  const orangeInput = screen.getByLabelText(/orange/i)
+  const orangeContainer = screen.getByText(/orange/i).closest('li')
   const inOrange = within(orangeContainer)
   fireEvent.change(orangeInput, {target: {value: 'sup dawg'}})
   fireEvent.click(inOrange.getByText('remove'))

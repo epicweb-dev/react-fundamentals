@@ -1,7 +1,3 @@
 node_modules
 coverage
 build
-scripts/workshop-setup.js
-src/babel.js
-src/react-dom.development.js
-src/react.development.js

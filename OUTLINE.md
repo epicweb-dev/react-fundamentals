@@ -78,11 +78,14 @@ Please do ask! Interrupt me. If you have an unrelated question, please ask on
 ## Emoji
 
 - **Kody the Koala Bear** 🐨 "Do this"
+- **Matthew the Muscle** 💪 "Exercise"
+- **Chuck the Checkered Flag** 🏁 "Final"
 - **Marty the Money Bag** 💰 "Here's a hint"
 - **Hannah the Hundred** 💯 "Extra Credit"
 - **Olivia the Owl** 🦉 "Pro-tip"
 - **Dominic the Document** 📜 "Docs links"
 - **Berry the Bomb** 💣 "Remove this code"
+- **Peter the Product Manager** 👨‍💼 "Story time"
 - **Alfred the Alert** 🚨 "Extra helpful in test errors"
 
 ## Workshop Feedback

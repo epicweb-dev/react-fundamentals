@@ -9,32 +9,21 @@
   "main": "src/index.js",
   "engines": {
     "node": ">=10",
-    "npm": ">=6",
-    "yarn": ">=1"
+    "npm": ">=6"
   },
   "dependencies": {
-    "@reach/router": "^1.2.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
+    "@testing-library/react": "^9.4.1",
     "chalk": "^3.0.0",
-    "glob": "^7.1.6",
-    "history": "^4.10.1",
-    "normalize.css": "^8.0.1",
-    "preval.macro": "^4.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "stop-runaway-react-effects": "^1.2.1"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
+    "@kentcdodds/react-workshop-app": "^2.0.0",
     "cross-spawn": "^7.0.1",
-    "husky": "^4.0.10",
-    "inquirer": "^7.0.3",
-    "is-ci": "^2.0.0",
+    "husky": "^4.2.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
-    "react-scripts": "^3.3.0",
-    "replace-in-file": "^5.0.2"
+    "react-scripts": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,7 +31,7 @@
     "test": "react-scripts test --env=jsdom",
     "test:coverage": "npm run test -- --watchAll=false --coverage",
     "test:exercises": "npm run test -- testing.*exercises\\/ --onlyChanged",
-    "setup": "node ./scripts/setup && npm run validate && node ./scripts/autofill-feedback-email.js",
+    "setup": "node ./scripts/setup",
     "lint": "eslint .",
     "validate": "npm-run-all --parallel build test:coverage lint"
   },
@@ -53,7 +42,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/exercises-final/**/*.js"
+      "src/final/**/*.js"
     ]
   },
   "eslintConfig": {

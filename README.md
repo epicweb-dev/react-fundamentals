@@ -1,39 +1,43 @@
-<p align="center">
-<a href="https://codefund.io/properties/512/visit-sponsor">
-<img src="https://codefund.io/properties/512/sponsor" />
-</a>
-</p>
-
 # React Fundamentals
 
 👋 hi there! My name is [Kent C. Dodds](https://kentcdodds.com)! This is a
 workshop repo to teach you the fundamentals of ReactJS!
 
+<!-- prettier-ignore-start -->
 [![Build Status][build-badge]][build]
 [![AppVeyor Build Status][win-build-badge]][win-build]
 [![Code Coverage][coverage-badge]][coverage]
 [![GPL 3.0 License][license-badge]][license]
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
-[![PRs Welcome][prs-badge]][prs] [![Code of Conduct][coc-badge]][coc]
+[![PRs Welcome][prs-badge]][prs]
+[![Code of Conduct][coc-badge]][coc]
+<!-- prettier-ignore-end -->
 
 ## Pre-Workshop Instructions/Requirements
 
-In order for us to maximize our efforts during the workshop, please do the
-following:
+In order for us to maximize our efforts during the workshop, please complete the
+following things to prepare.
+
+- 📺 indicates steps that are only necessary if the workshop is remote via Zoom
+- 👋 indicates steps that are specific to the material for this workshop
 
 - [ ] Setup the project (follow the setup instructions below) (~5 minutes)
-- [ ] Install and setup [Zoom](https://zoom.us) on the computer you will be
+- [ ] 📺 Install and setup [Zoom](https://zoom.us) on the computer you will be
       using (~5 minutes)
-- [ ] Watch
+- [ ] 📺 Watch
       [Use Zoom for KCD Workshops](https://egghead.io/lessons/egghead-use-zoom-for-kcd-workshops)
       (~8 minutes).
 - [ ] Watch
       [Setup and Logistics for KCD Workshops](https://egghead.io/lessons/egghead-setup-and-logistics-for-kcd-workshops)
       (~24 minutes). Please do NOT skip this step.
-- [ ] Attend my
+- [ ] 👋 Install the React DevTools
+      ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+      (recommended),
+      [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
+- [ ] 👋 Attend my
       [Modern JavaScript Workshop](https://kentcdodds.com/workshops/modern-javascript)
       or have the equivalent experience with modern JavaScript APIs.
-- [ ] Have experience with HTML, CSS, and DOM APIs.
+- [ ] 👋 Have experience with HTML, CSS, and DOM APIs.
 
 The more prepared you are for the workshop, the better it will go for you.
 
@@ -53,7 +57,7 @@ Here are the topics we'll be covering:
 
 - [git][git] v2 or greater
 - [NodeJS][node] v8 or greater
-- [yarn][yarn] v1 or greater (or [npm][npm] v6 or greater)
+- [npm][npm] v6 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
 properly, you can run this:
@@ -61,7 +65,7 @@ properly, you can run this:
 ```shell
 git --version
 node --version
-yarn --version # or npm --version
+npm --version
 ```
 
 If you have trouble with any of these, learn more about the PATH environment
@@ -69,17 +73,6 @@ variable and how to fix it here for [windows][win-path] or
 [mac/linux][mac-path].
 
 ## Setup
-
-You should be able to work through the entire workshop in the browser. This is
-actually the recommended approach as it requires absolutely no setup whatsoever.
-Go to
-[this codesandbox](https://codesandbox.io/s/github/kentcdodds/react-fundamentals)
-and you should be good to go.
-
-[![Edit react-fundamentals](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/kentcdodds/react-fundamentals)
-
-If you'd rather be able to work through the workshop on your own computer, then
-follow the following instructions.
 
 After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
@@ -93,10 +86,16 @@ npm run setup --silent
 This may take a few minutes. **It will ask you for your email.** This is
 optional and just automatically adds your email to the links in the project to
 make filling out some forms easier If you get any errors, please read through
-them and see if you can find out what the problem is. You may also want to look
-at [Troubleshooting](#troubleshooting). If you can't work it out on your own
-then please [file an issue][issue] and provide _all_ the output from the
-commands you ran (even if it's a lot).
+them and see if you can find out what the problem is. If you can't work it out
+on your own then please [file an issue][issue] and provide _all_ the output from
+the commands you ran (even if it's a lot).
+
+You may be able to work through the entire workshop in the browser. Go to
+[this codesandbox](https://codesandbox.io/s/github/kentcdodds/react-fundamentals)
+and you should be good to go. Note that sometimes people have trouble with
+codesandbox not working quite right with tests, but you should be able to work
+around that. If you're concerned, then it would probably be better to just set
+things up locally.
 
 ## Running the app
 
@@ -118,19 +117,22 @@ You can also open
 npm test
 ```
 
-This will start [Jest](http://facebook.github.io/jest) in watch mode. Read the
-output and play around with it.
+This will start [Jest](https://jestjs.io/) in watch mode. Read the output and
+play around with it. The tests are there to help you reach the final version,
+however _sometimes_ you can accomplish the task and the tests still fail if you
+implement things differently than I do in my solution, so don't look to them as
+a complete authority.
 
-**Your goal will be to go into each test, swap the final version for the
-exercise version in the import, and make the tests pass**
-
-## Helpful Emoji 🐨 💰 💯 🦉 📜 💣 🚨
+## Helpful Emoji 🐨 💪 🏁 💰 💯 🦉 📜 💣 👨‍💼 🚨
 
 Each exercise has comments in it to help you get through the exercise. These fun
 emoji characters are here to help you.
 
 - **Kody the Koala Bear** 🐨 will tell you when there's something specific you
   should do
+- **Matthew the Muscle** 💪 will indicate what you're working with an exercise
+- **Chuck the Checkered Flag** 🏁 will indicate that you're working with a final
+  version
 - **Marty the Money Bag** 💰 will give you specific tips (and sometimes code)
   along the way
 - **Hannah the Hundred** 💯 will give you extra challenges you can do if you
@@ -140,36 +142,9 @@ emoji characters are here to help you.
 - **Dominic the Document** 📜 will give you links to useful documentation
 - **Berry the Bomb** 💣 will be hanging around anywhere you need to blow stuff
   up (delete code)
+- **Peter the Product Manager** 👨‍💼 helps us know what our users want
 - **Alfred the Alert** 🚨 will occasionally show up in the test failures with
   potential explanations for why the tests are failing.
-
-## Troubleshooting
-
-<details>
-
-<summary>"npm run setup" command not working</summary>
-
-Here's what the setup script does. If it fails, try doing each of these things
-individually yourself:
-
-```
-# verify your environment will work with the project
-node ./scripts/verify
-
-# install dependencies
-npm install
-
-# verify the project is ready to run
-npm run build
-npm run test:coverage
-```
-
-If any of those scripts fail, please try to work out what went wrong by the
-error message you get. If you still can't work it out, feel free to [open an
-issue][issue] with _all_ the output from that script. I will try to help if I
-can.
-
-</details>
 
 ## Contributors
 
@@ -198,44 +173,25 @@ This material is available for private, non-commercial use under the
 would like to use this material to conduct your own workshop, please contact me
 at kent@doddsfamily.us
 
+<!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
 [git]: https://git-scm.com/
-[yarn]: https://yarnpkg.com/
-[build-badge]:
-  https://img.shields.io/travis/kentcdodds/react-fundamentals.svg?style=flat-square&logo=travis
+[build-badge]: https://img.shields.io/travis/kentcdodds/react-fundamentals.svg?style=flat-square&logo=travis
 [build]: https://travis-ci.org/kentcdodds/react-fundamentals
-[license-badge]:
-  https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
-[license]:
-  https://github.com/kentcdodds/react-fundamentals/blob/master/README.md#license
-[prs-badge]:
-  https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
+[license]: https://github.com/kentcdodds/react-fundamentals/blob/master/README.md#license
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
-[coc-badge]:
-  https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]:
-  https://github.com/kentcdodds/react-fundamentals/blob/master/CODE_OF_CONDUCT.md
-[github-watch-badge]:
-  https://img.shields.io/github/watchers/kentcdodds/react-fundamentals.svg?style=social
-[github-watch]: https://github.com/kentcdodds/react-fundamentals/watchers
-[github-star-badge]:
-  https://img.shields.io/github/stars/kentcdodds/react-fundamentals.svg?style=social
-[github-star]: https://github.com/kentcdodds/react-fundamentals/stargazers
-[twitter]:
-  https://twitter.com/intent/tweet?text=Check%20out%20react-fundamentals%20by%20@kentcdodds%20https://github.com/kentcdodds/react-fundamentals%20%F0%9F%91%8D
-[twitter-badge]:
-  https://img.shields.io/twitter/url/https/github.com/kentcdodds/react-fundamentals.svg?style=social
+[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[coc]: https://github.com/kentcdodds/react-fundamentals/blob/master/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
 [all-contributors]: https://github.com/kentcdodds/all-contributors
-[win-path]:
-  https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
+[win-path]: https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
 [mac-path]: http://stackoverflow.com/a/24322978/971592
 [issue]: https://github.com/kentcdodds/react-fundamentals/issues/new
-[win-build-badge]:
-  https://img.shields.io/appveyor/ci/kentcdodds/react-fundamentals.svg?style=flat-square&logo=appveyor
+[win-build-badge]: https://img.shields.io/appveyor/ci/kentcdodds/react-fundamentals.svg?style=flat-square&logo=appveyor
 [win-build]: https://ci.appveyor.com/project/kentcdodds/react-fundamentals
-[coverage-badge]:
-  https://img.shields.io/codecov/c/github/kentcdodds/react-fundamentals.svg?style=flat-square
+[coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/react-fundamentals.svg?style=flat-square
 [coverage]: https://codecov.io/github/kentcdodds/react-fundamentals
-[watchman]: https://facebook.github.io/watchman/docs/install.html
+<!-- prettier-ignore-end -->
