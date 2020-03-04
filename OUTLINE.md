@@ -33,19 +33,19 @@
 ## Schedule
 
 - 😴 Logistics
-- 🏋 01. Create DOM with JavaScript
-- 🏋 02. Create DOM with React
+- 💪 01. Create DOM with JavaScript
+- 💪 02. Create DOM with React
 - 😴 10 Minutes
-- 🏋 03. Create DOM with JSX
-- 🏋 04. Create Custom Components
-- 😴 30 Minutes
-- 🏋 05. Styling
-- 🏋 06. Simple Forms
+- 💪 03. Create DOM with JSX
+- 💪 04. Create Custom Components
+- 🌮 30 Minutes
+- 💪 05. Styling
+- 💪 06. Simple Forms
 - 😴 10 Minutes
-- 🏋 07. Dynamic Forms
-- 🏋 08. Controlled Forms
+- 💪 07. Dynamic Forms
+- 💪 08. Controlled Forms
 - 😴 10 Minutes
-- 🏋 09. Rendering Lists of Data
+- 💪 09. Rendering Lists of Data
 - ❓ Q&A
 
 ## Scripts
@@ -70,10 +70,10 @@ Please do ask! Interrupt me. If you have an unrelated question, please ask on
 
 ## Exercises
 
-- `src/exercises/0x.md`: Background, Exercise Instructions, Extra Credit
-- `src/exercises/0x.js`: Exercise with Emoji helpers
+- `src/exercise/0x.md`: Background, Exercise Instructions, Extra Credit
+- `src/exercise/0x.js`: Exercise with Emoji helpers
 - `src/__tests__/0x.js`: Tests
-- `src/exercises-final/0x.js`: Final version
+- `src/final/0x.js`: Final version
 
 ## Emoji
 

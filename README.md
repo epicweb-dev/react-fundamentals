@@ -21,7 +21,7 @@ following things to prepare.
 - 📺 indicates steps that are only necessary if the workshop is remote via Zoom
 - 👋 indicates steps that are specific to the material for this workshop
 
-- [ ] Setup the project (follow the setup instructions below) (~5 minutes)
+- [ ] 👋 Setup the project (follow the setup instructions below) (~5 minutes)
 - [ ] 📺 Install and setup [Zoom](https://zoom.us) on the computer you will be
       using (~5 minutes)
 - [ ] 📺 Watch
@@ -106,7 +106,7 @@ npm start
 ```
 
 This should start up your browser. If you're familiar, this is a standard
-[react-scripts](https://github.com/facebook/create-react-app) application.
+[react-scripts](https://create-react-app.dev/) application.
 
 You can also open
 [the deployment of the app on Netlify](https://react-fundamentals.netlify.com/).

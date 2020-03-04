@@ -13,6 +13,6 @@ test_script:
   - npm run setup
 
 cache:
-  - ./node_modules -> package.json
+  - ./node_modules -> package-lock.json
 
 build: off
