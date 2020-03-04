@@ -19,19 +19,6 @@ const smallBox = <div>small lightblue box</div>
 const mediumBox = <div>medium pink box</div>
 const largeBox = <div>large orange box</div>
 
-/*
-🦉 Elaboration & Feedback
-After the instruction, copy the URL below into your browser and fill out the form:
-http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Styling&em=
-*/
-
-////////////////////////////////////////////////////////////////////
-//                                                                //
-//                 Don't make changes below here.                 //
-// But do look at it to see how your code is intended to be used. //
-//                                                                //
-////////////////////////////////////////////////////////////////////
-
 function Usage() {
   return (
     <div>

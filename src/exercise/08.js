@@ -33,19 +33,6 @@ function UsernameForm({onSubmitUsername}) {
   )
 }
 
-/*
-🦉 Elaboration & Feedback
-After the instruction, copy the URL below into your browser and fill out the form:
-http://ws.kcd.im/?ws=React%20Fundamentals%20&e=Controlled%20Forms&em=
-*/
-
-////////////////////////////////////////////////////////////////////
-//                                                                //
-//                 Don't make changes below here.                 //
-// But do look at it to see how your code is intended to be used. //
-//                                                                //
-////////////////////////////////////////////////////////////////////
-
 function Usage() {
   const onSubmitUsername = username => console.info('username', username)
   return (
