@@ -18,7 +18,7 @@
     "react-dom": "^16.13.0"
   },
   "devDependencies": {
-    "@kentcdodds/react-workshop-app": "^2.3.0",
+    "@kentcdodds/react-workshop-app": "^2.4.0",
     "cross-spawn": "^7.0.1",
     "husky": "^4.2.3",
     "npm-run-all": "^4.1.5",
@@ -47,6 +47,11 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-react-app"
+    ]
   },
   "browserslist": {
     "development": [
