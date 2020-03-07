@@ -56,7 +56,7 @@ Here are the topics we'll be covering:
 ## System Requirements
 
 - [git][git] v2 or greater
-- [NodeJS][node] v8 or greater
+- [NodeJS][node] v10 or greater
 - [npm][npm] v6 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
