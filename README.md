@@ -1,4 +1,4 @@
-# React Fundamentals
+# [React Fundamentals](https://kentcdodds.com/workshops/react-fundamentals)
 
 👋 hi there! My name is [Kent C. Dodds](https://kentcdodds.com)! This is a
 workshop repo to teach you the fundamentals of ReactJS!
@@ -6,10 +6,8 @@ workshop repo to teach you the fundamentals of ReactJS!
 <!-- prettier-ignore-start -->
 [![Build Status][build-badge]][build]
 [![AppVeyor Build Status][win-build-badge]][win-build]
-[![Code Coverage][coverage-badge]][coverage]
 [![GPL 3.0 License][license-badge]][license]
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
-[![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 <!-- prettier-ignore-end -->
 
@@ -40,18 +38,6 @@ following things to prepare.
 - [ ] 👋 Have experience with HTML, CSS, and DOM APIs.
 
 The more prepared you are for the workshop, the better it will go for you.
-
-## Workshop Outline
-
-Here are the topics we'll be covering:
-
-- Create DOM with JavaScript, React, and JSX
-- Create Custom Components
-- Styling
-- Simple Forms (form submission)
-- Dynamic Forms (client-side form validation)
-- Controlled Forms (form state management)
-- Rendering Lists of Data
 
 ## System Requirements
 
@@ -123,7 +109,69 @@ however _sometimes_ you can accomplish the task and the tests still fail if you
 implement things differently than I do in my solution, so don't look to them as
 a complete authority.
 
-## Helpful Emoji 🐨 💪 🏁 💰 💯 🦉 📜 💣 👨‍💼 🚨
+## Workshop Outline
+
+> And so it begins ⚛
+
+👋 I'm Kent C. Dodds
+
+- 🏡 Utah
+- 👩 👧 👦 👦 👦 🐕
+- 🏢 kentcdodds.com
+- 🐦/🐙 @kentcdodds
+- 🏆 testingjavascript.com
+- 🥚 kcd.im/egghead
+- 🥋 kcd.im/fem
+- 💌 kcd.im/news
+- 📝 kcd.im/blog
+- 📺 kcd.im/devtips
+- 💻 kcd.im/coding
+- 📽 kcd.im/youtube
+- 🎙 kcd.im/3-mins
+- ❓ kcd.im/ama
+
+### Schedule
+
+- 😴 Logistics
+- 💪 01. Create DOM with JavaScript
+- 💪 02. Create DOM with React
+- 😴 10 Minutes
+- 💪 03. Create DOM with JSX
+- 💪 04. Create Custom Components
+- 🌮 30 Minutes
+- 💪 05. Styling
+- 💪 06. Simple Forms
+- 😴 10 Minutes
+- 💪 07. Dynamic Forms
+- 💪 08. Controlled Forms
+- 😴 10 Minutes
+- 💪 09. Rendering Lists of Data
+- ❓ Q&A
+
+### Questions
+
+Please do ask! Interrupt me. If you have an unrelated question, please ask on
+[my AMA](https://kcd.im/ama).
+
+### Zoom (for remote workshops)
+
+- Help us make this more human by keeping your video on if possible
+- Keep microphone muted unless speaking
+- Breakout rooms
+
+### Exercises
+
+- `src/exercise/00.md`: Background, Exercise Instructions, Extra Credit
+- `src/exercise/00.js`: Exercise with Emoji helpers
+- `src/__tests__/00.js`: Tests
+- `src/final/00.js`: Final version
+- `src/final/00.extra-0.js`: Final version of extra credit
+
+The purpose of the exercise is **not** for you to work through all the material.
+It's intended to get your brain thinking about the right questions to ask me as
+_I_ walk through the material.
+
+### Helpful Emoji 🐨 💪 🏁 💰 💯 🦉 📜 💣 👨‍💼 🚨
 
 Each exercise has comments in it to help you get through the exercise. These fun
 emoji characters are here to help you.
@@ -166,12 +214,20 @@ This project follows the
 [all-contributors](https://github.com/kentcdodds/all-contributors)
 specification. Contributions of any kind welcome!
 
+## Workshop Feedback
+
+Each exercise has an Elaboration and Feedback link. Please fill that out after
+the exercise and instruction.
+
+At the end of the workshop, please go to this URL to give overall feedback.
+Thank you! https://kcd.im/rf-ws-feedback
+
 ## License
 
 This material is available for private, non-commercial use under the
 [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html). If you
 would like to use this material to conduct your own workshop, please contact me
-at kent@doddsfamily.us
+at me@kentcdodds.com
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
@@ -181,8 +237,6 @@ at kent@doddsfamily.us
 [build]: https://travis-ci.org/kentcdodds/react-fundamentals
 [license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
 [license]: https://github.com/kentcdodds/react-fundamentals/blob/master/README.md#license
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-[prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://github.com/kentcdodds/react-fundamentals/blob/master/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
@@ -192,6 +246,4 @@ at kent@doddsfamily.us
 [issue]: https://github.com/kentcdodds/react-fundamentals/issues/new
 [win-build-badge]: https://img.shields.io/appveyor/ci/kentcdodds/react-fundamentals.svg?style=flat-square&logo=appveyor
 [win-build]: https://ci.appveyor.com/project/kentcdodds/react-fundamentals
-[coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/react-fundamentals.svg?style=flat-square
-[coverage]: https://codecov.io/github/kentcdodds/react-fundamentals
 <!-- prettier-ignore-end -->
