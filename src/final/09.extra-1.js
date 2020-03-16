@@ -1,6 +1,6 @@
 // Rendering Lists
 // 💯 Focus Demo
-// http://localhost:3000/isolated/exercises-final/09.extra-1
+// http://localhost:3000/isolated/final/09.extra-1.js
 
 import React from 'react'
 

@@ -1,6 +1,6 @@
 // Styling
 // 💯 Custom component that encapsulates styling
-// http://localhost:3000/isolated/exercises-final/05.extra-1
+// http://localhost:3000/isolated/final/05.extra-1.js
 
 import React from 'react'
 

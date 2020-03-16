@@ -1,4 +1,5 @@
 // Basic Forms
+// http://localhost:3000/isolated/exercise/06.js
 
 import React from 'react'
 
