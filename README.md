@@ -16,8 +16,8 @@ workshop repo to teach you the fundamentals of ReactJS!
 In order for us to maximize our efforts during the workshop, please complete the
 following things to prepare.
 
-- 📺 indicates steps that are only necessary if the workshop is remote via Zoom
-- 👋 indicates steps that are specific to the material for this workshop
+- 📺 only necessary if the workshop is remote via Zoom
+- 👋 specific to the material for this workshop
 
 - [ ] 👋 Setup the project (follow the setup instructions below) (~5 minutes)
 - [ ] 📺 Install and setup [Zoom](https://zoom.us) on the computer you will be
