@@ -95,7 +95,7 @@ This should start up your browser. If you're familiar, this is a standard
 [react-scripts](https://create-react-app.dev/) application.
 
 You can also open
-[the deployment of the app on Netlify](https://react-fundamentals.netlify.com/).
+[the deployment of the app on Netlify](https://react-fundamentals.netlify.app/).
 
 ## Running the tests
 
