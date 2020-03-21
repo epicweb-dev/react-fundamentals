@@ -3,6 +3,7 @@
 // http://localhost:3000/isolated/final/05.extra-1.js
 
 import React from 'react'
+import '../box-styles.css'
 
 function Box({style, size, className = '', ...otherProps}) {
   const sizeClassName = size ? `box--${size}` : ''

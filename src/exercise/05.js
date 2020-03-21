@@ -1,12 +1,8 @@
 // Styling
 // http://localhost:3000/isolated/exercise/05.js
 
-/*
-For the rest of the exercises, you can now run things locally with `npm start`
-or on codesandbox: https://codesandbox.io/s/github/kentcdodds/react-fundamentals
-*/
-
 import React from 'react'
+import '../box-styles.css'
 
 // 💰 Use the className for the size and style (backgroundColor) for the color
 // 💰 each of the elements should also have the "box" className applied
