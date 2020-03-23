@@ -1,18 +1,18 @@
 import React from 'react'
 import {render, screen, fireEvent} from '@testing-library/react'
-import Usage from '../final/06'
-// import Usage from '../exercise/06'
+import App from '../final/06'
+// import App from '../exercise/06'
 
 beforeAll(() => {
-  jest.spyOn(console, 'info').mockImplementation(() => {})
+  jest.spyOn(global, 'alert').mockImplementation(() => {})
 })
 
 beforeEach(() => {
-  console.info.mockClear()
+  global.alert.mockClear()
 })
 
 test('calls the onSubmitUsername handler when the submit is fired', () => {
-  render(<Usage />)
+  render(<App />)
   const input = screen.getByLabelText(/username/i)
   const submit = screen.getByText(/submit/i)
 
@@ -21,6 +21,6 @@ test('calls the onSubmitUsername handler when the submit is fired', () => {
   fireEvent.change(input, {target: {value: username}})
   fireEvent.click(submit)
 
-  expect(console.info).toHaveBeenCalledWith('username', username)
-  expect(console.info).toHaveBeenCalledTimes(1)
+  expect(global.alert).toHaveBeenCalledWith(`You entered: ${username}`)
+  expect(global.alert).toHaveBeenCalledTimes(1)
 })

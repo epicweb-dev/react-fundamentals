@@ -1,10 +1,10 @@
 import React from 'react'
 import {render, screen, fireEvent, within} from '@testing-library/react'
-import Usage from '../final/09'
-// import Usage from '../exercise/09'
+import App from '../final/09'
+// import App from '../exercise/09'
 
 test('renders', () => {
-  const {container} = render(<Usage />)
+  const {container} = render(<App />)
   const plus = screen.getByText(/add item/i)
   fireEvent.click(plus)
   fireEvent.click(plus)

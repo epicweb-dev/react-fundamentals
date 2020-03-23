@@ -16,7 +16,7 @@ const smallBox = <div>small lightblue box</div>
 const mediumBox = <div>medium pink box</div>
 const largeBox = <div>large orange box</div>
 
-function Usage() {
+function App() {
   return (
     <div>
       {smallBox}
@@ -26,4 +26,4 @@ function Usage() {
   )
 }
 
-export default Usage
+export default App

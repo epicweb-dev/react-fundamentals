@@ -29,7 +29,7 @@ const largeBox = (
   </div>
 )
 
-function Usage() {
+function App() {
   return (
     <div>
       {smallBox}
@@ -39,4 +39,4 @@ function Usage() {
   )
 }
 
-export default Usage
+export default App

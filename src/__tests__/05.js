@@ -1,11 +1,11 @@
 import React from 'react'
 import chalk from 'chalk'
 import {render, screen, prettyDOM} from '@testing-library/react'
-import Usage from '../final/05'
-// import Usage from '../exercise/05'
+import App from '../final/05'
+// import App from '../exercise/05'
 
 test('renders the correct styles new', () => {
-  const {container} = render(<Usage />)
+  const {container} = render(<App />)
   const allBoxes = screen.getAllByText(/box/i)
 
   try {

@@ -22,7 +22,15 @@ function App() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        height: 200,
+        width: 400,
+        backgroundColor: '#eee',
+        borderRadius: 4,
+        padding: 20,
+      }}
+    >
       <button disabled={items.length >= allItems.length} onClick={addItem}>
         add item
       </button>
@@ -39,20 +47,4 @@ function App() {
   )
 }
 
-function Usage() {
-  return (
-    <div
-      style={{
-        height: 200,
-        width: 400,
-        backgroundColor: '#eee',
-        borderRadius: 4,
-        padding: 20,
-      }}
-    >
-      <App />
-    </div>
-  )
-}
-
-export default Usage
+export default App

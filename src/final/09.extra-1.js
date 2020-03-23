@@ -79,8 +79,8 @@ function shuffle(originalArray) {
   return array
 }
 
-function Usage() {
+function App() {
   return <FocusDemo />
 }
 
-export default Usage
+export default App

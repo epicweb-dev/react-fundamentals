@@ -34,8 +34,8 @@ function UsernameForm({onSubmitUsername}) {
   )
 }
 
-function Usage() {
-  const onSubmitUsername = username => console.info('username', username)
+function App() {
+  const onSubmitUsername = username => alert(`You entered: ${username}`)
   return (
     <div style={{minWidth: 400}}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />
@@ -43,4 +43,4 @@ function Usage() {
   )
 }
 
-export default Usage
+export default App

@@ -16,7 +16,7 @@ function Box({style, size, className = '', ...otherProps}) {
   )
 }
 
-function Usage() {
+function App() {
   return (
     <div>
       <Box size="small" style={{backgroundColor: 'lightblue'}}>
@@ -33,4 +33,4 @@ function Usage() {
   )
 }
 
-export default Usage
+export default App
