@@ -28,6 +28,9 @@ following things to prepare.
 - [ ] Watch
       [Setup and Logistics for KCD Workshops](https://egghead.io/lessons/egghead-setup-and-logistics-for-kcd-workshops)
       (~24 minutes). Please do NOT skip this step.
+- [ ] 👋 Read through
+      ["JavaScript to Know for React"](https://kentcdodds.com/blog/javascript-to-know-for-react)
+      (~20 minutes)
 - [ ] 👋 Install the React DevTools
       ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
       (recommended),
