@@ -30,6 +30,16 @@
       "contributions": [
         "fundingFinding"
       ]
+    },
+    {
+      "login": "benmvp",
+      "name": "Ben Ilegbodu",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5714478?v=4",
+      "profile": "http://www.benmvp.com",
+      "contributions": [
+        "doc"
+      ]
     }
-  ]
+  ],
+  "skipCi": true
 }
