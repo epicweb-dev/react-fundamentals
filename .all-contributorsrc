@@ -39,6 +39,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "belcherj",
+      "name": "Jonathan Belcher",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6817400?v=4",
+      "profile": "https://github.com/belcherj",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
