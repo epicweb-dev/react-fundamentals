@@ -210,6 +210,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;" alt=""/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=kentcdodds" title="Code">💻</a> <a href="https://github.com/kentcdodds/react-fundamentals/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kentcdodds/react-fundamentals/commits?author=kentcdodds" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://stackshare.io/jdorfman/decisions"><img src="https://avatars1.githubusercontent.com/u/398230?v=4" width="100px;" alt=""/><br /><sub><b>Justin Dorfman</b></sub></a><br /><a href="#fundingFinding-jdorfman" title="Funding Finding">🔍</a></td>
     <td align="center"><a href="http://www.benmvp.com"><img src="https://avatars3.githubusercontent.com/u/5714478?v=4" width="100px;" alt=""/><br /><sub><b>Ben Ilegbodu</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=benmvp" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/belcherj"><img src="https://avatars1.githubusercontent.com/u/6817400?v=4" width="100px;" alt=""/><br /><sub><b>Jonathan Belcher</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=belcherj" title="Documentation">📖</a></td>
   </tr>
 </table>
 
