@@ -74,7 +74,7 @@ npm run setup --silent
 
 This may take a few minutes. **It will ask you for your email.** This is
 optional and just automatically adds your email to the links in the project to
-make filling out some forms easier If you get any errors, please read through
+make filling out some forms easier. If you get any errors, please read through
 them and see if you can find out what the problem is. If you can't work it out
 on your own then please [file an issue][issue] and provide _all_ the output from
 the commands you ran (even if it's a lot).
