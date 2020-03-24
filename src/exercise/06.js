@@ -10,7 +10,8 @@ function UsernameForm({onSubmitUsername}) {
   // events (which refreshes the page).
   //
   // 🐨 get the value from the username input (using whichever method
-  // you prefer from the options mentioned in the markdown file),
+  // you prefer from the options mentioned in the instructions)
+  // 💰 event.target.elements[0]
   // 🐨 Call `onSubmitUsername` with the value of the input
 
   // 🐨 add the onSubmit handler to the <form> below
