@@ -1,30 +1,26 @@
 import React from 'react'
-import {render, screen, fireEvent} from '@testing-library/react'
+import {render, screen, fireEvent, within} from '@testing-library/react'
 import App from '../final/07'
 // import App from '../exercise/07'
 
-beforeAll(() => {
-  jest.spyOn(global, 'alert').mockImplementation(() => {})
-})
+test('renders', () => {
+  const {container} = render(<App />)
+  const plus = screen.getByText(/add item/i)
+  fireEvent.click(plus)
+  fireEvent.click(plus)
+  fireEvent.click(plus)
+  fireEvent.click(plus)
 
-beforeEach(() => {
-  global.alert.mockClear()
-})
+  const orangeInput = screen.getByLabelText(/orange/i)
+  const orangeContainer = screen.getByText(/orange/i).closest('li')
+  const inOrange = within(orangeContainer)
+  fireEvent.change(orangeInput, {target: {value: 'sup dawg'}})
+  fireEvent.click(inOrange.getByText('remove'))
 
-test('calls the onSubmitUsername handler when the submit is fired', () => {
-  render(<App />)
-  const input = screen.getByLabelText(/username/i)
-  const submit = screen.getByText(/submit/i)
-
-  let value = 'A'
-  fireEvent.change(input, {target: {value}})
-  expect(submit).toBeDisabled() // upper-case
-  expect(screen.getByText(/lower case/i)).toBeInTheDocument()
-
-  value = 'a'
-  fireEvent.change(input, {target: {value}})
-  fireEvent.click(submit)
-
-  expect(global.alert).toHaveBeenCalledWith(`You entered: ${input.value}`)
-  expect(global.alert).toHaveBeenCalledTimes(1)
+  const allLis = container.querySelectorAll('li')
+  Array.from(allLis).forEach(li => {
+    const label = li.querySelector('label')
+    const input = li.querySelector('input')
+    expect(label.textContent).toBe(input.value)
+  })
 })

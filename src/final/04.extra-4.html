@@ -1,36 +1,24 @@
 <!-- Creating custom components -->
-<!-- 💯 Runtime validation with PropTypes -->
-<!-- http://localhost:3000/isolated/final/04.extra-3.html -->
+<!-- 💯 Use the prop-types package -->
+<!-- http://localhost:3000/isolated/final/04.extra-4.html -->
 
 <body>
   <div id="root"></div>
   <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
-    const PropTypes = {
-      string(props, propName, componentName) {
-        if (typeof props[propName] !== 'string') {
-          return new Error(
-            `Hey, the component ${componentName} needs the prop ${propName} to be a string, but a ${typeof props[
-              propName
-            ]} was passed`,
-          )
-        }
-      },
-    }
-
     function Message({subject, greeting}) {
       return (
         <div className="message">
-          {greeting}, {subject}
+          {greeting} {subject}
         </div>
       )
     }
-
     Message.propTypes = {
-      subject: PropTypes.string,
-      greeting: PropTypes.string,
+      subject: PropTypes.string.isRequired,
+      greeting: PropTypes.string.isRequired,
     }
 
     const element = (

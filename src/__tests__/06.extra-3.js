@@ -1,7 +1,7 @@
 import React from 'react'
 import {render, screen, fireEvent} from '@testing-library/react'
-import App from '../final/08'
-// import App from '../exercise/08'
+import App from '../final/06.extra-3'
+// import App from '../exercise/06'
 
 beforeAll(() => {
   jest.spyOn(global, 'alert').mockImplementation(() => {})

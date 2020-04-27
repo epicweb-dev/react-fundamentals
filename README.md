@@ -120,18 +120,20 @@ a complete authority.
 
 - 🏡 Utah
 - 👩 👧 👦 👦 👦 🐕
-- 🏢 kentcdodds.com
+- 🏢 https://kentcdodds.com
 - 🐦/🐙 @kentcdodds
-- 🏆 testingjavascript.com
-- 🥚 kcd.im/egghead
-- 🥋 kcd.im/fem
-- 💌 kcd.im/news
-- 📝 kcd.im/blog
-- 📺 kcd.im/devtips
-- 💻 kcd.im/coding
-- 📽 kcd.im/youtube
-- 🎙 kcd.im/3-mins
-- ❓ kcd.im/ama
+- 🏆 https://TestingJavaScript.com
+- 👩‍🚀 https://EpicReact.Dev
+- 💻 https://kcd.im/workshops
+- 🎙 https://kcd.im/podcast
+- 🥚 https://kcd.im/egghead
+- 🥋 https://kcd.im/fem
+- 💌 https://kcd.im/news
+- 📝 https://kcd.im/blog
+- 📺 https://kcd.im/devtips
+- 👨‍💻 https://kcd.im/coding
+- 📽 https://kcd.im/youtube
+- ❓ https://kcd.im/ama
 
 ### Schedule
 
@@ -143,12 +145,10 @@ a complete authority.
 - 💪 04. Create Custom Components
 - 🌮 30 Minutes
 - 💪 05. Styling
-- 💪 06. Simple Forms
 - 😴 10 Minutes
-- 💪 07. Dynamic Forms
-- 💪 08. Controlled Forms
+- 💪 06. Forms
 - 😴 10 Minutes
-- 💪 09. Rendering Lists of Data
+- 💪 07. Rendering Lists of Data
 - ❓ Q&A
 
 ### Questions
@@ -217,6 +217,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the

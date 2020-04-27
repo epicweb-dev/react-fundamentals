@@ -1,41 +1,48 @@
-// Dynamic Forms
+// Rendering Lists
 // http://localhost:3000/isolated/final/07.js
 
 import React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  const [error, setError] = React.useState(null)
-
-  function handleSubmit(event) {
-    event.preventDefault()
-    onSubmitUsername(event.target.elements.usernameInput.value)
-  }
-
-  function handleChange(event) {
-    const {value} = event.target
-    const isLowerCase = value === value.toLowerCase()
-    setError(isLowerCase ? null : 'Username must be lower case')
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="usernameInput">Username:</label>
-        <input id="usernameInput" type="text" onChange={handleChange} />
-      </div>
-      <div style={{color: 'red'}}>{error}</div>
-      <button disabled={Boolean(error)} type="submit">
-        Submit
-      </button>
-    </form>
-  )
-}
+const allItems = [
+  {id: 'a', value: 'apple'},
+  {id: 'o', value: 'orange'},
+  {id: 'g', value: 'grape'},
+  {id: 'p', value: 'pear'},
+]
 
 function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  const [items, setItems] = React.useState(allItems)
+
+  function addItem() {
+    setItems([...items, allItems.find(i => !items.includes(i))])
+  }
+
+  function removeItem(item) {
+    setItems(items.filter(i => i !== item))
+  }
+
   return (
-    <div style={{minWidth: 400}}>
-      <UsernameForm onSubmitUsername={onSubmitUsername} />
+    <div
+      style={{
+        height: 200,
+        width: 400,
+        backgroundColor: '#eee',
+        borderRadius: 4,
+        padding: 20,
+      }}
+    >
+      <button disabled={items.length >= allItems.length} onClick={addItem}>
+        add item
+      </button>
+      <ul style={{listStyle: 'none', paddingLeft: 0}}>
+        {items.map(item => (
+          <li key={item.id}>
+            <button onClick={() => removeItem(item)}>remove</button>{' '}
+            <label htmlFor={`${item.value}-input`}>{item.value}</label>{' '}
+            <input id={`${item.value}-input`} defaultValue={item.value} />
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

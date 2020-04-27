@@ -1,5 +1,6 @@
 // Controlled Forms
-// http://localhost:3000/isolated/final/08.js
+// 💯 Control the input value
+// http://localhost:3000/isolated/final/06.extra-3.js
 
 import React from 'react'
 
