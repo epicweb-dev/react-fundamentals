@@ -57,7 +57,6 @@
   },
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "left",
   "breadcrumbs.enabled": true,
   "grunt.autoDetect": "off",
   "gulp.autoDetect": "off",
