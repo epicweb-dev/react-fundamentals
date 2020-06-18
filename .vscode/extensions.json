@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "2gua.rainbow-brackets",
+    "sdras.night-owl",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "letrieu.expand-region",
+    "mgmcdermott.vscode-language-babel",
+    "PKief.material-icon-theme",
+    "VisualStudioExptTeam.vscodeintellicode"
+  ]
+}

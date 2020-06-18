@@ -12,13 +12,14 @@
     "npm": ">=6"
   },
   "dependencies": {
-    "@kentcdodds/react-workshop-app": "^2.10.0",
-    "@testing-library/react": "^10.0.4",
-    "chalk": "^4.0.0",
+    "@kentcdodds/react-workshop-app": "^2.11.0",
+    "@testing-library/react": "^10.3.0",
+    "@testing-library/user-event": "^12.0.2",
+    "chalk": "^4.1.0",
     "codegen.macro": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-error-boundary": "^2.2.1"
+    "react-error-boundary": "^2.2.2"
   },
   "devDependencies": {
     "husky": "^4.2.5",

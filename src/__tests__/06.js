@@ -1,5 +1,6 @@
 import React from 'react'
-import {render, screen, fireEvent} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import App from '../final/06'
 // import App from '../exercise/06'
 
@@ -18,8 +19,8 @@ test('calls the onSubmitUsername handler when the submit is fired', () => {
 
   const username = 'Jenny'
 
-  fireEvent.change(input, {target: {value: username}})
-  fireEvent.click(submit)
+  userEvent.type(input, username)
+  userEvent.click(submit)
 
   expect(global.alert).toHaveBeenCalledWith(`You entered: ${username}`)
   expect(global.alert).toHaveBeenCalledTimes(1)
