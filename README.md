@@ -5,6 +5,9 @@ workshop repo to teach you the fundamentals of ReactJS!
 
 <div align="center">
   <a href="https://epicreact.dev">
+    <strong style="display:block;font-size:1.5em;">
+      EpicReact.Dev
+    </strong>
     <img
       width="500"
       alt="Learn React from Start to Finish"
@@ -12,6 +15,8 @@ workshop repo to teach you the fundamentals of ReactJS!
     />
   </a>
 </div>
+
+<hr />
 
 <!-- prettier-ignore-start -->
 [![Build Status][build-badge]][build]
