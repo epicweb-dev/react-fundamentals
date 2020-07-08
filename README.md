@@ -252,7 +252,7 @@ Thank you! https://kcd.im/rf-ws-feedback
 [build-badge]: https://img.shields.io/travis/kentcdodds/react-fundamentals.svg?style=flat-square&logo=travis
 [build]: https://travis-ci.org/kentcdodds/react-fundamentals
 [license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
-[license]: https://github.com/kentcdodds/react-fundamentals/blob/master/README.md#license
+[license]: https://github.com/kentcdodds/react-fundamentals/blob/master/LICENSE
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://github.com/kentcdodds/react-fundamentals/blob/master/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
