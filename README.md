@@ -4,9 +4,7 @@
 workshop repo to teach you the fundamentals of ReactJS!
 
 <div align="center">
-  <a href="https://epicreact.dev">
-    <h2>EpicReact.Dev</h2>
-  </a>
+  <h2><a href="https://epicreact.dev">EpicReact.Dev</a></h2>
   <a href="https://epicreact.dev">
     <img
       width="500"
