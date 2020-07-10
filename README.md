@@ -224,12 +224,12 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://www.benmvp.com"><img src="https://avatars3.githubusercontent.com/u/5714478?v=4" width="100px;" alt=""/><br /><sub><b>Ben Ilegbodu</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=benmvp" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/belcherj"><img src="https://avatars1.githubusercontent.com/u/6817400?v=4" width="100px;" alt=""/><br /><sub><b>Jonathan Belcher</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=belcherj" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/rhefner"><img src="https://avatars1.githubusercontent.com/u/8144799?v=4" width="100px;" alt=""/><br /><sub><b>Richard Hefner</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=rhefner" title="Code">💻</a></td>
+    <td align="center"><a href="https://zacjones.io"><img src="https://avatars2.githubusercontent.com/u/6188161?v=4" width="100px;" alt=""/><br /><sub><b>Zac Jones</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=zacjones93" title="Documentation">📖</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
