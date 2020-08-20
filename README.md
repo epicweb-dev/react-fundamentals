@@ -1,10 +1,15 @@
-# [React Fundamentals](https://kentcdodds.com/workshops/react-fundamentals)
+<div>
+  <h1 align="center"><a href="https://epicreact.dev">React Fundamentals 🚀 EpicReact.Dev</a></h1>
+  <strong>
+    Learn the foundational concepts necessary for building
+    React applications and libraries
+  </strong>
+  <p>
+    Learn everything you need to be effective with the fundamental building
+    block of React applications. When you’re finished, you’ll be prepared to
+    create React components to build excellent experiences for your app's users.
+  </p>
 
-👋 hi there! My name is [Kent C. Dodds](https://kentcdodds.com)! This is a
-workshop repo to teach you the fundamentals of ReactJS!
-
-<div align="center">
-  <h2><a href="https://epicreact.dev">EpicReact.Dev</a></h2>
   <a href="https://epicreact.dev">
     <img
       alt="Learn React from Start to Finish"
@@ -19,40 +24,18 @@ workshop repo to teach you the fundamentals of ReactJS!
 [![Build Status][build-badge]][build]
 [![AppVeyor Build Status][win-build-badge]][win-build]
 [![GPL 3.0 License][license-badge]][license]
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 [![Code of Conduct][coc-badge]][coc]
 <!-- prettier-ignore-end -->
 
-## Pre-Workshop Instructions/Requirements
+## Prerequisites
 
-In order for us to maximize our efforts during the workshop, please complete the
-following things to prepare.
-
-- 📺 only necessary if the workshop is remote via Zoom
-- 👋 specific to the material for this workshop
-
-- [ ] 👋 Setup the project (follow the setup instructions below) (~5 minutes)
-- [ ] 📺 Install and setup [Zoom](https://zoom.us) on the computer you will be
-      using (~5 minutes)
-- [ ] 📺 Watch
-      [Use Zoom for KCD Workshops](https://egghead.io/lessons/egghead-use-zoom-for-kcd-workshops)
-      (~8 minutes).
-- [ ] Watch
-      [Setup and Logistics for KCD Workshops](https://egghead.io/lessons/egghead-setup-and-logistics-for-kcd-workshops)
-      (~24 minutes). Please do NOT skip this step.
-- [ ] 👋 Read through
-      ["JavaScript to Know for React"](https://kentcdodds.com/blog/javascript-to-know-for-react)
-      (~20 minutes)
-- [ ] 👋 Install the React DevTools
-      ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-      (recommended),
-      [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
-- [ ] 👋 Attend my
-      [Modern JavaScript Workshop](https://kentcdodds.com/workshops/modern-javascript)
-      or have the equivalent experience with modern JavaScript APIs.
-- [ ] 👋 Have experience with HTML, CSS, and DOM APIs.
-
-The more prepared you are for the workshop, the better it will go for you.
+- Read through
+  ["JavaScript to Know for React"](https://kentcdodds.com/blog/javascript-to-know-for-react)
+- Install the React DevTools
+  ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+  (recommended),
+  [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
 
 ## System Requirements
 
@@ -86,17 +69,12 @@ npm run setup --silent
 
 This may take a few minutes. **It will ask you for your email.** This is
 optional and just automatically adds your email to the links in the project to
-make filling out some forms easier. If you get any errors, please read through
-them and see if you can find out what the problem is. If you can't work it out
-on your own then please [file an issue][issue] and provide _all_ the output from
-the commands you ran (even if it's a lot).
+make filling out some forms easier.
 
-You may be able to work through the entire workshop in the browser. Go to
-[this codesandbox](https://codesandbox.io/s/github/kentcdodds/react-fundamentals)
-and you should be good to go. Note that sometimes people have trouble with
-codesandbox not working quite right with tests, but you should be able to work
-around that. If you're concerned, then it would probably be better to just set
-things up locally.
+If you get any errors, please read through them and see if you can find out what
+the problem is. If you can't work it out on your own then please [file an
+issue][issue] and provide _all_ the output from the commands you ran (even if
+it's a lot).
 
 ## Running the app
 
@@ -123,56 +101,6 @@ play around with it. The tests are there to help you reach the final version,
 however _sometimes_ you can accomplish the task and the tests still fail if you
 implement things differently than I do in my solution, so don't look to them as
 a complete authority.
-
-## Workshop Outline
-
-> And so it begins ⚛
-
-👋 I'm Kent C. Dodds
-
-- 🏡 Utah
-- 👩 👧 👦 👦 👦 🐕
-- 🏢 https://kentcdodds.com
-- 🐦/🐙 @kentcdodds
-- 🏆 https://TestingJavaScript.com
-- 👩‍🚀 https://EpicReact.Dev
-- 💻 https://kcd.im/workshops
-- 🎙 https://kcd.im/podcast
-- 🥚 https://kcd.im/egghead
-- 🥋 https://kcd.im/fem
-- 💌 https://kcd.im/news
-- 📝 https://kcd.im/blog
-- 📺 https://kcd.im/devtips
-- 👨‍💻 https://kcd.im/coding
-- 📽 https://kcd.im/youtube
-- ❓ https://kcd.im/ama
-
-### Schedule
-
-- 😴 Logistics
-- 💪 01. Create DOM with JavaScript
-- 💪 02. Create DOM with React
-- 😴 10 Minutes
-- 💪 03. Create DOM with JSX
-- 💪 04. Create Custom Components
-- 🌮 30 Minutes
-- 💪 05. Styling
-- 😴 10 Minutes
-- 💪 06. Forms
-- 😴 10 Minutes
-- 💪 07. Rendering Lists of Data
-- ❓ Q&A
-
-### Questions
-
-Please do ask! Interrupt me. If you have an unrelated question, please ask on
-[my AMA](https://kcd.im/ama).
-
-### Zoom (for remote workshops)
-
-- Help us make this more human by keeping your video on if possible
-- Keep microphone muted unless speaking
-- Breakout rooms
 
 ### Exercises
 
