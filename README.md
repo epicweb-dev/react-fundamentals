@@ -24,7 +24,6 @@
 [![Build Status][build-badge]][build]
 [![AppVeyor Build Status][win-build-badge]][win-build]
 [![GPL 3.0 License][license-badge]][license]
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 [![Code of Conduct][coc-badge]][coc]
 <!-- prettier-ignore-end -->
 
