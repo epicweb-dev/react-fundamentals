@@ -84,6 +84,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "marcosvega91",
+      "name": "Marco Moretti",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5365582?v=4",
+      "profile": "https://github.com/marcosvega91",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true
