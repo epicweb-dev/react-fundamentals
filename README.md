@@ -156,6 +156,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/sleepyArpan"><img src="https://avatars3.githubusercontent.com/u/50901152?v=4" width="100px;" alt=""/><br /><sub><b>Arpan Chattopadhyay</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=sleepyArpan" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/marcosvega91"><img src="https://avatars2.githubusercontent.com/u/5365582?v=4" width="100px;" alt=""/><br /><sub><b>Marco Moretti</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=marcosvega91" title="Code">💻</a></td>
   </tr>
 </table>
 
