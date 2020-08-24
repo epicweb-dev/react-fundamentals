@@ -93,6 +93,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "cindywu",
+      "name": "cindy",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1177031?v=4",
+      "profile": "http://cindywu.org",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
