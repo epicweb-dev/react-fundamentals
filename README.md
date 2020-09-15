@@ -118,8 +118,8 @@ _I_ walk through the material.
 Each exercise has comments in it to help you get through the exercise. These fun
 emoji characters are here to help you.
 
-- **Kody the Koala Bear** 🐨 will tell you when there's something specific you
-  should do
+- **Kody the Koala** 🐨 will tell you when there's something specific you should
+  do
 - **Matthew the Muscle** 💪 will indicate what you're working with an exercise
 - **Chuck the Checkered Flag** 🏁 will indicate that you're working with a final
   version
@@ -163,6 +163,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
