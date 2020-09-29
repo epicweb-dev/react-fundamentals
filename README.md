@@ -159,6 +159,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/marcosvega91"><img src="https://avatars2.githubusercontent.com/u/5365582?v=4" width="100px;" alt=""/><br /><sub><b>Marco Moretti</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=marcosvega91" title="Code">💻</a></td>
     <td align="center"><a href="http://cindywu.org"><img src="https://avatars3.githubusercontent.com/u/1177031?v=4" width="100px;" alt=""/><br /><sub><b>cindy</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=cindywu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://lifeiscontent.net/"><img src="https://avatars3.githubusercontent.com/u/180963?v=4" width="100px;" alt=""/><br /><sub><b>Aaron Reisman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=lifeiscontent" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://dev.to/jacobmgevans"><img src="https://avatars1.githubusercontent.com/u/27247160?v=4" width="100px;" alt=""/><br /><sub><b>Jacob M-G Evans</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/pulls?q=is%3Apr+reviewed-by%3AJacobMGEvans" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
