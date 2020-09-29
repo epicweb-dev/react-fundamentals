@@ -120,6 +120,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "jsehull",
+      "name": "Jesse Hull",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/9935383?v=4",
+      "profile": "https://jsehull.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
