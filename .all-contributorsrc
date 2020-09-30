@@ -129,6 +129,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "tcaraccia-riv",
+      "name": "Tomas Caraccia",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/64477810?v=4",
+      "profile": "https://github.com/tcaraccia-riv",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
