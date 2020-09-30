@@ -138,6 +138,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "vasilii-kovalev",
+      "name": "Vasilii Kovalev",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/10310491?v=4",
+      "profile": "https://vk.com/vasilii_kovalev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true
