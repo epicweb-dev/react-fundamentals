@@ -147,6 +147,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "FelixGeelhaar",
+      "name": "Felix Geelhaar",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6020564?v=4",
+      "profile": "https://github.com/FelixGeelhaar",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
