@@ -156,6 +156,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "apolakipso",
+      "name": "Apola Kipso",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/494674?v=4",
+      "profile": "https://twitter.com/apolakipso",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
