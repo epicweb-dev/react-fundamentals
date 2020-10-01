@@ -165,6 +165,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dcgoodwin2112",
+      "name": "dcgoodwin2112",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4554388?v=4",
+      "profile": "https://github.com/dcgoodwin2112",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "skipCi": true
