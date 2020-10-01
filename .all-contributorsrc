@@ -183,6 +183,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rchinerman",
+      "name": "Ryan Hinerman",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17489675?v=4",
+      "profile": "https://github.com/rchinerman",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
