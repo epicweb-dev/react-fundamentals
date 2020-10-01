@@ -1,5 +1,6 @@
+//creating variables
 var spawnSync = require('child_process').spawnSync
-
+//Styling
 var styles = {
   // got these from playing around with what I found from:
   // https://github.com/istanbuljs/istanbuljs/blob/0f328fd0896417ccb2085f4b7888dd8e167ba3fa/packages/istanbul-lib-report/lib/file-writer.js#L84-L96
@@ -13,7 +14,7 @@ var styles = {
 function color(modifier, string) {
   return styles[modifier].open + string + styles[modifier].close
 }
-
+//Printing items
 console.log(color('info', '▶️  Starting workshop setup...'))
 
 var error = spawnSync('npx --version', {shell: true}).stderr.toString().trim()
@@ -24,15 +25,14 @@ if (error) {
       '🚨  npx is not available on this computer. Please install npm@5.2.0 or greater',
     ),
   )
-  throw error
-}
-
+  throw error 
+//Making a command variable
 var command =
   'npx "https://gist.github.com/kentcdodds/bb452ffe53a5caa3600197e1d8005733" -q'
 console.log(
   color('subtitle', '      Running the following command: ' + command),
 )
-
+//Result
 var result = spawnSync(command, {stdio: 'inherit', shell: true})
 
 if (result.status === 0) {
