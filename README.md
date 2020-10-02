@@ -175,12 +175,12 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/dcgoodwin2112"><img src="https://avatars1.githubusercontent.com/u/4554388?v=4" width="100px;" alt=""/><br /><sub><b>dcgoodwin2112</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Adcgoodwin2112" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/pritamsangani/"><img src="https://avatars3.githubusercontent.com/u/22857896?v=4" width="100px;" alt=""/><br /><sub><b>Pritam Sangani</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=PritamSangani" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rchinerman"><img src="https://avatars3.githubusercontent.com/u/17489675?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Hinerman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=rchinerman" title="Documentation">📖</a> <a href="https://github.com/kentcdodds/react-fundamentals/commits?author=rchinerman" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Marcoj776"><img src="https://avatars0.githubusercontent.com/u/9052097?v=4" width="100px;" alt=""/><br /><sub><b>Marco</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3AMarcoj776" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
