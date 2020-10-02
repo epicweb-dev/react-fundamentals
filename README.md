@@ -38,8 +38,8 @@
 
 ## System Requirements
 
-- [git][git] v2 or greater
-- [NodeJS][node] v10 or greater
+- [git][git] v2.13 or greater
+- [NodeJS][node] v10.13 or greater
 - [npm][npm] v6 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
@@ -70,7 +70,10 @@ This may take a few minutes. **It will ask you for your email.** This is
 optional and just automatically adds your email to the links in the project to
 make filling out some forms easier.
 
-A few common issues during `npm run setup --silent` have involved PATH variables (above links or [here](https://github.com/kentcdodds/react-fundamentals/issues/27)), reinstalling git, node, or npm, and clearing npm caches.
+A few common issues during `npm run setup --silent` have involved PATH variables
+(above links or
+[here](https://github.com/kentcdodds/react-fundamentals/issues/27)),
+reinstalling git, node, or npm, and clearing npm caches.
 
 If you get any errors, please read through them and see if you can find out what
 the problem is. If you can't work it out on your own then please [file an
@@ -177,6 +180,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
