@@ -177,6 +177,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/rchinerman"><img src="https://avatars3.githubusercontent.com/u/17489675?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Hinerman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=rchinerman" title="Documentation">📖</a> <a href="https://github.com/kentcdodds/react-fundamentals/commits?author=rchinerman" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Marcoj776"><img src="https://avatars0.githubusercontent.com/u/9052097?v=4" width="100px;" alt=""/><br /><sub><b>Marco</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3AMarcoj776" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://peter.hozak.info/"><img src="https://avatars0.githubusercontent.com/u/1087670?v=4" width="100px;" alt=""/><br /><sub><b>Peter Hozák</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Aprillion" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
