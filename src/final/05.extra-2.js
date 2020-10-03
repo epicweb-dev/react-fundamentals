@@ -5,11 +5,11 @@
 import React from 'react'
 import '../box-styles.css'
 
-function Box({style, size, className = '', ...otherProps}) {
+function Box({style, size, ...otherProps}) {
   const sizeClassName = size ? `box--${size}` : ''
   return (
     <div
-      className={`box ${className} ${sizeClassName}`}
+      className={`box ${sizeClassName}`}
       style={{fontStyle: 'italic', ...style}}
       {...otherProps}
     />
