@@ -238,6 +238,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jmagrippis",
+      "name": "Johnny Magrippis",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3502800?v=4",
+      "profile": "https://magrippis.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true
