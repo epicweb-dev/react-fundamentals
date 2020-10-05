@@ -183,6 +183,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://navneet-sahota.netlify.com"><img src="https://avatars1.githubusercontent.com/u/34404592?v=4" width="100px;" alt=""/><br /><sub><b>Navneet Sahota</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Navneet-Sahota" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/rodrigofuentes"><img src="https://avatars1.githubusercontent.com/u/7374840?v=4" width="100px;" alt=""/><br /><sub><b>Rodrigo Fuentes</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=rodrigofuentes" title="Documentation">📖</a></td>
     <td align="center"><a href="https://magrippis.com"><img src="https://avatars0.githubusercontent.com/u/3502800?v=4" width="100px;" alt=""/><br /><sub><b>Johnny Magrippis</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=jmagrippis" title="Code">💻</a></td>
+    <td align="center"><a href="http://acharyaroshan.com.np"><img src="https://avatars2.githubusercontent.com/u/56434316?v=4" width="100px;" alt=""/><br /><sub><b>Roshan Acharya</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=coderosh" title="Documentation">📖</a></td>
   </tr>
 </table>
 
