@@ -11,7 +11,7 @@ function UsernameForm({onSubmitUsername}) {
   //
   // 🐨 get the value from the username input (using whichever method
   // you prefer from the options mentioned in the instructions)
-  // 💰 For example: event.target.elements[0]
+  // 💰 For example: event.target.elements[0].value
   // 🐨 Call `onSubmitUsername` with the value of the input
 
   // 🐨 add the onSubmit handler to the <form> below
