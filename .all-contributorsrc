@@ -247,6 +247,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "coderosh",
+      "name": "Roshan Acharya",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/56434316?v=4",
+      "profile": "http://acharyaroshan.com.np",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
