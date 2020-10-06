@@ -8,7 +8,7 @@
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
-    "node": ">=10.13",
+    "node": "^10.13 || 12 || 14",
     "npm": ">=6"
   },
   "dependencies": {
