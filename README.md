@@ -80,6 +80,12 @@ the problem is. If you can't work it out on your own then please [file an
 issue][issue] and provide _all_ the output from the commands you ran (even if
 it's a lot).
 
+It's recommended you run everything locally in the same environment you work in
+every day, but if you're having issues getting things set up, you can also set
+this up using [GitHub Codespaces](https://github.com/features/codespaces)
+([video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4)) or
+[Codesandbox](https://codesandbox.io/s/github/kentcdodds/react-fundamentals).
+
 ## Running the app
 
 To get the app up and running (and really see if it worked), run:
@@ -190,6 +196,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
