@@ -1,3 +1,5 @@
 {
-  "template": "node"
+  "template": "node",
+  "startScript": "start",
+  "port": 3000
 }
