@@ -33,7 +33,7 @@
     "test": "react-scripts test --env=jsdom",
     "test:coverage": "npm run test -- --watchAll=false",
     "test:exercises": "npm run test -- testing.*exercises\\/ --onlyChanged",
-    "setup": "node ./scripts/setup",
+    "setup": "node setup",
     "lint": "eslint .",
     "validate": "npm-run-all --parallel build test:coverage lint"
   },

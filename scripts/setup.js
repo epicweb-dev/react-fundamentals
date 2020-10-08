@@ -28,7 +28,7 @@ if (error) {
 }
 
 var command =
-  'npx "git://gist.github.com/bb452ffe53a5caa3600197e1d8005733.git" -q'
+  'npx "https://gist.github.com/kentcdodds/bb452ffe53a5caa3600197e1d8005733" -q'
 console.log(
   color('subtitle', '      Running the following command: ' + command),
 )
