@@ -265,6 +265,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "merodiro",
+      "name": "Amr A.Mohammed",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17033502?v=4",
+      "profile": "https://github.com/merodiro",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "skipCi": true
