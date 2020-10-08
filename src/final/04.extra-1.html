@@ -9,14 +9,14 @@
   <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
   <script type="text/babel">
     // This is being used as a component. But it's still not quite awesome yet.
-    function Message({children}) {
+    function message({children}) {
       return <div className="message">{children}</div>
     }
 
     const element = (
       <div className="container">
-        {React.createElement(Message, {children: 'Hello World'})}
-        {React.createElement(Message, {children: 'Goodbye World'})}
+        {React.createElement(message, {children: 'Hello World'})}
+        {React.createElement(message, {children: 'Goodbye World'})}
       </div>
     )
 
