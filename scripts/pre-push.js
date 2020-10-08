@@ -3,4 +3,4 @@ const {username} = require('os').userInfo()
 
 console.log(process.env)
 
-process.exit(1)
+// process.exit(1)
