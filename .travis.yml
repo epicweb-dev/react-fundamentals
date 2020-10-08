@@ -7,7 +7,7 @@ notifications:
   email: false
 branches:
   only:
-    - master
+    - main
 script:
   - npm run setup
   - npx codecov
