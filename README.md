@@ -57,6 +57,10 @@ variable and how to fix it here for [windows][win-path] or
 
 ## Setup
 
+> If you want to commit and push your work as you go, you'll want to
+> [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+> first and then clone your fork rather than this repo directly.
+
 After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
 

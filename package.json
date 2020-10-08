@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run validate"
+      "pre-commit": "node ./scripts/pre-commit"
     }
   },
   "jest": {
