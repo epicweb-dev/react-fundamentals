@@ -68,5 +68,13 @@
       "Firefox ESR",
       "not ie < 11"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentcdodds/react-fundamentals.git"
+  },
+  "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
+  "bugs": {
+    "url": "https://github.com/kentcdodds/react-fundamentals/issues"
   }
 }
