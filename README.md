@@ -196,11 +196,13 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://acharyaroshan.com.np"><img src="https://avatars2.githubusercontent.com/u/56434316?v=4" width="100px;" alt=""/><br /><sub><b>Roshan Acharya</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=coderosh" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/decisa"><img src="https://avatars0.githubusercontent.com/u/35339760?v=4" width="100px;" alt=""/><br /><sub><b>Art Telesh</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=decisa" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/merodiro"><img src="https://avatars1.githubusercontent.com/u/17033502?v=4" width="100px;" alt=""/><br /><sub><b>Amr A.Mohammed</b></sub></a><br /><a href="#ideas-merodiro" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
