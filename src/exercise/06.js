@@ -23,9 +23,9 @@ function UsernameForm({onSubmitUsername}) {
     <form>
       <div>
         <label>Username:</label>
-        <input type="text" />
+        <input name="username" type="text" />
       </div>
-      <button name="username" type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
   )
 }
