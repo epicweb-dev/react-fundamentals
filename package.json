@@ -12,7 +12,7 @@
     "npm": ">=6"
   },
   "dependencies": {
-    "@kentcdodds/react-workshop-app": "^2.16.4",
+    "@kentcdodds/react-workshop-app": "^2.18.0",
     "@testing-library/react": "^11.0.2",
     "@testing-library/user-event": "^12.1.3",
     "chalk": "^4.1.0",

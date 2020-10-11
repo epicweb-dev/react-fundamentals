@@ -83,6 +83,14 @@ the problem is. If you can't work it out on your own then please [file an
 issue][issue] and provide _all_ the output from the commands you ran (even if
 it's a lot).
 
+If you can't get the setup script to work, then just make sure you have the
+right versions of the requirements listed above, and run the following commands:
+
+```
+npm install
+npm run validate
+```
+
 It's recommended you run everything locally in the same environment you work in
 every day, but if you're having issues getting things set up, you can also set
 this up using [GitHub Codespaces](https://github.com/features/codespaces)
@@ -202,6 +210,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
