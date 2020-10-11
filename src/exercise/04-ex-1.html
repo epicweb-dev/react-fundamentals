@@ -1,0 +1,25 @@
+<!-- Creating custom components -->
+<!-- http://localhost:3000/isolated/exercise/04.html -->
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+  <script type="text/babel">
+    // 🐨 Make a function called `message` which returns the JSX we want to share
+
+    // 🐨 use that function in place of the divs below with:
+    // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+    const message= (props) => ( <div className="message">{props.children}</div>)
+
+    const element = (
+      <div className="container">
+        {React.createElement(message, {children: 'Hello World'})}
+        {React.createElement(message, {children: 'Goodbye World'})}
+      </div>
+    )
+    // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
