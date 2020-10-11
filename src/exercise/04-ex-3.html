@@ -11,21 +11,20 @@
 
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
-    const Message= ({subject, greeting}) => ( <div className="message">{greeting}, {subject}</div>)
+    const Message = ({subject, greeting}) => ( <div className="message">{greeting}, {subject}</div>)
 
-    Message.propTypes = {
-      greeting(props, propName, componentName) {
-        if (typeof props[propName] !== 'string') {
-          return new Error(`Sorry, ${propName} must be string, but a ${typeof props[propName]}`)
-        }
-      },
-      subject(props, propName, componentName) {
+    const PropTypes = {
+      string(props, propName, componentName) {
         if (typeof props[propName] !== 'string') {
           return new Error(`Sorry, ${propName} must be string, but a ${typeof props[propName]}`)
         }
       }
     }
 
+    Message.propTypes = {
+      greeting: PropTypes.string,
+      subject: PropTypes.string
+    }
     const element = (
       <div className="container">
         <Message greeting='Hello' subject="World" />
