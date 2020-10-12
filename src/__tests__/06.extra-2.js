@@ -1,4 +1,5 @@
 import React from 'react'
+import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from '../final/06.extra-2'
@@ -20,8 +21,13 @@ test('calls the onSubmitUsername handler when the submit is fired', () => {
   let value = 'A'
   userEvent.type(input, value)
   expect(submit).toBeDisabled() // upper-case
-  expect(screen.getByRole('alert')).toHaveTextContent(/lower case/i)
 
+  const output = screen.getByText(/lower case/i)
+  expect(output).toBeInTheDocument()
+  alfredTip(
+    output.getAttribute('role') !== 'alert',
+    'Add an attribute `role="alert"` to the div to help with screen reader users.',
+  )
   userEvent.clear(input)
   value = 'a'
   userEvent.type(input, value)
