@@ -205,12 +205,12 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/merodiro"><img src="https://avatars1.githubusercontent.com/u/17033502?v=4" width="100px;" alt=""/><br /><sub><b>Amr A.Mohammed</b></sub></a><br /><a href="#ideas-merodiro" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/DRS90"><img src="https://avatars1.githubusercontent.com/u/22821570?v=4" width="100px;" alt=""/><br /><sub><b>Douglas</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=DRS90" title="Documentation">📖</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
