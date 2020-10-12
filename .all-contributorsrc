@@ -275,6 +275,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "DRS90",
+      "name": "Douglas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/22821570?v=4",
+      "profile": "https://github.com/DRS90",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
