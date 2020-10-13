@@ -1,0 +1,41 @@
+.keys input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.keys input:focus {
+  outline: 6px solid #4bd2fb;
+}
+.keys .apple-input,
+.keys [for='apple-input'],
+.keys #apple-input {
+  background-color: #ff9393;
+}
+.keys .orange-input,
+.keys [for='orange-input'],
+.keys #orange-input {
+  background-color: #f1b66d;
+}
+.keys .grape-input,
+.keys [for='grape-input'],
+.keys #grape-input {
+  background-color: #e27ce2;
+}
+.keys .pear-input,
+.keys [for='pear-input'],
+.keys #pear-input {
+  background-color: #bef171;
+}
+
+.keys li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.keys [for='apple-input'],
+.keys [for='orange-input'],
+.keys [for='grape-input'],
+.keys [for='pear-input'] {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}

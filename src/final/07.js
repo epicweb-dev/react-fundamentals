@@ -4,10 +4,10 @@
 import React from 'react'
 
 const allItems = [
-  {id: 'a', value: 'apple'},
-  {id: 'o', value: 'orange'},
-  {id: 'g', value: 'grape'},
-  {id: 'p', value: 'pear'},
+  {id: 'apple', value: '🍎 apple'},
+  {id: 'orange', value: '🍊 orange'},
+  {id: 'grape', value: '🍇 grape'},
+  {id: 'pear', value: '🍐 pear'},
 ]
 
 function App() {
@@ -22,15 +22,7 @@ function App() {
   }
 
   return (
-    <div
-      style={{
-        height: 200,
-        width: 400,
-        backgroundColor: '#eee',
-        borderRadius: 4,
-        padding: 20,
-      }}
-    >
+    <div className="keys">
       <button disabled={items.length >= allItems.length} onClick={addItem}>
         add item
       </button>
@@ -38,8 +30,8 @@ function App() {
         {items.map(item => (
           <li key={item.id}>
             <button onClick={() => removeItem(item)}>remove</button>{' '}
-            <label htmlFor={`${item.value}-input`}>{item.value}</label>{' '}
-            <input id={`${item.value}-input`} defaultValue={item.value} />
+            <label htmlFor={`${item.id}-input`}>{item.value}</label>{' '}
+            <input id={`${item.id}-input`} defaultValue={item.value} />
           </li>
         ))}
       </ul>
