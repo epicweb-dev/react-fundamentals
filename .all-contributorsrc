@@ -293,6 +293,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "LauraOneasca",
+      "name": "LauraOneasca",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/31212753?v=4",
+      "profile": "https://github.com/LauraOneasca",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
