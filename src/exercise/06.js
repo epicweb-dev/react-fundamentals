@@ -17,7 +17,7 @@ function UsernameForm({onSubmitUsername}) {
   // 🐨 add the onSubmit handler to the <form> below
 
   // 🐨 replace input's name attribute with id attribute
-  // 🐨 make sure to associate the label to the input. 
+  // 🐨 make sure to associate the label to the input.
   // to do so, set the value of 'htmlFor' prop of the label to the id of input
   return (
     <form>
