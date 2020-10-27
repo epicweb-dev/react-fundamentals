@@ -12,13 +12,13 @@
     "npm": ">=6"
   },
   "dependencies": {
-    "@kentcdodds/react-workshop-app": "^2.19.5",
+    "@kentcdodds/react-workshop-app": "^2.19.6",
     "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.8",
+    "@testing-library/user-event": "^12.1.10",
     "chalk": "^4.1.0",
     "codegen.macro": "^4.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "husky": "^4.3.0",
