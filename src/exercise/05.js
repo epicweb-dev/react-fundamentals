@@ -1,7 +1,7 @@
 // Styling
 // http://localhost:3000/isolated/exercise/05.js
 
-import React from 'react'
+import * as React from 'react'
 import '../box-styles.css'
 
 // 💰 Use the className for the size and style (backgroundColor) for the color
