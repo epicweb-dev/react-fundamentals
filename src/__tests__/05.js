@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import chalk from 'chalk'
 import {render, screen, prettyDOM} from '@testing-library/react'
 import App from '../final/05'

@@ -1,7 +1,7 @@
 // Rendering Lists
 // http://localhost:3000/isolated/exercise/07.js
 
-import React from 'react'
+import * as React from 'react'
 
 const allItems = [
   {id: 'apple', value: '🍎 apple'},
