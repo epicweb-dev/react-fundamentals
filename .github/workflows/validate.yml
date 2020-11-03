@@ -2,11 +2,11 @@ name: validate
 on: [push, pull_request]
 jobs:
   setup:
-    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         node: [10.13, 12, 14]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v2
