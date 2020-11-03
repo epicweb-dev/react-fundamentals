@@ -1,7 +1,7 @@
 name: validate
 on: [push, pull_request]
 jobs:
-  main:
+  setup:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -18,3 +18,6 @@ jobs:
 
       - name: ▶️ Run setup script
         run: npm run setup
+
+      - name: ⬆️ Upload coverage report
+        uses: codecov/codecov-action@v1
