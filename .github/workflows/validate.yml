@@ -18,6 +18,3 @@ jobs:
 
       - name: ▶️ Run setup script
         run: npm run setup
-
-      - name: ⬆️ Upload coverage report
-        uses: codecov/codecov-action@v1
