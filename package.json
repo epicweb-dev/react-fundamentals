@@ -5,6 +5,9 @@
   "title": "React Fundamentals ⚛",
   "keywords": [],
   "homepage": "http://react-fundamentals.netlify.app/",
+  "repository": {
+    "url": "https://github.com/kentcdodds/react-fundamentals"
+  },
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
