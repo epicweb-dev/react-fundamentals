@@ -9,11 +9,12 @@
 
 
   <script type="module">
-
     const rootElement = document.getElementById('root')
-    const props = {id: 'element-id', children: 'Hello world!'}
-    const type = 'h1'
-    const element = React.createElement(type, props)
+    const hello = {children: 'Hello'}
+    const world = {children: 'World'}
+    const divProps = {className: 'container', children: 'hi'}
+
+    const element = React.createElement('div', divProps, 'span', hello, 'span', world)
     ReactDOM.render(element, rootElement)
 
   </script>
