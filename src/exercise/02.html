@@ -9,13 +9,13 @@
 
 
   <script type="module">
-    const rootElement = document.getElementById('root')
+    const root = document.getElementById('root')
     const hello = {children: 'Hello'}
     const world = {children: 'World'}
     const divProps = {className: 'container', children: 'hi'}
 
     const element = React.createElement('div', divProps, 'span', hello, 'span', world)
-    ReactDOM.render(element, rootElement)
+    ReactDOM.render(element, root)
 
   </script>
 </body>
