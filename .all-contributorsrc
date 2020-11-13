@@ -320,6 +320,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "denno020",
+      "name": "Luke",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2059313?v=4",
+      "profile": "https://github.com/denno020",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "skipCi": true

@@ -210,6 +210,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/LauraOneasca"><img src="https://avatars2.githubusercontent.com/u/31212753?v=4" width="100px;" alt=""/><br /><sub><b>LauraOneasca</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=LauraOneasca" title="Documentation">📖</a></td>
     <td align="center"><a href="https://michaeldeboey.be"><img src="https://avatars3.githubusercontent.com/u/6643991?v=4" width="100px;" alt=""/><br /><sub><b>Michaël De Boey</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=MichaelDeBoey" title="Code">💻</a></td>
     <td align="center"><a href="http://xiphe.net"><img src="https://avatars1.githubusercontent.com/u/911218?v=4" width="100px;" alt=""/><br /><sub><b>Hannes Diercks</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Xiphe" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/denno020"><img src="https://avatars2.githubusercontent.com/u/2059313?v=4" width="100px;" alt=""/><br /><sub><b>Luke</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Adenno020" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
