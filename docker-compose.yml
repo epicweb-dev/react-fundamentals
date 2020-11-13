@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  node:
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - '3000:3000'
