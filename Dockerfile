@@ -6,6 +6,6 @@ COPY package-lock.json .
 RUN npm install
 
 COPY . .
-RUN node setup
+RUN NO_EMAIL_AUTOFILL=true node setup
 
 CMD ["npm", "start"]
