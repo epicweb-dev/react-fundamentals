@@ -329,6 +329,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "tonidezman",
+      "name": "Toni Dezman",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11177270?v=4",
+      "profile": "https://tonidezman.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true
