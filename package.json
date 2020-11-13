@@ -12,9 +12,9 @@
     "npm": ">=6"
   },
   "dependencies": {
-    "@kentcdodds/react-workshop-app": "^2.19.7",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@kentcdodds/react-workshop-app": "^2.19.10",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/user-event": "^12.2.2",
     "chalk": "^4.1.0",
     "codegen.macro": "^4.0.0",
     "react": "^17.0.1",
