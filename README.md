@@ -219,11 +219,13 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://xiphe.net"><img src="https://avatars1.githubusercontent.com/u/911218?v=4" width="100px;" alt=""/><br /><sub><b>Hannes Diercks</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Xiphe" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/denno020"><img src="https://avatars2.githubusercontent.com/u/2059313?v=4" width="100px;" alt=""/><br /><sub><b>Luke</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Adenno020" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://tonidezman.github.io/"><img src="https://avatars0.githubusercontent.com/u/11177270?v=4" width="100px;" alt=""/><br /><sub><b>Toni Dezman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=tonidezman" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
