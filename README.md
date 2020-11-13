@@ -91,6 +91,13 @@ npm install
 npm run validate
 ```
 
+If you are still unable to fix issues and you know how to use Docker 🐳 you can
+setup the project with the following command:
+
+```
+docker-compose up
+```
+
 It's recommended you run everything locally in the same environment you work in
 every day, but if you're having issues getting things set up, you can also set
 this up using [GitHub Codespaces](https://github.com/features/codespaces)
@@ -216,6 +223,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
