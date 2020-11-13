@@ -311,6 +311,33 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Xiphe",
+      "name": "Hannes Diercks",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/911218?v=4",
+      "profile": "http://xiphe.net",
+      "contributions": [
+        "test"
+      ]
+    },
+    {
+      "login": "denno020",
+      "name": "Luke",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2059313?v=4",
+      "profile": "https://github.com/denno020",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "tonidezman",
+      "name": "Toni Dezman",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11177270?v=4",
+      "profile": "https://tonidezman.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true

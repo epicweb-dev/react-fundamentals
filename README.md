@@ -91,6 +91,13 @@ npm install
 npm run validate
 ```
 
+If you are still unable to fix issues and you know how to use Docker 🐳 you can
+setup the project with the following command:
+
+```
+docker-compose up
+```
+
 It's recommended you run everything locally in the same environment you work in
 every day, but if you're having issues getting things set up, you can also set
 this up using [GitHub Codespaces](https://github.com/features/codespaces)
@@ -209,12 +216,16 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/allstargaurav"><img src="https://avatars3.githubusercontent.com/u/24932097?v=4" width="100px;" alt=""/><br /><sub><b>Gaurav</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=allstargaurav" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/LauraOneasca"><img src="https://avatars2.githubusercontent.com/u/31212753?v=4" width="100px;" alt=""/><br /><sub><b>LauraOneasca</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=LauraOneasca" title="Documentation">📖</a></td>
     <td align="center"><a href="https://michaeldeboey.be"><img src="https://avatars3.githubusercontent.com/u/6643991?v=4" width="100px;" alt=""/><br /><sub><b>Michaël De Boey</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=MichaelDeBoey" title="Code">💻</a></td>
+    <td align="center"><a href="http://xiphe.net"><img src="https://avatars1.githubusercontent.com/u/911218?v=4" width="100px;" alt=""/><br /><sub><b>Hannes Diercks</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Xiphe" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/denno020"><img src="https://avatars2.githubusercontent.com/u/2059313?v=4" width="100px;" alt=""/><br /><sub><b>Luke</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Adenno020" title="Bug reports">🐛</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://tonidezman.github.io/"><img src="https://avatars0.githubusercontent.com/u/11177270?v=4" width="100px;" alt=""/><br /><sub><b>Toni Dezman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=tonidezman" title="Code">💻</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
