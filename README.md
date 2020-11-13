@@ -209,12 +209,12 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/allstargaurav"><img src="https://avatars3.githubusercontent.com/u/24932097?v=4" width="100px;" alt=""/><br /><sub><b>Gaurav</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=allstargaurav" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/LauraOneasca"><img src="https://avatars2.githubusercontent.com/u/31212753?v=4" width="100px;" alt=""/><br /><sub><b>LauraOneasca</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=LauraOneasca" title="Documentation">📖</a></td>
     <td align="center"><a href="https://michaeldeboey.be"><img src="https://avatars3.githubusercontent.com/u/6643991?v=4" width="100px;" alt=""/><br /><sub><b>Michaël De Boey</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=MichaelDeBoey" title="Code">💻</a></td>
+    <td align="center"><a href="http://xiphe.net"><img src="https://avatars1.githubusercontent.com/u/911218?v=4" width="100px;" alt=""/><br /><sub><b>Hannes Diercks</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Xiphe" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
