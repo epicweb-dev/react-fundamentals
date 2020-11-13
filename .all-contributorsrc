@@ -311,6 +311,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Xiphe",
+      "name": "Hannes Diercks",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/911218?v=4",
+      "profile": "http://xiphe.net",
+      "contributions": [
+        "test"
+      ]
     }
   ],
   "skipCi": true
