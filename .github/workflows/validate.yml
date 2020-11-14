@@ -1,7 +1,15 @@
 name: validate
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
 jobs:
   setup:
+    # ignore all-contributors PRs
+    if: ${{ !contains(github.head_ref, 'all-contributors') }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
