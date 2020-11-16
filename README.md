@@ -222,6 +222,7 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://tonidezman.github.io/"><img src="https://avatars0.githubusercontent.com/u/11177270?v=4" width="100px;" alt=""/><br /><sub><b>Toni Dezman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=tonidezman" title="Code">💻</a></td>
     <td align="center"><a href="http://bobbywarner.com"><img src="https://avatars0.githubusercontent.com/u/554961?v=4" width="100px;" alt=""/><br /><sub><b>Bobby Warner</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=bobbywarner" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/PunkSage"><img src="https://avatars2.githubusercontent.com/u/1321225?v=4" width="100px;" alt=""/><br /><sub><b>Konrad Szałwiński</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=PunkSage" title="Code">💻</a></td>
   </tr>
 </table>
 
