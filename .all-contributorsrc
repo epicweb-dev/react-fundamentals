@@ -356,6 +356,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "yaseenkadir",
+      "name": "Yaseen Kadir",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8746946?v=4",
+      "profile": "https://au.linkedin.com/pub/yaseen-kadir/102/99a/49a",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "skipCi": true
