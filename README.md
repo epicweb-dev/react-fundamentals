@@ -149,7 +149,7 @@ emoji characters are here to help you.
 
 - **Kody the Koala** 🐨 will tell you when there's something specific you should
   do
-- **Matthew the Muscle** 💪 will indicate what you're working with an exercise
+- **Matthew the Muscle** 💪 will indicate that you're working with an exercise
 - **Chuck the Checkered Flag** 🏁 will indicate that you're working with a final
   version
 - **Marty the Money Bag** 💰 will give you specific tips (and sometimes code)
