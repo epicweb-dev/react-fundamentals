@@ -5,9 +5,9 @@
 import * as React from 'react'
 
 function UsernameForm({onSubmitUsername}) {
-  const usernameInputRef = React.useRef()
+  const usernameInputRef = React.useRef<HTMLInputElement>()
 
-  function handleSubmit(event) {
+  function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault()
     onSubmitUsername(usernameInputRef.current.value)
   }

@@ -4,16 +4,23 @@
 
 import * as React from 'react'
 
+interface FormElements extends HTMLFormControlsCollection {
+  usernameInput: HTMLInputElement
+}
+interface UsernameFormElement extends HTMLFormElement {
+  readonly elements: FormElements
+}
+
 function UsernameForm({onSubmitUsername}) {
   const [error, setError] = React.useState(null)
 
-  function handleSubmit(event) {
+  function handleSubmit(event: React.SyntheticEvent<UsernameFormElement>) {
     event.preventDefault()
-    onSubmitUsername(event.target.elements.usernameInput.value)
+    onSubmitUsername(event.currentTarget.elements.usernameInput.value)
   }
 
-  function handleChange(event) {
-    const {value} = event.target
+  function handleChange(event: React.SyntheticEvent<HTMLInputElement>) {
+    const {value} = event.currentTarget
     const isLowerCase = value === value.toLowerCase()
     setError(isLowerCase ? null : 'Username must be lower case')
   }
@@ -35,7 +42,8 @@ function UsernameForm({onSubmitUsername}) {
 }
 
 function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  const onSubmitUsername = (username: string) =>
+    alert(`You entered: ${username}`)
   return (
     <div style={{minWidth: 400}}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />

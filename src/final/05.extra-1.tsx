@@ -5,7 +5,7 @@
 import * as React from 'react'
 import '../box-styles.css'
 
-function Box({style, className = '', ...otherProps}) {
+function Box({style = null, className = '', ...otherProps}) {
   return (
     <div
       className={`box ${className}`}
