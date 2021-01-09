@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "private": true,
   "keywords": [],
-  "homepage": "http://react-fundamentals.netlify.app/",
+  "homepage": "http://react-fundamentals-next.netlify.app/",
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.0.5",
     "chalk": "^4.1.2",
     "codegen.macro": "^4.1.0",
+    "pokemon": "^2.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -28,20 +29,23 @@
     "@craco/craco": "^6.4.3",
     "husky": "^4.3.8",
     "npm-run-all": "^4.1.5",
+    "patch-package": "^6.5.1",
     "prettier": "^2.7.1",
     "react-scripts": "^5.0.1",
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test --env=jsdom",
+    "postinstall": "patch-package --patch-dir config/patches",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "test:coverage": "npm run test -- --watchAll=false",
     "test:exercises": "npm run test -- testing.*exercises\\/ --onlyChanged",
     "setup": "node setup",
     "lint": "eslint .",
     "format": "prettier --write \"./src\"",
-    "validate": "npm-run-all --parallel build test:coverage lint"
+    "typecheck": "tsc -b",
+    "validate": "npm-run-all --parallel build test:coverage lint typecheck"
   },
   "husky": {
     "hooks": {

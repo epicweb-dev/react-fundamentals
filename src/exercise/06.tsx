@@ -1,7 +1,6 @@
 // Styling
-// http://localhost:3000/isolated/exercise/05.js
+// http://localhost:3000/isolated/exercise/06.tsx
 
-import * as React from 'react'
 import '../box-styles.css'
 
 // 🐨 add a className prop to each div and apply the correct class names
@@ -18,14 +17,18 @@ const smallBox = <div>small lightblue box</div>
 const mediumBox = <div>medium pink box</div>
 const largeBox = <div>large orange box</div>
 
+// 💰 the sizelssColorlessBox should still be a box, just with no size or color
+const sizelessColorlessBox = <div>sizeless colorless box</div>
+
 function App() {
   return (
     <div>
       {smallBox}
       {mediumBox}
       {largeBox}
+      {sizelessColorlessBox}
     </div>
   )
 }
 
-export default App
+export {App}

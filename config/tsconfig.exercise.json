@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.shared.json",
+  "include": ["../src/exercise/"],
+  "compilerOptions": {
+    "strict": false
+  }
+}

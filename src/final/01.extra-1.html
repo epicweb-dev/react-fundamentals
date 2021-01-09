@@ -2,14 +2,18 @@
 <!-- 💯 generate the root node -->
 <!-- http://localhost:3000/isolated/final/01.extra-1.html -->
 
-<body>
-  <script type="module">
-    const rootElement = document.createElement('div')
-    rootElement.setAttribute('id', 'root')
-    document.body.append(rootElement)
-    const element = document.createElement('div')
-    element.textContent = 'Hello World'
-    element.className = 'container'
-    rootElement.append(element)
-  </script>
-</body>
+<html>
+  <body>
+    <script type="module">
+      const rootElement = document.createElement('div')
+      rootElement.id = 'root'
+
+      const element = document.createElement('div')
+      element.className = 'container'
+      element.append('Hello World')
+
+      rootElement.append(element)
+      document.body.append(rootElement)
+    </script>
+  </body>
+</html>

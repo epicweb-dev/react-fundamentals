@@ -1,11 +1,15 @@
 // Styling
 // 💯 Create a custom component
-// http://localhost:3000/isolated/final/05.extra-1.js
+// http://localhost:3000/isolated/final/06.extra-1.tsx
 
 import * as React from 'react'
 import '../box-styles.css'
 
-function Box({style, className = '', ...otherProps}) {
+function Box({
+  style = {},
+  className = '',
+  ...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={`box ${className}`}
@@ -27,9 +31,9 @@ function App() {
       <Box className="box--large" style={{backgroundColor: 'orange'}}>
         large orange box
       </Box>
-      <Box>sizeless box</Box>
+      <Box>sizeless colorless box</Box>
     </div>
   )
 }
 
-export default App
+export {App}
