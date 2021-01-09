@@ -1,6 +1,6 @@
 <!-- Creating custom components -->
 <!-- 💯 Custom Props -->
-<!-- http://localhost:3000/isolated/final/04.extra-4.html -->
+<!-- http://localhost:3000/isolated/exercise/04.extra-4.html -->
 
 <body>
   <div id="root"></div>
@@ -15,13 +15,13 @@
       '/': (left, right) => left / right,
     }
 
-    function Calculator({left, operator, right}) {
-      const result = operations[operator](left, right)
+    // 🐨 accept the right props in the Calculator component here
+    function Calculator() {
+      // 💰 you can get the result with: operations[operator](left, right)
       return (
         <div>
-          <code>
-            {left} {operator} {right} = <output>{result}</output>
-          </code>
+          {/* 🐨 render the equation and it's result here */}
+          {/* 💰 open the final version in the app if you're unsure */}
         </div>
       )
     }

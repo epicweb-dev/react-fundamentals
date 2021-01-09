@@ -5,7 +5,11 @@
 import * as React from 'react'
 import '../box-styles.css'
 
-function Box({style, className = '', ...otherProps}) {
+function Box({
+  style = {},
+  className = '',
+  ...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={`box ${className}`}
@@ -32,4 +36,4 @@ function App() {
   )
 }
 
-export default App
+export {App}

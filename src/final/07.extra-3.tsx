@@ -4,16 +4,23 @@
 
 import * as React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
+interface FormElements extends HTMLFormControlsCollection {
+  usernameInput: HTMLInputElement
+}
+interface UsernameFormElement extends HTMLFormElement {
+  readonly elements: FormElements
+}
+
+function UsernameForm({
+  onSubmitUsername,
+}: {
+  onSubmitUsername: (username: string) => void
+}) {
   const [username, setUsername] = React.useState('')
 
-  function handleSubmit(event) {
+  function handleSubmit(event: React.SyntheticEvent<UsernameFormElement>) {
     event.preventDefault()
-    onSubmitUsername(username)
-  }
-
-  function handleChange(event) {
-    setUsername(event.target.value.toLowerCase())
+    onSubmitUsername(event.currentTarget.elements.usernameInput.value)
   }
 
   return (
@@ -23,7 +30,9 @@ function UsernameForm({onSubmitUsername}) {
         <input
           id="usernameInput"
           type="text"
-          onChange={handleChange}
+          onChange={event =>
+            setUsername(event.currentTarget.value.toLowerCase())
+          }
           value={username}
         />
       </div>
@@ -33,7 +42,8 @@ function UsernameForm({onSubmitUsername}) {
 }
 
 function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  const onSubmitUsername = (username: string) =>
+    alert(`You entered: ${username}`)
   return (
     <div style={{minWidth: 400}}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />
@@ -41,4 +51,4 @@ function App() {
   )
 }
 
-export default App
+export {App}

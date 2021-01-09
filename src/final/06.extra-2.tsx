@@ -5,7 +5,14 @@
 import * as React from 'react'
 import '../box-styles.css'
 
-function Box({style, size, className = '', ...otherProps}) {
+function Box({
+  style = {},
+  size,
+  className = '',
+  ...otherProps
+}: React.HTMLAttributes<HTMLDivElement> & {
+  size?: 'small' | 'medium' | 'large'
+}) {
   const sizeClassName = size ? `box--${size}` : ''
   return (
     <div
@@ -33,4 +40,4 @@ function App() {
   )
 }
 
-export default App
+export {App}

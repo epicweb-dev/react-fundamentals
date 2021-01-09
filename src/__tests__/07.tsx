@@ -1,20 +1,21 @@
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import App from '../final/06'
-// import App from '../exercise/06'
+import {App} from '../final/07'
+// import {App} from '../exercise/07'
 
+let alert = jest.spyOn(global, 'alert')
 beforeAll(() => {
-  jest.spyOn(global, 'alert').mockImplementation(() => {})
+  alert.mockImplementation(() => {})
 })
 
 beforeEach(() => {
-  global.alert.mockClear()
+  alert.mockClear()
 })
 
 test('calls the onSubmitUsername handler when the submit is fired', () => {
   render(<App />)
-  const input = screen.getByLabelText(/username/i)
+  const input = screen.getByLabelText(/username/i) as HTMLInputElement
   const submit = screen.getByText(/submit/i)
 
   const username = 'jenny'

@@ -3,24 +3,34 @@
 
 import * as React from 'react'
 
-const allItems = [
+type Item = {id: string; value: string}
+
+const allItems: Array<Item> = [
   {id: 'apple', value: '🍎 apple'},
   {id: 'orange', value: '🍊 orange'},
   {id: 'grape', value: '🍇 grape'},
   {id: 'pear', value: '🍐 pear'},
 ]
 
+function typedBoolean<T>(
+  value: T,
+): value is Exclude<T, false | null | undefined | '' | 0> {
+  return Boolean(value)
+}
+
 function App() {
   const [items, setItems] = React.useState(allItems)
 
   function addItem() {
-    setItems([
-      ...items,
-      allItems.find(i => !items.map(({id}) => id).includes(i.id)),
-    ])
+    setItems(
+      [
+        ...items,
+        allItems.find(i => !items.map(({id}) => id).includes(i.id)),
+      ].filter(typedBoolean),
+    )
   }
 
-  function removeItem(item) {
+  function removeItem(item: Item) {
     setItems(items.filter(i => i.id !== item.id))
   }
 
@@ -43,4 +53,4 @@ function App() {
   )
 }
 
-export default App
+export {App}
