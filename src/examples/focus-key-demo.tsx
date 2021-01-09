@@ -1,11 +1,12 @@
-// Rendering Lists
-// 💯 Focus Demo
-// http://localhost:3000/isolated/final/07.extra-1.js
+// Focus Key demo
+// http://localhost:3000/isolated/examples/focus-key-demo.tsx
 
 import * as React from 'react'
 
+type Item = {id: string; value: string}
+
 function FocusDemo() {
-  const [items, setItems] = React.useState([
+  const [items, setItems] = React.useState<Array<Item>>([
     {id: 'apple', value: '🍎 apple'},
     {id: 'orange', value: '🍊 orange'},
     {id: 'grape', value: '🍇 grape'},
@@ -17,9 +18,9 @@ function FocusDemo() {
     return () => clearInterval(id)
   }, [])
 
-  function getChangeHandler(item) {
-    return event => {
-      const newValue = event.target.value
+  function getChangeHandler(item: Item) {
+    return (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newValue = event.currentTarget.value
       setItems(allItems =>
         allItems.map(i => ({
           ...i,
@@ -67,7 +68,7 @@ function FocusDemo() {
   )
 }
 
-function shuffle(originalArray) {
+function shuffle<ArrayType extends Array<unknown>>(originalArray: ArrayType) {
   const array = [...originalArray]
   let currentIndex = array.length
   let temporaryValue
@@ -89,4 +90,4 @@ function App() {
   return <FocusDemo />
 }
 
-export default App
+export {App}

@@ -1,7 +1,6 @@
 // Styling
-// http://localhost:3000/isolated/final/05.js
+// http://localhost:3000/isolated/final/06.tsx
 
-import * as React from 'react'
 import '../box-styles.css'
 
 const smallBox = (
@@ -28,6 +27,11 @@ const largeBox = (
     large orange box
   </div>
 )
+const sizelessColorlessBox = (
+  <div className="box" style={{fontStyle: 'italic'}}>
+    sizeless colorless box
+  </div>
+)
 
 function App() {
   return (
@@ -35,8 +39,9 @@ function App() {
       {smallBox}
       {mediumBox}
       {largeBox}
+      {sizelessColorlessBox}
     </div>
   )
 }
 
-export default App
+export {App}

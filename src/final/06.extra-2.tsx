@@ -1,11 +1,18 @@
 // Styling
 // 💯 accept a size prop to encapsulate styling
-// http://localhost:3000/isolated/final/05.extra-2.js
+// http://localhost:3000/isolated/final/06.extra-2.tsx
 
 import * as React from 'react'
 import '../box-styles.css'
 
-function Box({style, size, className = '', ...otherProps}) {
+function Box({
+  style = {},
+  size,
+  className = '',
+  ...otherProps
+}: React.HTMLAttributes<HTMLDivElement> & {
+  size?: 'small' | 'medium' | 'large'
+}) {
   const sizeClassName = size ? `box--${size}` : ''
   return (
     <div
@@ -28,9 +35,9 @@ function App() {
       <Box size="large" style={{backgroundColor: 'orange'}}>
         large orange box
       </Box>
-      <Box>sizeless box</Box>
+      <Box>sizeless colorless box</Box>
     </div>
   )
 }
 
-export default App
+export {App}

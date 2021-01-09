@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js b/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js
+index 949f34a..0b3b54e 100644
+--- a/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js
++++ b/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js
+@@ -58,6 +58,7 @@ function verifyNoTypeScript() {
+ }
+ 
+ function verifyTypeScriptSetup() {
++  return
+   let firstTimeSetup = false;
+ 
+   if (!fs.existsSync(paths.appTsConfig)) {

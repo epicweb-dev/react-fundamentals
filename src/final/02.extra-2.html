@@ -1,6 +1,6 @@
 <!-- Intro to raw React APIs -->
-<!-- 💯 nesting elements -->
-<!-- http://localhost:3000/isolated/final/02.extra-1.html -->
+<!-- 💯 deep nesting elements -->
+<!-- http://localhost:3000/isolated/final/02.extra-2.html -->
 
 <body>
   <div id="root"></div>
@@ -9,10 +9,15 @@
   <script type="module">
     const rootElement = document.getElementById('root')
     const element = React.createElement(
-      'ul',
-      {className: 'sams-food'},
-      React.createElement('li', null, 'Green eggs'),
-      React.createElement('li', null, 'Ham'),
+      'div',
+      {className: 'container'},
+      React.createElement('p', null, `Here's Sam's favorite food:`),
+      React.createElement(
+        'ul',
+        {className: 'sams-food'},
+        React.createElement('li', null, 'Green eggs'),
+        React.createElement('li', null, 'Ham'),
+      ),
     )
     ReactDOM.render(element, rootElement)
   </script>

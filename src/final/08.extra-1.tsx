@@ -1,25 +1,39 @@
 // Rendering Lists
-// http://localhost:3000/isolated/exercise/07.js
+// 💯 Adding a key prop
+// http://localhost:3000/isolated/final/08.extra-1.tsx
 
 import * as React from 'react'
 
-const allItems = [
+type Item = {id: string; value: string}
+
+const allItems: Array<Item> = [
   {id: 'apple', value: '🍎 apple'},
   {id: 'orange', value: '🍊 orange'},
   {id: 'grape', value: '🍇 grape'},
   {id: 'pear', value: '🍐 pear'},
 ]
 
+function typedBoolean<T>(
+  value: T,
+): value is Exclude<T, false | null | undefined | '' | 0> {
+  return Boolean(value)
+}
+
 function App() {
   const [items, setItems] = React.useState(allItems)
 
   function addItem() {
     const itemIds = items.map(i => i.id)
-    setItems([...items, allItems.find(i => !itemIds.includes(i.id))])
+    const newItems = [
+      ...items,
+      allItems.find(i => !itemIds.includes(i.id)),
+    ].filter(typedBoolean)
+    setItems(newItems)
   }
 
-  function removeItem(item) {
-    setItems(items.filter(i => i.id !== item.id))
+  function removeItem(item: Item) {
+    const newItems = items.filter(i => i.id !== item.id)
+    setItems(newItems)
   }
 
   return (
@@ -29,8 +43,7 @@ function App() {
       </button>
       <ul style={{listStyle: 'none', paddingLeft: 0}}>
         {items.map(item => (
-          // 🐨 add a key prop to the <li> below. Set it to item.id
-          <li>
+          <li key={item.id}>
             <button onClick={() => removeItem(item)}>remove</button>{' '}
             <label htmlFor={`${item.id}-input`}>{item.value}</label>{' '}
             <input id={`${item.id}-input`} defaultValue={item.value} />
@@ -41,4 +54,4 @@ function App() {
   )
 }
 
-export default App
+export {App}
