@@ -1,9 +1,14 @@
 // Basic Forms
-// http://localhost:3000/isolated/exercise/06.js
+// http://localhost:3000/isolated/exercise/06.tsx
 
 import * as React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
+//#region UsernameForm
+interface UsernameFormProps {
+  onSubmitUsername: (username: string) => void
+}
+
+const UsernameForm: React.VFC<UsernameFormProps> = ({onSubmitUsername}) => {
   // 🐨 add a submit event handler here (`handleSubmit`).
   // 💰 Make sure to accept the `event` as an argument and call
   // `event.preventDefault()` to prevent the default behavior of form submit
@@ -21,17 +26,29 @@ function UsernameForm({onSubmitUsername}) {
   return (
     <form>
       <div>
-        <label>Username:</label>
+        {
+          /*
+           * 💣 remove the curly brackets and disable the eslint comment to
+           * suppress the jsx-a11y/label-has-associated-control error.
+           */
+          // eslint-disable-next-line jsx-a11y/label-has-associated-control
+          <label>Username:</label>
+        }
         <input type="text" />
       </div>
       <button type="submit">Submit</button>
     </form>
   )
 }
+//#endregion UsernameForm
 
-function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+//#region App
+const App: React.VFC = () => {
+  const onSubmitUsername = (username: string): void =>
+    alert(`You entered: ${username}`)
   return <UsernameForm onSubmitUsername={onSubmitUsername} />
 }
+
+//#region App
 
 export default App

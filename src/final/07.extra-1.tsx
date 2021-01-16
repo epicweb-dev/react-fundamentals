@@ -1,11 +1,18 @@
 // Rendering Lists
 // 💯 Focus Demo
-// http://localhost:3000/isolated/final/07.extra-1.js
+// http://localhost:3000/isolated/final/07.extra-1.tsx
 
 import * as React from 'react'
 
-function FocusDemo() {
-  const [items, setItems] = React.useState([
+//#region FocusDemo
+interface Item {
+  id: string
+  value: string
+}
+type Items = Item[]
+
+const FocusDemo: React.VFC = () => {
+  const [items, setItems] = React.useState<Items>([
     {id: 'apple', value: '🍎 apple'},
     {id: 'orange', value: '🍊 orange'},
     {id: 'grape', value: '🍇 grape'},
@@ -17,16 +24,17 @@ function FocusDemo() {
     return () => clearInterval(id)
   }, [])
 
-  function getChangeHandler(item) {
-    return event => {
-      const newValue = event.target.value
-      setItems(allItems =>
-        allItems.map(i => ({
-          ...i,
-          value: i.id === item.id ? newValue : i.value,
-        })),
-      )
-    }
+  type GetChangeHandler = (
+    item: Item,
+  ) => React.ChangeEventHandler<HTMLInputElement>
+  const getChangeHandler: GetChangeHandler = item => event => {
+    const newValue = event.target.value
+    setItems(allItems =>
+      allItems.map(i => ({
+        ...i,
+        value: i.id === item.id ? newValue : i.value,
+      })),
+    )
   }
 
   return (
@@ -67,11 +75,11 @@ function FocusDemo() {
   )
 }
 
-function shuffle(originalArray) {
+function shuffle<T>(originalArray: T[]): T[] {
   const array = [...originalArray]
   let currentIndex = array.length
-  let temporaryValue
-  let randomIndex
+  let temporaryValue: T
+  let randomIndex: number
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
     // Pick a remaining element...
@@ -84,9 +92,12 @@ function shuffle(originalArray) {
   }
   return array
 }
+//#endregion FocusDemo
 
-function App() {
+//#region App
+const App: React.VFC = () => {
   return <FocusDemo />
 }
+//#endregion App
 
 export default App

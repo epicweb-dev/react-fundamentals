@@ -1,26 +1,30 @@
 // Rendering Lists
-// http://localhost:3000/isolated/exercise/07.js
+// http://localhost:3000/isolated/exercise/07.tsx
 
 import * as React from 'react'
 
 const allItems = [
-  {id: 'apple', value: '🍎 apple'},
-  {id: 'orange', value: '🍊 orange'},
-  {id: 'grape', value: '🍇 grape'},
-  {id: 'pear', value: '🍐 pear'},
+  {id: 'apple', value: '🍎 apple'} as const,
+  {id: 'orange', value: '🍊 orange'} as const,
+  {id: 'grape', value: '🍇 grape'} as const,
+  {id: 'pear', value: '🍐 pear'} as const,
 ]
 
-function App() {
-  const [items, setItems] = React.useState(allItems)
+type Items = typeof allItems
+type Item = Items[number]
 
-  function addItem() {
+//#region  App
+const App: React.VFC = () => {
+  const [items, setItems] = React.useState<Items>(allItems)
+
+  const addItem: React.MouseEventHandler<HTMLButtonElement> = () => {
     setItems([
       ...items,
       allItems.find(i => !items.map(({id}) => id).includes(i.id)),
     ])
   }
 
-  function removeItem(item) {
+  function removeItem(item: Item): void {
     setItems(items.filter(i => i.id !== item.id))
   }
 
@@ -42,5 +46,6 @@ function App() {
     </div>
   )
 }
+//#endregion App
 
 export default App

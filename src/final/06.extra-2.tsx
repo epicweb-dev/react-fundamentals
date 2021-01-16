@@ -1,9 +1,10 @@
 // Dynamic Forms
 // 💯 Validate lower-case
-// http://localhost:3000/isolated/final/06.extra-2.js
+// http://localhost:3000/isolated/final/06.extra-2.tsx
 
 import * as React from 'react'
 
+//#region  UsernameForm
 interface FormElements extends HTMLFormControlsCollection {
   usernameInput: HTMLInputElement
 }
@@ -11,17 +12,21 @@ interface UsernameFormElement extends HTMLFormElement {
   readonly elements: FormElements
 }
 
-function UsernameForm({onSubmitUsername}) {
-  const [error, setError] = React.useState(null)
+interface UsernameFormProps {
+  onSubmitUsername: (username: string) => void
+}
 
-  function handleSubmit(event: React.SyntheticEvent<UsernameFormElement>) {
+const UsernameForm: React.VFC<UsernameFormProps> = ({onSubmitUsername}) => {
+  const [error, setError] = React.useState<null | string>(null)
+
+  const handleSubmit: React.FormEventHandler<UsernameFormElement> = event => {
     event.preventDefault()
     onSubmitUsername(event.currentTarget.elements.usernameInput.value)
   }
 
-  function handleChange(event: React.SyntheticEvent<HTMLInputElement>) {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = event => {
     const {value} = event.currentTarget
-    const isLowerCase = value === value.toLowerCase()
+    const isLowerCase: boolean = value === value.toLowerCase()
     setError(isLowerCase ? null : 'Username must be lower case')
   }
 
@@ -40,15 +45,19 @@ function UsernameForm({onSubmitUsername}) {
     </form>
   )
 }
+//#endregion UsernameForm
 
-function App() {
-  const onSubmitUsername = (username: string) =>
+//#region App
+const App: React.VFC = () => {
+  const onSubmitUsername = (username: string): void =>
     alert(`You entered: ${username}`)
+
   return (
     <div style={{minWidth: 400}}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />
     </div>
   )
 }
+//#endregion App
 
 export default App

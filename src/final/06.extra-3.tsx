@@ -1,18 +1,23 @@
 // Controlled Forms
 // 💯 Control the input value
-// http://localhost:3000/isolated/final/06.extra-3.js
+// http://localhost:3000/isolated/final/06.extra-3.tsx
 
 import * as React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  const [username, setUsername] = React.useState('')
+//#region  UsernameForm
+interface UsernameFormProps {
+  onSubmitUsername: (username: string) => void
+}
 
-  function handleSubmit(event) {
+const UsernameForm: React.VFC<UsernameFormProps> = ({onSubmitUsername}) => {
+  const [username, setUsername] = React.useState<string>('')
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = event => {
     event.preventDefault()
     onSubmitUsername(username)
   }
 
-  function handleChange(event) {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = event => {
     setUsername(event.target.value.toLowerCase())
   }
 
@@ -31,14 +36,19 @@ function UsernameForm({onSubmitUsername}) {
     </form>
   )
 }
+//#endregion UsernameForm
 
-function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+//#region App
+const App: React.VFC = () => {
+  const onSubmitUsername = (username: string): void =>
+    alert(`You entered: ${username}`)
+
   return (
     <div style={{minWidth: 400}}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />
     </div>
   )
 }
+//#endregion App
 
 export default App

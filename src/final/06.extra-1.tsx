@@ -1,13 +1,18 @@
 // Basic Forms
 // 💯 using refs
-// http://localhost:3000/isolated/final/06.extra-1.js
+// http://localhost:3000/isolated/final/06.extra-1.tsx
 
 import * as React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  const usernameInputRef = React.useRef<HTMLInputElement>()
+//#region  UsernameForm
+interface UsernameFormProps {
+  onSubmitUsername: (username: string) => void
+}
 
-  function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
+const UsernameForm: React.VFC<UsernameFormProps> = ({onSubmitUsername}) => {
+  const usernameInputRef = React.useRef<HTMLInputElement>(null!)
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = event => {
     event.preventDefault()
     onSubmitUsername(usernameInputRef.current.value)
   }
@@ -22,10 +27,14 @@ function UsernameForm({onSubmitUsername}) {
     </form>
   )
 }
+//#endregion UsernameForm
 
-function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+//#region App
+const App: React.VFC = () => {
+  const onSubmitUsername = (username: string): void =>
+    alert(`You entered: ${username}`)
   return <UsernameForm onSubmitUsername={onSubmitUsername} />
 }
+//#endregion App
 
 export default App

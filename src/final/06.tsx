@@ -1,10 +1,22 @@
 // Basic Forms
-// http://localhost:3000/isolated/final/06.js
+// http://localhost:3000/isolated/final/06.tsx
 
 import * as React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
+//#region  UsernameForm
+interface FormElements extends HTMLFormControlsCollection {
+  usernameInput: HTMLInputElement
+}
+interface UsernameFormElement extends HTMLFormElement {
+  readonly elements: FormElements
+}
+
+interface UsernameFormProps {
+  onSubmitUsername: (username: string) => void
+}
+
+const UsernameForm: React.VFC<UsernameFormProps> = ({onSubmitUsername}) => {
+  const handleSubmit: React.FormEventHandler<UsernameFormElement> = event => {
     event.preventDefault()
     onSubmitUsername(event.currentTarget.elements.usernameInput.value)
   }
@@ -19,10 +31,15 @@ function UsernameForm({onSubmitUsername}) {
     </form>
   )
 }
+//#endregion UsernameForm
 
-function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+//#region App
+const App: React.VFC = () => {
+  const onSubmitUsername = (username: string): void =>
+    alert(`You entered: ${username}`)
+
   return <UsernameForm onSubmitUsername={onSubmitUsername} />
 }
+//#endregion App
 
 export default App

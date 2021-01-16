@@ -1,5 +1,5 @@
 // Styling
-// http://localhost:3000/isolated/exercise/05.js
+// http://localhost:3000/isolated/exercise/05.tsx
 
 import * as React from 'react'
 import '../box-styles.css'
@@ -12,18 +12,27 @@ import '../box-styles.css'
 
 // 🐨 add a style prop to each of them as well so their background color
 // matches what the text says it should be as well as `fontStyle: 'italic'`
+
 const smallBox = <div>small lightblue box</div>
 const mediumBox = <div>medium pink box</div>
 const largeBox = <div>large orange box</div>
 
-function App() {
-  return (
-    <div>
-      {smallBox}
-      {mediumBox}
-      {largeBox}
-    </div>
-  )
+interface BoxProps {
+  // 🐨 add the box properties here!
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Box: React.FC<BoxProps> = () => {
+  // 🐨 return your box implementation
+  return null
+}
+
+const App: React.VFC = () => (
+  <div>
+    {smallBox}
+    {mediumBox}
+    {largeBox}
+  </div>
+)
 
 export default App
