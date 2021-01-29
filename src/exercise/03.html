@@ -10,8 +10,13 @@
 
     <script type="text/babel">
  
+    const children = 'Hello World'
+    const className = 'container'
+    const props = {children, className}
+    console.log({id: 'my-thing' , ...props, className:'default'})
+    // const element = React.createElement('div', {id: 'my-thing' , ...props})
+    const element = <div id ="my-thing" {...props} className = "default"/> // how do I apply props to this div?
 
-    const element = <div className="container"> Hello World </div>
     console.log(element)
     ReactDOM.render(element, document.getElementById('root'))
   </script>
