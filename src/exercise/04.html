@@ -8,18 +8,6 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
-    // 🐨 Make a function called `message` which returns the JSX we want to share
-  
-
-// const PropTypes = {
-//     string(props, propName, compoenentName) {
-//             const type = typeof props[propName]
-//             if(type !== 'string') {
-//               return new Error(`Hey, the component ${compoenentName} name needs the prop ${propName} name to be type string but was passed ${type} `);
-//             }
-//               console.log({props, propName, compoenentName})
-//           }
-// }
 
     function Message({subject, greeting}) {
       return (
@@ -28,23 +16,17 @@
         </div>
       )
     }
-      //  const helloElement = React.createElement(Message, {children: "Hello World"})
-      //   console.log(helloElement)
     
       Message.propTypes = {
           subject: PropTypes.string.isRequired,
           greeting: PropTypes.string.isRequired,
         
     }
-
-
-
     const element = (
-      <div className="container">
+      <React.Fragment>
        <Message  subject="World" />
-       <Message greeting="Goodbye" subject={5} />
-            
-      </div>
+       <Message greeting="Goodbye" subject={5} />  
+       </React.Fragment>
     )
 
     
