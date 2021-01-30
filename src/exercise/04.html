@@ -9,25 +9,45 @@
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
 
-    
-    function Message  ({children})  {
-          
-         return  <div className="message">{children}</div>
-        }
 
-       const helloElement = React.createElement(Message, {children: "Hello World"})
-        console.log(helloElement)
+const PropTypes = {
+    string(props, propName, compoenentName) {
+            const type = typeof props[propName]
+            if(type !== 'string') {
+              return new Error(`Hey, the component ${compoenentName} name needs the prop ${propName} name to be type string but was passed ${type} `);
+            }
+              console.log({props, propName, compoenentName})
+          }
+}
+
+    function Message({subject, greeting}) {
+      return (
+        <div className="message">
+          {greeting}, {subject}
+        </div>
+      )
+    }
+      //  const helloElement = React.createElement(Message, {children: "Hello World"})
+      //   console.log(helloElement)
     
-    
+      Message.propTypes = {
+          subject: PropTypes.string,
+          greeting: PropTypes.string,
+        
+    }
+
+
+
     const element = (
       <div className="container">
-        <Message>messsage</Message>
-        <Message>buy mmm</Message>
+       <Message greeting="ss" subject="World" />
+       <Message greeting="Goodbye" subject="World" />
             
       </div>
     )
 
     
+
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
