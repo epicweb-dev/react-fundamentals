@@ -1,10 +1,7 @@
-// Basic Forms
-// 💯 using refs
-// http://localhost:3000/isolated/final/06.extra-1.js
-
 import * as React from 'react'
 
 function UsernameForm({onSubmitUsername}) {
+  const [error, setError] = React.useState(null)
   const usernameInputRef = React.useRef()
 
   function handleSubmit(event) {
@@ -12,13 +9,21 @@ function UsernameForm({onSubmitUsername}) {
     onSubmitUsername(usernameInputRef.current.value)
   }
 
+  function handleChange(event) {
+    const {value} = event.target
+    console.log(event.target)
+    const isLowerCase = value === value.toLowerCase() 
+    setError(isLowerCase? null : 'Username must be lower case')
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="usernameInput">Username:</label>
-        <input id="usernameInput" type="text" ref={usernameInputRef} />
+        <input id="usernameInput" type="text" ref={usernameInputRef} onChange ={handleChange}/>
       </div>
-      <button type="submit">Submit</button>
+      <div style={{color: 'red'}}> {error} </div>
+      <button disabled={Boolean (error)} type="submit">Submit</button>
     </form>
   )
 }
