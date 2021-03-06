@@ -1,0 +1,4 @@
+npx npm-check-updates --upgrade --reject husky
+rm -rf node_modules package-lock.json
+npm install
+npm run validate
