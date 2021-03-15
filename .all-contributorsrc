@@ -374,6 +374,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "iliyan-trifonov",
+      "name": "Iliyan Trifonov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2099265?v=4",
+      "profile": "http://www.iliyan-trifonov.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
