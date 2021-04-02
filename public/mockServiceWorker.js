@@ -7,7 +7,7 @@
 /* eslint-disable */
 /* tslint:disable */
 
-const INTEGRITY_CHECKSUM = 'f7d0ed371e596d181f62c6f68c4b7baf'
+const INTEGRITY_CHECKSUM = '82ef9b96d8393b6da34527d1d6e19187'
 const bypassHeaderName = 'x-msw-bypass'
 const activeClientIds = new Set()
 
@@ -114,22 +114,24 @@ async function handleRequest(event, requestId) {
   // Send back the response clone for the "response:*" life-cycle events.
   // Ensure MSW is active and ready to handle the message, otherwise
   // this message will pend indefinitely.
-  if (activeClientIds.has(client.id)) {
-    const clonedResponse = response.clone()
-
-    sendToClient(client, {
-      type: 'RESPONSE',
-      payload: {
-        requestId,
-        type: clonedResponse.type,
-        ok: clonedResponse.ok,
-        status: clonedResponse.status,
-        statusText: clonedResponse.statusText,
-        body: clonedResponse.body === null ? null : await clonedResponse.text(),
-        headers: serializeHeaders(clonedResponse.headers),
-        redirected: clonedResponse.redirected,
-      },
-    })
+  if (client && activeClientIds.has(client.id)) {
+    ;(async function () {
+      const clonedResponse = response.clone()
+      sendToClient(client, {
+        type: 'RESPONSE',
+        payload: {
+          requestId,
+          type: clonedResponse.type,
+          ok: clonedResponse.ok,
+          status: clonedResponse.status,
+          statusText: clonedResponse.statusText,
+          body:
+            clonedResponse.body === null ? null : await clonedResponse.text(),
+          headers: serializeHeaders(clonedResponse.headers),
+          redirected: clonedResponse.redirected,
+        },
+      })
+    })()
   }
 
   return response
