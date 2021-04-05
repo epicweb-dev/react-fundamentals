@@ -14,7 +14,7 @@
     "npm": ">=6"
   },
   "dependencies": {
-    "@kentcdodds/react-workshop-app": "^4.0.2",
+    "@kentcdodds/react-workshop-app": "^4.0.4",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^13.1.1",
     "@types/react": "^17.0.3",
