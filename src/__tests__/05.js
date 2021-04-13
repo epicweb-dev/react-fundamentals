@@ -1,42 +1,41 @@
-import * as React from 'react'
+import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
 import chalk from 'chalk'
 import {render, screen, prettyDOM} from '@testing-library/react'
 import App from '../final/05'
 // import App from '../exercise/05'
 
 test('renders the correct styles new', () => {
-  const {container} = render(<App />)
+  render(<App />)
   const allBoxes = screen.getAllByText(/box/i)
 
-  try {
-    allBoxes.forEach(box => expect(box).toHaveClass('box'))
-  } catch (error) {
-    //
-    //
-    //
-    // these comment lines are just here to keep the next line out of the codeframe
-    // so it doesn't confuse people when they see the error message twice.
-    error.message = `🚨  ${chalk.red(
-      `One of the boxes is missing the className "box"`,
-    )}\n\n${prettyDOM(container)}`
+  const className = 'box'
+  allBoxes.forEach(box => {
+    alfredTip(
+      () => {
+        expect(box).toHaveClass(className)
+      },
+      () =>
+        `
+This box is missing the className "${className}"
 
-    throw error
-  }
+${chalk.reset(prettyDOM(box))}
+    `.trim(),
+    )
+  })
 
-  try {
-    allBoxes.forEach(box => expect(box).toHaveStyle('font-style: italic;'))
-  } catch (error) {
-    //
-    //
-    //
-    // these comment lines are just here to keep the next line out of the codeframe
-    // so it doesn't confuse people when they see the error message twice.
-    error.message = `🚨  ${chalk.red(
-      `One of the boxes is missing fontStyle: 'italic' in the style prop`,
-    )}\n\n${prettyDOM(container)}`
+  allBoxes.forEach(box => {
+    alfredTip(
+      () => {
+        expect(box).toHaveStyle('font-style: italic;')
+      },
+      () =>
+        `
+This box is missing fontStyle: 'italic' in the style prop
 
-    throw error
-  }
+${chalk.reset(prettyDOM(box))}
+    `.trim(),
+    )
+  })
 
   const small = screen.getByText(/small/i)
   const medium = screen.getByText(/medium/i)
