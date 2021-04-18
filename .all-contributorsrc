@@ -383,6 +383,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "oscard0m",
+      "name": "Oscar Dominguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2574275?v=4",
+      "profile": "https://dev.to/oscardom",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true

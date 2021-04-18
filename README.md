@@ -227,6 +227,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://au.linkedin.com/pub/yaseen-kadir/102/99a/49a"><img src="https://avatars1.githubusercontent.com/u/8746946?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yaseen Kadir</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Ayaseenkadir" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://viglucci.io"><img src="https://avatars0.githubusercontent.com/u/6305490?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Viglucci</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=viglucci" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.iliyan-trifonov.com"><img src="https://avatars.githubusercontent.com/u/2099265?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iliyan Trifonov</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=iliyan-trifonov" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://dev.to/oscardom"><img src="https://avatars.githubusercontent.com/u/2574275?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oscar Dominguez</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=oscard0m" title="Documentation">📖</a></td>
   </tr>
 </table>
 
