@@ -392,6 +392,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "aaronccasanova",
+      "name": "Aaron Casanova",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32409546?v=4",
+      "profile": "http://cpcomponents.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true
