@@ -14,10 +14,8 @@ function App() {
   const [items, setItems] = React.useState(allItems)
 
   function addItem() {
-    setItems([
-      ...items,
-      allItems.find(i => !items.map(({id}) => id).includes(i.id)),
-    ])
+    const itemIds = items.map(i => i.id)
+    setItems([...items, allItems.find(i => !itemIds.includes(i.id))])
   }
 
   function removeItem(item) {
