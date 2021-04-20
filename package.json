@@ -16,7 +16,7 @@
   "dependencies": {
     "@kentcdodds/react-workshop-app": "^4.1.0",
     "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^13.1.2",
+    "@testing-library/user-event": "^13.1.5",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "chalk": "^4.1.0",
