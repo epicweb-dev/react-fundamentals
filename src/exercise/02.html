@@ -10,13 +10,14 @@
   <script type="module">
     const rootElement = document.getElementById('root')
 
-    const  element = React.createElement('div',{id:'root'},
-      React.createElement('div', {className: 'container'},
-        React.createElement('span', {children: 'hello'}),
-        React.createElement('span', {children: ' world'})
-      )
+    const helloElement = React.createElement('span', {children: 'hello'})
+    const worldElement = React.createElement('span', {children: ' world'})
+    const element = React.createElement(
+      'div', 
+      {className: 'container'},
+      helloElement, worldElement
     )
-    
+
     ReactDOM.render(element, rootElement)
 
   </script>
