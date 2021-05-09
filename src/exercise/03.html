@@ -8,8 +8,10 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
 
   <script type="text/babel">
-
-    const element = <div className="container">Hello World</div>
+    const children = 'Hello World'
+    const className = 'container'
+    const props = {children, className}
+    const element = <div {...props}/>
 
     ReactDOM.render(element, document.getElementById('root'))
   </script>
