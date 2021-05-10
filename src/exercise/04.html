@@ -8,10 +8,12 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
 
-    function message({children}) {
-      return <div className="message">{children}</div>
-    }
+    const message = ({children}) => <div className="message">{children}</div>
     
+    // ({children}) {
+    //   return <div className="message">{children}</div>
+    // }
+
     const element = (
       <div className="container">
         {message({children: 'Hello World'})}
