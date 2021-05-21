@@ -401,6 +401,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kylegach",
+      "name": "Kyle Gach",
+      "avatar_url": "https://avatars.githubusercontent.com/u/486540?v=4",
+      "profile": "https://kylegach.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true

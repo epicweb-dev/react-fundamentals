@@ -231,6 +231,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="http://cpcomponents.com"><img src="https://avatars.githubusercontent.com/u/32409546?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Casanova</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=aaronccasanova" title="Code">💻</a></td>
+    <td align="center"><a href="https://kylegach.com"><img src="https://avatars.githubusercontent.com/u/486540?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kyle Gach</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=kylegach" title="Documentation">📖</a></td>
   </tr>
 </table>
 
