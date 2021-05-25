@@ -8,6 +8,7 @@ function UsernameForm({onSubmitUsername}) {
   // 💰 Make sure to accept the `event` as an argument and call
   // `event.preventDefault()` to prevent the default behavior of form submit
   // events (which refreshes the page).
+  // 📜 https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
   //
   // 🐨 get the value from the username input (using whichever method
   // you prefer from the options mentioned in the instructions)
