@@ -8,14 +8,31 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
-    function Message({children}) {
-      return <div className="message">{children}</div>
+    function Message({subject, greeting}) {
+      return (
+        <div className="message">
+          {greeting}, {subject}
+        </div>
+      )
+    }
+
+    const PropTypes = {
+      string(props, propName, componentName) {
+        if (typeof props[propName] !== 'string') {
+          return new Error(`${propName} must be a string`)
+        }
+      },
+    }
+
+    Message.propTypes = {
+      greeting: PropTypes.string,
+      subject: PropTypes.string,
     }
 
     const element = (
       <div className="container">
-        <Message>Hello World</Message>
-        <Message>Goodbye World</Message>
+        <Message greeting={2} subject="World" />
+        <Message greeting="Goodbye" subject="World" />
       </div>
     )
 
