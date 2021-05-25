@@ -8,21 +8,14 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
-    function message({children}) {
+    function Message({children}) {
       return <div className="message">{children}</div>
     }
 
-    const helloElement = React.createElement(message, {
-      children: 'Hello World',
-    })
-    const goodbyeElement = React.createElement(message, {
-      children: 'Goodbye World',
-    })
-
     const element = (
       <div className="container">
-        {helloElement}
-        {goodbyeElement}
+        <Message>Hello World</Message>
+        <Message>Goodbye World</Message>
       </div>
     )
 
