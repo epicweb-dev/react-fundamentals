@@ -57,15 +57,13 @@ variable and how to fix it here for [windows][win-path] or
 
 ## Setup
 
-> If you want to commit and push your work as you go, you'll want to
-> [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
-> first and then clone your fork rather than this repo directly.
-
-After you've made sure to have the correct things (and versions) installed, you
+* Create a [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) of
+the Alley for of the React Fundamentals repo into your personal github account.
+* After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
 
 ```
-git clone https://github.com/kentcdodds/react-fundamentals.git
+git clone https://github.com/[username]/react-fundamentals.git
 cd react-fundamentals
 node setup
 ```
@@ -75,7 +73,7 @@ optional and just automatically adds your email to the links in the project to
 make filling out some forms easier.
 
 A few common issues during `node setup` have involved PATH variables (above
-links or [here](https://github.com/kentcdodds/react-fundamentals/issues/27)),
+links or [here](https://github.com/alleyinteractive/react-fundamentals/issues/27)),
 reinstalling git, node, or npm, and clearing npm caches.
 
 If you get any errors, please read through them and see if you can find out what
@@ -131,16 +129,24 @@ implement things differently than I do in my solution, so don't look to them as
 a complete authority.
 
 ### Exercises
+* Exercises are located in `src/exercise`
+* Exercise answer keys (final code) are located in `src/final`
+* When you first start the app you’ll be taken to a menu of all the exercises.
+  * Click on either the title of the exercise or the “exercise” button to proceed to a specific exercise’s content.
+  * Each exercise has some text to read in addition to a source code file (generally either an HTML or JS file). Exercise readmes will be visible on the left hand side of the app.
+  * Changes made to exercise files (html, js) will be hot-reloaded in the exercise app and rendered on the right side of your screen.
+* Once you’ve completed an exercise, you can run `npm test` at the root of the repo to determine if you’ve done the exercise correctly. see previous section in this doc about tests.
+  * In addition, you can double check your code against the final version in `src/final` and/or by using the “final” button on the exercise menu screen.
+* There’s an area in each exercise’s markdown file for you to take personal notes.
+* Create a separate PR for each exercise you complete (or, if you want to break things down further, for each extra credit as well).
+  * Be sure to note which repo you're merging into as your PR base, as it may be either this repo or Kent C. Dodds' repo by default (you want to merg into you _own_ fork).
 
+Example locations:
 - `src/exercise/00.md`: Background, Exercise Instructions, Extra Credit
 - `src/exercise/00.js`: Exercise with Emoji helpers
 - `src/__tests__/00.js`: Tests
 - `src/final/00.js`: Final version
 - `src/final/00.extra-0.js`: Final version of extra credit
-
-The purpose of the exercise is **not** for you to work through all the material.
-It's intended to get your brain thinking about the right questions to ask me as
-_I_ walk through the material.
 
 ### Helpful Emoji 🐨 💰 💯 📝 🦉 📜 💣 💪 🏁 👨‍💼 🚨
 
