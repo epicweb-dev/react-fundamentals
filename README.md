@@ -139,7 +139,7 @@ a complete authority.
   * In addition, you can double check your code against the final version in `src/final` and/or by using the “final” button on the exercise menu screen.
 * There’s an area in each exercise’s markdown file for you to take personal notes.
 * Create a separate PR for each exercise you complete (or, if you want to break things down further, for each extra credit as well).
-  * Be sure to note which repo you're merging into as your PR base, as it may be either this repo or Kent C. Dodds' repo by default (you want to merg into you _own_ fork).
+  * Be sure to note which repo you're merging into as your PR base, as it may be either this repo or Kent C. Dodds' repo by default (you want to merg into your _own_ fork).
 
 Example locations:
 - `src/exercise/00.md`: Background, Exercise Instructions, Extra Credit
