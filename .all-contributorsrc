@@ -419,6 +419,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "m4ttsch",
+      "name": "Matt Schlenker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19544466?v=4",
+      "profile": "https://www.omscs-notes.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
