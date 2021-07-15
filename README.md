@@ -233,6 +233,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://cpcomponents.com"><img src="https://avatars.githubusercontent.com/u/32409546?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Casanova</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=aaronccasanova" title="Code">💻</a></td>
     <td align="center"><a href="https://kylegach.com"><img src="https://avatars.githubusercontent.com/u/486540?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kyle Gach</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=kylegach" title="Documentation">📖</a></td>
     <td align="center"><a href="https://antdke.co"><img src="https://avatars.githubusercontent.com/u/22419667?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anthony Diké</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=antdke" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.omscs-notes.com"><img src="https://avatars.githubusercontent.com/u/19544466?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Schlenker</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=m4ttsch" title="Documentation">📖</a></td>
   </tr>
 </table>
 
