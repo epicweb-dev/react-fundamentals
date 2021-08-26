@@ -428,6 +428,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Siemik",
+      "name": "Jakub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45874801?v=4",
+      "profile": "https://github.com/Siemik",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
