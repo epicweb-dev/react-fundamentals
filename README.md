@@ -64,7 +64,7 @@ variable and how to fix it here for [windows][win-path] or
 After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
 
-```
+```shell
 git clone https://github.com/kentcdodds/react-fundamentals.git
 cd react-fundamentals
 node setup
@@ -86,7 +86,7 @@ it's a lot).
 If you can't get the setup script to work, then just make sure you have the
 right versions of the requirements listed above, and run the following commands:
 
-```
+```shell
 npm install
 npm run validate
 ```
@@ -94,7 +94,7 @@ npm run validate
 If you are still unable to fix issues and you know how to use Docker 🐳 you can
 setup the project with the following command:
 
-```
+```shell
 docker-compose up
 ```
 
