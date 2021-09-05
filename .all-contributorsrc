@@ -446,6 +446,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "lifeparticle",
+      "name": "Mahbub Zaman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1612112?v=4",
+      "profile": "https://medium.com/@lifeparticle",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
