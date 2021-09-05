@@ -437,6 +437,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "debone",
+      "name": "Victor Debone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/763457?v=4",
+      "profile": "https://debone.com.br",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
