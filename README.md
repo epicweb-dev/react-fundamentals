@@ -235,6 +235,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://antdke.co"><img src="https://avatars.githubusercontent.com/u/22419667?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anthony Diké</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=antdke" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.omscs-notes.com"><img src="https://avatars.githubusercontent.com/u/19544466?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Schlenker</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=m4ttsch" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Siemik"><img src="https://avatars.githubusercontent.com/u/45874801?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jakub</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Siemik" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://debone.com.br"><img src="https://avatars.githubusercontent.com/u/763457?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Victor Debone</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=debone" title="Documentation">📖</a></td>
   </tr>
 </table>
 
