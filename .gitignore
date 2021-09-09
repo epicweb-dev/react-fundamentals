@@ -5,3 +5,4 @@ build
 .idea/
 .vscode/
 .eslintcache
+.env
