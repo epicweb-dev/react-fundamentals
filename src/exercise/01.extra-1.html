@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic JavaScript-rendered Hello World</title>
+  </head>
+  <body>
+    <script type="module">
+      const rootEle = document.createElement('div')
+      rootEle.id = 'root'
+      document.body.append(rootEle)
+
+      const hWElement = document.createElement('div')
+      hWElement.textContent = 'Hello World dafasf'
+      hWElement.className = 'container'
+      rootEle.append(hWElement)
+    </script>
+  </body>
+</html>

@@ -6,6 +6,26 @@
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
 <!--   📜 https://github.com/mdn/js-examples/tree/master/modules -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic JavaScript-rendered Hello World</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      const rootEle = document.getElementById('root')
+      const hWElement = document.createElement('div')
+      hWElement.textContent = 'Hello World'
+      hWElement.className = 'container'
+      rootEle.append(hWElement)
+    </script>
+  </body>
+</html>
 
 <!-- These next instructions are to be written in JavaScript in the <script> tag -->
 <!-- 🐨 Create a div -->

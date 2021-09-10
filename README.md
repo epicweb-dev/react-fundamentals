@@ -112,8 +112,14 @@ To get the app up and running (and really see if it worked), run:
 npm start
 ```
 
+- 產生一個互動式的學習介面，左邊筆記跟 md 檔聯動，可以做筆記。
+- 右邊畫面是答案（final 資料夾）。
+
+
 This should start up your browser. If you're familiar, this is a standard
 [react-scripts](https://create-react-app.dev/) application.
+
+
 
 You can also open
 [the deployment of the app on Netlify](https://react-fundamentals.netlify.app/).
