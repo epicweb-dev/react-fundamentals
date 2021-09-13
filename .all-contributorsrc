@@ -455,6 +455,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mokajima",
+      "name": "Misaki Okajima",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10166985?v=4",
+      "profile": "https://mokajima.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true

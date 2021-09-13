@@ -238,6 +238,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://debone.com.br"><img src="https://avatars.githubusercontent.com/u/763457?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Victor Debone</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=debone" title="Documentation">📖</a></td>
     <td align="center"><a href="https://medium.com/@lifeparticle"><img src="https://avatars.githubusercontent.com/u/1612112?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mahbub Zaman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=lifeparticle" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://mokajima.com/"><img src="https://avatars.githubusercontent.com/u/10166985?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Misaki Okajima</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=mokajima" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
