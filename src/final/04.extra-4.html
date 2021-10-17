@@ -17,7 +17,7 @@
       )
     }
     Message.propTypes = {
-      subject: PropTypes.string.isRequired,
+      subject: PropTypes.string.isRequired,  // isRequired ensures a warning is shown if the prop isn't provided.
       greeting: PropTypes.string.isRequired,
     }
 
