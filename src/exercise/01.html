@@ -3,9 +3,12 @@
     <div id="root"></div>
   </bod>
   <script type="module">
+    const $root = document.createElement('div')
+    $root.id = 'root'
     const $div = document.createElement('div')
     $div.textContent = 'Hello World'
     $div.className = 'container'
-    document.getElementById('root').appendChild($div)
+    $root.appendChild($div)
+    document.body.appendChild($root)
   </script>
 </html>
