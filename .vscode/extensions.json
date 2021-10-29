@@ -3,7 +3,6 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "formulahendry.auto-rename-tag",
-    "mgmcdermott.vscode-language-babel",
     "VisualStudioExptTeam.vscodeintellicode"
   ]
 }

@@ -15,9 +15,6 @@
     "editor.suggest.showKeywords": false
   },
   "editor.renderWhitespace": "boundary",
-  "files.exclude": {
-    "USE_GITIGNORE": true
-  },
   "files.defaultLanguage": "{activeEditorLanguage}",
   "javascript.validate.enable": false,
   "search.exclude": {
