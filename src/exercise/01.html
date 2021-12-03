@@ -2,18 +2,30 @@
 <!-- http://localhost:3000/isolated/exercise/01.html -->
 
 <!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
-<!-- 🐨 Then create a <script type="module"> for your JavaScript -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
-<!--   📜 https://github.com/mdn/js-examples/tree/master/modules -->
+<html>
+  <body>
+    <div id="root"></div>
+    <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
+    <!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
+    <!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
+    <!--   📜 https://github.com/mdn/js-examples/tree/master/modules -->
 
-<!-- These next instructions are to be written in JavaScript in the <script> tag -->
-<!-- 🐨 Create a div -->
-<!--   💰 document.createElement('div') -->
+    <!-- These next instructions are to be written in JavaScript in the <script> tag -->
+    <!-- 🐨 Create a div -->
+    <!--   💰 document.createElement('div') -->
 
-<!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
-<!--   💰 div.textContent = '...' -->
+    <!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
+    <!--   💰 div.textContent = '...' -->
 
-<!-- 🐨 Append the div to the root div using `append` -->
-<!--   💰 document.getElementById('root') -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+    <!-- 🐨 Append the div to the root div using `append` -->
+    <!--   💰 document.getElementById('root') -->
+    <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+    <script type="module">
+      const createdDiv = document.createElement('div')
+      createdDiv.textContent = 'Hello World'
+      createdDiv.classList.add('container')
+      const root = document.documentElement
+      root.append(createdDiv)
+    </script>
+  </body>
+</html>
