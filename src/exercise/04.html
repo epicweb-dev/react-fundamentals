@@ -6,16 +6,90 @@
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+
   <script type="text/babel">
+    const PropTypes = {
+      string(props, propName, componentName) {
+        if (typeof props[propName] !== 'string') {
+          return new Error(
+            `Invalid prop ${propName} supplied to ${componentName}. Validation failed.`,
+          )
+        }
+      },
+    }
+    // Extra Credit 3:
+    //   Message3.propTypes = {
+    //     greeting: PropTypes.string,
+    //     subject: PropTypes.string,
+    //   }
+
     // 🐨 Make a function called `message` which returns the JSX we want to share
+    function message({children}) {
+      return <div className="message">{children}</div>
+    }
+
+    // For Extra Credit 2:
+    function Message2({children}) {
+      return <div className="message">{children}</div>
+    }
+
+    // For Extra Credit 3:
+    //   function Message3({subject, greeting}) {
+    //     return (
+    //       <div className="message">
+    //         {greeting}, {subject}
+    //       </div>
+    //     )
+    //   }
+
+    //For Extra Credit 4:
+    function Message4({subject, greeting}) {
+      return (
+        <div className="message">
+          {greeting}, {subject}
+        </div>
+      )
+    }
+
+    Message4.propTypes = {
+      subject: PropTypes.string.isRequired,
+      greeting: PropTypes.string.isRequired,
+    }
 
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
     const element = (
-      <div className="container">
-        <div className="message">Hello World</div>
-        <div className="message">Goodbye World</div>
-      </div>
+      <Message2>
+        <div>
+          {message({children: 'Hello World'})}
+          {message({children: 'Goodbye World'})}
+        </div>
+        <div>
+          Extra Credit 1:
+          {React.createElement(message, {children: 'Hello World'})}
+          {React.createElement(message, {children: 'Goodbye World'})}
+        </div>
+        <div>
+          Extra Credit 2:
+          <Message2>Hello World</Message2>
+          <Message2>Goodbye World</Message2>
+        </div>
+        <div>
+          Extra Credit 3: Commented out so Extra Credit 4 can show.
+          {
+            //<Message3 greeting="Hello" subject="World" />
+          }
+          {
+            //<Message3 greeting="Goodbye" subject="World" />
+          }
+        </div>
+        <div>
+          Extra Credit 4:
+          <Message4 greeting="Hello" subject="World" />
+          <Message4 greeting="Goodbye" subject="World" />
+        </div>
+      </Message2>
     )
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
