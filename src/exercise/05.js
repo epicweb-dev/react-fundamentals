@@ -48,9 +48,10 @@ function Box({className, style, ...props}) {
 }
 
 function Box2({className, size, style, ...props}) {
+  const sizeClassName = size ? `box--${size}` : '';
   return (
     <div
-      className={`box box--${size}`}
+      className={`box ${sizeClassName}`}
       style={{fontStyle: 'italic', ...style}}
       {...props}
     />
