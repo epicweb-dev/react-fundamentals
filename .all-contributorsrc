@@ -482,6 +482,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alexcwatt",
+      "name": "Alex Watt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/494201?v=4",
+      "profile": "https://alexcwatt.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
