@@ -22,7 +22,7 @@ test('calls the onSubmitUsername handler when the submit is fired', () => {
   userEvent.type(input, value)
   expect(submit).toBeDisabled() // upper-case
 
-  const output = screen.getByText(/lower case/i)
+  const output = screen.getByText(/lower\s?case/i)
   expect(output).toBeInTheDocument()
   alfredTip(
     output.getAttribute('role') !== 'alert',
