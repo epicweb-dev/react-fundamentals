@@ -491,6 +491,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "nedredmond",
+      "name": "Ned Redmond",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23404711?v=4",
+      "profile": "https://github.com/nedredmond",
+      "contributions": [
+        "test"
+      ]
     }
   ],
   "skipCi": true
