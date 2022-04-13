@@ -4,7 +4,7 @@ import {render, screen, prettyDOM} from '@testing-library/react'
 import App from '../final/05'
 // import App from '../exercise/05'
 
-test('renders the correct styles new', () => {
+test('renders the correct styles new', async () => {
   render(<App />)
   const allBoxes = screen.getAllByText(/box/i)
 
