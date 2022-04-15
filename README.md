@@ -6,7 +6,7 @@
   </strong>
   <p>
     Learn everything you need to be effective with the fundamental building
-    block of React applications. When you’re finished, you’ll be prepared to
+    block of React applications. When you're finished, you'll be prepared to
     create React components to build excellent experiences for your app's users.
   </p>
 
@@ -35,6 +35,10 @@
   ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
   (recommended),
   [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
+
+> NOTE: The EpicReact.dev videos were recorded with React version ^16.13 and all
+> material in this repo has been updated to React version ^18. Differences are
+> minor and any relevant differences are noted in the instructions.
 
 ## System Requirements
 

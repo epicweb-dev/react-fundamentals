@@ -6,8 +6,8 @@
 
   <!-- 🐨 add React and ReactDOM on the page.
        💰 Here are script tags that'll do the job:
-  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react@18.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.development.js"></script>
   -->
 
   <script type="module">
@@ -19,7 +19,7 @@
     const element = document.createElement('div')
     element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
     element.className = 'container' // 💰 in React, this is also called the "className" prop
-    // This is similar to ReactDOM.render
+    // This is similar to ReactDOM.createRoot().render()
     rootElement.append(element)
 
     // 🐨 Please re-implement the regular document.createElement code above
