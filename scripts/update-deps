@@ -1,4 +1,5 @@
-npx npm-check-updates --upgrade --reject husky
+# prettier-ignore
+npx npm-check-updates --upgrade --reject husky,chalk,react-scripts
 rm -rf node_modules package-lock.json
 npx npm@6 install
 npm run validate
