@@ -1,0 +1,11 @@
+tasks:
+  - init: npm install && npm run validate
+    command: npm run start
+
+vscode:
+  extensions:
+    - VisualStudioExptTeam.vscodeintellicode
+    - dbaeumer.vscode-eslint
+    - formulahendry.auto-rename-tag
+    - esbenp.prettier-vscode
+    - ms-azuretools.vscode-docker
