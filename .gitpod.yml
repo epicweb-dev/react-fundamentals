@@ -1,12 +1,14 @@
 tasks:
-  - init: npm install && npm run validate
+  - name: App
+    init: npm install && npm run validate
+    command: npm run start
+
+  - name: Set up email
     command: |
       echo "Autofilling Email"
       echo "Each exercise comes with a elaboration form to help your retention. Providing your email now will mean you don't have to provide it each time you fill out the form."
 
       npx "https://gist.github.com/kentcdodds/2d44448a8997b9964b1be44cd294d1f5"
-      npm run start
-      echo "Ready"
 
 vscode:
   extensions:

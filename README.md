@@ -45,10 +45,10 @@
 
 It's recommended you run everything in the same environment you work in every
 day, but if you don't want to set up the repository locally, you can get started
-with [Gitpod](https://gitpod.io),
+in one click with [Gitpod](https://gitpod.io),
 [CodeSandbox](https://codesandbox.io/s/github/kentcdodds/react-fundamentals), or
-[GitHub Codespaces](https://github.com/features/codespaces)
-([video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4))
+by following the [video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4)
+instructions for [GitHub Codespaces](https://github.com/features/codespaces).
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jacobparis/react-fundamentals)
 
