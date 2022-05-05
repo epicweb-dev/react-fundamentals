@@ -54,6 +54,9 @@
   },
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
   "breadcrumbs.enabled": true,
   "grunt.autoDetect": "off",
   "gulp.autoDetect": "off",
