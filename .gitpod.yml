@@ -3,6 +3,10 @@ tasks:
     init: npm install && npm run validate
     command: npm run start
 
+  - name: Test
+    command: npm run test
+    openMode: split-right
+
   - name: Set up email
     command: |
       clear
@@ -10,7 +14,7 @@ tasks:
       printf "\u001b[36;1mAutofilling Email\u001b[0m\n"
       printf "\u001b[2;1mEach exercise comes with a elaboration form to help your retention. Providing your email now will mean you don't have to provide it each time you fill out the form.\u001b[0m\n"
 
-      npx "https://gist.github.com/kentcdodds/2d44448a8997b9964b1be44cd294d1f5" \
+      npx -q "https://gist.github.com/kentcdodds/2d44448a8997b9964b1be44cd294d1f5" \
         && code "src/exercise/01.md" \
         && exit 0
 
