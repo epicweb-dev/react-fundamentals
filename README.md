@@ -25,7 +25,7 @@
 [![GPL 3.0 License][license-badge]][license]
 [![All Contributors][all-contributors-badge]](#contributors-)
 [![Code of Conduct][coc-badge]][coc]
-[![Gitpod ready-to-code][gitpod-badge]](https://gitpod.io/#https://github.com/jacobparis/react-fundamentals)
+[![Gitpod ready-to-code][gitpod-badge]](https://gitpod.io/#https://github.com/kentcdodds/react-fundamentals)
 <!-- prettier-ignore-end -->
 
 ## Prerequisites
@@ -50,7 +50,7 @@ in one click with [Gitpod](https://gitpod.io),
 by following the [video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4)
 instructions for [GitHub Codespaces](https://github.com/features/codespaces).
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jacobparis/react-fundamentals)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kentcdodds/react-fundamentals)
 
 For a local development environment, follow the instructions below
 
