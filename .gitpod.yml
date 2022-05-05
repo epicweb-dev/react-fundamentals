@@ -1,7 +1,8 @@
 tasks:
   - name: App
-    init: npm install && npm run validate
+    init: npm install
     command: npm run start
+    openMode: split-left
 
   - name: Test
     command: npm run test
@@ -15,7 +16,6 @@ tasks:
       printf "\u001b[2;1mEach exercise comes with a elaboration form to help your retention. Providing your email now will mean you don't have to provide it each time you fill out the form.\u001b[0m\n"
 
       npx "https://gist.github.com/kentcdodds/2d44448a8997b9964b1be44cd294d1f5" \
-        && code "src/exercise/01.md" \
         && exit 0
 
 vscode:
