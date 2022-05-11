@@ -500,6 +500,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "ozadari5",
+      "name": "Oz Adari",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92675396?v=4",
+      "profile": "https://github.com/ozadari5",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
