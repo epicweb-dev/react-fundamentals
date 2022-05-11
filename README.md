@@ -256,6 +256,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/octokatherine"><img src="https://avatars.githubusercontent.com/u/49968061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Katherine Peterson</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=octokatherine" title="Documentation">📖</a></td>
     <td align="center"><a href="https://alexcwatt.com/"><img src="https://avatars.githubusercontent.com/u/494201?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Watt</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=alexcwatt" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/nedredmond"><img src="https://avatars.githubusercontent.com/u/23404711?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ned Redmond</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=nedredmond" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/ozadari5"><img src="https://avatars.githubusercontent.com/u/92675396?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oz Adari</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=ozadari5" title="Documentation">📖</a></td>
   </tr>
 </table>
 
