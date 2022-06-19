@@ -148,7 +148,7 @@ a complete authority.
 - `src/exercise/00.tsx`: Exercise with Emoji helpers
 - `src/__tests__/00.test.tsx`: Tests
 - `src/final/00.tsx`: Final version
-- `src/final/00.extra-0.test.tsx`: Final version of extra credit
+- `src/final/00.extra-0.tsx`: Final version of extra credit
 
 The purpose of the exercise is **not** for you to work through all the material.
 It's intended to get your brain thinking about the right questions to ask me as
