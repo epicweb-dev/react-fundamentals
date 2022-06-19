@@ -1,15 +1,18 @@
 import * as React from 'react'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from '../final/06'
 // import App from '../exercise/06'
 
+let windowAlertSpy: jest.SpyInstance<void, Parameters<typeof window['alert']>>
+const global = window || globalThis
+
 beforeAll(() => {
-  jest.spyOn(global, 'alert').mockImplementation(() => {})
+  windowAlertSpy = jest.spyOn(global, 'alert').mockImplementation(() => { })
 })
 
 beforeEach(() => {
-  global.alert.mockClear()
+  windowAlertSpy.mockClear()
 })
 
 test('calls the onSubmitUsername handler when the submit is fired', async () => {

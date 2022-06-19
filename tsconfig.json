@@ -32,7 +32,8 @@
     "types": [
       "react",
       "react-dom",
-      "jest"
+      "jest",
+      "@testing-library/jest-dom"
     ], /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */

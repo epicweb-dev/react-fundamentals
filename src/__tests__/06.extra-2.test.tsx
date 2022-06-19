@@ -1,21 +1,24 @@
 import * as React from 'react'
-import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
-import {render, screen} from '@testing-library/react'
+import { alfredTip } from '@kentcdodds/react-workshop-app/test-utils'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from '../final/06.extra-2'
 // import App from '../exercise/06'
 
+let windowAlertSpy: jest.SpyInstance<void, Parameters<typeof window['alert']>>
+const global = window || globalThis
+
 beforeAll(() => {
-  jest.spyOn(global, 'alert').mockImplementation(() => {})
+  windowAlertSpy = jest.spyOn(global, 'alert').mockImplementation(() => { })
 })
 
 beforeEach(() => {
-  global.alert.mockClear()
+  windowAlertSpy.mockClear()
 })
 
 test('calls the onSubmitUsername handler when the submit is fired', async () => {
   render(<App />)
-  const input = screen.getByLabelText(/username/i)
+  const input = screen.getByLabelText<HTMLInputElement>(/username/i)
   const submit = screen.getByText(/submit/i)
 
   let value = 'A'
