@@ -2,13 +2,20 @@
 // 💯 using refs
 // http://localhost:3000/isolated/final/06.extra-1.js
 
-import * as React from 'react'
+import React, { useRef } from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  const usernameInputRef = React.useRef()
+type UsernameFormProps = { onSubmitUsername: (username: string) => void }
 
-  function handleSubmit(event) {
+function UsernameForm({ onSubmitUsername }: UsernameFormProps) {
+  const usernameInputRef = useRef<HTMLInputElement>(null)
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+
+    if (!usernameInputRef.current) {
+      return
+    }
+
     onSubmitUsername(usernameInputRef.current.value)
   }
 
@@ -24,7 +31,7 @@ function UsernameForm({onSubmitUsername}) {
 }
 
 function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  const onSubmitUsername = (username: string) => alert(`You entered: ${username}`)
   return <UsernameForm onSubmitUsername={onSubmitUsername} />
 }
 

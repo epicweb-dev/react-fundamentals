@@ -2,17 +2,19 @@
 // 💯 Control the input value
 // http://localhost:3000/isolated/final/06.extra-3.js
 
-import * as React from 'react'
+import React, { useState } from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  const [username, setUsername] = React.useState('')
+type UsernameFormProps = { onSubmitUsername: (username: string) => void }
 
-  function handleSubmit(event) {
+function UsernameForm({ onSubmitUsername }: UsernameFormProps) {
+  const [username, setUsername] = useState('')
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     onSubmitUsername(username)
   }
 
-  function handleChange(event) {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     setUsername(event.target.value.toLowerCase())
   }
 
@@ -33,9 +35,9 @@ function UsernameForm({onSubmitUsername}) {
 }
 
 function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  const onSubmitUsername = (username: string) => alert(`You entered: ${username}`)
   return (
-    <div style={{minWidth: 400}}>
+    <div style={{ minWidth: 400 }}>
       <UsernameForm onSubmitUsername={onSubmitUsername} />
     </div>
   )

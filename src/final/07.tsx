@@ -1,24 +1,37 @@
 // Rendering Lists
 // http://localhost:3000/isolated/final/07.js
 
-import * as React from 'react'
+import React, { useState } from 'react'
 
-const allItems = [
-  {id: 'apple', value: '🍎 apple'},
-  {id: 'orange', value: '🍊 orange'},
-  {id: 'grape', value: '🍇 grape'},
-  {id: 'pear', value: '🍐 pear'},
+type Item = {
+  id: 'apple' | 'orange' | 'grape' | 'pear'
+  value: '🍎 apple' | '🍊 orange' | '🍇 grape' | '🍐 pear'
+}
+
+type Items = Item[]
+
+const allItems: Items = [
+  { id: 'apple', value: '🍎 apple' },
+  { id: 'orange', value: '🍊 orange' },
+  { id: 'grape', value: '🍇 grape' },
+  { id: 'pear', value: '🍐 pear' },
 ]
 
 function App() {
-  const [items, setItems] = React.useState(allItems)
+  const [items, setItems] = useState(allItems)
 
   function addItem() {
     const itemIds = items.map(i => i.id)
-    setItems([...items, allItems.find(i => !itemIds.includes(i.id))])
+
+    const foundItem = allItems.find(i => !itemIds.includes(i.id))
+    if (!foundItem) {
+      return
+    }
+
+    setItems([...items, foundItem])
   }
 
-  function removeItem(item) {
+  function removeItem(item: Item) {
     setItems(items.filter(i => i.id !== item.id))
   }
 
@@ -27,7 +40,7 @@ function App() {
       <button disabled={items.length >= allItems.length} onClick={addItem}>
         add item
       </button>
-      <ul style={{listStyle: 'none', paddingLeft: 0}}>
+      <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
         {items.map(item => (
           <li key={item.id}>
             <button onClick={() => removeItem(item)}>remove</button>{' '}

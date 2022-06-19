@@ -1,7 +1,7 @@
 // Styling
 // http://localhost:3000/isolated/exercise/05.js
 
-import * as React from 'react'
+import React from 'react'
 import '../box-styles.css'
 
 // 🐨 add a className prop to each div and apply the correct class names
