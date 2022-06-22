@@ -518,6 +518,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sunnatganiev",
+      "name": "Sunnatullo Ganiev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38115176?v=4",
+      "profile": "https://github.com/sunnatganiev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
