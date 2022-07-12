@@ -3,27 +3,29 @@
 
 <body>
   <div id="root"></div>
-
-  <!-- 🐨 add React and ReactDOM on the page.
-       💰 Here are script tags that'll do the job:
+  <!-- 🐨 add React and ReactDOM on the page.-->
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
-  -->
 
   <script type="module">
-    const rootElement = document.getElementById('root')
+    const container = document.getElementById('root')
+    const root = ReactDOM.createRoot(container)
 
-    // You're going to re-implement this code using React!
-    // 💣 So go ahead and delete this implementation (or comment it out for now)
-    // These three lines are similar to React.createElement
-    const element = document.createElement('div')
-    element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
-    element.className = 'container' // 💰 in React, this is also called the "className" prop
-    // This is similar to ReactDOM.createRoot().render()
-    rootElement.append(element)
+    // These lines are similar to React.createElement
+    // element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
+    // element.className = 'container' // 💰 in React, this is also called the "className" prop
+    const spanType = 'span'
+    const spanText1 = {children: 'Hello', key: '1'}
+    const spanText2 = {children: 'World', key: '2'}
+    const spanElement1 = React.createElement(spanType, spanText1)
+    const spanElement2 = React.createElement(spanType, spanText2)
 
-    // 🐨 Please re-implement the regular document.createElement code above
-    // with these React API calls
-    // 💰 The example in the markdown file should be a good hint for you.
+    const elementProps = {
+      children: [spanElement1, ' ', spanElement2],
+      className: 'container',
+    }
+
+    const element = React.createElement('div', elementProps)
+    root.render(element)
   </script>
 </body>
