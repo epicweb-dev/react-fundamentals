@@ -17,6 +17,8 @@
     const spanType = 'span'
     const spanText1 = {children: 'Hello', key: '1'}
     const spanText2 = {children: 'World', key: '2'}
+
+    // The role of react is to create element
     const spanElement1 = React.createElement(spanType, spanText1)
     const spanElement2 = React.createElement(spanType, spanText2)
 
@@ -26,6 +28,8 @@
     }
 
     const element = React.createElement('div', elementProps)
+
+    // The role of render is to take elements and put them on the page
     root.render(element)
   </script>
 </body>
