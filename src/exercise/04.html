@@ -11,12 +11,61 @@
 
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+
+    // ---- main exercise
+    // function message({children}) {
+    //   return <div className="message">{children}</div>
+    // }
+
+    // const element = (
+    //   <div className="container">
+    //     {message({children: 'Hello World'})}
+    //     {message({children: 'Goodbye World'})}
+    //   </div>
+    // )
+
+    // --- Extra 2 - CC with JSX
+
+    // function Message({children}) {
+    //   return <div className="message">{children}</div>
+    // }
+
+    // const element = (
+    //   <div className="container">
+    //     <Message>Hello World'</Message>
+    //     <Message>Goodbye World'</Message>
+    //   </div>
+    // )
+
+    // --- Extra 3 - Runtime validation with PropTypes
+
+    function Message({subject, greeting}) {
+      return (
+        <div className="message">
+          {greeting} {subject}
+        </div>
+      )
+    }
+
     const element = (
       <div className="container">
-        <div className="message">Hello World</div>
-        <div className="message">Goodbye World</div>
+        <Message greeting="Hello" subject="World" />
+        <Message greeting="Goodbye" subject="World" />
       </div>
     )
+
+    const PropTypes = {
+      string(props, propName, componentName) {
+        if (typeof props[propName] !== 'string') {
+          return new Error('Some useful error message here')
+        }
+      },
+    }
+
+    Message.propTypes = {
+      greeting: PropTypes.string,
+      subject: PropTypes.string,
+    }
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.createRoot(document.getElementById('root')).render(element)
