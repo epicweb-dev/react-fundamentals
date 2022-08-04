@@ -6,6 +6,8 @@
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  <!-- Extra 4 - prop-types package -->
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
 
@@ -37,7 +39,7 @@
     //   </div>
     // )
 
-    // --- Extra 3 - Runtime validation with PropTypes
+    // --- Extra 3 - Runtime validation with PropTypes && Extra 5 React.Fragment
 
     function Message({subject, greeting}) {
       return (
@@ -48,16 +50,20 @@
     }
 
     const element = (
-      <div className="container">
+      <>
         <Message greeting="Hello" subject="World" />
         <Message greeting="Goodbye" subject="World" />
-      </div>
+      </>
     )
 
     const PropTypes = {
       string(props, propName, componentName) {
         if (typeof props[propName] !== 'string') {
-          return new Error('Some useful error message here')
+          return new Error(
+            `Hey, the component ${componentName} needs the prop ${propName} to be a string, but a ${typeof props[
+              propName
+            ]} was passed`,
+          )
         }
       },
     }
