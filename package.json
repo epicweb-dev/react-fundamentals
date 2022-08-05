@@ -11,7 +11,7 @@
   "main": "src/index.js",
   "engines": {
     "node": "14 || 16 || 18",
-    "npm": ">=6"
+    "npm": ">=8.16.0"
   },
   "dependencies": {
     "@kentcdodds/react-workshop-app": "^6.0.1",
