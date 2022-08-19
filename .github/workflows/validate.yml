@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [14, 16, 18]
     runs-on: ${{ matrix.os }}
     steps:
       - name: ⬇️ Checkout repo
@@ -22,7 +21,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 8
 
       - name: npm 8
         run: npm install --global npm@8
