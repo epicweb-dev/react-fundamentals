@@ -16,21 +16,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 8
+          node-version: 18
 
       - name: npm 8
-        run: |
-          npm --version
-          npm install --global npm@8
-          npm --version
-
-      - name: npm version
-        run: npm --version
+        run: npm install --global npm@8
 
       - name: ▶️ Run setup script
         run: npm run setup
