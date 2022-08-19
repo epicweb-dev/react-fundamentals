@@ -22,10 +22,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 8
-          check-latest: true
 
       - name: npm 8
-        run: npm install --global npm@8
+        run: |
+          npm --version
+          npm install --global npm@8
 
       - name: ▶️ Run setup script
         run: npm run setup
