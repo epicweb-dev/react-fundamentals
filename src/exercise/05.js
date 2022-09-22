@@ -39,9 +39,18 @@ const largeBox = (
   </div>
 )
 
-const Box = ({className, style, children}) => {
+const Box = ({size, style, children}) => {
+  const sizes = {
+    small: 'box--small',
+    mediuam: 'box--medium',
+    large: 'box--large',
+  }
+
   return (
-    <div className={`box ${className}`} style={{fontStyle: 'italic', ...style}}>
+    <div
+      className={`box ${sizes[size]}`}
+      style={{fontStyle: 'italic', ...style}}
+    >
       {children}
     </div>
   )
@@ -50,6 +59,9 @@ const Box = ({className, style, children}) => {
 function App() {
   return (
     <div>
+      <Box size="small" style={{backgroundColor: 'lightblue'}}>
+        small lightblue box
+      </Box>
       {smallBox}
       {mediumBox}
       {largeBox}
