@@ -527,7 +527,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jcat4",
+      "name": "Joey Cardosi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7866287?v=4",
+      "profile": "https://github.com/jcat4",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
