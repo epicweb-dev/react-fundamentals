@@ -536,6 +536,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Havock94",
+      "name": "Luca",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7635248?v=4",
+      "profile": "https://github.com/Havock94",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,

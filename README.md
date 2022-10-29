@@ -263,6 +263,7 @@ Thanks goes to these wonderful people
     <tr>
       <td align="center"><a href="https://github.com/sunnatganiev"><img src="https://avatars.githubusercontent.com/u/38115176?v=4?s=100" width="100px;" alt="Sunnatullo Ganiev"/><br /><sub><b>Sunnatullo Ganiev</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=sunnatganiev" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/jcat4"><img src="https://avatars.githubusercontent.com/u/7866287?v=4?s=100" width="100px;" alt="Joey Cardosi"/><br /><sub><b>Joey Cardosi</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=jcat4" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Havock94"><img src="https://avatars.githubusercontent.com/u/7635248?v=4?s=100" width="100px;" alt="Luca"/><br /><sub><b>Luca</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Havock94" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
