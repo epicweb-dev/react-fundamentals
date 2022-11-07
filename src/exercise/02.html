@@ -4,11 +4,8 @@
 <body>
   <div id="root"></div>
 
-  <!-- 🐨 add React and ReactDOM on the page.
-       💰 Here are script tags that'll do the job:
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
-  -->
 
   <script type="module">
     const rootElement = document.getElementById('root')
@@ -16,11 +13,18 @@
     // You're going to re-implement this code using React!
     // 💣 So go ahead and delete this implementation (or comment it out for now)
     // These three lines are similar to React.createElement
-    const element = document.createElement('div')
-    element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
-    element.className = 'container' // 💰 in React, this is also called the "className" prop
-    // This is similar to ReactDOM.createRoot().render()
-    rootElement.append(element)
+    // const element = document.createElement('div')
+    // element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
+    // element.className = 'container' // 💰 in React, this is also called the "className" prop
+    // // This is similar to ReactDOM.createRoot().render()
+    // rootElement.append(element)
+    const spanElement1 = React.createElement('span', {key: 1, children: 'Hello'})
+    const spanElement2 = React.createElement('span', {key: 2, children: 'World'})
+    const reactElement = React.createElement('div', {className: 'container', children: [spanElement1, ' ', spanElement2]})
+
+    const root = ReactDOM.createRoot(rootElement)
+    root.render(reactElement)
+
 
     // 🐨 Please re-implement the regular document.createElement code above
     // with these React API calls
