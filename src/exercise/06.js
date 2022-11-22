@@ -3,36 +3,75 @@
 
 import * as React from 'react'
 
-function UsernameForm({onSubmitUsername}) {
-  // 🐨 add a submit event handler here (`handleSubmit`).
-  // 💰 Make sure to accept the `event` as an argument and call
-  // `event.preventDefault()` to prevent the default behavior of form submit
-  // events (which refreshes the page).
-  // 📜 https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
-  //
-  // 🐨 get the value from the username input (using whichever method
-  // you prefer from the options mentioned in the instructions)
-  // 💰 For example: event.target.elements[0].value
-  // 🐨 Call `onSubmitUsername` with the value of the input
+function UsernameForm({onSubmitInfo}) {
 
-  // 🐨 add the onSubmit handler to the <form> below
+  //  hook - more direct to accessing inputs
+  const inputAge = React.useRef(null)
+  const [error, setError] = React.useState('')
+  const [name, setName] = React.useState('')
 
-  // 🐨 make sure to associate the label to the input.
-  // to do so, set the value of 'htmlFor' prop of the label to the id of input
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const age = inputAge.current.value
+    const username = e.target.username.value
+    // we are using 'name' from the setter, not the 'e'
+    onSubmitInfo(name,username,age)
+  }
+
+  // handleing error if uppercase chars are used
+  const handleUsernameChange = (e) => {
+    const inputValue = e.target.value
+    const isValid = inputValue === inputValue.toLowerCase()
+    setError(isValid ? null : 'Username must be lower case')
+  }
+
+  // directly not allowing upper case chars - transofrming to lowercase
+  const handleNameChange = (e) => {
+    const inputValue = e.target.value
+    setName(inputValue.toLowerCase())
+  }
+
   return (
-    <form>
+    <form
+      onSubmit={handleSubmit}
+    >
       <div>
-        <label>Username:</label>
-        <input type="text" />
+        <label htmlFor="name">Name:</label>
+        {/* start controlled input using 'value' */}
+        <input
+          onChange={handleNameChange}
+          value={name}
+          type="text"
+          id="name"
+          />
       </div>
-      <button type="submit">Submit</button>
+      {/* end controlled input */}
+      <div>
+        <label htmlFor="username">Username:</label>
+        <input
+          onChange={handleUsernameChange}
+          type="text"
+          id="username"
+          />
+      </div>
+      <div
+        style={{color: 'red'}}
+        role="alert"
+      >{error}</div>
+      <div>
+        <label htmlFor="age">Age:</label>
+        <input ref={inputAge} type="text" id="age" />
+      </div>
+      <button type="submit" disabled={Boolean(error)} >Submit</button>
     </form>
   )
 }
 
 function App() {
-  const onSubmitUsername = username => alert(`You entered: ${username}`)
-  return <UsernameForm onSubmitUsername={onSubmitUsername} />
+  const onSubmitInfo = (name, username, age) => {
+    alert(`Hello ${name}!\nYour username is ${username} and you are ${age}`)
+  }
+  return <UsernameForm onSubmitInfo={onSubmitInfo} />
 }
 
 export default App
