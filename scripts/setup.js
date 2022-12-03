@@ -16,15 +16,20 @@ function color(modifier, string) {
 
 console.log(color('info', '▶️  Starting workshop setup...'))
 
-var error = spawnSync('npx --version', {shell: true}).stderr.toString().trim()
-if (error) {
+var output = spawnSync('npm --version', {shell: true}).stdout.toString().trim()
+var outputParts = output.split('.')
+var major = Number(outputParts[0])
+var minor = Number(outputParts[1])
+if (major < 8 || (major === 8 && minor < 16)) {
   console.error(
     color(
       'danger',
-      '🚨  npx is not available on this computer. Please install npm@5.2.0 or greater',
+      '🚨  npm version is ' +
+        output +
+        ' which is out of date. Please install npm@8.16.0 or greater',
     ),
   )
-  throw error
+  throw new Error('npm version is out of date')
 }
 
 var command =
