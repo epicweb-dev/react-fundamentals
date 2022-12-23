@@ -2,6 +2,16 @@
 <!-- http://localhost:3000/isolated/exercise/01.html -->
 
 <!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
+<body>
+  <div id="root"></div>
+  <script type="module">
+    const elementDiv = document.getElementById('root')
+    const div = document.createElement('div')
+    div.textContent = 'Hello World'
+    div.className = 'container'
+    elementDiv.append(div)
+  </script>
+</body>
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
@@ -9,7 +19,6 @@
 
 <!-- These next instructions are to be written in JavaScript in the <script> tag -->
 <!-- 🐨 Create a div -->
-<!--   💰 document.createElement('div') -->
 
 <!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
 <!--   💰 div.textContent = '...' -->
