@@ -545,6 +545,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "anjola-adeuyi",
+      "name": "Anjola Adeuyi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57623705?v=4",
+      "profile": "https://www.linkedin.com/in/anjola-adeuyi/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
