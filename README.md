@@ -265,6 +265,7 @@ Thanks goes to these wonderful people
       <td align="center"><a href="https://github.com/jcat4"><img src="https://avatars.githubusercontent.com/u/7866287?v=4?s=100" width="100px;" alt="Joey Cardosi"/><br /><sub><b>Joey Cardosi</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=jcat4" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/Havock94"><img src="https://avatars.githubusercontent.com/u/7635248?v=4?s=100" width="100px;" alt="Luca"/><br /><sub><b>Luca</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=Havock94" title="Documentation">📖</a></td>
       <td align="center"><a href="https://www.linkedin.com/in/anjola-adeuyi/"><img src="https://avatars.githubusercontent.com/u/57623705?v=4?s=100" width="100px;" alt="Anjola Adeuyi"/><br /><sub><b>Anjola Adeuyi</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=anjola-adeuyi" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/ASPzoomin"><img src="https://avatars.githubusercontent.com/u/20736334?v=4?s=100" width="100px;" alt="Sai Pavan"/><br /><sub><b>Sai Pavan</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=ASPzoomin" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
