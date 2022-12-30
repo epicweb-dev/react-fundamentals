@@ -563,6 +563,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jmurphyau",
+      "name": "James Murphy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/445432?v=4",
+      "profile": "https://github.com/jmurphyau",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "skipCi": true,
