@@ -16,9 +16,9 @@ import '../box-styles.css'
 
 const fontStyle = 'italic';
 
-const smallBox = <div className="box box--small" style={{ fontStyle, backgroundColor: 'lightblue' }}>small lightblue box</div>;
-const mediumBox = <div className="box box--medium" style={{ fontStyle, backgroundColor: 'pink' }}>medium pink box</div>;
-const largeBox = <div className="box box--large" style={{ fontStyle, backgroundColor: 'orange' }}>large orange box</div>;
+// const smallBox = <div className="box box--small" style={{ fontStyle, backgroundColor: 'lightblue' }}>small lightblue box</div>;
+// const mediumBox = <div className="box box--medium" style={{ fontStyle, backgroundColor: 'pink' }}>medium pink box</div>;
+// const largeBox = <div className="box box--large" style={{ fontStyle, backgroundColor: 'orange' }}>large orange box</div>;
 
 const Box = ({ size, style, ...props }) => {
   const sizeClassName = size ? `box--${size}` : ''
