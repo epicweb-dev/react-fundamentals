@@ -39,3 +39,17 @@
   width: 100px;
   text-align: right;
 }
+
+.keys aside {
+  margin-top: 40px;
+}
+
+.keys .settings {
+  align-items: center;
+  display: flex;
+}
+
+.keys input[type='checkbox'] {
+  height: 16px;
+  width: 16px;
+}
