@@ -27,7 +27,7 @@ function App() {
       <button disabled={items.length >= allItems.length} onClick={addItem}>
         add item
       </button>
-      <ul style={{listStyle: 'none', paddingLeft: 0}}>
+      <ul>
         {items.map(item => (
           <li key={item.id}>
             <button onClick={() => removeItem(item)}>remove</button>{' '}

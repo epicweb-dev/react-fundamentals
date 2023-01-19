@@ -27,7 +27,7 @@ function App() {
       <button disabled={items.length >= allItems.length} onClick={addItem}>
         add item
       </button>
-      <ul style={{listStyle: 'none', paddingLeft: 0}}>
+      <ul>
         {items.map(item => (
           // 🐨 add a key prop to the <li> below. Set it to item.id
           <li>

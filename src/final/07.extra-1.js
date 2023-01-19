@@ -38,39 +38,61 @@ function FocusDemo() {
       <main>
         <div>
           <h1>Without a key</h1>
-          {items.map(item => (
-            <input
-              className={`${item.id}-input`}
-              value={item.value}
-              onChange={getChangeHandler(item)}
-            />
-          ))}
+          <ul style={{display: 'flex', gap: '10px'}}>
+            {items.map((item, index) => (
+              <li>
+                <label htmlFor={`no-key-${item.id}-input`}>
+                  No key #{index + 1}
+                </label>
+                <input
+                  id={`no-key-${item.id}-input`}
+                  className={`${item.id}-input`}
+                  value={item.value}
+                  onChange={getChangeHandler(item)}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <h1>With array index as key</h1>
-          {items.map((item, index) => (
-            <input
-              className={`${item.id}-input`}
-              key={index}
-              value={item.value}
-              onChange={getChangeHandler(item)}
-            />
-          ))}
+          <ul style={{display: 'flex', gap: '10px'}}>
+            {items.map((item, index) => (
+              <li key={index}>
+                <label htmlFor={`index-key-${item.id}-input`}>
+                  Index key #{index + 1}
+                </label>
+                <input
+                  id={`index-key-${item.id}-input`}
+                  className={`${item.id}-input`}
+                  value={item.value}
+                  onChange={getChangeHandler(item)}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
-          <h1>With a Proper Key</h1>
-          {items.map(item => (
-            <input
-              className={`${item.id}-input`}
-              key={item.id}
-              value={item.value}
-              onChange={getChangeHandler(item)}
-            />
-          ))}
+          <h1>With a proper key</h1>
+          <ul style={{display: 'flex', gap: '10px'}}>
+            {items.map((item, index) => (
+              <li key={item.id}>
+                <label htmlFor={`proper-key-${item.id}-input`}>
+                  Proper key #{index + 1}
+                </label>
+                <input
+                  id={`proper-key-${item.id}-input`}
+                  className={`${item.id}-input`}
+                  value={item.value}
+                  onChange={getChangeHandler(item)}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
       </main>
-      <aside>
-        <div className="settings">
+      <aside style={{marginTop: '40px'}}>
+        <div style={{alignItems: 'center', display: 'flex', gap: '8px'}}>
           <input
             id="autoshuffle"
             type="checkbox"
