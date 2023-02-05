@@ -269,6 +269,9 @@ Thanks goes to these wonderful people
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jmurphyau"><img src="https://avatars.githubusercontent.com/u/445432?v=4?s=100" width="100px;" alt="James Murphy"/><br /><sub><b>James Murphy</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Ajmurphyau" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jgorfine-zendesk"><img src="https://avatars.githubusercontent.com/u/93289772?v=4?s=100" width="100px;" alt="Jen Gorfine"/><br /><sub><b>Jen Gorfine</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/issues?q=author%3Ajgorfine-zendesk" title="Bug reports">🐛</a> <a href="#a11y-jgorfine-zendesk" title="Accessibility">️️️️♿️</a> <a href="https://github.com/kentcdodds/react-fundamentals/commits?author=jgorfine-zendesk" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ambujsahu81"><img src="https://avatars.githubusercontent.com/u/118078892?v=4?s=100" width="100px;" alt="Ambuj sahu"/><br /><sub><b>Ambuj sahu</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=ambujsahu81" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
