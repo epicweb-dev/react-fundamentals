@@ -10,7 +10,7 @@
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
-    "node": "14 || 16 || 18",
+    "node": "14 || 16 || 18 || 19",
     "npm": ">=8.16.0"
   },
   "dependencies": {
