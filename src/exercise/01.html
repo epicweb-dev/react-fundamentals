@@ -2,6 +2,43 @@
 <!-- http://localhost:3000/isolated/exercise/01.html -->
 
 <!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
+    <html>
+        <body>
+            <!--<div id="root"></div>-->
+            <script type="module">
+                //all Javascript here
+
+                //extra credit create root within js
+                const rootNode = document.createElement('div')
+                //rootNode.id = 'root'
+                rootNode.setAttribute('id', 'root') //-> <div id="root"> tag
+
+                //appending the div tag to the body in the doc
+                document.body.append(rootNode)
+
+                //crating a div element
+                //🐨 Create a div and further down used rootElement to append
+                const divElement = document.createElement("div")
+                const rootElement = document.getElementById('root')
+
+                //🐨 Set the div's textContent to 'Hello World'
+                divElement.textContent = "Hello World"
+
+                //and classname to container
+                divElement.className = "container"
+
+                //note, to not use () for js
+
+                //now using the append function to set the divElement on root in html
+
+                //rootElement.append(divElement)    //first implementation
+                //rootNode.append(rootElement)      //test
+                rootNode.append(divElement)         //extra credit implementation
+                //element appended and displayed in root in html
+
+            </script>
+        </body>
+    </html>
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->

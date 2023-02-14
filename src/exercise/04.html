@@ -6,17 +6,122 @@
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+
+  <!--extra credit 4, adding the prop-types package.-->
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+
+
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
 
+//Adding a PropTypes to get some verification of the passed input into the funtion parameters.
+
+const PropTypes = {
+  string(props, propName, componentName){
+    if(typeof props[propName]!== 'string'){ 
+      return new Error('The element ${componentName} properties are not Strings. Expects two strings. Please review the element.')
+
+    } 
+  }
+}
+//extra credit 4 done, semi tested.
+
+//prop type validation adds memory and processor stress. Reducing app optimization.
+
+//function message returning JSX compilable result    
+/*
+function message({children}){
+  return <div className="message">{children}</div>
+}
+*/
+
+//testing another implementation of the message function
+//overload of message() with now two parameters
+
+//note the function name and the class name cannot be the same, had a bug for both being 'message' RIP bug
+function Message({subject, greeting}){
+  return <div className = "message">{greeting}, {subject}</div>
+
+}
+
+//impementing propTypes to the Message function.
+Message.propTypes = {
+  subject: PropTypes.string,
+  greeting: PropTypes.string
+}
+
+    //<div className = 'message'>{children}</div>
+
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+    
+    /*
+    const element = (
+      <div className="container">
+        {message({children: 'Hello World'})}
+        {message({children: 'Goodbye World'})}
+      </div>
+    )
+    */
+    //working
+
+    //extra credit pt1.
+    //passing the createElement in the first parameter and the children in the second
+
+    //making a costum component with React.createElement
+    /*
+    const element = (
+      <div className = 'container'>
+        {React.createElement(message, {children: 'Hello World'})}
+        {React.createElement(message, {children: 'Goodbye World'})}
+
+      </div>
+    )
+    */
+    //working, extra credit 1.
+
+
+    //Making a custom component with JSX
+    /*
+    const element = 
+    <div className= "container">
+      <Message subject="World" greeting= "Hello" /> 
+      <Message subject="World" greeting="Goodbye" />
+      </div>
+    */
+
+    const element = 
+    <>
+       <Message subject= {true} greeting= "Hello" />
+       <Message subject="World" greeting= "Goodbye" />
+    </>
+    //working implementation of the React fragment.
+    //fast way to position elements side by side, and faster syntax.
+    //equivalent to <> -> <React.Fragment> -> <div className="container">
+
+    
+      //tries the testing propTypes error message with no success.
+      //tested the final version with the same error test of changing to boolean type and
+      //still got the same 'uncatched' error from the chrome dev tools
+
+
+
+    //JSX is much more readable and shorter than the React.createElement function.
+    //having some problems with the rendering of the new line, reviewed code but still
+    //no major changes from the final version. corrected if using another tag, e.g. <p></p>
+
+    //end of extra credit 2
+
+    //extra credit 3 done.
+
+    /*
     const element = (
       <div className="container">
         <div className="message">Hello World</div>
         <div className="message">Goodbye World</div>
       </div>
     )
+    */
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.createRoot(document.getElementById('root')).render(element)

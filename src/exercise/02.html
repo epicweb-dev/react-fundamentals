@@ -4,23 +4,74 @@
 <body>
   <div id="root"></div>
 
-  <!-- 🐨 add React and ReactDOM on the page.
+  <!-- 🐨 add React and ReactDOM on the page. import the packages
        💰 Here are script tags that'll do the job:
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
   -->
 
+  <!--React and react dom import.-->
+  <script src ="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+  <script src ="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+
+  <!--APIs for raw React imported.-->
+
   <script type="module">
+
+
+    // making the variabls //working.
+    const elementType = 'div'
     const rootElement = document.getElementById('root')
+
+    //nesting elements, the props of the react element creates new react elements.
+    const elementProps = {id:'root', children:[
+      React.createElement('span', null, 'Hello'),
+      React.createElement('span', null, 'World'),
+    ]}
+
+    const reactElement = React.createElement(elementType, elementProps)
+    const root = ReactDOM.createRoot(rootElement)
+    root.render(reactElement)
+
+    //this script uses the module example part by part, define variables and properties
+    //following by the rendering of the reactElement on the ReactDOM root.
+
+    //final examples uses only 2 const where more operations are performed e.g.
+    /*
+    const rootElement = document.getElementById('root')
+    const element = React.createElement('div', {
+      className: 'container',
+      children: 'Hello World',
+    })
+
+    ReactDOM.createRoot(rootElement).render(element)
+
+    //more elegant, less use of mem.
+
+    */
+
+
+    //const rootElement = ReactDOM.createRoot()
+
+
+    //const rootElement = document.getElementById('root')
 
     // You're going to re-implement this code using React!
     // 💣 So go ahead and delete this implementation (or comment it out for now)
     // These three lines are similar to React.createElement
-    const element = document.createElement('div')
-    element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
-    element.className = 'container' // 💰 in React, this is also called the "className" prop
+
+    //React.element.createElement("div","root")
+    //const root = ReactDOM.createRoot('root')
+
+
+    //const element = document.createElement('div')
+    
+
+    //element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
+    //element.className = 'container' // 💰 in React, this is also called the "className" prop
+    
     // This is similar to ReactDOM.createRoot().render()
-    rootElement.append(element)
+    //rootElement.append(element)
 
     // 🐨 Please re-implement the regular document.createElement code above
     // with these React API calls
