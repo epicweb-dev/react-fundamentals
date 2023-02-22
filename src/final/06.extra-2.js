@@ -5,7 +5,7 @@
 import * as React from 'react'
 
 function UsernameForm({onSubmitUsername}) {
-  const [error, setError] = React.useState(null)
+  const [error, setError] = React.useState(true)
 
   function handleSubmit(event) {
     event.preventDefault()
