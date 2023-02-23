@@ -1,24 +1,43 @@
-<!-- Creating custom components -->
-<!-- http://localhost:3000/isolated/exercise/04.html -->
+// Styling
+// http://localhost:3000/isolated/exercise/05.js
 
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  <script type="text/babel">
-    // 🐨 Make a function called `message` which returns the JSX we want to share
+import * as React from 'react'
+import '../box-styles.css'
 
-    // 🐨 use that function in place of the divs below with:
-    // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
-    const element = (
-      <div className="container">
-        <div className="message">Hello World</div>
-        <div className="message">Goodbye World</div>
-      </div>
-    )
+// 🐨 add a className prop to each div and apply the correct class names
+// based on the text content
+// 💰 Here are the available class names: box, box--large, box--medium, box--small
+// 💰 each of the elements should have the "box" className applied
 
-    // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
-    ReactDOM.createRoot(document.getElementById('root')).render(element)
-  </script>
-</body>
+// 🐨 add a style prop to each div so their background color
+// matches what the text says it should be
+// 🐨 also use the style prop to make the font italic
+// 💰 Here are available style attributes: backgroundColor, fontStyle
+
+function Box({className, style, children}) {
+  const finalClassName = 'box ' + className
+  return (
+    <div
+      className={finalClassName}
+      style={{...style, fontStyle: 'italic'}}
+    >{children}</div>
+  )
+}
+
+function App() {
+  return (
+    <div>
+      <Box className="box--large" style={{backgroundColor: 'lightblue'}}>
+        small lightblue s
+      </Box>
+      <Box className="box--medium" style={{backgroundColor: 'pink'}}>
+        medium pink box
+      </Box>
+      <Box className="box--small" style={{backgroundColor: 'orange'}}>
+        large orange box
+      </Box>
+    </div>
+  )
+}
+
+export default App
