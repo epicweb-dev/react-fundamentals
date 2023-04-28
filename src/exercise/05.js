@@ -29,13 +29,13 @@ function App() {
       </Box>
       <Box
         className="box box--medium"
-        style={{fontStyle: 'italic', backgroundColor: 'lightblue'}}
+        style={{fontStyle: 'italic', backgroundColor: 'pink'}}
       >
         medium pink box
       </Box>
       <Box
         className="box box--large"
-        style={{fontStyle: 'italic', backgroundColor: 'lightblue'}}
+        style={{fontStyle: 'italic', backgroundColor: 'orange'}}
       >
         large orange box
       </Box>
