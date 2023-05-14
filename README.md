@@ -271,6 +271,7 @@ Thanks goes to these wonderful people
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ambujsahu81"><img src="https://avatars.githubusercontent.com/u/118078892?v=4?s=100" width="100px;" alt="Ambuj sahu"/><br /><sub><b>Ambuj sahu</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=ambujsahu81" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mattchannn"><img src="https://avatars.githubusercontent.com/u/48675050?v=4?s=100" width="100px;" alt="Mat Chan"/><br /><sub><b>Mat Chan</b></sub></a><br /><a href="https://github.com/kentcdodds/react-fundamentals/commits?author=mattchannn" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
