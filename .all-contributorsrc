@@ -592,6 +592,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mattchannn",
+      "name": "Mat Chan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48675050?v=4",
+      "profile": "https://github.com/mattchannn",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": true,
