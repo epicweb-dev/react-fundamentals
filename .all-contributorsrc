@@ -601,6 +601,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jkrooncoding",
+      "name": "Jesse Kroon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27491767?v=4",
+      "profile": "https://github.com/jkrooncoding",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
