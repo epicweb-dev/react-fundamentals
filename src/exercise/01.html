@@ -1,19 +1,24 @@
-<!-- Basic JavaScript-rendered Hello World -->
-<!-- http://localhost:3000/isolated/exercise/01.html -->
+<!-- Generate DOM nodes -->
+<!-- <body>
+  <div id="root"></div>
+  <script type="module">
+    const div = document.createElement('div')
+    div.textContent = 'Hello world'
+    div.className = 'container'
+    const root = document.getElementById('root')
+    root.append(div)
+  </script>
+</body> -->
 
-<!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
-<!-- 🐨 Then create a <script type="module"> for your JavaScript -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
-<!--   📜 https://github.com/mdn/js-examples/tree/master/module-examples -->
-
-<!-- These next instructions are to be written in JavaScript in the <script> tag -->
-<!-- 🐨 Create a div -->
-<!--   💰 document.createElement('div') -->
-
-<!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
-<!--   💰 div.textContent = '...' -->
-
-<!-- 🐨 Append the div to the root div using `append` -->
-<!--   💰 document.getElementById('root') -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+<!-- Generate DOM nodes - Extra credit -->
+<body>
+  <script type="module">
+    const rootElement = document.createElement('div')
+    rootElement.id = 'root'
+    document.body.append(rootElement)
+    const div = document.createElement('div')
+    div.textContent = 'Hello world'
+    div.className = 'container'
+    rootElement.append(div)
+  </script>
+</body>
