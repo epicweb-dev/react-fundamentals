@@ -1,27 +1,31 @@
-<!-- Creating custom components -->
-<!-- http://localhost:3000/isolated/exercise/04.html -->
-
 <body>
   <div id="root"></div>
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
 
-    function message(props) {
+    function Message({subject, greeting}) {
       return (
-        <div {...props} />
+        <div className="message">
+          {greeting}, {subject}
+        </div>
       )
     }
     
+    Message.propTypes = {
+      subject: PropTypes.string.isRequired,
+      greeting: PropTypes.string.isRequired
+    }
+
     const element = (
-      <div className="container">
-        {message({className: 'message', children: "Hello World"})}
-        {message({className: 'message', children: "Goodbye World"})}
-      </div>
+      <>
+        <Message greeting="Hello" subject="World" />        
+        <Message greeting="Goodbye" subject="World" />
+      </>
     )
 
-    // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.createRoot(document.getElementById('root')).render(element)
   </script>
 </body>
