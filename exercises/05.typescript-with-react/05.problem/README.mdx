@@ -1,0 +1,226 @@
+# TypeScript with React
+
+Production deploys:
+
+- [Exercise](http://react-fundamentals-next.netlify.app/isolated/exercise/05.tsx)
+- [Final](http://react-fundamentals-next.netlify.app/isolated/final/05.tsx)
+
+In this exercise, we're going to take the `Calculator` component we have in the
+extra credit of the previous exercise and add type annotations to it.
+
+We're moving from the `*.html` files to `*.tsx` files. This is more real-world
+and also your editor likely supports TypeScript better within TypeScript files
+rather than HTML files. From here on out, every exercise will export an `App`
+component. The workshop app will take care of rendering that for us. The
+workshop app is a little magical, so you probably won't find where it happens,
+but rest assured, it's just calling `ReactDOM.render` under the hood, just like
+we were doing in the previous exercises.
+
+Moving to `*.tsx` files also means that you can use the tests to help validate
+your solution is correct. It's Alfred the Alert's time to shine 🚨!
+
+As a reminder, to get the tests running, in a separate terminal window, run
+`npm test`, then open the test file for the exercise you're working on and
+update the imports:
+
+```diff
+  import {render} from '@testing-library/react'
+  import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
+- import {App} from '../final/05'
+- // import {App} from '../exercise/05'
++ // import {App} from '../final/05'
++ import {App} from '../exercise/05'
+```
+
+In addition to typing the function itself, we'll also be able to play around
+with some approaches to typing the `operations` object to make things easier for
+us as well as people using our component.
+
+I'd also like you to meet Lily the Life Jacket! 🦺 She's going to be hanging
+around the rest of the crew to indicate wherever there's something that's
+TypeScript-specific you need to do and to give you TypeScript-specific tips.
+You'll be working with Lily the Life Jacket a lot in this exercise.
+
+Now, open `src/exercise/05.tsx` and follow the emoji there. You'll notice that
+instead of calling `ReactDOM.render`, we're exporting an `App` component. This
+is how the rest of the workshops will work. Rest assured, `ReactDOM.render` _is_
+being called for you under the hood, just like we were doing earlier.
+
+## Extra Credit
+
+### 1. 💯 improve autocomplete for the operator string
+
+[Production deploy](http://react-fundamentals-next.netlify.app/isolated/final/05.extra-1.tsx)
+
+Our `CalculatorProps['operator']` type being set simply to `string` is not
+"narrow" enough to help users of our `Calculator` component. It allows _any_
+`string` value to be provided, even one which our Calculator doesn't support.
+For example, the exponentiation operator `**` could be passed and TypeScript
+won't complain, but this would cause a runtime error because we don't have a
+function to handle that operator:
+
+```tsx
+element = <Calculator left={2} operator="**" right={3} /> // 💥
+```
+
+On top of that, the API for our `Calculator` isn't very discoverable. How would
+people know which `operations` are possible? Docs? Trial and error?
+
+Rather than a `string`, your TypeScript type definition can be set to a specific
+string. For example:
+
+```tsx
+type KodyString = 'Kody'
+let kody: KodyString // this variable can only ever be set to the string 'Kody'
+```
+
+Combine that functionality with
+[union syntax of `|`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
+and you'll be able to specify exactly which operators are allowed. For example:
+
+```tsx
+type KodyOrHannahString = 'Kody' | 'Hannah'
+let assistant: KodyOrHannahString // this variable can only ever be set to the string 'Kody' or 'Hannah'
+
+// 💰 tip: we could do the same thing without creating a type by inlining instead:
+// let assistant: 'Kody' | 'Hannah'
+```
+
+How about we narrow our `operator` type from a `string` to some specific strings
+using a union.
+
+### 2. 💯 derive the operator type from the operations object
+
+[Production deploy](http://react-fundamentals-next.netlify.app/isolated/final/05.extra-2.tsx)
+
+You may have noticed that we're duplicating our operators of `+`, `-`, `*`, and
+`/`. Any time we want to add a new operator, we have to add it in two places and
+if we miss one then we could either have a runtime error, or users won't be able
+to use our new operator at all.
+
+It would be better if we could have the compiler let us know we missed one
+(foreshadowing... look forward to that in an upcoming extra credit) or just
+derive the possible operators.
+
+To do this, you need to know about two TypeScript keywords: `typeof` and
+`keyof`. Technically `typeof` is a JavaScript feature, but TypeScript builds on
+top of this and will get you the TypeScript type for the given variable. So if
+you say:
+
+```tsx
+const user = {name: 'kody', isCute: true}
+type User = typeof user
+// type User = { name: string; isCute: boolean; }
+```
+
+And then you can use `keyof` to get a union-ed type of strings of all the keys
+in a given type:
+
+```tsx
+type UserKeys = keyof User
+// type UserKeys = "name" | "isCute"
+```
+
+📜 Learn more about TypeScript's
+[`typeof` operator](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html)
+and
+[`keyof` operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html).
+
+With that, try and derive the type of the `CalculatorProps['operator']` so you
+don't have to repeat yourself.
+
+### 3. 💯 default prop values
+
+[Production deploy](http://react-fundamentals-next.netlify.app/isolated/final/05.extra-3.tsx)
+
+Sometimes you want to allow the user of your component to skip providing a prop
+and use a default value instead. To do this, we can use
+[destructuring default values syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values_2),
+but when users of our component try to skip a prop, TypeScript will complain
+because our type says all the elements of the `CalculatorProps` type are
+required.
+
+So when you make a prop optional, make sure you provide any relevant default
+value as well as mark it as optional using the
+[optional properties syntax](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties):
+
+```tsx
+type User = {name: string; isCute?: boolean}
+// name is required, isCute is optional, so these both compile:
+const kody = {name: 'Kody', isCute: true}
+const peter = {name: 'Peter'}
+```
+
+For this extra credit, make all props optional. Default `left` and `right` to
+`0` and `operator` to `'+'`. Then you can update the App to test it out:
+
+```tsx
+function App() {
+  return (
+    <div>
+      <h1>Calculator</h1>
+      <Calculator left={1} right={2} />
+      <Calculator operator="-" />
+      <Calculator left={1} operator="*" />
+      <Calculator operator="/" right={2} />
+    </div>
+  )
+}
+```
+
+### 4. 💯 reduce duplication for operation functions
+
+[Production deploy](http://react-fundamentals-next.netlify.app/isolated/final/05.extra-4.tsx)
+
+🦉 These last two extra credits have little to do with React and everything to
+do with TypeScript. If you'd rather skip these two, I won't be offended 🥲
+
+One last thing that bugs me is the repetition in the `operations` type. The type
+for every one of those functions is the same. They all accept two numbers and
+return a number.
+
+One thing we could do is extract that function into a type and then tell
+TypeScript that the `operations` object is a `Record` where the key is one of
+the valid operators and the value is an `OperationFn`.
+
+I'm going to let you try this one on your own.
+
+💰 But I'll give you some hints:
+
+- You'll need 📜
+  [TypeScript's `Record` Utility Type](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeystype)
+- You'll have to manually create a union of all allowed `operations` again for
+  the Record's `key`
+- You'll need to define 📜
+  [a function type](https://kentcdodds.com/blog/typescript-function-syntaxes)
+  for the Record's value
+
+🦉 At the end of this one, you may prefer the previous version and that's fine.
+This is just two ways to do it and they both come with trade-offs. Personally, I
+prefer this way to avoid typing all the functions individually.
+
+🦉 Also, you may wonder why we went back to repeating ourselves. Unfortunately
+there's no way around it if you want to define the object as a Record with a
+specific key. However! It's not as bad as before because if we make a mistake
+and forget to update both places, the compiler will complain at us rather than
+having a runtime error, so it's less of a problem. And there's actually a
+workaround for this, which is what the next extra credit is all about!
+
+### 5. 💯 use a "Constrained Identity Function (CIF)"
+
+[Production deploy](http://react-fundamentals-next.netlify.app/isolated/final/05.extra-5.tsx)
+
+Ok, so repeating ourselves there is not awesome. The problem is that we want to
+enforce the value of our `operations` object, but to do that we either have to
+widen the type of our `key` or list it explicitly as we're doing.
+
+What we need is some way to enforce the values of our object, without having to
+annotate our object. That's what a CIF is. I've written a blog post to describe
+this, so I'll let you go through that, and then try to make that work yourself:
+
+**[How to write a Constrained Identity Function (CIF) in TypeScript](https://kentcdodds.com/blog/how-to-write-a-constrained-identity-function-in-typescript)**
+
+## 🦉 Feedback
+
+Fill out
+[the feedback form](https://ws.kcd.im/?ws=React%20Fundamentals%20%E2%9A%9B&e=05%3A%20TypeScript%20with%20React&em=).
