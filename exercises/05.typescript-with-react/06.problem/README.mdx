@@ -1,0 +1,11 @@
+# Use a “Constrained Identity Function (CIF)”
+
+Ok, so repeating ourselves there is not awesome. The problem is that we want to
+enforce the value of our `operations` object, but to do that we either have to
+widen the type of our `key` or list it explicitly as we're doing.
+
+What we need is some way to enforce the values of our object, without having to
+annotate our object. That's what a CIF is. I've written a blog post to describe
+this, so I'll let you go through that, and then try to make that work yourself:
+
+**[How to write a Constrained Identity Function (CIF) in TypeScript](https://kentcdodds.com/blog/how-to-write-a-constrained-identity-function-in-typescript)**

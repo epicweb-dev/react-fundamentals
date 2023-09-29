@@ -1,6 +1,5 @@
-// TypeScript with React
-// 💯 derive the operator type from the operations object
-// http://localhost:3000/isolated/final/05.extra-2.tsx
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
 
 const operations = {
   '+': (left: number, right: number): number => left + right,
@@ -11,7 +10,7 @@ const operations = {
 
 type CalculatorProps = {
   left: number
-  operator: keyof typeof operations
+  operator: string
   right: number
 }
 function Calculator({left, operator, right}: CalculatorProps) {
@@ -37,4 +36,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)

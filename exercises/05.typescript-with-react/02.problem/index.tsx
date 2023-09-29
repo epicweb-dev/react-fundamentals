@@ -9,11 +9,11 @@ const operations = {
 }
 
 type CalculatorProps = {
-  left?: number
-  operator?: keyof typeof operations
-  right?: number
+  left: number
+  operator: string
+  right: number
 }
-function Calculator({left = 0, operator = '+', right = 0}: CalculatorProps) {
+function Calculator({left, operator, right}: CalculatorProps) {
   const result = operations[operator](left, right)
   return (
     <div>

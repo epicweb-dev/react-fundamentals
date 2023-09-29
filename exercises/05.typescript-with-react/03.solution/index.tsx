@@ -1,6 +1,5 @@
-// TypeScript with React
-// 💯 improve autocomplete for the operator string
-// http://localhost:3000/isolated/final/05.extra-1.tsx
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
 
 const operations = {
   '+': (left: number, right: number): number => left + right,
@@ -11,7 +10,7 @@ const operations = {
 
 type CalculatorProps = {
   left: number
-  operator: '+' | '-' | '*' | '/'
+  operator: keyof typeof operations
   right: number
 }
 function Calculator({left, operator, right}: CalculatorProps) {
@@ -37,4 +36,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)

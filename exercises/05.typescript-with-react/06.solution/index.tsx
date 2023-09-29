@@ -1,12 +1,18 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
-const operations = {
-  '+': (left: number, right: number): number => left + right,
-  '-': (left: number, right: number): number => left - right,
-  '*': (left: number, right: number): number => left * right,
-  '/': (left: number, right: number): number => left / right,
-}
+type OperationFn = (left: number, right: number) => number
+
+const createOperations = <OperationsType extends Record<string, OperationFn>>(
+  opts: OperationsType,
+) => opts
+
+const operations = createOperations({
+  '+': (left, right) => left + right,
+  '-': (left, right) => left - right,
+  '*': (left, right) => left * right,
+  '/': (left, right) => left / right,
+})
 
 type CalculatorProps = {
   left?: number
@@ -28,10 +34,10 @@ function App() {
   return (
     <div>
       <h1>Calculator</h1>
-      <Calculator left={1} operator="+" right={2} />
-      <Calculator left={1} operator="-" right={2} />
-      <Calculator left={1} operator="*" right={2} />
-      <Calculator left={1} operator="/" right={2} />
+      <Calculator left={1} right={2} />
+      <Calculator operator="-" />
+      <Calculator left={1} operator="*" />
+      <Calculator operator="." right={2} />
     </div>
   )
 }

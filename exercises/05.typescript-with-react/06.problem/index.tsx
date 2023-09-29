@@ -1,6 +1,5 @@
-// TypeScript with React
-// 💯 reduce duplication for operation functions
-// http://localhost:3000/isolated/final/05.extra-4.tsx
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
 
 type OperationFn = (left: number, right: number) => number
 type Operator = '+' | '-' | '/' | '*'
@@ -35,8 +34,11 @@ function App() {
       <Calculator operator="-" />
       <Calculator left={1} operator="*" />
       <Calculator operator="/" right={2} />
+      <Calculator operator="." right={2} />
     </div>
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)

@@ -1,20 +1,21 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
-const operations = {
-  '+': (left: number, right: number): number => left + right,
-  '-': (left: number, right: number): number => left - right,
-  '*': (left: number, right: number): number => left * right,
-  '/': (left: number, right: number): number => left / right,
+type OperationFn = (left: number, right: number) => number
+type Operator = '+' | '-' | '/' | '*'
+const operations: Record<Operator, OperationFn> = {
+  '+': (left, right) => left + right,
+  '-': (left, right) => left - right,
+  '*': (left, right) => left * right,
+  '/': (left, right) => left / right,
 }
 
 type CalculatorProps = {
-  left: number
-  operator: string
-  right: number
+  left?: number
+  operator?: keyof typeof operations
+  right?: number
 }
-function Calculator({left, operator, right}: CalculatorProps) {
-  // @ts-expect-error we'll fix this in the next extra credit
+function Calculator({left = 0, operator = '+', right = 0}: CalculatorProps) {
   const result = operations[operator](left, right)
   return (
     <div>
@@ -29,10 +30,10 @@ function App() {
   return (
     <div>
       <h1>Calculator</h1>
-      <Calculator left={1} operator="+" right={2} />
-      <Calculator left={1} operator="-" right={2} />
-      <Calculator left={1} operator="*" right={2} />
-      <Calculator left={1} operator="/" right={2} />
+      <Calculator left={1} right={2} />
+      <Calculator operator="-" />
+      <Calculator left={1} operator="*" />
+      <Calculator operator="/" right={2} />
     </div>
   )
 }

@@ -1,6 +1,5 @@
-// TypeScript with React
-// 💯 default prop values
-// http://localhost:3000/isolated/final/05.extra-3.tsx
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
 
 const operations = {
   '+': (left: number, right: number): number => left + right,
@@ -10,11 +9,11 @@ const operations = {
 }
 
 type CalculatorProps = {
-  left?: number
-  operator?: keyof typeof operations
-  right?: number
+  left: number
+  operator: keyof typeof operations
+  right: number
 }
-function Calculator({left = 0, operator = '+', right = 0}: CalculatorProps) {
+function Calculator({left, operator, right}: CalculatorProps) {
   const result = operations[operator](left, right)
   return (
     <div>
@@ -37,4 +36,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)

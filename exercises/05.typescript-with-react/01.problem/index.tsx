@@ -1,19 +1,18 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
+// 🦺 add type definitions for each function
 const operations = {
-  '+': (left: number, right: number): number => left + right,
-  '-': (left: number, right: number): number => left - right,
-  '*': (left: number, right: number): number => left * right,
-  '/': (left: number, right: number): number => left / right,
+  '+': (left, right) => left + right,
+  '-': (left, right) => left - right,
+  '*': (left, right) => left * right,
+  '/': (left, right) => left / right,
 }
 
-type CalculatorProps = {
-  left?: number
-  operator?: keyof typeof operations
-  right?: number
-}
-function Calculator({left = 0, operator = '+', right = 0}: CalculatorProps) {
+// 🦺 create a type called CalculatorProps
+
+// 🦺 set the type for this props argument to CalculatorProps
+function Calculator({left, operator, right}) {
   const result = operations[operator](left, right)
   return (
     <div>

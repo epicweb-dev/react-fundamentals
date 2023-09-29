@@ -1,19 +1,12 @@
-// TypeScript with React
-// 💯 use a "Constrained Identity Function (CIF)"
-// http://localhost:3000/isolated/final/05.extra-5.tsx
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
 
-type OperationFn = (left: number, right: number) => number
-
-const createOperations = <OperationsType extends Record<string, OperationFn>>(
-  opts: OperationsType,
-) => opts
-
-const operations = createOperations({
-  '+': (left, right) => left + right,
-  '-': (left, right) => left - right,
-  '*': (left, right) => left * right,
-  '/': (left, right) => left / right,
-})
+const operations = {
+  '+': (left: number, right: number): number => left + right,
+  '-': (left: number, right: number): number => left - right,
+  '*': (left: number, right: number): number => left * right,
+  '/': (left: number, right: number): number => left / right,
+}
 
 type CalculatorProps = {
   left?: number
@@ -43,4 +36,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)
