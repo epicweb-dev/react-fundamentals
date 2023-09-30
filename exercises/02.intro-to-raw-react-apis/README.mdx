@@ -1,0 +1,27 @@
+# Intro to raw React APIs
+
+React is the most widely used frontend framework in the world and it's using the
+same APIs that you're using when it creates DOM nodes.
+
+> In fact,
+> [here's where that happens in the React source code](https://github.com/facebook/react/blob/ee432635724d5a50301448016caa137ac3c0a7a2/packages/react-dom/src/client/ReactDOMComponent.js#L416)
+> at the time of this writing.
+
+React abstracts away the imperative browser API from you to give you a much more
+declarative API to work with.
+
+> Learn more about the difference between those two concepts here:
+> [Imperative vs Declarative Programming](https://ui.dev/imperative-vs-declarative-programming/)
+
+One important thing to know about React is that it supports multiple platforms
+(for example, native mobile, native desktop, web, and even terminal and VR).
+Each of these platforms has its own code necessary for interacting with that
+platform, and then there's shared code between the platforms.
+
+With that in mind, you need two JavaScript files to write React applications for
+the web:
+
+- React: responsible for creating React elements (kinda like
+  `document.createElement()`)
+- ReactDOM: responsible for rendering React elements to the DOM (kinda like
+  `rootElement.append()`)
