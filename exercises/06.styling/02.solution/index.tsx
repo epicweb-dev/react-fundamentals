@@ -3,7 +3,7 @@
 // http://localhost:3000/isolated/final/06.extra-1.tsx
 
 import * as React from 'react'
-import '../box-styles.css'
+import * as ReactDOM from 'react-dom/client'
 
 function Box({
   style = {},
@@ -36,4 +36,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)

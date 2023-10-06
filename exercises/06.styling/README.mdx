@@ -1,0 +1,40 @@
+# Styling
+
+There are two primary ways to style react components
+
+1. Inline styles with the `style` prop
+2. Regular CSS with the `className` prop
+
+**About the `style` prop:**
+
+- In HTML you'd pass a string of CSS:
+
+```html
+<div style="margin-top: 20px; background-color: blue;"></div>
+```
+
+- In React, you'll pass an object of CSS:
+
+```tsx
+<div style={{marginTop: 20, backgroundColor: 'blue'}} />
+```
+
+Note that in react the `{{` and `}}` is actually a combination of a JSX
+expression and an object expression. The same example above could be written
+like so:
+
+```tsx
+const myStyles = {marginTop: 20, backgroundColor: 'blue'}
+<div style={myStyles} />
+```
+
+Note also that the property names are `camelCased` rather than `kebab-cased`.
+This matches the `style` property of DOM nodes (which is a
+[`CSSStyleDeclaration`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration)
+object).
+
+**About the `className` prop:**
+
+As we discussed earlier, in HTML, you apply a class name to an element with the
+`class` attribute. In JSX, you use the `className` prop.
+

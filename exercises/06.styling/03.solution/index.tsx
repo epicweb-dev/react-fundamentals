@@ -2,8 +2,7 @@
 // 💯 accept a size prop to encapsulate styling
 // http://localhost:3000/isolated/final/06.extra-2.tsx
 
-import * as React from 'react'
-import '../box-styles.css'
+import * as ReactDOM from 'react-dom/client'
 
 function Box({style, size, ...otherProps}) {
   const sizeClassName = size ? `box--${size}` : ''
@@ -33,4 +32,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)

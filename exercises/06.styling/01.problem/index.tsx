@@ -1,7 +1,8 @@
 // Styling
 // http://localhost:3000/isolated/exercise/06.tsx
 
-import '../box-styles.css'
+import * as ReactDOM from 'react-dom/client'
+// import './box-styles.css'
 
 // 🐨 add a className prop to each div and apply the correct class names
 // based on the text content
@@ -31,4 +32,6 @@ function App() {
   )
 }
 
-export {App}
+const rootEl = document.createElement('div')
+document.body.append(rootEl)
+ReactDOM.createRoot(rootEl).render(<App />)
