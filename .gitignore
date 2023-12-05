@@ -1,14 +1,15 @@
-## workshop-app
-/playground
-
-## other
-/notes
-
-## react-workshop-app
-.DS_Store
 node_modules
-coverage
-build
-.idea/
-.vscode/
-.eslintcache
+
+workspace/
+**/.cache/
+**/build/
+**/public/build
+**/playwright-report
+data.db
+/playground
+**/tsconfig.tsbuildinfo
+
+# in a real app you'd want to not commit the .env
+# file as well, but since this is for a workshop
+# we're going to keep them around.
+# .env

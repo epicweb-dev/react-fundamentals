@@ -1,0 +1,27 @@
+<body>
+	<div id="root"></div>
+	<script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+	<script type="module">
+		const rootElement = document.getElementById('root')
+
+		// 🐨 re-create this with React.createElement and assign that to the element variable
+		// <div class="container">
+		// 	<p>Here's Sam's favorite food:</p>
+		// 	<ul class="sams-food">
+		// 		<li>Green eggs</li>
+		// 		<li>Ham</li>
+		// 	</ul>
+		// </div>
+
+		const element = React.createElement('div', {
+			className: 'container',
+			children: [
+				React.createElement('span', null, 'Hello'),
+				' ',
+				React.createElement('span', null, 'World'),
+			],
+		})
+		ReactDOM.createRoot(rootElement).render(element)
+	</script>
+</body>

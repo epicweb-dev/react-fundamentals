@@ -1,93 +1,55 @@
 {
-  "name": "@kentcdodds/react-fundamentals",
-  "description": "The material for learning React fundamentals",
-  "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
-  "version": "1.0.0",
+  "name": "react-fundamentals",
   "private": true,
   "kcd-workshop": {
     "title": "React Fundamentals ⚛",
-    "githubRoot": "https://github.com/kentcdodds/react-fundamentals/blob/main",
-    "root": true
+    "githubRoot": "https://github.com/epicweb-dev/react-fundamentals/blob/main"
   },
-  "keywords": [],
-  "homepage": "http://react-fundamentals-next.netlify.app/",
-  "license": "GPL-3.0-only",
-  "main": "src/index.js",
-  "engines": {
-    "node": ">=16",
-    "npm": ">=8.16.0"
-  },
-  "dependencies": {
-    "@kentcdodds/react-workshop-app": "^6.0.1",
-    "@kentcdodds/workshop-app": "^2.23.1",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.1",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "chalk": "^4.1.2",
-    "codegen.macro": "^4.1.0",
-    "pokemon": "^2.3.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@craco/craco": "^6.4.3",
-    "husky": "^4.3.8",
-    "npm-run-all": "^4.1.5",
-    "patch-package": "^6.5.1",
-    "prettier": "^2.7.1",
-    "react-scripts": "^5.0.1",
-    "typescript": "^4.7.4"
-  },
+  "type": "module",
   "scripts": {
+    "build": "npm run build --if-present --workspaces",
     "start": "kcdshop start",
     "dev": "kcdshop start",
-    "postinstall": "patch-package --patch-dir config/patches",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "test:coverage": "npm run test -- --watchAll=false",
-    "test:exercises": "npm run test -- testing.*exercises\\/ --onlyChanged",
-    "setup": "node setup",
+    "test": "npm run test --silent --prefix playground",
+    "test:e2e": "npm run test:e2e --silent --prefix playground",
+    "test:e2e:dev": "npm run test:e2e:dev --silent --prefix playground",
+    "test:e2e:run": "npm run test:e2e:run --silent --prefix playground",
+    "pretest:all": "npm run build",
+    "test:all": "node ./scripts/test.js",
+    "setup": "node ./setup.js",
+    "setup:custom": "node ./scripts/setup-custom.js",
     "lint": "eslint .",
-    "format": "prettier --write \"./src\"",
+    "format": "prettier --write .",
     "typecheck": "tsc -b",
-    "validate": "npm-run-all --parallel build test:coverage lint typecheck"
+    "validate:all": "npm-run-all --parallel --print-label --print-name --continue-on-error test:all lint typecheck"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "node ./scripts/pre-commit",
-      "pre-push": "node ./scripts/pre-push"
-    }
+  "keywords": [],
+  "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "@kentcdodds/workshop-app": "^2.58.8",
+    "typescript": "^5.3.2"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/final/**/*.js"
-    ]
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ],
+  "workspaces": [
+    "exercises/*/*",
+    "examples/*"
+  ],
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8.16.0",
+    "git": ">=2.18.0"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "development": [
-      "last 2 chrome versions",
-      "last 2 firefox versions",
-      "last 2 edge versions"
-    ],
-    "production": [
-      ">1%",
-      "last 4 versions",
-      "Firefox ESR",
-      "not ie < 11"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kentcdodds/react-fundamentals.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kentcdodds/react-fundamentals/issues"
-  },
-  "msw": {
-    "workerDirectory": "public"
+  "devDependencies": {
+    "@testing-library/react": "^14.1.2",
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18.2.17",
+    "execa": "^8.0.1",
+    "fs-extra": "^11.2.0",
+    "prettier": "^3.1.0"
   }
 }

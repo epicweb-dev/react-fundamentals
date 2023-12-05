@@ -1,17 +1,18 @@
-name: validate
+name: deploy
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches:
       - 'main'
-      - 'next'
   pull_request:
     branches:
       - 'main'
-      - 'next'
 jobs:
   setup:
-    # ignore all-contributors PRs
-    if: ${{ !contains(github.head_ref, 'all-contributors') }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -25,8 +26,35 @@ jobs:
         with:
           node-version: 18
 
-      - name: npm 8
-        run: npm install --global npm@8
-
       - name: ▶️ Run setup script
         run: npm run setup
+
+      - name: ʦ TypeScript
+        run: npm run typecheck
+
+      - name: ⬣ ESLint
+        run: npm run lint
+
+  deploy:
+    name: 🚀 Deploy
+    runs-on: ubuntu-latest
+    # only deploy main branch on pushes
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      # move Dockerfile to root
+      - name: 🚚 Move Files
+        run: |
+          mv ./scripts/fly.toml ./fly.toml
+          mv ./scripts/Dockerfile ./Dockerfile
+          mv ./scripts/.dockerignore ./.dockerignore
+
+      - name: 🚀 Deploy Production
+        uses: superfly/flyctl-actions@1.3
+        with:
+          args: 'deploy --remote-only'
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

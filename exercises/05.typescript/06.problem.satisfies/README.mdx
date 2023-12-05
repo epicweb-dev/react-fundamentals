@@ -1,0 +1,33 @@
+# Satisfies
+
+Ok, so repeating ourselves there is not awesome. The problem is that we want to
+enforce the value of our `operations` object, but to do that we either have to
+widen the type of our `key` or list it explicitly as we're doing. This is
+because when you cast your object to a type, TypeScript widens your type as far
+as that cast. Here's a simple example of the problem:
+
+```ts
+type ValidCandies = 'twix' | 'snickers' | 'm&ms'
+const candy: ValidCandies = 'twix'
+// candy is 'twix' | 'snickers' | 'm&ms'
+```
+
+What we need is some way to enforce the values of our object, without having to
+annotate our object. We can do this using TypeScript's
+[`satisfies`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#the-satisfies-operator) syntax.
+For example:
+
+```ts
+type ValidCandies = 'twix' | 'snickers' | 'm&ms'
+const candy = 'twix' satisfies ValidCandies
+// candy is 'twix'
+```
+
+See? No type widening! Wahoo!
+
+<callout-info>
+	Before `satisfies` came out, we had to use a "Constrained Identity Function"
+	(pattern coined by your's truly). Learn more in **[How to write a Constrained
+	Identity Function (CIF) in
+	TypeScript](https://kentcdodds.com/blog/how-to-write-a-constrained-identity-function-in-typescript)**
+</callout-info>

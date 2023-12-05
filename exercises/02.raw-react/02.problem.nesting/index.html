@@ -1,0 +1,20 @@
+<body>
+	<div id="root"></div>
+	<script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+	<script type="module">
+		const rootElement = document.getElementById('root')
+		const element = React.createElement('div', {
+			className: 'container',
+			// 🐨 turn this children prop into an array with three elements:
+			// 1: a span that has the text "Hello"
+			// 2: a string with the text " "
+			// 3: a span that has the text "World"
+			// 🦉 also play around with using the third argument to createElement
+			// for children instead of the children prop...
+			// https://react.dev/reference/react/createElement
+			children: 'Hello World',
+		})
+		ReactDOM.createRoot(rootElement).render(element)
+	</script>
+</body>

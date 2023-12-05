@@ -1,5 +1,0 @@
-# prettier-ignore
-npx npm-check-updates --upgrade --reject husky,chalk
-rm -rf node_modules package-lock.json
-npx npm@8 install
-npm run validate

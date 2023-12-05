@@ -1,0 +1,38 @@
+# Narrow Types
+
+Our `CalculatorProps['operator']` type being set simply to `string` is not
+"narrow" enough to help users of our `Calculator` component. It allows _any_
+`string` value to be provided, even one which our Calculator doesn't support.
+For example, the exponentiation operator `**` could be passed and TypeScript
+won't complain, but this would cause a runtime error because we don't have a
+function to handle that operator:
+
+```tsx
+element = <Calculator left={2} operator="**" right={3} /> // 💥
+```
+
+On top of that, the API for our `Calculator` isn't very discoverable. How would
+people know which `operations` are possible? Docs? Trial and error?
+
+Rather than a `string`, your TypeScript type definition can be set to a specific
+string. For example:
+
+```tsx
+type KodyString = 'Kody'
+let kody: KodyString // this variable can only ever be set to the string 'Kody'
+```
+
+Combine that functionality with
+[union syntax of `|`](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
+and you'll be able to specify exactly which operators are allowed. For example:
+
+```tsx
+type KodyOrHannahString = 'Kody' | 'Hannah'
+let assistant: KodyOrHannahString // this variable can only ever be set to the string 'Kody' or 'Hannah'
+
+// 💰 tip: we could do the same thing without creating a type by inlining instead:
+// let assistant: 'Kody' | 'Hannah'
+```
+
+How about we narrow our `operator` type from a `string` to some specific strings
+using a union.

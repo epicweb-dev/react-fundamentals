@@ -1,0 +1,40 @@
+# Props
+
+In this exercise, we're going to take the `Calculator` component we have in the
+extra credit of the previous exercise and add type annotations to it.
+
+We're moving from the `*.html` files to `*.tsx` files. This is more real-world
+and also your editor likely supports TypeScript better within TypeScript files
+rather than HTML files. From here on out, every exercise will export an `App`
+component. The workshop app will take care of rendering that for us. The
+workshop app is a little magical, so you probably won't find where it happens,
+but rest assured, it's just calling
+`ReactDOM.createRoot(rootElement).render(element)` under the hood, just like we
+were doing in the previous exercises.
+
+Moving to `*.tsx` files also means that you can use the tests to help validate
+your solution is correct. It's Alfred the Alert's time to shine 🚨!
+
+As a reminder, to get the tests running, in a separate terminal window, run
+`npm test`, then open the test file for the exercise you're working on and
+update the imports:
+
+```tsx add=5-6 remove=3-4
+import { render } from '@testing-library/react'
+import { alfredTip } from '@kentcdodds/react-workshop-app/test-utils'
+import { App } from '../final/05'
+// import {App} from '../exercise/05'
+// import {App} from '../final/05'
+import { App } from '../exercise/05'
+```
+
+In addition to typing the function itself, we'll also be able to play around
+with some approaches to typing the `operations` object to make things easier for
+us as well as people using our component.
+
+I'd also like you to meet Lily the Life Jacket! 🦺 She's going to be hanging
+around the rest of the crew to indicate wherever there's something that's
+TypeScript-specific you need to do and to give you TypeScript-specific tips.
+You'll be working with Lily the Life Jacket a lot in this exercise.
+
+Follow the emoji!

@@ -1,0 +1,18 @@
+{
+  "name": "deployed-react-fundamentals",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "kcdshop start"
+  },
+  "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "@kentcdodds/workshop-app": "^2.58.8",
+    "execa": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8.16.0"
+  }
+}

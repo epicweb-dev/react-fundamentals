@@ -1,3 +1,7 @@
 node_modules
-coverage
 build
+public/build
+playwright-report
+test-results
+server-build
+scripts

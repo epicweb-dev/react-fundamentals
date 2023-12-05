@@ -1,0 +1,38 @@
+# Props
+
+You are the commander of your component's API. The API for your component is
+"props" which is the object your component function accepts as an argument. For
+example, our `Message` component uses the "special" and implicit `children`
+prop. It's special because it means we can do this:
+
+```tsx
+element = <Message>Hello World</Message>
+// is functionally equivalent to
+element = <Message children="Hello World" />
+
+// and this:
+element = (
+	<Message>
+		<span>Hello</span> <span>World</span>
+	</Message>
+)
+// is functionally equivalent to
+element = <Message children={[<span>Hello</span>, ' ', <span>World</span>]} />
+```
+
+But we don't have to use the `children` prop, we can call it whatever we want.
+And sometimes using something other than the `children` prop can be really
+useful. For example, let's imagine a `Calculator` component that can display an
+equation and it's solution, like so:
+
+```tsx
+element = <Calculator left={1} operator="+" right={2} />
+// should render:
+// <div>
+//   <code>
+//     1 + 2 = <output>3</output>
+//   </code>
+// </div>
+```
+
+Let's get some more practice with custom components.

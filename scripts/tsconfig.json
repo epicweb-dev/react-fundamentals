@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "target": "es2022",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+		"allowJs": true,
+    "skipLibCheck": true,
+		"noEmit": true
+  }
+}

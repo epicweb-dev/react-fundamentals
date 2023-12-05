@@ -1,0 +1,40 @@
+# Raw React APIs
+
+React is the most widely used frontend framework in the world and it's using the
+same APIs that you're using when it creates DOM nodes.
+
+<callout-success>
+	In fact, [here's where that happens in the React source
+	code](https://github.com/facebook/react/blob/5dd35968bef791ccc5948c657fabf191a77fff3f/packages/react-dom-bindings/src/client/ReactFiberConfigDOM.js#L479)
+	at the time of this writing.
+</callout-success>
+
+React abstracts away the imperative browser API from you to give you a much more
+declarative API to work with.
+
+<callout-info>
+	Learn more about the difference between those two concepts here: [Imperative
+	vs Declarative
+	Programming](https://ui.dev/imperative-vs-declarative-programming/)
+</callout-info>
+
+One important thing to know about React is that it supports multiple platforms
+(for example, native mobile, native desktop, web, and even terminal and VR).
+Each of these platforms has its own code necessary for interacting with that
+platform, and then there's shared code between the platforms.
+
+With that in mind, you need two JavaScript files to write React applications for
+the web:
+
+- React: responsible for creating React elements (kinda like
+  `document.createElement()`)
+- ReactDOM: responsible for rendering React elements to the DOM (kinda like
+  `rootElement.append()`)
+
+You can learn more about this in [the react docs](https://react.dev/reference/react).
+
+We'll also be using a service called [unpkg.com](https://unpkg.com/) to load
+these files into our application. unpkg is a CDN (content delivery network) for
+any file that's on npm. It works great for our purposes of keeping this as
+simple as possible so you can learn React and not get distracted by a bunch of
+tools (don't worry, those will come later).

@@ -2,7 +2,9 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "formulahendry.auto-rename-tag",
-    "VisualStudioExptTeam.vscodeintellicode"
+    "bradlc.vscode-tailwindcss",
+    "neotan.vscode-auto-restart-typescript-eslint-servers",
+    "prisma.prisma",
+    "qwtel.sqlite-viewer"
   ]
 }

@@ -1,0 +1,41 @@
+# Styling
+
+In this exercise we'll use both methods for styling react components.
+
+We have the following css on the page:
+
+```css
+.box {
+	border: 1px solid #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.box--large {
+	width: 270px;
+	height: 270px;
+}
+
+.box--medium {
+	width: 180px;
+	height: 180px;
+}
+
+.box--small {
+	width: 90px;
+	height: 90px;
+}
+```
+
+Note: the class name convention we're following here is called
+[BEM](http://getbem.com/introduction/).
+
+The CSS gets onto the page using `<link rel="stylesheet" href="styles.css">`
+tag. In our isolated learning environment, the workshop app gets the styles on
+the page for us automatically. In a real-world app, you'll need to add the
+`<link>` tag yourself (or use a tool which does this for you).
+
+Your job is to apply the right `className` and `style` props to the divs so the
+styles applied match the text content.

@@ -1,0 +1,9 @@
+# Raw API
+
+So far we've only used `React.createElement('someString')`, but the first
+argument to `React.createElement` can also be a function which returns something
+that's renderable.
+
+So instead of calling your `message` function, pass it as the first argument to
+`React.createElement` and pass the `{children: 'Hello World'}` object as the
+second argument.
