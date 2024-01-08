@@ -1,13 +1,16 @@
-import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
 function Box({
 	style = {},
 	className = '',
-	...otherProps
+	// 🐨 add a size prop here
+	...otherProps // 🦺 union this with an object that has a size prop type here which is
+	// optional and one of "small", "medium", or "large"
 }: React.HTMLAttributes<HTMLDivElement>) {
+	// 🐨 based on the size prop, define a new variable called sizeClassName
 	return (
 		<div
+			// 🐨 add the sizeClassName to the className prop
 			className={`box ${className}`}
 			style={{ fontStyle: 'italic', ...style }}
 			{...otherProps}
@@ -18,6 +21,7 @@ function Box({
 function App() {
 	return (
 		<div>
+			{/* 🐨 update all these boxes to use the size prop */}
 			<Box className="box--small" style={{ backgroundColor: 'lightblue' }}>
 				small lightblue box
 			</Box>

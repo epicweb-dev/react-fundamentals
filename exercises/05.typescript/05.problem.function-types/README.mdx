@@ -1,11 +1,11 @@
 # Reduce Duplication
 
-🦉 These last two extra credits have little to do with React and everything to
+🦉 These last two steps have little to do with React and everything to
 do with TypeScript. If you'd rather skip these two, I won't be offended 🥲
 
-One last thing that bugs me is the repetition in the `operations` type. The type
-for every one of those functions is the same. They all accept two numbers and
-return a number.
+👨‍💼 One last thing that bugs me is the repetition in the `operations` type. The
+type for every one of those functions is the same. They all accept two numbers
+and return a number.
 
 One thing we could do is extract that function into a type and then tell
 TypeScript that the `operations` object is a `Record` where the key is one of
@@ -32,4 +32,4 @@ there's no way around it if you want to define the object as a Record with a
 specific key. However! It's not as bad as before because if we make a mistake
 and forget to update both places, the compiler will complain at us rather than
 having a runtime error, so it's less of a problem. And there's actually a
-workaround for this, which is what the next extra credit is all about!
+workaround for this, which is what the next step is all about!

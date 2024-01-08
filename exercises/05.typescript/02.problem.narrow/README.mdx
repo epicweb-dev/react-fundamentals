@@ -1,6 +1,6 @@
 # Narrow Types
 
-Our `CalculatorProps['operator']` type being set simply to `string` is not
+👨‍💼 Our `CalculatorProps['operator']` type being set simply to `string` is not
 "narrow" enough to help users of our `Calculator` component. It allows _any_
 `string` value to be provided, even one which our Calculator doesn't support.
 For example, the exponentiation operator `**` could be passed and TypeScript

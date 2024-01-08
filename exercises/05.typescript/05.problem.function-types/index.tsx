@@ -1,15 +1,14 @@
-import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
-// 🐨 create an OperationFn type that represents the common shape of the
+// 🦺 create an OperationFn type that represents the common shape of the
 // operation functions below
-// 🐨 create an Operator type that's set to the union of +, -, *, and /
+// 🦺 create an Operator type that's set to the union of +, -, *, and /
 // 🦉 Note: you cannot use "keyof typeof operations" anymore because of a
 // circular dependency here
 
-// 🐨 cast the operations variable to a Record of the Operator type and the OperationFn type
+// 🦺 cast the operations variable to a Record of the Operator type and the OperationFn type
 const operations = {
-	// 🐨 remove all the ": number" from these functions
+	// 🦺 remove all the ": number" from these functions
 	'+': (left: number, right: number): number => left + right,
 	'-': (left: number, right: number): number => left - right,
 	'*': (left: number, right: number): number => left * right,

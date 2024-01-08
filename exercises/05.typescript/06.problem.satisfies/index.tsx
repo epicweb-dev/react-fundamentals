@@ -1,17 +1,16 @@
-import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
 type OperationFn = (left: number, right: number) => number
 // 💣 delete the Operator type
 type Operator = '+' | '-' | '/' | '*'
-// 🐨 remove the type cast
+// 🦺 remove the type cast
 const operations: Record<Operator, OperationFn> = {
 	'+': (left, right) => left + right,
 	'-': (left, right) => left - right,
 	'*': (left, right) => left * right,
 	'/': (left, right) => left / right,
 }
-// 🐨 add "satisfies" here to ensure operations satisfies a Record with string keys and OperationFn values
+// 🦺 add "satisfies" here to ensure operations satisfies a Record with string keys and OperationFn values
 
 type CalculatorProps = {
 	left?: number

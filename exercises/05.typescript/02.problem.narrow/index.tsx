@@ -1,4 +1,3 @@
-import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
 const operations = {
@@ -10,7 +9,7 @@ const operations = {
 
 type CalculatorProps = {
 	left: number
-	// 🐨 limit the operator to be only +, -, *, or /
+	// 🦺 limit the operator to be only +, -, *, or /
 	operator: string
 	right: number
 }

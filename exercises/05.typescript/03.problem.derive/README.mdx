@@ -1,12 +1,12 @@
 # Derive Types
 
-You may have noticed that we're duplicating our operators of `+`, `-`, `*`, and
-`/`. Any time we want to add a new operator, we have to add it in two places and
-if we miss one then we could either have a runtime error, or users won't be able
-to use our new operator at all.
+👨‍💼 You may have noticed that we're duplicating our operators of `+`, `-`, `*`,
+and `/`. Any time we want to add a new operator, we have to add it in two places
+and if we miss one then we could either have a runtime error, or users won't be
+able to use our new operator at all.
 
 It would be better if we could have the compiler let us know we missed one
-(foreshadowing... look forward to that in an upcoming extra credit) or just
+(foreshadowing... look forward to that in an upcoming step) or just
 derive the possible operators.
 
 To do this, you need to know about two TypeScript keywords: `typeof` and

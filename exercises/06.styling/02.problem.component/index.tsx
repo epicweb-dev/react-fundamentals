@@ -1,5 +1,14 @@
 import * as ReactDOM from 'react-dom/client'
 
+// 🐨 create a component called "Box" which accepts style (defaults to {}), className (defaults to ''), and children props.
+// 🐨 Make it render a div with the style, className, and children applied.
+// 🐨 Also automatically add the fontStyle: 'italic' style to the style prop so consumers don't have to provide that
+// 🐨 And automatically add the "box" className to the className prop so consumers don't have to provide that as well.
+
+// 💯 as a bonus, have this accept any number of additional props (typed as React.HTMLAttributes<HTMLDivElement>)
+// and apply those to the rendered div as well.
+
+// 🐨 update all of these to use the <Box> component with the appropriate props.
 const smallBox = (
 	<div
 		className="box box--small"

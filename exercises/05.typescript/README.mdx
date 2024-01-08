@@ -1,8 +1,17 @@
-# TypeScript with React
+# TypeScript
 
 TypeScript is an enormously valuable team productivity, code quality, and
 confidence tool that I strongly recommend you use to build any React application
-you plan making maintainable.
+you plan making maintainable. As you're working with TypeScript and getting
+angry at all the red squiggles it puts in your code, keep this in mind:
+
+> TypeScript is not making your life terrible. It's just showing you how
+> terrible your life already is. – Kent C. Dodds
+
+You can think of TypeScript as that brutally honest friend who isn't afraid to
+tell you about the spinach in your teeth. It's not the friend's fault that
+you've got spinach in your teeth. It's your fault. You should be thanking
+TypeScript, not cursing it.
 
 Remember, in exercise 4 we learned what a React component is:
 
@@ -20,7 +29,9 @@ folks using TypeScript with React is:
 📜 I advise having the
 [React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
 repo open as a reference while you're getting used to using TypeScript and
-React.
+React. Another terrific resource is
+[Total TypeScript](https://www.totaltypescript.com/) which has a lot of great
+free resources which go much deeper than we do in this exercise.
 
 With that said, here's a quick intro to adding type annotations to functions:
 
@@ -103,3 +114,14 @@ experienced or want to focus on it. You can do this like so:
 // I don't know how to fix this right now... Come back later.
 make.magic()
 ```
+
+Unfortunately, there are some things that TypeScript cannot do for you
+
+👨‍💼 Note also, we're moving from the `*.html` files to `*.tsx` files. This is
+more real-world and also your editor likely supports TypeScript better within
+TypeScript files rather than HTML files. From here on out, the `index.tsx` file
+will be loaded onto the page automatically. We'll also get live reload of the
+browser as we save changes which will be quite nice. The workshop app is a
+little magical, but you'll find
+`ReactDOM.createRoot(rootElement).render(element)` calls in each of the files,
+just like we were doing in the previous exercises.

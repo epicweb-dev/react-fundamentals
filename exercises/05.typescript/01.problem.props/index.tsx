@@ -1,21 +1,15 @@
-import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
-// 🐨 add type definitions for each function
 const operations = {
-	// @ts-expect-error 💣 when you finish, remove this comment.
-	'+': (left, right) => left + right,
-	// @ts-expect-error 💣 when you finish, remove this comment.
-	'-': (left, right) => left - right,
-	// @ts-expect-error 💣 when you finish, remove this comment.
-	'*': (left, right) => left * right,
-	// @ts-expect-error 💣 when you finish, remove this comment.
-	'/': (left, right) => left / right,
+	'+': (left: number, right: number): number => left + right,
+	'-': (left: number, right: number): number => left - right,
+	'*': (left: number, right: number): number => left * right,
+	'/': (left: number, right: number): number => left / right,
 }
 
-// 🐨 create a type called CalculatorProps
+// 🦺 create a type called CalculatorProps
 
-// 🐨 set the type for this props argument to CalculatorProps
+// 🦺 set the type for this props argument to CalculatorProps
 // @ts-expect-error 💣 when you finish, remove this comment.
 function Calculator({ left, operator, right }) {
 	// @ts-expect-error we'll fix this one later

@@ -1,7 +1,7 @@
 # Default Props
 
-Sometimes you want to allow the user of your component to skip providing a prop
-and use a default value instead. To do this, we can use
+👨‍💼 Sometimes you want to allow the user of your component to skip providing a
+prop and use a default value instead. To do this, we can use
 [destructuring default values syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values_2),
 but when users of our component try to skip a prop, TypeScript will complain
 because our type says all the elements of the `CalculatorProps` type are
@@ -18,7 +18,7 @@ const kody = { name: 'Kody', isCute: true }
 const peter = { name: 'Peter' }
 ```
 
-For this extra credit, make all props optional. Default `left` and `right` to
+For this step, make all props optional. Default `left` and `right` to
 `0` and `operator` to `'+'`. Then you can update the App to test it out:
 
 ```tsx

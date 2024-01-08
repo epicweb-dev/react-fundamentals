@@ -1,5 +1,4 @@
 import * as ReactDOM from 'react-dom/client'
-// import './box-styles.css'
 
 // 🐨 add a className prop to each div and apply the correct class names
 // based on the text content

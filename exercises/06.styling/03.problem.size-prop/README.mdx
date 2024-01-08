@@ -1,22 +1,15 @@
 # Size Prop
 
-It's great that we're composing the `className`s and `style`s properly, but
+👨‍💼 It's great that we're composing the `className`s and `style`s properly, but
 wouldn't it be better if the users of our components didn't have to worry about
 which class name to apply for a given effect? Or that a class name is involved
 at all? I think it would be better if users of our component had a `size` prop
 and our component took care of making the box that size.
 
-In this extra credit, try to make this API work:
+In this step, try to make this API work:
 
 ```tsx
 <Box size="small" style={{ backgroundColor: 'lightblue' }}>
 	small lightblue box
 </Box>
 ```
-
-Wouldn't it be even cooler if instead of showing an error message we just didn't
-allow the user to enter invalid input? Yeah! In this extra credit I've backed us
-up and removed the error stuff and now we're going to control the input state
-and control the input value. Anytime there's a change we'll call
-`.toLowerCase()` on the value to ensure that it's always the lower case version
-of what the user types.
