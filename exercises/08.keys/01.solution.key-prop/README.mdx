@@ -1,0 +1,30 @@
+# Key prop
+
+👨‍💼 Great work. That was super weird an confusing for our users. They're much
+happier now.
+
+🦉 Note, the key only needs to be unique within a given array. So this works
+fine:
+
+```tsx
+const element = (
+	<ul>
+		{list.map(listItem => (
+			<li key={listItem.id}>{listItem.value}</li>
+		))}
+	</ul>
+)
+```
+
+In our example, the `value` of the input is managed by the browser, but this
+has even bigger implications when we start working with our own state and
+side-effects. It's a little too early to demonstrate this for you, but you
+should know that when React removes a component from the DOM, it gets
+"unmounted" which will trigger side-effect cleanups, and if new elements are
+added then those will be "mounted" and will trigger your side-effects. This can
+cause some surprising and problematic issues for your users.
+
+So just remember the rule and always provide a `key` when rendering an array.
+Later when you have more React experience, you can come back to this exercise
+and expand it a bit with custom components that manage state and side-effects to
+observe the problems caused when you ignore the `key`.
