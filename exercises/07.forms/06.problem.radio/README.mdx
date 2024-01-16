@@ -1,0 +1,18 @@
+# Radios
+
+👨‍💼 We need to allow the user to select the visibility of the account. It can be
+either Public or Private (default to public). We could use a `<select>` here, but I don't think
+that's the best option. Instead, let's use a radio group.
+
+📜 You can [learn about radio groups on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)
+
+What's interesting about radio groups is that they are a group of inputs that
+share the same name. Only one of them can be selected at a time. Each radio
+input needs its own `label`. To label the entire group, you can use a
+`<fieldset>` and a `<legend>`.
+
+Similar to checkboxes, to set the default value, you need to add the `checked`
+attribute to the input you want to be selected by default.
+
+Similar to a select `option`, you need to set the `value` on the input to
+determine what value will be sent to the server when the form is submitted.

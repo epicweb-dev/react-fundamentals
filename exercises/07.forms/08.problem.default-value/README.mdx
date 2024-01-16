@@ -1,0 +1,72 @@
+# Default Value
+
+🦉 You may have noticed in the previous step we used a `value` prop. This is how
+you set the value in an HTML document. React however is a little special and
+supports what's called
+["controlled inputs"](https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable)
+meaning you can programmatically control the value of the input.
+
+For this reason, when you set the `value` prop on an input like this, it means
+that React will expect you keep that value up-to-date and will not allow the
+user to change the value to anything other than what you have specified in the
+`value` prop. Effectively, this means that if we set the `value` on one of our
+fields, the user can't change it unless we do a little extra work. This is a
+very useful feature we'll discuss more later on, but it has implications for our
+form now, so let's address this.
+
+The thing is, we want to default several of these fields to a value, but we
+want the user to be able to change them. With the exception of the hidden input,
+we can't do that with the `value` prop. So we need to use a different prop.
+
+In React, you use the `defaultValue` prop to set the default value of an input
+and the `defaultChecked` prop to set the default value of a checkbox or radio.
+The `defaultValue` should be a string (or it will be coerced to a string) that
+matches the format of the input.
+
+```tsx
+<input type="text" defaultValue="Hello World" />
+// these give the same result:
+<input type="number" defaultValue="42" />
+<input type="number" defaultValue={42} />
+```
+
+If it's a date, you need to use a string, but it needs to be in the format
+`YYYY-MM-DD` (because that's the format of the value when the user selects a
+date). You can use the `toISOString` method on a `Date` object which gives a
+string with the format `YYYY-MM-DDTHH:mm:ss.sssZ`, so we can use `slice` to get
+the first 10 characters:
+
+```tsx
+<input type="date" defaultValue={new Date().toISOString().slice(0, 10)} />
+```
+
+This applies to `select` as well. Set it the the value of the option you want to
+have selected, and that one will be selected by default:
+
+```tsx
+<select defaultValue="pineapple">
+	<option value="apple">Apple</option>
+	<option value="banana">Banana</option>
+	<option value="pineapple">Pineapple</option>
+</select>
+```
+
+Checkboxes and Radios are special cases. For these, you set the `defaultChecked`
+prop:
+
+```tsx
+<input type="checkbox" defaultChecked />
+// and for the radio, just set defaultChecked on the one you want selected:
+<input type="radio" name="fruit" value="apple" defaultChecked />
+<input type="radio" name="fruit" value="banana" />
+<input type="radio" name="fruit" value="pineapple" />
+```
+
+👨‍💼 So with that, please set some defaults on these form fields:
+
+- Account Type: "Student"
+- Age: 18
+- Favorite Color: #002E5D
+- Visibility: Public
+- Waiver Signed: Checked
+- Start Date: Today's date

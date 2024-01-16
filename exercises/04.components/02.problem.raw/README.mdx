@@ -8,7 +8,7 @@ So instead of calling your `message` function, pass it as the first argument to
 `React.createElement` and pass the `{children: 'Hello World'}` object as the
 second argument.
 
-```js
+```ts
 React.createElement(
 	someFunction,
 	{ prop1: 'value1', prop2: 'value2' },
@@ -21,7 +21,7 @@ Then `someFunction` will be called with the props object as the first argument
 and the children will appear as an array in the children property of the props
 object.
 
-```js
+```ts
 function someFunction(props) {
 	props.children // ['child1', 'child2']
 	props.prop1 // 'value1'
