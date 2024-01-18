@@ -2,3 +2,20 @@
 
 👨‍💼 Great! Now when the user submits the form, this extra information will be
 available in the submission without the user needing to supply it. Well done!
+
+🦉 A common question here is whether you can supply complex data structures as
+hidden input values, and you definitely can. You can either provide multiple
+hidden inputs, or just stick JSON in your hidden input like so:
+
+```tsx
+<input
+	type="hidden"
+	name="order"
+	value={JSON.stringify({ sandwich: 'tuna' })}
+/>
+```
+
+Then the backend could parse that JSON from the `order` form field. This can be
+very useful if you're using a library that doesn't render form elements, but you
+want to send the user's selections to the backend as a part of your form using
+your own form elements.
