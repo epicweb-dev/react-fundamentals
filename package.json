@@ -25,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
     "eslint-config-prettier": "^9.1.0",
+    "react-error-boundary": "^4.0.12",
     "typescript": "^5.3.2"
   },
   "eslintIgnore": [

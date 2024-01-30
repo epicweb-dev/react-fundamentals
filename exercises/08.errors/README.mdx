@@ -1,0 +1,157 @@
+# Error Boundaries
+
+Unfortunately, sometimes things go wrong and we need to handle errors when they
+do so we can show the user useful information. No matter how hard you try,
+eventually your app code just isn't going to behave the way you expect it to and
+you'll need to handle those exceptions. If an error is thrown and unhandled,
+your application will be removed from the page, leaving the user with a blank
+screen... Kind of awkward...
+
+The problem is, you can't just wrap your entire application in a `try`/`catch`
+because of the way JavaScript works. If you recall from earlier lessons, when
+then you'll remember this:
+
+```tsx
+const element = (
+	<div>
+		<h1>Calculator</h1>
+		<Calculator left={1} operator="+" right={2} />
+		<Calculator left={1} operator="-" right={2} />
+		<Calculator left={1} operator="*" right={2} />
+		<Calculator left={1} operator="/" right={2} />
+	</div>
+)
+
+console.log(element)
+// logs something like:
+
+// {
+// 	type: 'div',
+// 	props: {
+// 		children: [
+// 			{ type: 'h1', props: { children: 'Calculator' } },
+// 			{ type: Calculator, props: { left: 1, operator: '+', right: 2 } },
+// 			{ type: Calculator, props: { left: 1, operator: '-', right: 2 } },
+// 			{ type: Calculator, props: { left: 1, operator: '*', right: 2 } },
+// 			{ type: Calculator, props: { left: 1, operator: '/', right: 2 } },
+// 		],
+// 	},
+// }
+```
+
+So if we tried to wrap our JSX in a `try`/`catch`, it would only catch errors
+during the creation of those elements, but the real errors will happen with
+React gets around to calling our component functions.
+
+So you could wrap all of the contents of your components in a `try`/`catch`, but
+that's super annoying boilerplate.
+
+If only there were something like:
+
+```tsx
+<Try catch={<div>Oh no!</div>}>
+	<App />
+</Try>
+```
+
+Oh wait! There is! They're called
+[Error Boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+So you can make a special kind of component that implements the Error Boundary
+API, and then use it like so:
+
+```tsx
+<ErrorBoundary fallback={<div>Oh no!</div>}>
+	<App />
+</ErrorBoundary>
+```
+
+Unfortunately, React doesn't ship this component as a built-in component, and
+there is currently no way to create an Error Boundary component as a modern
+function component so you have to use a class component instead.
+
+Here's a simple version of an Error Boundary component:
+
+```tsx
+class ErrorBoundary extends React.Component {
+	state = { error: null }
+	static getDerivedStateFromError(error) {
+		return { error }
+	}
+	render() {
+		return this.state.error ? this.props.fallback : this.props.children
+	}
+}
+```
+
+Then you'd use it like so:
+
+```tsx
+<ErrorBoundary fallback={<div>Oh no!</div>}>
+	<App />
+</ErrorBoundary>
+```
+
+And now any errors thrown in `App` will be caught by the Error
+Boundary and render out the error message instead of crashing the app.
+
+You're literally never going to need to do this though. Instead we'll follow
+the official docs' recommendation and use
+[`react-error-boundary`](https://npm.im/react-error-boundary) which has a really
+nice API with a variety of ways to use it for different use cases. Check
+[📜 the docs](https://npm.im/react-error-boundary) for more details.
+
+## Async Errors
+
+In React, you need to consider two types of errors: errors that happen during
+rendering, and errors that don't (like an event handler, a `useEffect` callback,
+or a promise `.then`/`.catch`).
+
+React cannot catch all of these kinds of errors because they happen outside of
+React's call stack. So you need to surface those to React yourself. It's not
+very often you'll need to handle these kinds of errors in real world
+applications using modern React patterns and frameworks, but you may run into
+cases where it's useful. The easiest way to do this is to use the
+`useErrorBoundary` hook from
+[`react-error-boundary`](https://npm.im/react-error-boundary):
+
+```tsx
+function App() {
+	const { showBoundary } = useErrorBoundary()
+
+	useEffect(() => {
+		function handleMouseMove(event) {
+			try {
+				// Do something that could throw
+			} catch (error) {
+				showBoundary(error)
+			}
+		}
+		window.addEventListener('mousemove', handleMouseMove)
+		return () => {
+			window.removeEventListener('mousemove', handleMouseMove)
+		}
+	})
+
+	// Render ...
+}
+```
+
+An alternative to using an error boundary for this type of error is to store the
+error in state and display that. Both approaches are valid, and which one you
+choose comes down to which feels better. I typically try both and choose the one
+I hate the least 😅
+
+## Localized Error Handling
+
+Most applications will use more than a single error boundary. You should really
+think about error boundaries as try/catch blocks. You don't want to wrap your
+entire application in a single try/catch block because it's more difficult to
+handle errors in a meaningful way. Instead, you wrap things in more practical
+places so you can handle errors in a more localized way with the kind of context
+that makes sense for that part of the application.
+
+You'll use error boundaries in a similar way. Just think about what the user
+will be able to do when errors occur and if you're able to give them more useful
+actions by handling the error in a more closely to where it originated, then do
+that.
