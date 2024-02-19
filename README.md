@@ -32,18 +32,17 @@
 
 ## Prerequisites
 
-- TODO: add prerequisites
-- Some
-- Pre-requisite
-- links
-- here
+- Basic understanding of HTML, CSS, JavaScript, and TypeScript
+- Install the React DevTools (Chrome (recommended), Firefox)
 
 ## Pre-workshop Resources
 
 Here are some resources you can read before taking the workshop to get you up to
 speed on some of the tools and concepts we'll be covering:
 
-- TODO: add resources
+- [JavaScript to Know for React](https://kentcdodds.com/blog/javascript-to-know-for-react)
+- [Beginner's TypeScript](https://www.totaltypescript.com/tutorials/beginners-typescript)
+- [React with TypeScript](https://www.totaltypescript.com/tutorials/react-with-typescript)
 
 ## System Requirements
 
