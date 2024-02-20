@@ -7,8 +7,8 @@ import {
 	getApps,
 	isProblemApp,
 	setPlayground,
-} from '@kentcdodds/workshop-app/apps.server'
-import { getWatcher } from '@kentcdodds/workshop-app/change-tracker'
+} from '@kentcdodds/workshop-utils/apps.server'
+import { getWatcher } from '@kentcdodds/workshop-utils/change-tracker'
 
 // getApps expects this env var
 process.env.NODE_ENV = 'development'
