@@ -8,7 +8,7 @@
   "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@kentcdodds/workshop-app": "^3.6.0",
+    "@kentcdodds/workshop-app": "^3.6.3",
     "execa": "^7.2.0"
   },
   "engines": {
