@@ -1,7 +1,7 @@
 node_modules
 
 **/build/**
-**/public/build/**
+**/public/**
 .env
 
 **/package.json

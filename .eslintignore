@@ -1,6 +1,6 @@
 node_modules
 build
-public/build
+public
 playwright-report
 test-results
 server-build
