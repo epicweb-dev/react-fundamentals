@@ -7,7 +7,10 @@
 	<script src="/react-dom.js"></script>
 	<script src="/babel-standalone.js"></script>
 	<script type="text/babel">
-		const element = <div className="container">Hello World</div>
+		const children = 'Hello World'
+		const className = 'container'
+		// 🐨 get the children and className interpolated into this element:
+		const element = <div></div>
 		ReactDOM.createRoot(document.getElementById('root')).render(element)
 	</script>
 </body>

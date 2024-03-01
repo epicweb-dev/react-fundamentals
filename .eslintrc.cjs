@@ -6,6 +6,7 @@ module.exports = {
 		'prettier',
 	],
 	rules: {
+		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/consistent-type-imports': [
 			'warn',
 			{

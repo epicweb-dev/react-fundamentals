@@ -2,7 +2,6 @@ import { useState } from 'react'
 import * as ReactDOM from 'react-dom/client'
 
 function App() {
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [key, setKey] = useState(0)
 	return (
 		<div>

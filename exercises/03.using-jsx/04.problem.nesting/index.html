@@ -7,10 +7,14 @@
 	<script src="/react-dom.js"></script>
 	<script src="/babel-standalone.js"></script>
 	<script type="text/babel">
-		const children = 'Hello World'
-		const className = 'container'
-		const props = { children, className }
-		const element = <div {...props} />
+		const element = (
+			<div className="container">
+				{/* 💡 TIP: this is how you do comments inside JSX elements! */}
+				{/* 🐨 put a paragraph tag with the contents "Here's Sam's favorite food:" */}
+				{/* 🐨 add a ul with the class "sams-food" */}
+				{/* 🐨 add li elements for "Green eggs" and "Ham" */}
+			</div>
+		)
 		ReactDOM.createRoot(document.getElementById('root')).render(element)
 	</script>
 </body>

@@ -7,7 +7,6 @@
 	<script src="/react-dom.js"></script>
 	<script src="/babel-standalone.js"></script>
 	<script type="text/babel">
-		const rootElement = document.getElementById('root')
 		const element = (
 			<>
 				<p>Here's Sam's favorite food:</p>
@@ -17,6 +16,6 @@
 				</ul>
 			</>
 		)
-		ReactDOM.createRoot(rootElement).render(element)
+		ReactDOM.createRoot(document.getElementById('root')).render(element)
 	</script>
 </body>
