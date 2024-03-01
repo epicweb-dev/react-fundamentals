@@ -5,20 +5,69 @@ There are two primary ways to style react components
 1. Inline styles with the `style` prop
 2. Regular CSS with the `className` prop
 
-**About the `style` prop:**
+Before we get into those, you need to know something about element properties
+and HTML attributes.
 
-- In HTML you'd pass a string of CSS:
+## Element properties and HTML attributes
+
+In HTML, you have elements and attributes. For example, the `div` element has a
+`class` attribute:
 
 ```html
-<div style="margin-top: 20px; background-color: blue;"></div>
+<div class="my-class"></div>
 ```
 
-- In React, you'll pass an object of CSS:
+In the DOM, the `div` element has a `className` property:
+
+```html
+<div id="my-div" class="my-class"></div>
+<script>
+	const myDiv = document.getElementById('my-div')
+	console.log(myDiv.class) // undefined
+	console.log(myDiv.className) // "my-class"
+</script>
+```
+
+In JSX, you use the property name rather than the attribute name:
+
+```tsx
+<div className="my-class" />
+```
+
+This applies to a number of other attributes as well. For example, `for` in HTML
+is `htmlFor` in DOM (and JSX). Others include `tabindex` and `readonly` (which
+are, respectively, `tabIndex` and `readOnly` in JSX).
+
+Most differences between HTML attributes and JSX props are due to the fact that
+props are a reference to "properties" not "attributes", so understanding the
+difference is handy!
+
+## Inline styles
+
+Inline styles are set differently in JSX from HTML as a result of how they are
+applied to the DOM. In HTML, you'd pass a string of CSS, but you access it as an
+object in the DOM:
+
+```html
+<div id="my-div" style="margin-top: 20px; background-color: blue;"></div>
+<script>
+	const myDiv = document.getElementById('my-div')
+	console.log(myDiv.style.marginTop) // "20px"
+	console.log(myDiv.style.backgroundColor) // "blue"
+</script>
+```
+
+As a result, in JSX, you pass an object of CSS rather than a string:
 
 ```tsx
 <div style={{ marginTop: 20, backgroundColor: 'blue' }} />
 ```
 
+This actually makes them much easier to work with. Though the style prop has
+some significant limitations (like lack of media queries and pseudo-selectors),
+so it's not always the best choice.
+
+<callout-warning class="aside">
 Note that in react the `{{` and `}}` is actually a combination of a JSX
 expression and an object expression. The same example above could be written
 like so:
@@ -28,12 +77,36 @@ const myStyles = {marginTop: 20, backgroundColor: 'blue'}
 <div style={myStyles} />
 ```
 
+</callout-warning>
+
 Note also that the property names are `camelCased` rather than `kebab-cased`.
 This matches the `style` property of DOM nodes (which is a
 [`CSSStyleDeclaration`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration)
 object).
 
-**About the `className` prop:**
+## Class names
 
-As we discussed earlier, in HTML, you apply a class name to an element with the
-`class` attribute. In JSX, you use the `className` prop.
+The most common mechanism for styling web applications is through the use of CSS
+and class names.
+
+As mentioned earlier, in HTML, you apply a class name to an element with the
+`class` attribute. In JSX, you use the `className` prop:
+
+```tsx
+<div className="my-class" />
+```
+
+Then you'll load a CSS file onto the page:
+
+```html
+<link rel="stylesheet" href="styles.css" />
+```
+
+And that can contain the styles for `.my-class`:
+
+```css
+.my-class {
+	margin-top: 20px;
+	background-color: blue;
+}
+```

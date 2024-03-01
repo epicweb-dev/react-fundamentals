@@ -46,3 +46,14 @@ element = <lower_snake_case /> // React.createElement('lower_snake_case')
 
 Now let's refactor your function to a name that will make it possible to call it
 by using it as a JSX component.
+
+The most common approaches you'll find in the wild are to have the name of the
+component capitalized:
+
+```tsx
+element = <Capitalized /> // React.createElement(Capitalized)
+```
+
+Sometimes you'll see the property access syntax as well.
+
+Let's go refactor so we can use our componets as JSX!

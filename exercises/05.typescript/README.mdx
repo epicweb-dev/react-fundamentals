@@ -6,14 +6,17 @@ you plan making maintainable. As you're working with TypeScript and getting
 angry at all the red squiggles it puts in your code, keep this in mind:
 
 > TypeScript is not making your life terrible. It's just showing you how
-> terrible your life already is. – Kent C. Dodds
+> terrible your life already is. – [Kent C. Dodds](https://twitter.com/kentcdodds/status/1763606063394496633)
 
-You can think of TypeScript as that brutally honest friend who isn't afraid to
-tell you about the spinach in your teeth. It's not the friend's fault that
-you've got spinach in your teeth. It's your fault. You should be thanking
-TypeScript, not cursing it.
+You can think of TypeScript as that
+[brutally honest friend](https://twitter.com/kentcdodds/status/1715562350835855396)
+who isn't afraid to tell you about the spinach in your teeth. It's not the
+friend's fault that you've got spinach in your teeth. It's your fault. You
+should be thanking TypeScript, not cursing it.
 
-Remember, in exercise 4 we learned what a React component is:
+Remember, in exercise 4 we learned
+[what a React component](https://twitter.com/kentcdodds/status/1763606427028136131)
+is:
 
 > Components are functions which accept an object called "props" and return
 > something that is renderable
@@ -88,12 +91,12 @@ function Message(props: { children: React.ReactNode }) {
 	return <div className="message">{props.children}</div>
 }
 
-// and you can destructure as well:
+// and you can destructure as well (this is what I do most of the time):
 function Message({ children }: { children: React.ReactNode }) {
 	return <div className="message">{children}</div>
 }
 
-// mix-and-match (this is what I do most of the time):
+// mix-and-match:
 type MessageProps = { children: React.ReactNode }
 function Message({ children }: MessageProps) {
 	return <div className="message">{children}</div>
@@ -111,17 +114,21 @@ experienced or want to focus on it. You can do this like so:
 ```typescript
 // @ts-expect-error TypeScript is complaining about this next line.
 // Something about magic not existing.
-// I don't know how to fix this right now... Come back later.
+// I don't know how to fix this right now and AI Assistants were unhelpful...
+// Come back later.
 make.magic()
 ```
 
-Unfortunately, there are some things that TypeScript cannot do for you
+Don't worry if you struggle with TypeScript at first, the more you use it, the
+better you'll get at it, just like anything else.
 
-👨‍💼 Note also, we're moving from the `*.html` files to `*.tsx` files. This is
-more real-world and also your editor likely supports TypeScript better within
-TypeScript files rather than HTML files. From here on out, the `index.tsx` file
-will be loaded onto the page automatically. We'll also get live reload of the
-browser as we save changes which will be quite nice. The workshop app is a
-little magical, but you'll find
-`ReactDOM.createRoot(rootElement).render(element)` calls in each of the files,
-just like we were doing in the previous exercises.
+<callout-info>
+	Note: we're moving from the `*.html` files to `*.tsx` files. This is more
+	real-world and also your editor likely supports TypeScript better within
+	TypeScript files rather than HTML files. From here on out, the `index.tsx`
+	file will be loaded onto the page automatically. We'll also get live reload of
+	the browser as we save changes which will be quite nice. The workshop app is a
+	little magical, but you'll find
+	`ReactDOM.createRoot(rootElement).render(element)` calls in each of the files,
+	just like we were doing in the previous exercises.
+</callout-info>

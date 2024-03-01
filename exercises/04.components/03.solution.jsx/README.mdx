@@ -12,4 +12,38 @@ equivalent:
 <Alert children="Something went wrong!" />
 ```
 
-We'll learn more about that next.
+Our `Message` component uses the "special" and implicit `children` prop. It's
+special because it means we can do this:
+
+```tsx
+element = <Message>Hello World</Message>
+// is functionally equivalent to:
+element = <Message children="Hello World" />
+```
+
+And you can put JSX in the children prop with either syntax as well:
+
+```tsx
+element = (
+	<Message>
+		<span>Hello</span> <span>World</span>
+	</Message>
+)
+// is functionally equivalent to:
+element = <Message children={[<span>Hello</span>, ' ', <span>World</span>]} />
+```
+
+📜 [Learn more about passing JSX as `children`](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children).
+
+But we don't have to use the `children` prop, we can call it whatever we want.
+So you could also do:
+
+```tsx
+element = <Message greeting={[<span>Hello</span>, ' ', <span>World</span>]} />
+```
+
+The only thing that's special about the `children` prop is that it's implicit
+in JSX.
+
+And sometimes using something other than the `children` prop can be really
+useful, but we'll get to that in a future workshop.
