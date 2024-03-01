@@ -33,7 +33,7 @@
 ## Prerequisites
 
 - Basic understanding of HTML, CSS, JavaScript, and TypeScript
-- Install the React DevTools (Chrome (recommended), Firefox)
+- Install the [React DevTools](https://react.dev/learn/react-developer-tools)
 
 ## Pre-workshop Resources
 

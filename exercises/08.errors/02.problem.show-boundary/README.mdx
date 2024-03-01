@@ -1,1 +1,24 @@
 # Other Errors
+
+👨‍💼 Recall previously we learned that React doesn't catch all errors for you.
+We've got an error in our `onSubmit` handler like this. If you try to submit the
+form, you'll notice in the console that there's an error (someone made a typo
+😅).
+
+Before we fix the typo, we want to give the user better feedback for when
+something like this happens (right now, they don't know it's not working and
+that's terribly annoying). So what I want you to do is wrap that callback in our
+own `try/catch` and then surface it to React using the `showBoundary` function
+you get when you call the `useErrorBoundary` utility:
+
+```tsx
+import { useErrorBoundary } from 'react-error-boundary'
+
+// ... in the component
+const { showBoundary } = useErrorBoundary()
+
+// ... in the `catch` block
+showBoundary(error)
+```
+
+So let's make that happen!

@@ -1,7 +1,8 @@
 # Custom Component
 
-👨‍💼 Try to make a custom `<Box />` component that renders a div, accepts all the
-props and merges the given `style` and `className` props with the shared values.
+👨‍💼 We want to reduce duplication here by making a custom `<Box />` component
+that renders a div, accepts all the props and merges the given `style` and
+`className` props with the shared values.
 
 I should be able to use it like so:
 
@@ -11,8 +12,9 @@ I should be able to use it like so:
 </Box>
 ```
 
-The `box` className and `fontStyle: 'italic'` style should be applied in
-addition to the values that come from props.
+The `box` className and `fontStyle: 'italic'` style should be applied
+automatically by the `<Box />` component which should then merge that default
+with the values that come from props.
 
 How you go about implementing it is part of the fun (aka "learning" 😉). You may
 come up with something completely different from how I do it and that's great
@@ -50,8 +52,3 @@ function MySpan(props: React.HTMLAttributes<HTMLSpanElement>) {
 
 And now you'll get type safety and autocomplete for all the HTML attributes
 accepted by a span element.
-
-💰 Note, you'll need to import `React` to reference it's `HTMLAttributes`
-generic type. To import React, you can use `import * as React from 'react'` at
-the top of the file.
-[Learn more](https://epicreact.dev/importing-react-through-the-ages).

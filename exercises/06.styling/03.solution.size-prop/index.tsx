@@ -1,8 +1,6 @@
 import * as ReactDOM from 'react-dom/client'
 
 function Box({
-	style = {},
-	className = '',
 	size,
 	...otherProps
 }: {
@@ -11,9 +9,11 @@ function Box({
 	const sizeClassName = size ? `box--${size}` : ''
 	return (
 		<div
-			className={`box ${className} ${sizeClassName}`}
-			style={{ fontStyle: 'italic', ...style }}
 			{...otherProps}
+			className={['box', otherProps.className, sizeClassName]
+				.filter(Boolean)
+				.join(' ')}
+			style={{ fontStyle: 'italic', ...otherProps.style }}
 		/>
 	)
 }

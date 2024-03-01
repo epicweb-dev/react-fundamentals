@@ -1,6 +1,8 @@
 import * as ReactDOM from 'react-dom/client'
 
 function Box({
+	// 💯 you can keep the style and className props here, but you can make this
+	// still work if you remove them. Give that a shot if you want.
 	style = {},
 	className = '',
 	// 🐨 add a size prop here
@@ -11,6 +13,7 @@ function Box({
 	return (
 		<div
 			// 🐨 add the sizeClassName to the className prop
+			// 💯 for something extra, handle the case where no className is given (remove extra spaces).
 			className={`box ${className}`}
 			style={{ fontStyle: 'italic', ...style }}
 			{...otherProps}

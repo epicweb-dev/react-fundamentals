@@ -47,10 +47,13 @@ We haven't covered things changing over time yet, but this warning's going to
 show up any time you render an array regardless of whether that array changes
 so we're going to address that here.
 
-If you re-render that list with an added item, React doesn't really know whether
-you added an item in the middle, beginning, or end. And the same goes for when
-you remove an item (it doesn't know whether that changes is in the middle,
-beginning, or end either).
+If you were to somehow update that list with an added item and tell React to
+update the UI, React doesn't really know whether you added an item in the
+middle, beginning, or end. And the same goes for when you remove an item (it
+doesn't know whether that changes is in the middle, beginning, or end either).
+Or maybe you removed them all and replaced them with completely new values.
+React just doesn't have enough information to know what to do about what you've
+done to the array.
 
 In simple cases (like the `One`, `Two`, `Three` example above), it's not a big
 deal, because React's best-guess works out ok. However, if any of those React

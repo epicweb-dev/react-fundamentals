@@ -39,12 +39,32 @@ console.log(element)
 // }
 ```
 
-So if we tried to wrap our JSX in a `try`/`catch`, it would only catch errors
-during the creation of those elements, but the real errors will happen with
-React gets around to calling our component functions.
+You'll notice that the `Calculator` is just referenced, but not actually called
+at this stage. So if we tried to wrap our JSX in a `try`/`catch`, it would only
+catch errors during the creation of those elements, but the real errors will
+happen with React gets around to calling our component functions.
 
 So you could wrap all of the contents of your components in a `try`/`catch`, but
-that's super annoying boilerplate.
+that's super annoying boilerplate:
+
+```tsx
+// no, don't do this...
+function Calculator({ left, operator, right }) {
+	try {
+		const result = operations[operator](left, right)
+		return (
+			<div>
+				<code>
+					{left} {operator} {right} = <output>{result}</output>
+				</code>
+			</div>
+		)
+	} catch (error) {
+		return <div>Oh no! An error occurred!</div>
+	}
+}
+// ugh, that would be terrible
+```
 
 If only there were something like:
 
@@ -65,6 +85,10 @@ API, and then use it like so:
 	<App />
 </ErrorBoundary>
 ```
+
+And just like with `try/catch` you can place these error boundaries wherever you
+want to catch errors. You can even nest them to catch errors in different parts
+of your application to give your users a more meaningful experience.
 
 Unfortunately, React doesn't ship this component as a built-in component, and
 there is currently no way to create an Error Boundary component as a modern
@@ -95,11 +119,12 @@ Then you'd use it like so:
 And now any errors thrown in `App` will be caught by the Error
 Boundary and render out the error message instead of crashing the app.
 
-You're literally never going to need to do this though. Instead we'll follow
-the official docs' recommendation and use
-[`react-error-boundary`](https://npm.im/react-error-boundary) which has a really
-nice API with a variety of ways to use it for different use cases. Check
-[📜 the docs](https://npm.im/react-error-boundary) for more details.
+You're **never going to need to do this** though. Instead we'll follow the
+official docs' recommendation and use
+[`react-error-boundary`](https://www.npmjs.com/package/react-error-boundary)
+which has a really nice API with a variety of ways to use it for different use
+cases. Check [📜 the docs](https://www.npmjs.com/package/react-error-boundary)
+for more details.
 
 ## Async Errors
 
@@ -107,13 +132,15 @@ In React, you need to consider two types of errors: errors that happen during
 rendering, and errors that don't (like an event handler, a `useEffect` callback,
 or a promise `.then`/`.catch`).
 
-React cannot catch all of these kinds of errors because they happen outside of
-React's call stack. So you need to surface those to React yourself. It's not
-very often you'll need to handle these kinds of errors in real world
-applications using modern React patterns and frameworks, but you may run into
-cases where it's useful. The easiest way to do this is to use the
-`useErrorBoundary` hook from
-[`react-error-boundary`](https://npm.im/react-error-boundary):
+Under the hood, React is using `try`/`catch` to catch errors that happen during
+rendering, but React cannot catch all of these kinds of errors because they
+happen outside of React's call stack.
+
+So you need to surface those to React yourself. It's not very often you'll need
+to handle these kinds of errors in real world applications using modern React
+patterns and frameworks, but you may run into cases where it's useful. The
+easiest way to do this is to use the `useErrorBoundary` hook from
+[`react-error-boundary`](https://www.npmjs.com/package/react-error-boundary):
 
 ```tsx
 function App() {
@@ -155,3 +182,26 @@ You'll use error boundaries in a similar way. Just think about what the user
 will be able to do when errors occur and if you're able to give them more useful
 actions by handling the error in a more closely to where it originated, then do
 that.
+
+For example, let's say you have a list/detail view. You might want to have an
+error boundary around the list and another around the detail view. This way, if
+there's an error in the list, you can show a message to the user and give them
+the option to retry fetching the list. If there's an error in the detail view,
+you can show an error and they can at least try other items in the list.
+
+```tsx
+function App() {
+	return (
+		<div>
+			<ErrorBoundary fallback={<div>Something went wrong with the list.</div>}>
+				<List />
+			</ErrorBoundary>
+			<ErrorBoundary
+				fallback={<div>Something went wrong with this item, try another.</div>}
+			>
+				<Detail />
+			</ErrorBoundary>
+		</div>
+	)
+}
+```
