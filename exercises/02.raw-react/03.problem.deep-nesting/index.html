@@ -17,14 +17,13 @@
 		// 	</ul>
 		// </div>
 
-		const element = React.createElement('div', {
-			className: 'container',
-			children: [
-				React.createElement('span', null, 'Hello'),
-				' ',
-				React.createElement('span', null, 'World'),
-			],
-		})
+		const element = React.createElement(
+			'div',
+			{ className: 'container' },
+			React.createElement('span', null, 'Hello'),
+			' ',
+			React.createElement('span', null, 'World'),
+		)
 		ReactDOM.createRoot(rootElement).render(element)
 	</script>
 </body>
