@@ -21,7 +21,7 @@ form HTTP `method` (which is `GET`). This will send the data in the body of the
 request instead of in the URL:
 
 ```tsx
-<form action="POST"></form>
+<form method="POST"></form>
 ```
 
 🐨 Go ahead and make that change now, then come on back for the rest...
@@ -53,7 +53,7 @@ we're doing with the photo.
 uploads:
 
 ```tsx
-<form action="POST" encType="multipart/form-data"></form>
+<form method="POST" encType="multipart/form-data"></form>
 ```
 
 Great, so now if you check the network tab you'll find that the file is
@@ -73,7 +73,7 @@ console:
 
 ```tsx
 <form
-	action="POST"
+	method="POST"
 	onSubmit={event => {
 		event.preventDefault()
 		// ...
@@ -89,6 +89,7 @@ that out. To do that, we'll use
 [the `FormData` API](https://developer.mozilla.org/en-US/docs/Web/API/FormData):
 
 ```tsx
+const form = event.currentTarget
 const formData = new FormData(form)
 // The browser doesn't display form values very well when you console.log(formData)
 // so you can do this:
