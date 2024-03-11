@@ -1,7 +1,6 @@
 import * as ReactDOM from 'react-dom/client'
-import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 
-function OnboardingForm() {
+function App() {
 	return (
 		<form
 			action="api/onboarding"
@@ -11,18 +10,13 @@ function OnboardingForm() {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
 				console.log(Object.fromEntries(formData))
-				const accountType = formData.get('accountType') as string
-				console.log(accountType.toUpperCase())
 			}}
 		>
 			<input type="hidden" name="orgId" value="123" />
 			<div>
 				<label htmlFor="accountTypeSelection">Account Type:</label>
-				<select
-					id="accountTypeSelection"
-					name="accountType"
-					defaultValue="student"
-				>
+				{/* 🐨 set the default value to "student" */}
+				<select id="accountTypeSelection" name="accountType">
 					<option value="">--Please select an option--</option>
 					<option value="admin">Admin</option>
 					<option value="teacher">Teacher</option>
@@ -40,14 +34,8 @@ function OnboardingForm() {
 			</div>
 			<div>
 				<label htmlFor="ageInput">Age:</label>
-				<input
-					id="ageInput"
-					name="age"
-					type="number"
-					min="0"
-					max="200"
-					defaultValue={18}
-				/>
+				{/* 🐨 set the default value to 18 */}
+				<input id="ageInput" name="age" type="number" min="0" max="200" />
 			</div>
 			<div>
 				<label htmlFor="photoInput">Photo:</label>
@@ -55,17 +43,14 @@ function OnboardingForm() {
 			</div>
 			<div>
 				<label htmlFor="colorInput">Favorite Color:</label>
-				<input
-					id="colorInput"
-					name="color"
-					type="color"
-					defaultValue="#002E5D"
-				/>
+				{/* 🐨 set the default value to #002E5D */}
+				<input id="colorInput" name="color" type="color" />
 			</div>
 			<fieldset>
 				<legend>Visibility:</legend>
 				<label>
-					<input name="visibility" type="radio" value="public" defaultChecked />
+					{/* 🐨 set the default value to "Public" */}
+					<input name="visibility" type="radio" value="public" />
 					Public
 				</label>
 				<label>
@@ -75,40 +60,18 @@ function OnboardingForm() {
 			</fieldset>
 			<div>
 				<label>
-					<input name="waiver" type="checkbox" defaultChecked />
+					{/* 🐨 set the default value to checked */}
+					<input name="waiver" type="checkbox" />
 					Waiver Signed
 				</label>
 			</div>
 			<div>
+				{/* 🐨 set the default value to today */}
 				<label htmlFor="startDateInput">Start Date:</label>
-				<input
-					id="startDateInput"
-					name="startDate"
-					type="date"
-					// 💰 you can comment this out to avoid the runtime error
-					defaultValue={new Date('today').toISOString().slice(0, 10)}
-					// defaultValue={new Date().toISOString().slice(0, 10)}
-				/>
+				<input id="startDateInput" name="startDate" type="date" />
 			</div>
 			<button type="submit">Submit</button>
 		</form>
-	)
-}
-
-function ErrorFallback({ error }: FallbackProps) {
-	return (
-		<div role="alert">
-			There was an error:{' '}
-			<pre style={{ color: 'red', whiteSpace: 'normal' }}>{error.message}</pre>
-		</div>
-	)
-}
-
-function App() {
-	return (
-		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<OnboardingForm />
-		</ErrorBoundary>
 	)
 }
 

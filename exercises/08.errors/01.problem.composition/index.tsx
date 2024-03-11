@@ -5,6 +5,7 @@ import * as ReactDOM from 'react-dom/client'
 function App() {
 	return (
 		<form
+			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
 			onSubmit={event => {

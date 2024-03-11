@@ -1,7 +1,6 @@
 import * as ReactDOM from 'react-dom/client'
-import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 
-function OnboardingForm() {
+function App() {
 	return (
 		<form
 			action="api/onboarding"
@@ -11,8 +10,6 @@ function OnboardingForm() {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
 				console.log(Object.fromEntries(formData))
-				const accountType = formData.get('accountType') as string
-				console.log(accountType.toUpperCase())
 			}}
 		>
 			<input type="hidden" name="orgId" value="123" />
@@ -85,30 +82,11 @@ function OnboardingForm() {
 					id="startDateInput"
 					name="startDate"
 					type="date"
-					// 💰 you can comment this out to avoid the runtime error
-					defaultValue={new Date('today').toISOString().slice(0, 10)}
-					// defaultValue={new Date().toISOString().slice(0, 10)}
+					defaultValue={new Date().toISOString().slice(0, 10)}
 				/>
 			</div>
 			<button type="submit">Submit</button>
 		</form>
-	)
-}
-
-function ErrorFallback({ error }: FallbackProps) {
-	return (
-		<div role="alert">
-			There was an error:{' '}
-			<pre style={{ color: 'red', whiteSpace: 'normal' }}>{error.message}</pre>
-		</div>
-	)
-}
-
-function App() {
-	return (
-		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<OnboardingForm />
-		</ErrorBoundary>
 	)
 }
 

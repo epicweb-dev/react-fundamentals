@@ -9,6 +9,7 @@ function OnboardingForm() {
 	const { showBoundary } = useErrorBoundary()
 	return (
 		<form
+			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
 			onSubmit={event => {

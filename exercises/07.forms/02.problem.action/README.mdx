@@ -1,0 +1,23 @@
+# Form Action
+
+🧝‍♂️ I've added some backend code that will handle our form submission. It's at
+`api/onboarding`. You can find it in <InlineFile file="api.server.ts" />.
+
+<callout-info>
+	Note: the `api.server.ts` file is some magic from the Workshop app. to make it
+	so we can test things out with a backend server without having to actually set
+	up a backend server. It's not something you'd use in a real app.
+</callout-info>
+
+👨‍💼 Great! So we want the user's form submission to be sent along to
+`api/onboarding`. By default, when a form is submitted, the browser will send
+the form data to the current page's URL. We can change this by adding an
+`action` attribute to the form element:
+
+```html
+<form action="path/to/backend/route">
+	<!-- ... -->
+</form>
+```
+
+Go ahead and add an `action` attribute to the form element.

@@ -5,6 +5,7 @@ function OnboardingForm() {
 	// 🐨 call useErrorBoundary here and get the showBoundary function
 	return (
 		<form
+			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
 			onSubmit={event => {
