@@ -23,7 +23,7 @@
   "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@kentcdodds/workshop-app": "^3.12.2",
+    "@kentcdodds/workshop-app": "^3.13.0",
     "@remix-run/eslint-config": "^2.8.1",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
