@@ -4,7 +4,7 @@
     Learn the foundational concepts necessary for building React applications and libraries
   </strong>
   <p>
-    Learn everything you need to be effective with the fundamental building block of React applications. When you're finished, you'll be prepared to create React components to build excellent experiences for your app's users.
+    Learn everything you need to be effective with the fundamental building blocks of React applications. When you're finished, you'll be prepared to create React components to build excellent experiences for your app's users.
   </p>
 </div>
 
