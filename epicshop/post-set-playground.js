@@ -8,9 +8,9 @@ const exclude = [
 	'exercises/04.',
 ]
 
-if (exclude.every(e => !process.env.epicshop_PLAYGROUND_SRC_DIR.includes(e))) {
+if (exclude.every(e => !process.env.EPICSHOP_PLAYGROUND_SRC_DIR.includes(e))) {
 	fs.writeFileSync(
-		path.join(process.env.epicshop_PLAYGROUND_DEST_DIR, 'tsconfig.json'),
+		path.join(process.env.EPICSHOP_PLAYGROUND_DEST_DIR, 'tsconfig.json'),
 		JSON.stringify({ extends: '../tsconfig' }, null, 2),
 	)
 }
