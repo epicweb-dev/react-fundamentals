@@ -50,6 +50,6 @@ jobs:
 
       - name: 🚀 Deploy
         run: flyctl deploy --remote-only
-        working-directory: ./scripts/deployed
+        working-directory: ./epicshop
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

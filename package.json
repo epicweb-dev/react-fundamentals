@@ -1,7 +1,7 @@
 {
   "name": "react-fundamentals",
   "private": true,
-  "kcd-workshop": {
+  "epicshop": {
     "title": "React Fundamentals ⚛",
     "githubRoot": "https://github.com/epicweb-dev/react-fundamentals/blob/main"
   },
@@ -10,10 +10,11 @@
     "#*": "./*"
   },
   "scripts": {
-    "start": "kcdshop start",
-    "dev": "kcdshop start",
-    "setup": "node ./setup.js",
-    "setup:custom": "node ./scripts/setup-custom.js",
+    "postinstall": "cd ./epicshop && npm install",
+    "start": "npx --prefix ./epicshop epicshop start",
+    "dev": "npx --prefix ./epicshop epicshop start",
+    "setup": "node ./epicshop/setup.js",
+    "setup:custom": "node ./epicshop/setup-custom.js",
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc -b",
@@ -23,11 +24,6 @@
   "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@kentcdodds/workshop-app": "^3.14.1",
-    "@remix-run/eslint-config": "^2.8.1",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "eslint-config-prettier": "^9.1.0",
     "react-error-boundary": "^4.0.13",
     "typescript": "^5.4.2"
   },
@@ -42,12 +38,13 @@
     "git": ">=2.18.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^14.2.1",
+    "@remix-run/eslint-config": "^2.8.1",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "eslint": "^8.57.0",
-    "execa": "^8.0.1",
-    "fs-extra": "^11.2.0",
+    "eslint-config-prettier": "^9.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5"
   }

@@ -1,22 +1,16 @@
-import fs from 'fs'
 import path from 'node:path'
-import { spawn } from 'child_process'
-import fsExtra from 'fs-extra'
-import { $ } from 'execa'
 import {
 	getApps,
 	isProblemApp,
 	setPlayground,
-} from '@kentcdodds/workshop-utils/apps.server'
-import { getWatcher } from '@kentcdodds/workshop-utils/change-tracker.server'
+} from '@epic-web/workshop-utils/apps.server'
+import { getWatcher } from '@epic-web/workshop-utils/change-tracker.server'
+import fsExtra from 'fs-extra'
 
 // getApps expects this env var
 process.env.NODE_ENV = 'development'
 
 const allApps = await getApps()
-const uniqueApps = allApps.filter(
-	(a, index) => allApps.findIndex(b => b.fullPath === a.fullPath) === index,
-)
 const problemApps = allApps.filter(isProblemApp)
 
 if (!process.env.SKIP_PLAYGROUND) {

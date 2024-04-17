@@ -1,1 +1,0 @@
-import './scripts/setup.js'

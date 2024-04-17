@@ -1,7 +1,7 @@
-import chokidar from 'chokidar'
 import path from 'node:path'
-import { $ } from 'execa'
 import { fileURLToPath } from 'node:url'
+import chokidar from 'chokidar'
+import { $ } from 'execa'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const here = (...p) => path.join(__dirname, ...p)

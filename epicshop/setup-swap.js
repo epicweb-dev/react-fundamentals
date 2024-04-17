@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { $ } from 'execa'
 import { writeFile, stat } from 'node:fs/promises'
+import { $ } from 'execa'
 
 const swapExists = await stat('/swapfile').catch(() => false)
 

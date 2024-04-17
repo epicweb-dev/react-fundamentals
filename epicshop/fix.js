@@ -2,14 +2,11 @@
 // because you may need to run it without deps.
 
 import fs from 'node:fs'
-import cp from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const here = (...p) => path.join(__dirname, ...p)
-const VERBOSE = false
-const logVerbose = (...args) => (VERBOSE ? console.log(...args) : undefined)
 
 const workshopRoot = here('..')
 const examples = (await readDir(here('../examples'))).map(dir =>
