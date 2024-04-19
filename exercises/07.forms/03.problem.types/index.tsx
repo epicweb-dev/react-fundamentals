@@ -9,7 +9,8 @@ function App() {
 			</div>
 			{/* 🐨 add appropriate inputs for:
 				- password
-				- photo
+				- age (accepting numbers from 0 to 200)
+				- photo (restricts the input to only accept image files)
 				- color
 				- startDate
 			 */}
