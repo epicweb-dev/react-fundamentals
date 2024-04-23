@@ -57,13 +57,13 @@ represented by a string in the URL (especially for large files). The file is
 simply represented by its name, and that is all the server will get which is
 just not very useful to the server.
 
-We can change that by adding a `enctype="multipart/form-data"` attribute to the
+We can change that by adding a `encType="multipart/form-data"` attribute to the
 form. This will change the `Content-Type` header to `multipart/form-data` and
 the body of the request will be a `multipart/form-data` request. This is the
 same type of request that you'd get if you were uploading a file which is what
 we're doing with the photo.
 
-🐨 Now, update the `form` to have the appropriate `enctype` attribute for file
+🐨 Now, update the `form` to have the appropriate [`enctype`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#enctype) attribute for file
 uploads:
 
 ```tsx
