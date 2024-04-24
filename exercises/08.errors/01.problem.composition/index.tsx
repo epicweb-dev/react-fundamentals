@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom/client'
-// 🐨 bring in ErrorBoundary and FallbackProps from react-error-boundary
+// 🐨 bring in ErrorBoundary and FallbackProps type from react-error-boundary
 
 // 🐨 Rename this to OnboardingForm
 function App() {
@@ -99,6 +99,7 @@ function App() {
 // 🐨 create an ErrorFallback component here that accepts FallbackProps
 // and renders the error.message
 // 💯 you can make it look nice if you want
+// 📜 https://github.com/bvaughn/react-error-boundary#errorboundary-with-fallbackcomponent-prop
 
 // 🐨 make a component called "App" that renders the OnboardingForm inside an
 // ErrorBoundary with the ErrorFallback as the FallbackComponent
