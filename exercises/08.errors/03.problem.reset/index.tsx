@@ -109,7 +109,10 @@ function ErrorFallback({ error }: FallbackProps) {
 		<div role="alert">
 			There was an error:{' '}
 			<pre style={{ color: 'red', whiteSpace: 'normal' }}>{error.message}</pre>
-			{/* 🐨 add a "Try again" button and pass the resetErrorBoundary function to the onClick prop */}
+			{/* 
+				🐨 Add a "Try again" button. Assign the resetErrorBoundary function to its onClick prop. 
+				💰 For more on the onClick event handler, visit: 📜 https://react.dev/learn/responding-to-events
+			*/}
 		</div>
 	)
 }
