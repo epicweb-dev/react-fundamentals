@@ -1,4 +1,5 @@
 import * as ReactDOM from 'react-dom/client'
+// 🐨 bring in useErrorBoundary from react-error-boundary
 import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 
 function OnboardingForm() {
