@@ -1,4 +1,4 @@
-import * as ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 
 // 🦺 create an OperationFn type that represents the common shape of the
 // operation functions below
@@ -45,4 +45,4 @@ function App() {
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
-ReactDOM.createRoot(rootEl).render(<App />)
+createRoot(rootEl).render(<App />)

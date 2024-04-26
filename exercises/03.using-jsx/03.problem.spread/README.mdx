@@ -12,13 +12,13 @@ const element = <div /> // how do I apply props to this div?
 If we were doing raw React APIs it would be:
 
 ```tsx
-const element = React.createElement('div', props)
+const element = createElement('div', props)
 ```
 
 Or, it could be written like this:
 
 ```tsx
-const element = React.createElement('div', { ...props })
+const element = createElement('div', { ...props })
 ```
 
 👨‍💼 See if you can figure out how to make that work with JSX. Take an object of

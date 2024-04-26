@@ -1,4 +1,4 @@
-import * as ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 // 🐨 bring in ErrorBoundary and FallbackProps type from react-error-boundary
 
 // 🐨 Rename this to OnboardingForm
@@ -108,4 +108,4 @@ function App() {
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
-ReactDOM.createRoot(rootEl).render(<App />)
+createRoot(rootEl).render(<App />)

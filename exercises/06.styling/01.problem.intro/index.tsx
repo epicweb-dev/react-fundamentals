@@ -1,4 +1,4 @@
-import * as ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 
 // 🐨 add a className prop to each div and apply the correct class names
 // based on the text content
@@ -30,4 +30,4 @@ function App() {
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
-ReactDOM.createRoot(rootEl).render(<App />)
+createRoot(rootEl).render(<App />)

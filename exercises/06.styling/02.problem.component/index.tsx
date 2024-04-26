@@ -1,4 +1,4 @@
-import * as ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 
 // 🐨 create a component called "Box" which accepts style (defaults to {}), className (defaults to ''), and children props.
 // 🐨 Make it render a div with the style, className, and children applied.
@@ -52,4 +52,4 @@ function App() {
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
-ReactDOM.createRoot(rootEl).render(<App />)
+createRoot(rootEl).render(<App />)

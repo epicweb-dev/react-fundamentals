@@ -1,4 +1,4 @@
-import * as ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 
 const operations = {
 	'+': (left: number, right: number): number => left + right,
@@ -43,4 +43,4 @@ function App() {
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
-ReactDOM.createRoot(rootEl).render(<App />)
+createRoot(rootEl).render(<App />)

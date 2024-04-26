@@ -1,12 +1,15 @@
-/** @type {import('@types/eslint').Linter.BaseConfig} */
-module.exports = {
-	extends: [
-		'@remix-run/eslint-config',
-		'@remix-run/eslint-config/node',
-		'prettier',
-	],
+/** @type {import('@types/eslint').Linter.Config} */
+export default {
+	languageOptions: { parser: await import('@typescript-eslint/parser') },
+	plugins: {
+		'@typescript-eslint': (await import('@typescript-eslint/eslint-plugin'))
+			.default,
+		import: (await import('eslint-plugin-import')).default,
+	},
+	ignores: ['node_modules', 'public/babel-standalone.js'],
 	rules: {
-		'@typescript-eslint/no-unused-vars': 'off',
+		// playwright requires destructuring in fixtures even if you don't use anything 🤷‍♂️
+		'no-empty-pattern': 'off',
 		'@typescript-eslint/consistent-type-imports': [
 			'warn',
 			{

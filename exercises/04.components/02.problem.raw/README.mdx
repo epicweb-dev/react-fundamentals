@@ -1,15 +1,15 @@
 # Raw API
 
-👨‍💼 So far we've only used `React.createElement('someString')`, but the first
-argument to `React.createElement` can also be a function which returns something
+👨‍💼 So far we've only used `createElement('someString')`, but the first
+argument to `createElement` can also be a function which returns something
 that's renderable.
 
 So instead of calling your `message` function, pass it as the first argument to
-`React.createElement` and pass the `{children: 'Hello World'}` object as the
+`createElement` and pass the `{children: 'Hello World'}` object as the
 second argument.
 
 ```ts
-React.createElement(
+createElement(
 	someFunction,
 	{ prop1: 'value1', prop2: 'value2' },
 	'child1',
@@ -31,4 +31,4 @@ function someFunction(props) {
 ```
 
 So let's move from calling `message` directly to calling it through
-`React.createElement`.
+`createElement`.

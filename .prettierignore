@@ -1,11 +1,7 @@
 node_modules
-
 **/build/**
-**/public/**
+**/public/build/**
+**/public/babel-standalone.js
 .env
-
-**/package.json
-**/tsconfig.json
-
 **/package-lock.json
 **/playwright-report/**

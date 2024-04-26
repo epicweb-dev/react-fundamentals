@@ -1,4 +1,4 @@
-import * as ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 // 🐨 bring in useErrorBoundary from react-error-boundary
 import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 
@@ -116,4 +116,4 @@ function App() {
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
-ReactDOM.createRoot(rootEl).render(<App />)
+createRoot(rootEl).render(<App />)

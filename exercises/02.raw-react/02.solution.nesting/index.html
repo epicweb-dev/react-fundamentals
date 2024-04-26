@@ -1,19 +1,34 @@
-<body>
-	<!-- this is here to add automatic browser reloading as you save your work -->
-	<script type="module" src="epic_ws.js"></script>
+<html>
+	<head>
+		<script type="importmap">
+			{
+				"imports": {
+					"react": "https://esm.sh/react@19.0.0-beta-94eed63c49-20240425?dev",
+					"react-dom/client": "https://esm.sh/react-dom@19.0.0-beta-94eed63c49-20240425/client?dev"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
 
-	<div id="root"></div>
-	<script src="/react.js"></script>
-	<script src="/react-dom.js"></script>
-	<script type="module">
-		const rootElement = document.getElementById('root')
-		const element = React.createElement(
-			'div',
-			{ className: 'container' },
-			React.createElement('span', null, 'Hello'),
-			' ',
-			React.createElement('span', null, 'World'),
-		)
-		ReactDOM.createRoot(rootElement).render(element)
-	</script>
-</body>
+		<script type="module">
+			import { createElement } from 'react'
+			import { createRoot } from 'react-dom/client'
+
+			const rootElement = document.getElementById('root')
+			const element = createElement(
+				'div',
+				{ className: 'container' },
+				createElement('span', null, 'Hello'),
+				' ',
+				createElement('span', null, 'World'),
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

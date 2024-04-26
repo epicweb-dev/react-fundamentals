@@ -14,7 +14,7 @@ the `ErrorBoundary` so we can define our own `ErrorFallback` component.
 ```
 
 Right now we have an `App` component which we render using
-`ReactDOM.createRoot(rootEl).render(<App />)`, so to get our stuff wrapped
+`createRoot(rootEl).render(<App />)`, so to get our stuff wrapped
 properly, we'll rename our existing `App` component (call it `OnboardingForm`) and
 then make a new `App` which renders the `ErrorBoundary` around the `OnboardingForm`
 component along with our `FallbackComponent` called `ErrorFallback` (which you

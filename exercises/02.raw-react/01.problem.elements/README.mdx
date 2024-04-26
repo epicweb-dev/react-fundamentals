@@ -5,21 +5,29 @@ yet... You're going to use raw React APIs here.
 
 In modern applications you'll get React and React DOM files from a "package
 registry" like [npm](https://npmjs.com) ([react](https://npm.im/react) and
-[react-dom](https://npm.im/react-dom)). But for these first exercises, we'll use
-the script files which are available in the `./public` directory of this repo
-and regular script tags so you don't have to bother installing them. So in the
-exercise you'll be required to add script tags for these files.
+[react-dom](https://npm.im/react-dom)).
 
-Once you include the script tags, you'll have two new global variables to use:
-`React` and `ReactDOM`.
+<callout-info>
+	🦉 We'll be using a service called [`esm.sh`](https://esm.sh) to load react
+	and react-dom on the page as native ESM modules which will allow us to use
+	`import` statements to import those without having to worry about build tools.
+</callout-info>
+
+We'll also use an
+[import map](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap)
+to help us avoid having to write the full URL for modules in our import statements.
 
 Here's a simple example of the API:
 
 ```typescript
+import { createElement } from 'react'
+import { createRoot } from 'react-dom/client'
+
 const elementProps = { id: 'element-id', children: 'Hello world!' }
 const elementType = 'h1'
-const reactElement = React.createElement(elementType, elementProps)
-const root = ReactDOM.createRoot(rootElement)
+const reactElement = createElement(elementType, elementProps)
+
+const root = createRoot(rootElement)
 root.render(reactElement)
 ```
 
@@ -38,14 +46,14 @@ const child1 = 'Hello'
 const child2 = ' '
 const child3 = 'world!'
 const elementType = 'h1'
-const reactElement = React.createElement(
+const reactElement = createElement(
 	elementType,
 	elementProps,
 	child1,
 	child2,
 	child3,
 )
-ReactDOM.createRoot(rootElement).render(reactElement)
+createRoot(rootElement).render(reactElement)
 ```
 
 Alright! Let's do this!
