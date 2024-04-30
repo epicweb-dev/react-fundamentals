@@ -1,27 +1,12 @@
 <html>
-	<head>
-		<!--
-			🐨 add an importmap for react and react-dom/client
-			🦉 Without the importmap, you would have to do:
-				import { createElement } from 'https://esm.sh/react@19.0.0-beta-94eed63c49-20240425?dev'
-			which techincally works, but... 🤡
-		-->
-		<!-- 💰 because this is a workshop about react and not import maps, we'll just give this to you: -->
-		<!-- <script type="importmap">
-			{
-				"imports": {
-					"react": "https://esm.sh/react@19.0.0-beta-94eed63c49-20240425?dev",
-					"react-dom/client": "https://esm.sh/react-dom@19.0.0-beta-94eed63c49-20240425/client?dev"
-				}
-			}
-		</script> -->
-		<!-- 📜 read up on import maps: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap -->
-	</head>
 	<body>
 		<div id="root"></div>
 
 		<script type="module">
-			// 🐨 createElement from react and createRoot from react-dom here
+			// 🐨 add imports for react and react-dom/client here
+			// 💰 import { createElement } from '/react.js'
+			// 💰 import { createRoot } from '/react-dom/client.js'
+
 			const rootElement = document.getElementById('root')
 
 			// You're going to re-implement this code using React!

@@ -1,20 +1,10 @@
 <html>
-	<head>
-		<script type="importmap">
-			{
-				"imports": {
-					"react": "https://esm.sh/react@19.0.0-beta-94eed63c49-20240425?dev",
-					"react-dom/client": "https://esm.sh/react-dom@19.0.0-beta-94eed63c49-20240425/client?dev"
-				}
-			}
-		</script>
-	</head>
 	<body>
 		<div id="root"></div>
 
 		<script type="module">
-			import { createElement } from 'react'
-			import { createRoot } from 'react-dom/client'
+			import { createElement } from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
 
 			const rootElement = document.getElementById('root')
 			// 🐨 create this DOM output with React elements:
