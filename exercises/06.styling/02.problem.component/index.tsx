@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client'
 // 🐨 Also automatically add the fontStyle: 'italic' style to the style prop so consumers don't have to provide that
 // 🐨 And automatically add the "box" className to the className prop so consumers don't have to provide that as well.
 
-// 💯 as a bonus, have this accept any number of additional props (typed as React.HTMLAttributes<HTMLDivElement>)
+// 💯 as a bonus, have this accept any number of additional props (typed as React.ComponentProps<'div'>)
 // and apply those to the rendered div as well.
 
 // 🐨 update all of these to use the <Box> component with the appropriate props.

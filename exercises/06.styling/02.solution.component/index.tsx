@@ -4,7 +4,7 @@ function Box({
 	style = {},
 	className = '',
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) {
+}: React.ComponentProps<'div'>) {
 	return (
 		<div
 			className={`box ${className}`}

@@ -45,7 +45,7 @@ case), you'll want to borrow the type definition for that element from React.
 Here's how you do that (for a `span` element rather than `div`):
 
 ```tsx
-function MySpan(props: React.HTMLAttributes<HTMLSpanElement>) {
+function MySpan(props: React.ComponentProps<'span'>) {
 	return <span {...props} />
 }
 ```

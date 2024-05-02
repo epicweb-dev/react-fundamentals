@@ -5,7 +5,7 @@ function Box({
 	...otherProps
 }: {
 	size?: 'small' | 'medium' | 'large'
-} & React.HTMLAttributes<HTMLDivElement>) {
+} & React.ComponentProps<'div'>) {
 	const sizeClassName = size ? `box--${size}` : ''
 	return (
 		<div
