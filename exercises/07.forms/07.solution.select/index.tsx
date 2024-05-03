@@ -1,17 +1,11 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	function logFormData(formData: FormData) {
+		console.log(Object.fromEntries(formData))
+	}
 	return (
-		<form
-			action="api/onboarding"
-			method="POST"
-			encType="multipart/form-data"
-			onSubmit={event => {
-				event.preventDefault()
-				const formData = new FormData(event.currentTarget)
-				console.log(Object.fromEntries(formData))
-			}}
-		>
+		<form action={logFormData}>
 			<div>
 				<label htmlFor="accountTypeSelection">Account Type:</label>
 				<select id="accountTypeSelection" name="accountType">
@@ -42,8 +36,6 @@ function App() {
 				<label htmlFor="colorInput">Favorite Color:</label>
 				<input id="colorInput" name="color" type="color" />
 			</div>
-			{/* 🐨 add a fieldset with the legend "Visibility" */}
-			{/* 🐨 add two radio buttons for public/private options for the name "visibility" */}
 			<div>
 				<label>
 					<input name="waiver" type="checkbox" />

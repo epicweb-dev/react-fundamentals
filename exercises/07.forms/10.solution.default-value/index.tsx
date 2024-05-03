@@ -1,17 +1,11 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	function logFormData(formData: FormData) {
+		console.log(Object.fromEntries(formData))
+	}
 	return (
-		<form
-			action="api/onboarding"
-			method="POST"
-			encType="multipart/form-data"
-			onSubmit={event => {
-				event.preventDefault()
-				const formData = new FormData(event.currentTarget)
-				console.log(Object.fromEntries(formData))
-			}}
-		>
+		<form action={logFormData}>
 			<input type="hidden" name="orgId" value="123" />
 			<div>
 				<label htmlFor="accountTypeSelection">Account Type:</label>

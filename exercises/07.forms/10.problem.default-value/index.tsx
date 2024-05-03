@@ -1,20 +1,15 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	function logFormData(formData: FormData) {
+		console.log(Object.fromEntries(formData))
+	}
 	return (
-		<form
-			action="api/onboarding"
-			method="POST"
-			encType="multipart/form-data"
-			onSubmit={event => {
-				event.preventDefault()
-				const formData = new FormData(event.currentTarget)
-				console.log(Object.fromEntries(formData))
-			}}
-		>
+		<form action={logFormData}>
 			<input type="hidden" name="orgId" value="123" />
 			<div>
 				<label htmlFor="accountTypeSelection">Account Type:</label>
+				{/* 🐨 set the default value to "student" */}
 				<select id="accountTypeSelection" name="accountType">
 					<option value="">--Please select an option--</option>
 					<option value="admin">Admin</option>
@@ -33,6 +28,7 @@ function App() {
 			</div>
 			<div>
 				<label htmlFor="ageInput">Age:</label>
+				{/* 🐨 set the default value to 18 */}
 				<input id="ageInput" name="age" type="number" min="0" max="200" />
 			</div>
 			<div>
@@ -41,11 +37,13 @@ function App() {
 			</div>
 			<div>
 				<label htmlFor="colorInput">Favorite Color:</label>
+				{/* 🐨 set the default value to #002E5D */}
 				<input id="colorInput" name="color" type="color" />
 			</div>
 			<fieldset>
 				<legend>Visibility:</legend>
 				<label>
+					{/* 🐨 set the default value to "Public" */}
 					<input name="visibility" type="radio" value="public" />
 					Public
 				</label>
@@ -56,11 +54,13 @@ function App() {
 			</fieldset>
 			<div>
 				<label>
+					{/* 🐨 set the default value to checked */}
 					<input name="waiver" type="checkbox" />
 					Waiver Signed
 				</label>
 			</div>
 			<div>
+				{/* 🐨 set the default value to today */}
 				<label htmlFor="startDateInput">Start Date:</label>
 				<input id="startDateInput" name="startDate" type="date" />
 			</div>

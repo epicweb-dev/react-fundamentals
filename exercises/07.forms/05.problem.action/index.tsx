@@ -1,9 +1,14 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	// 🐨 create a function called logFormData
+	// it accepts a formData object which
+	// 🐨 console.log the formData object like we do in the current onSubmit handler
 	return (
 		<form
+			// 🐨 replace the string "api/onboarding" with the logFormData function
 			action="api/onboarding"
+			// 💣 delete the rest of these props
 			method="POST"
 			encType="multipart/form-data"
 			onSubmit={event => {
@@ -12,16 +17,6 @@ function App() {
 				console.log(Object.fromEntries(formData))
 			}}
 		>
-			<div>
-				<label htmlFor="accountTypeSelection">Account Type:</label>
-				<select id="accountTypeSelection" name="accountType">
-					<option value="">--Please select an option--</option>
-					<option value="admin">Admin</option>
-					<option value="teacher">Teacher</option>
-					<option value="parent">Parent</option>
-					<option value="student">Student</option>
-				</select>
-			</div>
 			<div>
 				<label htmlFor="usernameInput">Username:</label>
 				<input id="usernameInput" name="username" />
@@ -41,23 +36,6 @@ function App() {
 			<div>
 				<label htmlFor="colorInput">Favorite Color:</label>
 				<input id="colorInput" name="color" type="color" />
-			</div>
-			<fieldset>
-				<legend>Visibility:</legend>
-				<label>
-					<input checked name="visibility" type="radio" value="public" />
-					Public
-				</label>
-				<label>
-					<input name="visibility" type="radio" value="private" />
-					Private
-				</label>
-			</fieldset>
-			<div>
-				<label>
-					<input name="waiver" type="checkbox" />
-					Waiver Signed
-				</label>
 			</div>
 			<div>
 				<label htmlFor="startDateInput">Start Date:</label>

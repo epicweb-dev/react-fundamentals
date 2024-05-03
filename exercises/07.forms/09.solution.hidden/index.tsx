@@ -1,17 +1,22 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	function logFormData(formData: FormData) {
+		console.log(Object.fromEntries(formData))
+	}
 	return (
-		<form
-			action="api/onboarding"
-			method="POST"
-			encType="multipart/form-data"
-			onSubmit={event => {
-				event.preventDefault()
-				const formData = new FormData(event.currentTarget)
-				console.log(Object.fromEntries(formData))
-			}}
-		>
+		<form action={logFormData}>
+			<input type="hidden" name="orgId" value="123" />
+			<div>
+				<label htmlFor="accountTypeSelection">Account Type:</label>
+				<select id="accountTypeSelection" name="accountType">
+					<option value="">--Please select an option--</option>
+					<option value="admin">Admin</option>
+					<option value="teacher">Teacher</option>
+					<option value="parent">Parent</option>
+					<option value="student">Student</option>
+				</select>
+			</div>
 			<div>
 				<label htmlFor="usernameInput">Username:</label>
 				<input id="usernameInput" name="username" />
@@ -32,8 +37,23 @@ function App() {
 				<label htmlFor="colorInput">Favorite Color:</label>
 				<input id="colorInput" name="color" type="color" />
 			</div>
-			{/* 🐨 add a checkbox with the label "Waiver Signed" */}
-			{/* 💰 put the <input> inside the <label> */}
+			<fieldset>
+				<legend>Visibility:</legend>
+				<label>
+					<input name="visibility" type="radio" value="public" />
+					Public
+				</label>
+				<label>
+					<input name="visibility" type="radio" value="private" />
+					Private
+				</label>
+			</fieldset>
+			<div>
+				<label>
+					<input name="waiver" type="checkbox" />
+					Waiver Signed
+				</label>
+			</div>
 			<div>
 				<label htmlFor="startDateInput">Start Date:</label>
 				<input id="startDateInput" name="startDate" type="date" />

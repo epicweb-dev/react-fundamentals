@@ -1,28 +1,11 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	function logFormData(formData: FormData) {
+		console.log(Object.fromEntries(formData))
+	}
 	return (
-		<form
-			action="api/onboarding"
-			method="POST"
-			encType="multipart/form-data"
-			onSubmit={event => {
-				event.preventDefault()
-				const formData = new FormData(event.currentTarget)
-				console.log(Object.fromEntries(formData))
-			}}
-		>
-			{/* 🐨 add a hidden input with the name "orgId" and the value "123" */}
-			<div>
-				<label htmlFor="accountTypeSelection">Account Type:</label>
-				<select id="accountTypeSelection" name="accountType">
-					<option value="">--Please select an option--</option>
-					<option value="admin">Admin</option>
-					<option value="teacher">Teacher</option>
-					<option value="parent">Parent</option>
-					<option value="student">Student</option>
-				</select>
-			</div>
+		<form action={logFormData}>
 			<div>
 				<label htmlFor="usernameInput">Username:</label>
 				<input id="usernameInput" name="username" />
@@ -43,17 +26,6 @@ function App() {
 				<label htmlFor="colorInput">Favorite Color:</label>
 				<input id="colorInput" name="color" type="color" />
 			</div>
-			<fieldset>
-				<legend>Visibility:</legend>
-				<label>
-					<input name="visibility" type="radio" value="public" />
-					Public
-				</label>
-				<label>
-					<input name="visibility" type="radio" value="private" />
-					Private
-				</label>
-			</fieldset>
 			<div>
 				<label>
 					<input name="waiver" type="checkbox" />
