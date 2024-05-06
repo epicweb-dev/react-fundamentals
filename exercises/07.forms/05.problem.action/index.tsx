@@ -9,6 +9,9 @@ function App() {
 			// 🐨 replace the string "api/onboarding" with the logFormData function
 			action="api/onboarding"
 			// 💣 delete the rest of these props
+			//   💯 React has a warning if you leave method and encType around once
+			//   you make the action a function. Feel free to check out what that
+			//   warning says before removing them.
 			method="POST"
 			encType="multipart/form-data"
 			onSubmit={event => {
