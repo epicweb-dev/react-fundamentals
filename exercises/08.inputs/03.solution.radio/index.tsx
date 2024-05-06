@@ -39,7 +39,7 @@ function App() {
 			<fieldset>
 				<legend>Visibility:</legend>
 				<label>
-					<input checked name="visibility" type="radio" value="public" />
+					<input name="visibility" type="radio" value="public" />
 					Public
 				</label>
 				<label>
