@@ -5,7 +5,7 @@ function App() {
 		<form
 			action="api/onboarding"
 			// 🦉 Follow these instructions in order. Test the behavior after each step
-			// 1️⃣ 🐨 set the method to "POST"
+			// 1️⃣ 🐨 set the method to "POST" then update api.server.ts to handle the POST request
 			// 2️⃣ 🐨 set the encType to "multipart/form-data"
 			// 3️⃣ 🐨 add an onSubmit handler that calls event.preventDefault()
 			// 4️⃣ 🐨 create a FormData object from the the form (💰 event.currentTarget)
