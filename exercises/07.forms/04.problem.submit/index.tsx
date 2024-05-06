@@ -4,11 +4,13 @@ function App() {
 	return (
 		<form
 			action="api/onboarding"
-			// 🐨 set the method to "POST"
-			// 🐨 set the encType to "multipart/form-data"
-			// 🐨 add an onSubmit handler that calls event.preventDefault()
-			// 🐨 create a FormData object from the the form (💰 event.currentTarget)
-			// 🐨 log the result of Object.fromEntries(formData)
+			// 🦉 Follow these instructions in order. Test the behavior after each step
+			// 1️⃣ 🐨 set the method to "POST"
+			// 2️⃣ 🐨 set the encType to "multipart/form-data"
+			// 3️⃣ 🐨 add an onSubmit handler that calls event.preventDefault()
+			// 4️⃣ 🐨 create a FormData object from the the form (💰 event.currentTarget)
+			// 5️⃣ 🐨 log the result of Object.fromEntries(formData)
+			// 6️⃣ 💯 as extra credit, see what happens if you remove the action, method, and encType
 		>
 			<div>
 				<label htmlFor="usernameInput">Username:</label>

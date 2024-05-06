@@ -3,9 +3,13 @@ import { createRoot } from 'react-dom/client'
 function App() {
 	return (
 		<form
+			// 🦉 note because our onSubmit calls preventDefault, the action, method,
+			// and encType are no longer necessary and can be removed. But we'll keep
+			// them around here for the exercise diff.
 			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
+			// 🦉 by the end of the exercise, this is all you'll actually need:
 			onSubmit={event => {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
