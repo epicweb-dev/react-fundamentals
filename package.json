@@ -45,7 +45,7 @@
     "eslint-plugin-react-hooks": "$eslint-plugin-react-hooks"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "npm": ">=8.16.0",
     "git": ">=2.18.0"
   }
