@@ -15,8 +15,7 @@ ADD . .
 
 RUN npm install --omit=dev
 
-CMD node ./setup-swap.js && \
-    rm -rf ${EPICSHOP_CONTEXT_CWD} && \
+CMD rm -rf ${EPICSHOP_CONTEXT_CWD} && \
     git clone https://github.com/epicweb-dev/react-fundamentals ${EPICSHOP_CONTEXT_CWD} && \
     cd ${EPICSHOP_CONTEXT_CWD} && \
     npx epicshop start
