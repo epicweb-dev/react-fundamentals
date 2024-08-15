@@ -1,4 +1,4 @@
-FROM node:18-bookworm-slim as base
+FROM node:20-bookworm-slim as base
 
 RUN apt-get update && apt-get install -y git
 
