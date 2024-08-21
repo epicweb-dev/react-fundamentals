@@ -2,13 +2,13 @@ import { createRoot } from 'react-dom/client'
 
 function App() {
 	return (
-		<form action="api/onboarding">
+		<div>
 			<div>
 				<label htmlFor="usernameInput">Username:</label>
 				<input id="usernameInput" name="username" />
 			</div>
 			<button type="submit">Submit</button>
-		</form>
+		</div>
 	)
 }
 
