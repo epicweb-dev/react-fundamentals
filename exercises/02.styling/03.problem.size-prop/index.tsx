@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 
-function Box({
+export function Box({
 	// 💯 you can keep the style and className props here, but you can make this
 	// still work if you remove them. Give that a shot if you want.
 	style = {},

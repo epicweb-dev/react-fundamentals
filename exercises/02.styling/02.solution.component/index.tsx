@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 
-function Box({
+export function Box({
 	style = {},
 	className = '',
 	...otherProps
