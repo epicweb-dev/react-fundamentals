@@ -85,9 +85,8 @@ function OnboardingForm() {
 					id="startDateInput"
 					name="startDate"
 					type="date"
-					// 💰 you can comment this out to avoid the runtime error
+					// This line causes the error during render
 					defaultValue={new Date('today').toISOString().slice(0, 10)}
-					// defaultValue={new Date().toISOString().slice(0, 10)}
 				/>
 			</div>
 			<button type="submit">Submit</button>
