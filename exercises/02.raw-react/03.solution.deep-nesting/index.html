@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="module">
+			import { createElement } from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+			const element = createElement(
+				'div',
+				{ className: 'container' },
+				createElement('p', null, `Here's Sam's favorite food:`),
+				createElement(
+					'ul',
+					{ className: 'sams-food' },
+					createElement('li', null, 'Green eggs'),
+					createElement('li', null, 'Ham'),
+				),
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

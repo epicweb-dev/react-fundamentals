@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel" data-type="module">
+			import * as React from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+
+			const element = (
+				<>
+					<p>Here's Sam's favorite food:</p>
+					<ul className="sams-food">
+						<li>Green eggs</li>
+						<li>Ham</li>
+					</ul>
+				</>
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<script type="module" src="/babel-standalone.js"></script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

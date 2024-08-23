@@ -1,0 +1,28 @@
+# Spread props
+
+What if I have an object of props that I want applied to the `div` like this:
+
+```tsx
+const children = 'Hello World'
+const className = 'container'
+const props = { children, className }
+const element = <div /> // how do I apply props to this div?
+```
+
+If we were doing raw React APIs it would be:
+
+```tsx
+const element = createElement('div', props)
+```
+
+Or, it could be written like this:
+
+```tsx
+const element = createElement('div', { ...props })
+```
+
+👨‍💼 See if you can figure out how to make that work with JSX. Take an object of
+props, and apply those props to a React element.
+
+📜
+[Forwarding props with the JSX spread syntax](https://react.dev/learn/passing-props-to-a-component#forwarding-props-with-the-jsx-spread-syntax)

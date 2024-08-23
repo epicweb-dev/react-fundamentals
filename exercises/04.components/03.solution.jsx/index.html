@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel" data-type="module">
+			import * as React from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+
+			// This is being used as a component 🎉
+			function Message({ children }) {
+				return <div className="message">{children}</div>
+			}
+
+			const element = (
+				<div className="container">
+					<Message>Hello World</Message>
+					<Message>Goodbye World</Message>
+				</div>
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<script type="module" src="/babel-standalone.js"></script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

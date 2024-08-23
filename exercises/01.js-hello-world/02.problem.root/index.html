@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<!-- 💣 delete this element (we'll make it with JS instead) -->
+		<div id="root"></div>
+
+		<script type="module">
+			// 🐨 rather than getting the element from the DOM created by the HTML
+			// create the root element like you do the hello world element
+			const rootElement = document.getElementById('root')
+			// 🐨 you can even add the id to the root element if you like
+
+			const element = document.createElement('div')
+			element.className = 'container'
+			element.textContent = 'Hello World'
+
+			rootElement.append(element)
+			// 🐨 add the rootElement to the document.body
+		</script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

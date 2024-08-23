@@ -1,0 +1,33 @@
+# Simple Function
+
+👨‍💼 The DOM we want to generate is like this:
+
+```html
+<div class="container">
+	<div class="message">Hello World</div>
+	<div class="message">Goodbye World</div>
+</div>
+```
+
+In this case, it would be cool if we could reduce the duplication for creating
+the React elements for this:
+
+```tsx
+<div className="message">{children}</div>
+```
+
+So we need to make a function which accepts an object argument with a `children`
+property and returns the React element. Then you can interpolate a call to that
+function in your JSX.
+
+```tsx
+<div>{message('Hello World')}</div>
+```
+
+This is not how we write custom React components, but this is important for you
+to understand them. We'll get to custom components in the next steps.
+
+📜 Read more
+
+- [JavaScript in JSX with Curly Braces](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
+- [What is JSX?](https://kentcdodds.com/blog/what-is-jsx)

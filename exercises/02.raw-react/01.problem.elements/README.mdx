@@ -1,0 +1,73 @@
+# Create React Elements
+
+👨‍💼 Let's convert this to use React! But don't worry, we won't be doing any JSX just
+yet... You're going to use raw React APIs here.
+
+In modern applications you'll get React and React DOM files from a "package
+registry" like [npm](https://npmjs.com) ([react](https://npm.im/react) and
+[react-dom](https://npm.im/react-dom)).
+
+To keep things as simple as possible in these first exercises, we'll be
+importing the file `public/react.js` at `/react.js` and
+`public/react-dom/client.js` at `/react-dom/client.js`. Those files re-export
+the packages from [esm.sh](https://esm.sh).
+
+Here's a simple example of the API:
+
+```typescript
+import { createElement } from '/react.js'
+import { createRoot } from '/react-dom/client.js'
+
+const elementProps = { id: 'element-id', children: 'Hello world!' }
+const elementType = 'h1'
+const reactElement = createElement(elementType, elementProps)
+
+const root = createRoot(rootElement)
+root.render(reactElement)
+```
+
+<callout-info>
+
+    🦉 As a reminder, in a typical application, you're import will be something
+    like
+
+```ts nonumber nolang
+import { createRoot } from 'react-dom/client'
+```
+
+    With that, a build tool or `importmap` will handle resolving that to the
+    correct path.
+
+</callout-info>
+
+The "props" in `elementProps` above is short for "properties" and they're a
+foundational part of React elements. You can think of the element type as a
+blueprint for the kind of React component to create and the props are the inputs
+for when React actually creates that element.
+
+`children` is a special prop. You can pass a single element like above, or an
+array of children (if there's more than one). You can also pass the children as
+any number of additional arguments:
+
+```typescript
+const elementProps = { id: 'element-id' }
+const child1 = 'Hello'
+const child2 = ' '
+const child3 = 'world!'
+const elementType = 'h1'
+const reactElement = createElement(
+	elementType,
+	elementProps,
+	child1,
+	child2,
+	child3,
+)
+createRoot(rootElement).render(reactElement)
+```
+
+Alright! Let's do this!
+
+<callout-info class="aside">
+	💰 Tip: `console.log` the `reactElement` to see what it looks like. You might
+	find it kinda interesting!
+</callout-info>

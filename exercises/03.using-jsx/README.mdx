@@ -1,0 +1,29 @@
+# Using JSX
+
+JSX is more intuitive than the raw React API and is easier to understand when
+reading the code. It's fairly simple HTML-like syntactic sugar on top of the raw
+React APIs:
+
+```tsx
+const element = <h1 id="greeting">Hey there</h1>
+
+// ↓ ↓ ↓ ↓ compiles to ↓ ↓ ↓ ↓
+
+const element = createElement('h1', {
+	id: 'greeting',
+	children: 'Hey there',
+})
+```
+
+Because JSX is not actually JavaScript, you have to convert it using something
+called a code compiler. [Babel](https://babeljs.io) is one such tool.
+
+<callout-info>
+	🦉 Pro tip: If you'd like to see how JSX gets compiled to JavaScript, [check
+	out the online babel REPL
+	here](https://babeljs.io/repl#?builtIns=App&code_lz=MYewdgzgLgBArgSxgXhgHgCYIG4D40QAOAhmLgBICmANtSGgPRGm7rNkDqIATtRo-3wMseAFBA&presets=react&prettier=true).
+</callout-info>
+
+If you can train your brain to look at JSX and see the compiled version of that
+code, you'll be MUCH more effective at reading and using it! I strongly
+recommend you give this some intentional practice.

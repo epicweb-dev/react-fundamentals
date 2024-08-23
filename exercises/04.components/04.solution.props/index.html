@@ -1,0 +1,47 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel" data-type="module">
+			import * as React from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+
+			const operations = {
+				'+': (left, right) => left + right,
+				'-': (left, right) => left - right,
+				'*': (left, right) => left * right,
+				'/': (left, right) => left / right,
+			}
+
+			function Calculator({ left, operator, right }) {
+				const result = operations[operator](left, right)
+				return (
+					<div>
+						<code>
+							{left} {operator} {right} = <output>{result}</output>
+						</code>
+					</div>
+				)
+			}
+
+			const element = (
+				<div>
+					<h1>Calculator</h1>
+					<Calculator left={1} operator="+" right={2} />
+					<Calculator left={1} operator="-" right={2} />
+					<Calculator left={1} operator="*" right={2} />
+					<Calculator left={1} operator="/" right={2} />
+				</div>
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<script type="module" src="/babel-standalone.js"></script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

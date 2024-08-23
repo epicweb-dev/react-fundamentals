@@ -1,0 +1,30 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel" data-type="module">
+			import * as React from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+
+			// 🐨 Make a function called `message` which returns the JSX we want to share
+
+			// 🐨 use that function in place of the divs below with:
+			// 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+			const element = (
+				<div className="container">
+					<div className="message">Hello World</div>
+					<div className="message">Goodbye World</div>
+				</div>
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<script type="module" src="/babel-standalone.js"></script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

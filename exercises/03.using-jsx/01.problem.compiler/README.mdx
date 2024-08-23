@@ -1,0 +1,13 @@
+# Compiling JSX
+
+<callout-warning>
+	Normally you'll compile all of your code at build-time before you ship your
+	application to the browser, but because Babel is written in JavaScript we can
+	actually run it _in_ the browser to compile our code on the fly and that's
+	what we'll do in this exercise.
+</callout-warning>
+
+👨‍💼 Let's add a script tag for Babel, then we'll update our own script tag to
+tell Babel to compile it for us on the fly. When you're done, you should notice
+the compiled version of the code appears in the `<head>` of the DOM (which you
+can inspect using DevTools).

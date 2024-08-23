@@ -1,0 +1,34 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="module">
+			import { createElement } from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+
+			// 🐨 re-create this with createElement and assign that to the element variable
+			// <div class="container">
+			// 	<p>Here's Sam's favorite food:</p>
+			// 	<ul class="sams-food">
+			// 		<li>Green eggs</li>
+			// 		<li>Ham</li>
+			// 	</ul>
+			// </div>
+
+			const element = createElement(
+				'div',
+				{ className: 'container' },
+				createElement('span', null, 'Hello'),
+				' ',
+				createElement('span', null, 'World'),
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+# Custom Components
+
+Just like in regular JavaScript, when you want to reuse code, you write
+functions. If you want to share JSX, you can do that as well. In React we call
+these functions "components" and they have some special properties.
+
+Components are functions which accept an object called "props" and return
+something that is renderable (more React elements, strings, `null`, numbers,
+etc.). To be clear, this is _the_ definition of a React component. That's all it
+is. So I'll say it
+[again](https://twitter.com/kentcdodds/status/1763606427028136131):
+
+> Components are functions which accept an object called "props" and return
+> something that is renderable
+
+Here's an example of that:
+
+```tsx
+function Greeting(props) {
+	return <h1>Hello, {props.name}</h1>
+}
+```
+
+Then that component can be used like this:
+
+```tsx
+<Greeting name="World" />
+```
+
+Just like previous exercises, we're going to ease into this syntax so you have a
+solid foundational understanding of how this works.

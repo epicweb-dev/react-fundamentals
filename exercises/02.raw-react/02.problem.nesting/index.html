@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<div id="root"></div>
+
+		<script type="module">
+			import { createElement } from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
+
+			const rootElement = document.getElementById('root')
+			// 🐨 create this DOM output with React elements:
+			// <div class="container">
+			// 	<span>Hello</span> <span>World</span>
+			// </div>
+			const element = createElement(
+				'div',
+				{ className: 'container' },
+				// 🐨 replace the "Hello World" with createElement calls that creates
+				// a span with the text "Hello" and another span with the text "World"
+				// also, you'll need to add a space string (" ") between the spans
+				'Hello World',
+			)
+
+			createRoot(rootElement).render(element)
+		</script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
+	</body>
+</html>

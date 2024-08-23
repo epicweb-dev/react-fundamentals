@@ -1,0 +1,34 @@
+# Raw API
+
+👨‍💼 So far we've only used `createElement('someString')`, but the first
+argument to `createElement` can also be a function which returns something
+that's renderable.
+
+So instead of calling your `message` function, pass it as the first argument to
+`createElement` and pass the `{children: 'Hello World'}` object as the
+second argument.
+
+```ts
+createElement(
+	someFunction,
+	{ prop1: 'value1', prop2: 'value2' },
+	'child1',
+	'child2',
+)
+```
+
+Then `someFunction` will be called with the props object as the first argument
+and the children will appear as an array in the children property of the props
+object.
+
+```ts
+function someFunction(props) {
+	props.children // ['child1', 'child2']
+	props.prop1 // 'value1'
+	props.prop2 // 'value2'
+	return // some jsx
+}
+```
+
+So let's move from calling `message` directly to calling it through
+`createElement`.

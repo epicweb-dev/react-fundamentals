@@ -1,0 +1,49 @@
+# JSX Components
+
+👨‍💼 Great job! We can now use JSX to write custom components and reuse bits of
+our UI with ease.
+
+🦉 The children prop is special because it can appear either as a prop or in
+between the opening and closing tags of a component. So these two are
+equivalent:
+
+```tsx
+<Alert>Something went wrong!</Alert>
+<Alert children="Something went wrong!" />
+```
+
+Our `Message` component uses the "special" and implicit `children` prop. It's
+special because it means we can do this:
+
+```tsx
+element = <Message>Hello World</Message>
+// is functionally equivalent to:
+element = <Message children="Hello World" />
+```
+
+And you can put JSX in the children prop with either syntax as well:
+
+```tsx
+element = (
+	<Message>
+		<span>Hello</span> <span>World</span>
+	</Message>
+)
+// is functionally equivalent to:
+element = <Message children={[<span>Hello</span>, ' ', <span>World</span>]} />
+```
+
+📜 [Learn more about passing JSX as `children`](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children).
+
+But we don't have to use the `children` prop, we can call it whatever we want.
+So you could also do:
+
+```tsx
+element = <Message greeting={[<span>Hello</span>, ' ', <span>World</span>]} />
+```
+
+The only thing that's special about the `children` prop is that it's implicit
+in JSX.
+
+And sometimes using something other than the `children` prop can be really
+useful, but we'll get to that in a future workshop.

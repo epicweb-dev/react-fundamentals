@@ -1,0 +1,59 @@
+# JSX Components
+
+👨‍💼 Rather than:
+
+```tsx
+element = createElement(message, { children: 'Hello World' })
+```
+
+I want to use JSX, even for custom components, like this:
+
+```tsx
+element = <message>Hello World</message>
+```
+
+And we're so close! Just like using JSX for regular `div`s is nicer than using
+the raw `createElement` API, using JSX for custom components is nicer too.
+Remember that it's Babel that's responsible for taking our JSX and compiling it
+to `createElement` calls. If we try `<message>Hello World</message>,
+here's what Babel will do:
+
+```tsx
+element = <message>Hello World</message>
+
+// the desired output
+element = createElement(message, { children: 'Hello World' })
+
+// the actual output
+element = createElement('message', { children: 'Hello World' })
+```
+
+So we just need a way to tell Babel how to compile our JSX so it passes the
+function by its name rather than a string. We do this by how the JSX appears.
+Here are a few examples of Babel output for JSX:
+
+```tsx
+element = <Capitalized /> // createElement(Capitalized)
+element = <property.access /> // createElement(property.access)
+element = <Property.Access /> // createElement(Property.Access)
+element = <Property['Access'] /> // SyntaxError
+element = <lowercase /> // createElement('lowercase')
+element = <kebab-case /> // createElement('kebab-case')
+element = <Upper-Kebab-Case /> // createElement('Upper-Kebab-Case')
+element = <Upper_Snake_Case /> // createElement(Upper_Snake_Case)
+element = <lower_snake_case /> // createElement('lower_snake_case')
+```
+
+Now let's refactor your function to a name that will make it possible to call it
+by using it as a JSX component.
+
+The most common approaches you'll find in the wild are to have the name of the
+component capitalized:
+
+```tsx
+element = <Capitalized /> // createElement(Capitalized)
+```
+
+Sometimes you'll see the property access syntax as well.
+
+Let's go refactor so we can use our components as JSX!

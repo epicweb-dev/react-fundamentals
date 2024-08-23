@@ -1,0 +1,74 @@
+# Hello World in JS
+
+It doesn't take long to learn how to make "Hello World" appear on the page with
+HTML:
+
+```html
+<html>
+	<body>
+		<div>Hello World</div>
+	</body>
+</html>
+```
+
+The browser takes this HTML code and generates
+[the DOM (the Document Object Model)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+out of it. The browser then exposes the DOM to JavaScript so you can interact
+with it to add a layer of interactivity to your web-page.
+
+```html
+<html>
+	<body>
+		<div>Hello World</div>
+		<script type="module">
+			// your JavaScript here
+		</script>
+	</body>
+</html>
+```
+
+Years ago, people were generating HTML on the server and then adding JavaScript
+on top of that generated HTML for interactivity. However, as requirements for
+that interactivity became more challenging, this approach produced applications
+that were difficult to maintain and had performance issues.
+
+<callout-info class="aside">
+	If you'd like to learn more about the history, read [The Web's Next
+	Transition](https://www.epicweb.dev/the-webs-next-transition).
+</callout-info>
+
+So modern JavaScript frameworks were created to address some of the challenges
+by programmatically creating the DOM rather than defining it in hand-written
+HTML.
+
+```html
+<html>
+	<body>
+		<script type="module">
+			const element = document.createElement('div')
+			element.textContent = 'Hello World'
+			document.body.append(element)
+		</script>
+	</body>
+</html>
+```
+
+This approach is more flexible, but comes at the cost of making the browser do
+a little extra work. The browser has to parse the JavaScript code, execute it,
+and then generate the DOM from the JavaScript code before displaying things to
+the user.
+
+This is why hybrid approaches are popular. You can generate the DOM with HTML
+and then add interactivity with JavaScript. In the world of React, you can use
+React code to generate the HTML on the server and then use the same React code
+to add interactivity on the client. Doing this isn't an enormous amount of
+effort, however there are a lot of considerations to take into account so you'll
+want to use [Remix](https://remix.run) (which is built on top of React) to make
+it easier (and you get a lot of other critical pieces to the puzzle as well).
+
+We're going to focus on the client-side of things in this workshop, but you can
+apply the same principles to frameworks like Remix. But let's just start with
+the total fundamentals of creating and appending our own DOM nodes before we
+get into the React side of things. I call this "going down to level up." You'll
+find yourself much more efficient with React if you understand the fundamentals
+of the DOM and JavaScript. So let's get started!

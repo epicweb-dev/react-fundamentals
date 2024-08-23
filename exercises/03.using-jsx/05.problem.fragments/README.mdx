@@ -1,0 +1,41 @@
+# Fragments
+
+🦉 One feature of JSX that you'll find useful is called
+["React Fragments"](https://react.dev/reference/react/Fragment). It's a special
+kind of component from React which allows you to position two elements
+side-by-side rather than just nested.
+
+Let's say we wanted to do the same thing as above, except we didn't want the
+`container` `div`. So, we wanted to just create:
+
+```html
+<p>Here's Sam's favorite food:</p>
+<ul class="sams-food">
+	<li>Green eggs</li>
+	<li>Ham</li>
+</ul>
+```
+
+In React, we do this with `<React.Fragment>`. Replace the
+`<div className="container">` with a fragment and inspect the DOM to notice that
+the elements are both rendered as direct children of `root`.
+
+<callout-info class="aside">
+	💰 TIP: Fragments are common enough that there's a syntax shortcut for them.
+	You can open with `<>` and close with `</>`, so:
+</callout-info>
+
+```tsx
+element = <React.Fragment>this is in a fragment</React.Fragment>
+// is the same as:
+element = <>this is in a fragment</>
+```
+
+👨‍💼 We want to get rid of the `<div className="container">` we have in there, but
+we need to keep the `<p>` and `<ul>` next to each other. Figure out how to make
+that work.
+
+💯 As a little extra part of this, try to figure out why `<React.Fragment>` is
+needed at all. Might help if you look at what this looks like using
+`createElement` rather than JSX. As I said, understanding how JSX compiles
+to `createElement` really helps improve your capabilities with JSX!
