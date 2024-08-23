@@ -5,6 +5,8 @@
     "title": "React Fundamentals ⚛",
     "githubRoot": "https://github.com/epicweb-dev/react-fundamentals/blob/main",
     "subtitle": "Learn the foundational concepts necessary for building React applications and libraries",
+    "epicWorkshopHost": "www.epicreact.dev",
+    "epicWorkshopSlug": "react-fundamentals",
     "instructor": {
       "name": "Kent C. Dodds",
       "avatar": "/images/instructor.png",
