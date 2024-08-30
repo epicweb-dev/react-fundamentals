@@ -6,8 +6,8 @@ export function Box({
 	style = {},
 	className = '',
 	// 🐨 add a size prop here
-	...otherProps // 🦺 union this with an object that has a size prop type here which is
-	// optional and one of "small", "medium", or "large"
+	...otherProps // 🦺 intersect (&) this with an object that has a size prop type here which is
+	// optional and is one of "small", "medium", or "large"
 }: React.ComponentProps<'div'>) {
 	// 🐨 based on the size prop, define a new variable called sizeClassName
 	return (
