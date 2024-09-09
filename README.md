@@ -86,6 +86,14 @@ npm run setup
 If you experience errors here, please open [an issue][issue] with as many
 details as you can offer.
 
+## Starting the app
+
+Once you have the setup finished, you can start the app with:
+
+```
+npm start
+```
+
 ## The Workshop App
 
 Learn all about the workshop app on the
