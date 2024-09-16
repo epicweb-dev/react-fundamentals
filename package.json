@@ -10,8 +10,14 @@
       "slug": "react-fundamentals",
       "displayName": "EpicReact.dev",
       "displayNameShort": "Epic React",
-      "logo": "/logo.svg"
+      "logo": "/logo.svg",
+      "discordChannelId": "1285244676286189569",
+      "discordTags": [
+        "1285246046498328627",
+        "1285245484432228375"
+      ]
     },
+    "onboardingVideo": "https://www.epicweb.dev/tips/get-started-with-the-epic-workshop-app-for-react",
     "instructor": {
       "name": "Kent C. Dodds",
       "avatar": "/images/instructor.png",
