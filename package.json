@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@epic-web/config": "^1.5.3",
-    "@epic-web/workshop-utils": "^4.24.1",
+    "@epic-web/workshop-utils": "^4.25.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/react": "npm:types-react@19.0.0-alpha.5",
     "@types/react-dom": "npm:types-react-dom@19.0.0-alpha.5",
