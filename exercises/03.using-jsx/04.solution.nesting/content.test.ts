@@ -1,15 +1,21 @@
-import { expect, testStep } from '@epic-web/workshop-utils/test'
+import { expect, testStep, dtl } from '@epic-web/workshop-utils/test'
 
-// wait for babel to compile and evaluate the JSX
-await new Promise(resolve => setTimeout(resolve, 100))
-
-await testStep('Proper elements are rendered to the DOM', () => {
+await testStep('Proper elements are rendered to the DOM', async () => {
 	const rootElement = document.getElementById('root')
 	expect(rootElement, 'root element not found').to.be.instanceOf(HTMLElement)
 	if (!rootElement) return
 
-	const element = rootElement.querySelector('.container')
-	expect(element, 'container element not found').to.be.instanceOf(HTMLElement)
+	const element = await dtl.waitFor(
+		() => {
+			const element = rootElement!.querySelector('.container')
+			expect(element, 'container element not found').to.be.instanceOf(
+				HTMLElement,
+			)
+			return element
+		},
+		{ timeout: 5000 },
+	)
+
 	if (!element) return
 
 	const p = element.querySelector('p')
