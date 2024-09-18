@@ -35,6 +35,9 @@ jobs:
       - name: ⬣ ESLint
         run: npm run lint
 
+      - name: 🧪 In-browser tests
+        run: npm --prefix epicshop test
+
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-latest

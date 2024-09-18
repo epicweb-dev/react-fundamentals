@@ -4,8 +4,6 @@ workspace/
 **/.cache/
 **/build/
 **/public/build
-**/playwright-report
-data.db
 /playground
 **/tsconfig.tsbuildinfo
 
