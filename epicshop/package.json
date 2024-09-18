@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "test:setup": "playwright install chromium --with-deps",
     "test": "playwright test"
   },
   "dependencies": {
