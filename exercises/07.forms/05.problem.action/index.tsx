@@ -1,9 +1,8 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
-	// 🐨 create a function called logFormData
-	// it accepts a formData object which
-	// 🐨 console.log the formData object like we do in the current onSubmit handler
+	// 🐨 create a function called logFormData which accepts a FormData object
+	// 🐨 console.log the FormData object like we do in the current onSubmit handler
 	return (
 		<form
 			// 🐨 replace the string "api/onboarding" with the logFormData function
