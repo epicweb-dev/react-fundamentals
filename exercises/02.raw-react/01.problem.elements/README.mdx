@@ -5,16 +5,25 @@
 👨‍💼 Let's convert this to use React! But don't worry, we won't be doing any JSX just
 yet... You're going to use raw React APIs here.
 
-In modern applications you'll get React and React DOM files from a "package
-registry" like [npm](https://npmjs.com) ([react](https://npm.im/react) and
+In modern applications, you typically get React and React DOM files from a "package registry",
+like [npm](https://npmjs.com) where packages we use are ([react](https://npm.im/react) and
 [react-dom](https://npm.im/react-dom)).
 
-To keep things as simple as possible in these first exercises, we'll be
-importing the file `public/react.js` at `/react.js` and
-`public/react-dom/client.js` at `/react-dom/client.js`. Those files re-export
-the packages from [esm.sh](https://esm.sh).
+<callout-info class="aside">
+	A package registry is a centralized repository where developers can publish
+	and share reusable code packages. 
+</callout-info>
 
-Here's a simple example of the API:
+To keep things simple for these exercises, we'll import React from slightly different locations:
+
+- `public/react.js` (accessed at `/react.js`)
+- `public/react-dom/client.js` (accessed at `/react-dom/client.js`)
+
+These files use a service called [esm.sh](https://esm.sh) to provide the React packages.
+
+Don't worry too much about [esm.sh](https://esm.sh) for now - it's just helping us load React easily in these exercises.
+
+Here's a simple example of how to use the React createElement API:
 
 ```typescript
 import { createElement } from '/react.js'
@@ -42,34 +51,43 @@ import { createRoot } from 'react-dom/client'
 
 </callout-info>
 
-The "props" in `elementProps` above is short for "properties" and they're a
-foundational part of React elements. You can think of the element type as a
-blueprint for the kind of React component to create and the props are the inputs
-for when React actually creates that element.
+The "props" in `elementProps` above is short for "properties". Props are a key concept
+in React - they're the way we pass data into our elements. You can think of the element
+type as a blueprint for the kind of React component to create, and the props are the
+inputs that customize that element.
 
-`children` is a special prop. You can pass a single element like above, or an
-array of children (if there's more than one). You can also pass the children as
-any number of additional arguments:
+`children` is a special prop in React. It represents the content inside an element.
+You have a few ways to specify children:
+
+1. As a prop (like in the first example above)
+2. As multiple arguments to `createElement`
+3. As an array
+
+Here's an example showing the last two methods:
 
 ```typescript
 const elementProps = { id: 'element-id' }
-const child1 = 'Hello'
-const child2 = ' '
-const child3 = 'world!'
 const elementType = 'h1'
-const reactElement = createElement(
+
+// Method 2: Multiple arguments
+const reactElement1 = createElement(
 	elementType,
 	elementProps,
-	child1,
-	child2,
-	child3,
+	'Hello',
+	' ',
+	'world!',
 )
-createRoot(rootElement).render(reactElement)
+
+// Method 3: Array of children
+const children = ['Hello', ' ', 'world!']
+const reactElement2 = createElement(elementType, elementProps, children)
+
+createRoot(rootElement).render(reactElement1) // or reactElement2
 ```
 
-Alright! Let's do this!
+Alright! Let's put this into practice!
 
 <callout-info class="aside">
-	💰 Tip: `console.log` the `reactElement` to see what it looks like. You might
-	find it kinda interesting!
+	💰 Tip: Use `console.log(reactElement)` to see what your created element looks
+	like. You might find the structure interesting!
 </callout-info>
