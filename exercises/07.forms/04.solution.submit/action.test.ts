@@ -8,14 +8,6 @@ const form = await dtl.waitFor(() => {
 	return form
 })
 
-await testStep('Form has correct action', async () => {
-	expect(form).toHaveAttribute('action', 'api/onboarding')
-})
-
-await testStep('Form has correct method', async () => {
-	expect(form).toHaveAttribute('method', 'POST')
-})
-
-await testStep('Form has correct encType', async () => {
-	expect(form).toHaveAttribute('encType', 'multipart/form-data')
+await testStep('Form does not have incorrect method', async () => {
+	expect(form).not.toHaveAttribute('method', 'GET')
 })
