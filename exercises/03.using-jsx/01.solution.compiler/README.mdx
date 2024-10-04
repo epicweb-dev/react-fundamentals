@@ -2,4 +2,37 @@
 
 <EpicVideo url="https://www.epicreact.dev/workshops/react-fundamentals/compiling-jsx/solution" />
 
+🦉 Let's break down the key changes in our `script` tag:
+
+1. `type="text/babel"` and `data-type="module"`:
+
+   - `type="text/babel"` tells Babel to transpile this script, allowing us to use JSX and modern JavaScript features.
+   - `data-type="module"` indicates that this script should be treated as a module after Babel transpilation. This enables us to use `import` statements.
+
+   We use both instead of just `type="module"` because browsers don't natively understand JSX. Babel needs to transform our code first, then it can be treated as a module.
+
+2. Importing React:
+   We've changed from:
+
+   ```javascript
+   import { createElement } from '/react.js'
+   ```
+
+   to:
+
+   ```javascript
+   import * as React from '/react.js'
+   ```
+
+   This imports all exports from React as a namespace called `React`. It's beneficial because:
+
+   - It provides access to all React APIs, not just `createElement`.
+   - When using JSX, the transpiler will convert JSX elements to `React.createElement` calls, so we need the `React` namespace in scope.
+
+🔍 To dive deeper into these concepts, check out these resources:
+
+- [📜 Babel documentation on browser usage](https://babeljs.io/docs/babel-standalone)
+- [📜 React documentation on JSX](https://react.dev/learn/writing-markup-with-jsx)
+- [📜 MDN on JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+
 👨‍💼 Great! Now we're ready to start using JSX in our HTML file!

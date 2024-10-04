@@ -2,13 +2,26 @@
 
 <EpicVideo url="https://www.epicreact.dev/workshops/react-fundamentals/fragments" />
 
-🦉 One feature of JSX that you'll find useful is called
-["React Fragments"](https://react.dev/reference/react/Fragment). It's a special
-kind of component from React which allows you to position two elements
-side-by-side rather than just nested.
+🦉 One feature of JSX that you'll find useful is called ["React Fragments"](https://react.dev/reference/react/Fragment).
 
-Let's say we wanted to do the same thing as above, except we didn't want the
-`container` `div`. So, we wanted to just create:
+React Fragments allow you to group multiple elements without adding an extra
+DOM node. This lets you return multiple elements side-by-side from a component
+without needing a wrapper div. It's useful for avoiding unnecessary markup
+that could affect styling or layout.
+
+We have currently the following code:
+
+```html
+<div className="container">
+	<p>Here's Sam's favorite food:</p>
+	<ul className="sams-food">
+		<li>Green eggs</li>
+		<li>Ham</li>
+	</ul>
+</div>
+```
+
+We want to do the same thing as above, except we don't want the `container` `div`. So, we want to just create:
 
 ```html
 <p>Here's Sam's favorite food:</p>
