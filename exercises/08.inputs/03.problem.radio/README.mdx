@@ -8,13 +8,17 @@ that's the best option. Instead, let's use a radio group.
 
 📜 You can [learn about radio groups on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)
 
-What's interesting about radio groups is that they are a group of inputs that
-share the same name. Only one of them can be selected at a time. Each radio
-input needs its own `label`. To label the entire group, you can use a
-`<fieldset>` and a `<legend>`.
+What's interesting about radio groups is that each radio group can contain
+multiple inputs that share the same name. Only one of them can be selected at
+a time. Each radio input needs its own `label`. To label the entire group, you
+can use a `<fieldset>` and a `<legend>`.
 
-Similar to checkboxes, to set the default value, you need to add the `checked`
-attribute to the input you want to be selected by default.
+<callout-info>
+	Note: Similar to checkboxes, to set the default value, you can set the
+	`checked` attribute to the input you want to be selected by default... but
+	in React, that will make your input read-only! We'll learn more about how
+	to set default values in React in a future lesson.
+</callout-info>
 
 Similar to a select `option`, you need to set the `value` on the input to
 determine what value will be sent to the server when the form is submitted.

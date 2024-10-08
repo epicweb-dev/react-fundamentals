@@ -14,7 +14,7 @@ const smallBox = <div>small lightblue box</div>
 const mediumBox = <div>medium pink box</div>
 const largeBox = <div>large orange box</div>
 
-// 💰 the sizelssColorlessBox should still be a box, just with no size or color
+// 💰 the sizelessColorlessBox should still be a box, just with no size or color
 const sizelessColorlessBox = <div>sizeless colorless box</div>
 
 function App() {
