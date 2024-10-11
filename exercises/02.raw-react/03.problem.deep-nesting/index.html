@@ -20,9 +20,11 @@
 			const element = createElement(
 				'div',
 				{ className: 'container' },
-				createElement('span', null, 'Hello'),
-				' ',
-				createElement('span', null, 'World'),
+				createElement('p', null, `Here's Sam's favorite food:`),
+				createElement('ul', { className: 'sams-food' }, [
+					createElement('li', null, 'Green eggs'),
+					createElement('li', null, 'Ham'),
+				]),
 			)
 
 			createRoot(rootElement).render(element)
