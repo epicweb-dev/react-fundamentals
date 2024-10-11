@@ -12,7 +12,7 @@
 			const className = 'container'
 			const props = { children, className }
 			// 🐨 get this props object spread onto the div element
-			const element = <div></div>
+			const element = <div {...props}></div>
 
 			createRoot(rootElement).render(element)
 		</script>
