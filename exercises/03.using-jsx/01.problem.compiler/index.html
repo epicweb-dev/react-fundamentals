@@ -2,23 +2,20 @@
 	<body>
 		<div id="root"></div>
 
-		<script type="module">
+		<script type="text/babel" data-type="module">
 			// 🐨 on the script tag above, change `type="module"`
 			// to `type="text/babel"` and add data-type="module" so babel will compile
 			// this code as a module script for the browser to run.
 
 			// 🐨 babel compiles JSX to "React.createElement" instead of simply "createElement"
 			// so change this import to: import * as React from '/react.js'
-			import { createElement } from '/react.js'
+			import * as React from '/react.js'
 			import { createRoot } from '/react-dom/client.js'
 
 			const rootElement = document.getElementById('root')
 
 			// 🐨 With babel compiling this code, you can now re-implement this using JSX!
-			const element = createElement('div', {
-				className: 'container',
-				children: 'Hello World',
-			})
+			const element = <div className="container">Hello World</div>
 
 			// 💰 there are a few subtle differences between JSX and HTML. One such
 			// difference is how you apply a class to an element in JSX is by using
@@ -35,6 +32,7 @@
 		-->
 
 		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="/babel-standalone.js"></script>
 		<script type="module" src="epic_ws.js"></script>
 	</body>
 </html>
