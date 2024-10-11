@@ -11,13 +11,15 @@
 			// <div class="container">
 			// 	<span>Hello</span> <span>World</span>
 			// </div>
+			const helloSpan = createElement('span', {}, 'Hello')
+			const worldSpan = createElement('span', {}, 'World')
 			const element = createElement(
 				'div',
 				{ className: 'container' },
 				// 🐨 replace the "Hello World" with createElement calls that creates
 				// a span with the text "Hello" and another span with the text "World"
 				// also, you'll need to add a space string (" ") between the spans
-				'Hello World',
+				[helloSpan, ' ', worldSpan],
 			)
 
 			createRoot(rootElement).render(element)
