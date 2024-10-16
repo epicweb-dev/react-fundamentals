@@ -6,7 +6,7 @@ const user = userEvent.setup()
 
 import './index.tsx'
 
-testStep('Error boundary is rendered after form submission', async () => {
+await testStep('Error boundary is rendered after form submission', async () => {
 	// submit the form
 	await user.click(await screen.findByRole('button', { name: /submit/i }))
 

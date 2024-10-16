@@ -6,7 +6,7 @@ const user = userEvent.setup()
 
 import './index.tsx'
 
-testStep('Error boundary is rendered after form submission', async () => {
+await testStep('Error boundary is rendered after form submission', async () => {
 	// submit the form
 	await user.click(await screen.findByRole('button', { name: /submit/i }))
 
@@ -24,7 +24,7 @@ testStep('Error boundary is rendered after form submission', async () => {
 	expect(form).toBeNull()
 })
 
-testStep('Clicking "Try again" resets the error boundary', async () => {
+await testStep('Clicking "Try again" resets the error boundary', async () => {
 	// Click the "Try again" button
 	const tryAgainButton = await screen.findByRole('button', {
 		name: /try again/i,
