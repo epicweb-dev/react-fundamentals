@@ -3,7 +3,7 @@ const { screen } = dtl
 
 import './index.tsx'
 
-testStep(
+await testStep(
 	'Error boundary is rendered immediately due to render error',
 	async () => {
 		// Check if the error message is displayed
