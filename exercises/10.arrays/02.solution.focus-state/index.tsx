@@ -21,8 +21,8 @@ function App() {
 	function getChangeHandler(item: (typeof items)[number]) {
 		return (event: React.ChangeEvent<HTMLInputElement>) => {
 			const newValue = event.currentTarget.value
-			setItems(allItems =>
-				allItems.map(i => ({
+			setItems((allItems) =>
+				allItems.map((i) => ({
 					...i,
 					value: i.id === item.id ? newValue : i.value,
 				})),
@@ -94,7 +94,7 @@ function App() {
 						id="autoshuffle"
 						type="checkbox"
 						checked={autoShuffle}
-						onChange={event => setAutoShuffle(event.target.checked)}
+						onChange={(event) => setAutoShuffle(event.target.checked)}
 					/>
 					<label htmlFor="autoshuffle">Auto-shuffle inputs</label>
 				</div>
@@ -115,7 +115,9 @@ function shuffle<ArrayType>(originalArray: Array<ArrayType>) {
 		currentIndex -= 1
 		// And swap it with the current element.
 		temporaryValue = array[currentIndex]
+		// @ts-expect-error
 		array[currentIndex] = array[randomIndex]
+		// @ts-expect-error
 		array[randomIndex] = temporaryValue
 	}
 	return array

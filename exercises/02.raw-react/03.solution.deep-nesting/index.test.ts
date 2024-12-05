@@ -31,8 +31,8 @@ await testStep('Proper elements are rendered to the DOM', async () => {
 
 	const [greenEggs, ham] = ul!.querySelectorAll('li')
 
-	expect(greenEggs.textContent, 'green eggs text is not correct').to.equal(
+	expect(greenEggs?.textContent, 'green eggs text is not correct').to.equal(
 		'Green eggs',
 	)
-	expect(ham.textContent, 'ham text is not correct').to.equal('Ham')
+	expect(ham?.textContent, 'ham text is not correct').to.equal('Ham')
 })

@@ -33,6 +33,6 @@ await testStep('"Hello World" is rendered to the DOM', async () => {
 	expect(hello, 'Hello span not found').to.be.instanceOf(HTMLElement)
 	expect(world, 'World span not found').to.be.instanceOf(HTMLElement)
 
-	expect(hello.textContent, 'hello text is not correct').to.equal('Hello')
-	expect(world.textContent, 'world text is not correct').to.equal('World')
+	expect(hello?.textContent, 'hello text is not correct').to.equal('Hello')
+	expect(world?.textContent, 'world text is not correct').to.equal('World')
 })
