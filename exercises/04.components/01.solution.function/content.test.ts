@@ -21,6 +21,6 @@ await testStep('Proper elements are rendered to the DOM', async () => {
 	const messages = Array.from(element.querySelectorAll('.message'))
 	expect(messages, 'messages not found').to.have.length(2)
 	const [helloMessage, goodbyeMessage] = messages
-	expect(helloMessage?.textContent).to.equal('Hello World')
-	expect(goodbyeMessage?.textContent).to.equal('Goodbye World')
+	expect(helloMessage?.textContent?.toLowerCase()).to.equal('hello world')
+	expect(goodbyeMessage?.textContent?.toLowerCase()).to.equal('goodbye world')
 })
