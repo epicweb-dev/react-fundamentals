@@ -5,7 +5,15 @@ export async function respondWithDataTable(data: URLSearchParams | FormData) {
 	const headerCellStyle = `${cellStyle} border-bottom-width: 2px;`
 
 	async function stringifyValue(value: string | File) {
-		if (value instanceof File) {
+		// this would be value instanceof File except the global File was not added until Node 20.
+		// feel free to update this when we drop Node 18 support after April 2025.
+		if (
+			typeof value === 'object' &&
+			'size' in value &&
+			'arrayBuffer' in value &&
+			'type' in value &&
+			'name' in value
+		) {
 			if (value.size > MAX_FILE_SIZE) {
 				throw new Response(`File larger than ${MAX_FILE_SIZE} bytes`, {
 					status: 400,
