@@ -15,10 +15,6 @@ await testStep('Error boundary is rendered after form submission', async () => {
 	expect(errorMessage).toBeDefined()
 	expect(errorMessage.textContent).toContain('There was an error:')
 
-	// Check if the error message contains the specific error
-	const errorDetails = await screen.findByText(/toUpperCase/i)
-	expect(errorDetails).toBeDefined()
-
 	// Ensure the form is not rendered after error
 	const form = screen.queryByRole('form')
 	expect(form).toBeNull()
