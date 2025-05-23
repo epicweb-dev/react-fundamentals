@@ -17,7 +17,9 @@
 				// 🐨 replace the "Hello World" with createElement calls that creates
 				// a span with the text "Hello" and another span with the text "World"
 				// also, you'll need to add a space string (" ") between the spans
-				'Hello World',
+				createElement('span', null, 'Hello'),
+				' ',
+				createElement('span', null, 'world'),
 			)
 
 			createRoot(rootElement).render(element)
