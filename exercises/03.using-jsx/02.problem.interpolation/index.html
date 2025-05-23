@@ -11,7 +11,7 @@
 			const children = 'Hello World'
 			const className = 'container'
 			// 🐨 get the children and className interpolated into this element:
-			const element = <div></div>
+			const element = <div className={className}>{children}</div>
 
 			createRoot(rootElement).render(element)
 		</script>
