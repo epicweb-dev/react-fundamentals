@@ -11,14 +11,24 @@
 			// 🐨 replace the <div> with a React Fragment.
 			// 💯 try both syntaxes!
 			const element = (
-				<div className="container">
+				<React.Fragment className="container">
 					<p>Here's Sam's favorite food:</p>
 					<ul className="sams-food">
 						<li>Green eggs</li>
 						<li>Ham</li>
 					</ul>
-				</div>
+				</React.Fragment>
 			)
+
+			// const element = (
+			// 	<>
+			// 		<p>Here's Sam's favorite food:</p>
+			// 		<ul className="sams-food">
+			// 			<li>Green eggs</li>
+			// 			<li>Ham</li>
+			// 		</ul>
+			// 	</>
+			// )
 
 			createRoot(rootElement).render(element)
 		</script>
