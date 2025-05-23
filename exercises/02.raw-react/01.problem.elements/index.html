@@ -4,8 +4,8 @@
 
 		<script type="module">
 			// 🐨 add imports for react and react-dom/client here
-			// 💰 import { createElement } from '/react.js'
-			// 💰 import { createRoot } from '/react-dom/client.js'
+			import { createElement } from '/react.js'
+			import { createRoot } from '/react-dom/client.js'
 
 			const rootElement = document.getElementById('root')
 
@@ -13,13 +13,15 @@
 			// 💣 So go ahead and delete this implementation (or comment it out for now)
 			// These three lines are similar to createElement
 			// 📜 https://react.dev/reference/react/createElement
-			const element = document.createElement('div')
-			element.className = 'container' // 💰 in React, this is also called the "className" prop
-			element.textContent = 'Hello World' // 💰 in React, this is the "children" prop or a third argument
-			// This is similar to createRoot().render()
-			rootElement.append(element)
 
 			// 🐨 Please replace all the DOM-related code above with React API calls
+			const element = createElement(
+				'div',
+				{ className: 'container' },
+				'Hello World',
+			)
+			createRoot(rootElement).render(element)
+
 			// 💰 The example in the markdown file should be a good hint for you.
 		</script>
 
