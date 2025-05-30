@@ -9,15 +9,15 @@
 			const rootElement = document.getElementById('root')
 
 			// 🐨 capitalize the name of this function
-			function message({ children }) {
+			function Message({ children }) {
 				return <div className="message">{children}</div>
 			}
 
 			const element = (
 				<div className="container">
 					{/* 🐨 swap these for JSX with Message components */}
-					{React.createElement(message, { children: 'Hello World' })}
-					{React.createElement(message, { children: 'Goodbye World' })}
+					<Message>Hello world</Message>
+					<Message>Goodbye world</Message>
 				</div>
 			)
 
