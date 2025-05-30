@@ -16,8 +16,8 @@
 			const element = (
 				<div className="container">
 					{/* 🐨 change these function calls to React.createElement API calls */}
-					{message({ children: 'Hello World' })}
-					{message({ children: 'Goodbye World' })}
+					{React.createElement(message, { children: 'Hello World' })}
+					{React.createElement(message, { children: 'Goodbye World' })}
 				</div>
 			)
 
