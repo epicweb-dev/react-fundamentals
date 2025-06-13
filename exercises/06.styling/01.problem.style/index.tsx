@@ -10,16 +10,44 @@ import { createRoot } from 'react-dom/client'
 // 🐨 also use the style prop to make the font italic
 // 💰 Here are available style attributes: backgroundColor, fontStyle
 
-const smallBox = <div>small lightblue box</div>
-const mediumBox = <div>medium pink box</div>
-const largeBox = <div>large orange box</div>
+const smallBox = (
+	<div
+		className="box box--small"
+		style={{ background: 'lightblue', fontStyle: 'italic' }}
+	>
+		small lightblue box
+	</div>
+)
+const mediumBox = (
+	<div
+		className="box box--medium"
+		style={{ background: 'pink', fontStyle: 'italic' }}
+	>
+		medium pink box
+	</div>
+)
+const largeBox = (
+	<div
+		className="box box--large"
+		style={{ background: 'orange', fontStyle: 'italic' }}
+	>
+		large orange box
+	</div>
+)
 
 // 💰 the sizelessColorlessBox should still be a box, just with no size or color
-const sizelessColorlessBox = <div>sizeless colorless box</div>
+const sizelessColorlessBox = (
+	<div
+		className="box"
+		style={{ background: 'transparent', fontStyle: 'italic' }}
+	>
+		sizeless colorless box
+	</div>
+)
 
 function App() {
 	return (
-		<div>
+		<div className="box">
 			{smallBox}
 			{mediumBox}
 			{largeBox}
