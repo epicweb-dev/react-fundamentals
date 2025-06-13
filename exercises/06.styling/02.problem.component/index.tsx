@@ -1,6 +1,13 @@
 import { createRoot } from 'react-dom/client'
 
 // 🐨 create a component called "Box" which accepts style (defaults to {}), className (defaults to ''), and children props.
+export function Box({
+	style = {},
+	className = '',
+	...props
+}: React.ComponentProps<'div'>) {
+	return <div className={`box ${className}`} style={{ fontStyle: 'italic', ...style }} {...props} />
+}
 // 🐨 Make it render a div with the style, className, and children applied.
 // 🐨 Also automatically add the fontStyle: 'italic' style to the style prop so consumers don't have to provide that
 // 🐨 And automatically add the "box" className to the className prop so consumers don't have to provide that as well.
@@ -11,33 +18,33 @@ import { createRoot } from 'react-dom/client'
 
 // 🐨 update all of these to use the <Box> component with the appropriate props.
 const smallBox = (
-	<div
-		className="box box--small"
-		style={{ fontStyle: 'italic', backgroundColor: 'lightblue' }}
+	<Box
+		className="box--small"
+		style={{ backgroundColor: 'lightblue' }}
 	>
 		small lightblue box
-	</div>
+	</Box>
 )
 const mediumBox = (
-	<div
-		className="box box--medium"
-		style={{ fontStyle: 'italic', backgroundColor: 'pink' }}
+	<Box
+		className="box--medium"
+		style={{ backgroundColor: 'pink' }}
 	>
 		medium pink box
-	</div>
+	</Box>
 )
 const largeBox = (
-	<div
-		className="box box--large"
-		style={{ fontStyle: 'italic', backgroundColor: 'orange' }}
+	<Box
+		className="box--large"
+		style={{ backgroundColor: 'orange' }}
 	>
 		large orange box
-	</div>
+	</Box>
 )
 const sizelessColorlessBox = (
-	<div className="box" style={{ fontStyle: 'italic' }}>
+	<Box>
 		sizeless colorless box
-	</div>
+	</Box>
 )
 
 function App() {
