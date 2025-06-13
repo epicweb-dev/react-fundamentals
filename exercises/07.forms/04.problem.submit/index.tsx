@@ -1,13 +1,23 @@
 import { createRoot } from 'react-dom/client'
 
 function App() {
+	const handlesubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault()
+
+		const formData = new FormData(event.currentTarget)
+		console.log(Object.fromEntries(formData))
+	}
+
 	return (
 		<form
 			action="api/onboarding"
 			// 🦉 Follow these instructions in order. Test the behavior after each step
 			// 1️⃣ 🐨 set the method to "POST" then update api.server.ts to handle the POST request
+			method='POST'
 			// 2️⃣ 🐨 set the encType to "multipart/form-data"
+			encType='multipart/form-data'
 			// 3️⃣ 🐨 add an onSubmit handler that calls event.preventDefault()
+			onSubmit={handlesubmit}
 			// 4️⃣ 🐨 create a FormData object from the form (💰 event.currentTarget)
 			// 5️⃣ 🐨 log the result of Object.fromEntries(formData)
 			// 6️⃣ 💯 as extra credit, see what happens if you remove the action, method, and encType
