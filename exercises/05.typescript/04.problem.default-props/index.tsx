@@ -9,12 +9,12 @@ const operations = {
 
 type CalculatorProps = {
 	// 🐨 make each of these optional
-	left: number
-	operator: keyof typeof operations
-	right: number
+	left?: number
+	operator?: keyof typeof operations
+	right?: number
 }
 // 🐨 add defaults so if a user just uses <Calculator /> they'll get "0 + 0 = 0"
-function Calculator({ left, operator, right }: CalculatorProps) {
+function Calculator({ left = 0, operator = '+', right = 0 }: CalculatorProps) {
 	const result = operations[operator](left, right)
 	return (
 		<div>
