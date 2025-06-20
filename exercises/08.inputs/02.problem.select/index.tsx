@@ -7,6 +7,16 @@ function App() {
 	return (
 		<form action={logFormData}>
 			{/* 🐨 add a label "Account Type" */}
+			<div>
+				<label htmlFor="accountTypeSelectInput">Account Type</label>
+				<select id="accountTypeSelectInput" name="accountType">
+					<option value="">--Please choose an option--</option>
+					<option value="admin">Admin</option>
+					<option value="teacher">Teacher</option>
+					<option value="parent">Parent</option>
+					<option value="student">Student</option>
+				</select>
+			</div>
 			{/* 🐨 add a select with the following options:
 				- admin
 				- teacher
