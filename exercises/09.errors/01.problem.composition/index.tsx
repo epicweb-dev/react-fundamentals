@@ -1,14 +1,14 @@
 import { createRoot } from 'react-dom/client'
 // 🐨 bring in ErrorBoundary and FallbackProps type from react-error-boundary
-
+import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 // 🐨 Rename this to OnboardingForm
-function App() {
+function OnboardingForm() {
 	return (
 		<form
 			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
-			onSubmit={event => {
+			onSubmit={(event) => {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
 				console.log(Object.fromEntries(formData))
@@ -97,6 +97,14 @@ function App() {
 }
 
 // 🐨 create an ErrorFallback component here that accepts FallbackProps
+function ErrorFallback({ error }: FallbackProps) {
+	return (
+		<div role="alert">
+			<p>Something went wrong:</p>
+			<pre style={{ color: 'red' }}>{error.message}</pre>
+		</div>
+	)
+}
 // and renders the error.message
 // 💯 you can make it look nice if you want
 // 📜 https://github.com/bvaughn/react-error-boundary#errorboundary-with-fallbackcomponent-prop
@@ -105,6 +113,14 @@ function App() {
 // ErrorBoundary with the ErrorFallback as the FallbackComponent
 // 🦉 as a tip, you could use the onError prop if you wanted to report errors to
 // a reporting service like Sentry.io
+
+function App() {
+	return (
+		<ErrorBoundary FallbackComponent={ErrorFallback}>
+			<OnboardingForm />
+		</ErrorBoundary>
+	)
+}
 
 const rootEl = document.createElement('div')
 document.body.append(rootEl)
