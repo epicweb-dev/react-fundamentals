@@ -39,8 +39,7 @@ function App() {
 						{items.map((item, index) => (
 							// 🐨 add a key prop to the <li> below. Set it to item.id
 							// 💣 you can then delete this eslint-disable line:
-							// eslint-disable-next-line react/jsx-key
-							<li>
+							<li key={item.id}>
 								<label htmlFor={`no-key-${item.id}-input`}>
 									No key #{index + 1}
 								</label>
@@ -59,7 +58,7 @@ function App() {
 					<ul style={{ display: 'flex', gap: '10px' }}>
 						{items.map((item, index) => (
 							// 🐨 change the key prop below to item.id (something that actually represents the item)
-							<li key={index}>
+							<li key={item.id}>
 								<label htmlFor={`index-key-${item.id}-input`}>
 									Index key #{index + 1}
 								</label>
@@ -77,7 +76,7 @@ function App() {
 					<h1>With a proper key</h1>
 					<ul style={{ display: 'flex', gap: '10px' }}>
 						{items.map((item, index) => (
-							<li key={item.id}>
+							<li key={index}>
 								<label htmlFor={`proper-key-${item.id}-input`}>
 									Proper key #{index + 1}
 								</label>
