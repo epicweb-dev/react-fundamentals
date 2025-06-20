@@ -6,7 +6,7 @@ function App() {
 	return (
 		<div>
 			{/* 🐨 add a key prop to this input and set it to the key state */}
-			<input />
+			<input key={key}/>
 			<button onClick={() => setKey(key => key + 1)}>Reset</button>
 		</div>
 	)
