@@ -98,6 +98,7 @@ function App() {
 
 // 🐨 create an ErrorFallback component here that accepts FallbackProps
 // and renders the error.message
+// The error message should be displayed in the format: "There was an error: [error message]"
 // 💯 you can make it look nice if you want
 // 📜 https://github.com/bvaughn/react-error-boundary#errorboundary-with-fallbackcomponent-prop
 
