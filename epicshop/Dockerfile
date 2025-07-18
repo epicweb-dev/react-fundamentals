@@ -1,7 +1,8 @@
-FROM node:20-bookworm-slim as base
+FROM node:24-bookworm-slim as base
 
 RUN apt-get update && apt-get install -y git
 
+ENV EPICSHOP_REPO=https://github.com/epicweb-dev/react-fundamentals
 ENV EPICSHOP_CONTEXT_CWD="/myapp/workshop-content"
 ENV EPICSHOP_DEPLOYED="true"
 ENV EPICSHOP_DISABLE_WATCHER="true"
@@ -11,11 +12,15 @@ ENV NODE_ENV="production"
 
 WORKDIR /myapp
 
+# Clone the workshop repo during build time, excluding database files
+RUN git clone --depth 1 ${EPICSHOP_REPO} ${EPICSHOP_CONTEXT_CWD}
+
 ADD . .
 
 RUN npm install --omit=dev
 
-CMD rm -rf ${EPICSHOP_CONTEXT_CWD} && \
-    git clone https://github.com/epicweb-dev/react-fundamentals ${EPICSHOP_CONTEXT_CWD} && \
-    cd ${EPICSHOP_CONTEXT_CWD} && \
+RUN cd ${EPICSHOP_CONTEXT_CWD} && \
+    npx epicshop warm
+
+CMD cd ${EPICSHOP_CONTEXT_CWD} && \
     npx epicshop start
