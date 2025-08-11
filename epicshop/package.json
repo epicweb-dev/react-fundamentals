@@ -1,15 +1,19 @@
 {
   "type": "module",
   "scripts": {
+    "postinstall": "patch-package",
     "test:setup": "playwright install chromium --with-deps",
     "test": "playwright test"
   },
   "dependencies": {
     "@epic-web/config": "^1.16.3",
     "@epic-web/workshop-app": "^6.20.2",
+    "@epic-web/workshop-cli": "^6.20.2",
     "@epic-web/workshop-utils": "^6.20.2",
     "execa": "^9.5.1",
-    "fs-extra": "^11.2.0",
-    "@epic-web/workshop-cli": "^6.20.2"
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.0"
   }
 }

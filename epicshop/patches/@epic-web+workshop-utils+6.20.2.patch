@@ -1,0 +1,20 @@
+diff --git a/node_modules/@epic-web/workshop-utils/dist/esm/epic-api.server.js b/node_modules/@epic-web/workshop-utils/dist/esm/epic-api.server.js
+index 5ea9871..7fd64a5 100644
+--- a/node_modules/@epic-web/workshop-utils/dist/esm/epic-api.server.js
++++ b/node_modules/@epic-web/workshop-utils/dist/esm/epic-api.server.js
+@@ -430,13 +430,13 @@ const UserInfoSchema = z
+     image: z.string().nullable(),
+     discordProfile: z
+         .object({
+-        nick: z.string().nullable(),
++        nick: z.string().nullable().optional(),
+         user: z.object({
+             id: z.string(),
+             username: z.string(),
+             avatar: z.string().nullable().optional(),
+             global_name: z.string().nullable().optional(),
+-        }),
++        }).optional(),
+     })
+         .nullable()
+         .optional(),
