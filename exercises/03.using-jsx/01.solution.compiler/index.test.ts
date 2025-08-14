@@ -29,9 +29,25 @@ await testStep('babel is loaded', () => {
 })
 
 await testStep('JSX is in use', async () => {
+	// Filter out comment lines before checking
+	const scriptContent = inlineScript!.textContent || ''
+	const lines = scriptContent.split('\n')
+	const nonCommentLines = lines
+		.filter((line) => {
+			const trimmed = line.trim()
+			return (
+				!trimmed.startsWith('//') &&
+				!trimmed.startsWith('/*') &&
+				!trimmed.startsWith('*')
+			)
+		})
+		.join('\n')
+
 	expect(
-		inlineScript!.textContent,
-		'createElement( should not appear in your source',
+		nonCommentLines,
+		'createElement( should not appear in your source (excluding comments)',
 	).not.to.include('createElement(')
-	expect(inlineScript!.textContent, 'JSX is not in use').to.include('</div>')
+	expect(nonCommentLines, 'JSX is not in use (excluding comments)').to.include(
+		'</div>',
+	)
 })
