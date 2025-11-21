@@ -13,7 +13,7 @@ function App() {
 			//   warning says before removing them.
 			method="POST"
 			encType="multipart/form-data"
-			onSubmit={event => {
+			onSubmit={(event) => {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
 				console.log(Object.fromEntries(formData))

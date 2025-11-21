@@ -31,7 +31,7 @@ form.
 
 ```tsx
 <form
-	onSubmit={event => {
+	onSubmit={(event) => {
 		event.preventDefault() // prevent the default browser behavior
 		const formData = new FormData(event.currentTarget)
 		// do something with the form data

@@ -7,4 +7,4 @@ rm -rf node_modules package-lock.json ./epicshop/package-lock.json ./epicshop/no
 npm install
 npm run setup
 npm run typecheck
-npm run lint --fix
+npm run lint -- --fix

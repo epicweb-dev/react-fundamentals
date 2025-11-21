@@ -20,5 +20,8 @@ await testStep('children is interpolated', async () => {
 		inlineScript.textContent,
 		'children should be interpolated',
 	).not.to.include('>Hello World<')
-	expect(inlineScript.textContent, 'expected script to include { children }').to.match(/{\s*children\s*}/)
+	expect(
+		inlineScript.textContent,
+		'expected script to include { children }',
+	).to.match(/{\s*children\s*}/)
 })

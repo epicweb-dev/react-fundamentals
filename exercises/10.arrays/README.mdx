@@ -24,7 +24,7 @@ const list = ['One', 'Two', 'Three']
 
 const ui = (
 	<ul>
-		{list.map(listItem => (
+		{list.map((listItem) => (
 			<li>{listItem}</li>
 		))}
 	</ul>
@@ -36,7 +36,7 @@ different. Let's re-write it to see that difference:
 
 ```tsx
 const list = ['One', 'Two', 'Three']
-const listUI = list.map(listItem => <li>{listItem}</li>)
+const listUI = list.map((listItem) => <li>{listItem}</li>)
 // notice that listUI is an array
 const ui = <ul>{listUI}</ul>
 ```

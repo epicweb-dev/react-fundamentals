@@ -12,13 +12,13 @@ function App() {
 	const [items, setItems] = useState(allItems)
 
 	function addItem() {
-		const itemIds = items.map(i => i.id)
-		const itemToAdd = allItems.find(i => !itemIds.includes(i.id))
+		const itemIds = items.map((i) => i.id)
+		const itemToAdd = allItems.find((i) => !itemIds.includes(i.id))
 		if (itemToAdd) setItems([...items, itemToAdd])
 	}
 
 	function removeItem(id: string) {
-		setItems(items.filter(i => i.id !== id))
+		setItems(items.filter((i) => i.id !== id))
 	}
 
 	return (
@@ -27,7 +27,7 @@ function App() {
 				add item
 			</button>
 			<ul>
-				{items.map(item => (
+				{items.map((item) => (
 					// 🐨 add a key prop to the <li> below. Set it to item.id
 					// 💣 you can then delete this eslint-disable line:
 					// eslint-disable-next-line react/jsx-key

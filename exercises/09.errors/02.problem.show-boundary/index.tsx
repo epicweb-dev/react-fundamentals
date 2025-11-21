@@ -9,7 +9,7 @@ function OnboardingForm() {
 			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
-			onSubmit={event => {
+			onSubmit={(event) => {
 				// 🐨 wrap all of this in a try/catch block
 				// 🐨 call showBoundary with the error in the catch block
 				event.preventDefault()

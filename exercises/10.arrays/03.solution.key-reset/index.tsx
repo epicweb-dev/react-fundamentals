@@ -6,7 +6,7 @@ function App() {
 	return (
 		<div>
 			<input key={key} />
-			<button onClick={() => setKey(key => key + 1)}>Reset</button>
+			<button onClick={() => setKey((key) => key + 1)}>Reset</button>
 		</div>
 	)
 }

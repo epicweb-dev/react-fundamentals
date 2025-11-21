@@ -8,7 +8,7 @@ function App() {
 			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
-			onSubmit={event => {
+			onSubmit={(event) => {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
 				console.log(Object.fromEntries(formData))

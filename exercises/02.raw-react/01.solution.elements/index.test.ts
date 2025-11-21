@@ -25,7 +25,7 @@ await testStep('The DOM element is created by React', () => {
 	expect(element, 'element not found').to.be.instanceOf(HTMLElement)
 	if (!element) return
 
-	const reactKeys = Object.keys(element).filter(key =>
+	const reactKeys = Object.keys(element).filter((key) =>
 		key.startsWith('__react'),
 	)
 	expect(

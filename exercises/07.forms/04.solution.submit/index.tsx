@@ -10,7 +10,7 @@ function App() {
 			method="POST"
 			encType="multipart/form-data"
 			// 🦉 by the end of the exercise, this is all you'll actually need:
-			onSubmit={event => {
+			onSubmit={(event) => {
 				event.preventDefault()
 				const formData = new FormData(event.currentTarget)
 				console.log(Object.fromEntries(formData))

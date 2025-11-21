@@ -5,7 +5,6 @@
 🦉 Let's break down the key changes in our `script` tag:
 
 1. `type="text/babel"` and `data-type="module"`:
-
    - `type="text/babel"` tells Babel to transpile this script, allowing us to use JSX and modern JavaScript features.
    - `data-type="module"` indicates that this script should be treated as a module after Babel transpilation. This enables us to use `import` statements.
 
@@ -25,7 +24,6 @@
    ```
 
    This imports all exports from React as a namespace called `React`. It's beneficial because:
-
    - It provides access to all React APIs, not just `createElement`.
    - When using JSX, the transpiler will convert JSX elements to `React.createElement` calls, so we need the `React` namespace in scope.
 

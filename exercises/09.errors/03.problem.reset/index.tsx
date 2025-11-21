@@ -12,7 +12,7 @@ function OnboardingForm() {
 			action="api/onboarding"
 			method="POST"
 			encType="multipart/form-data"
-			onSubmit={event => {
+			onSubmit={(event) => {
 				try {
 					event.preventDefault()
 					const formData = new FormData(event.currentTarget)
