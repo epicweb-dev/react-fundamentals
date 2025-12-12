@@ -65,22 +65,10 @@ variable and how to fix it here for [windows][win-path] or
 
 ## Setup
 
-This is a pretty large project (it's actually many apps in one) so it can take
-several minutes to get everything set up the first time. Please have a strong
-network connection before running the setup and grab a snack.
-
-> **Warning**: This repo is _very_ large. Make sure you have a good internet
-> connection before you start the setup process. The instructions below use
-> `--depth` to limit the amount you download, but if you have a slow connection,
-> or you pay for bandwidth, you may want to find a place with a better
-> connection.
-
-Follow these steps to get this set up:
+Use the Epic Workshop CLI to get this setup:
 
 ```sh nonumber
-git clone --depth 1 https://github.com/epicweb-dev/react-fundamentals.git
-cd react-fundamentals
-npm run setup
+npx epicshop@latest add react-fundamentals
 ```
 
 If you experience errors here, please open [an issue][issue] with as many
