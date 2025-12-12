@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@epic-web/config": "^1.21.3",
-    "@epic-web/workshop-utils": "^6.43.0",
+    "@epic-web/workshop-utils": "^6.45.5",
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
