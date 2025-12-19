@@ -23,14 +23,22 @@ jobs:
         with:
           node-version: 20
 
+      - name: ⬇️ Install epicshop
+        run: npm install -g epicshop@latest
+
+      - name: 🎊 Configure epicshop
+        run: epicshop config --repos-dir ./workshops
+
       - name: ▶️ Add repo
         run: npx --yes epicshop@latest add react-fundamentals
 
       - name: ʦ TypeScript
         run: npm run typecheck
+        working-directory: ./workshops/react-fundamentals
 
       - name: ⬣ ESLint
         run: npm run lint
+        working-directory: ./workshops/react-fundamentals
 
       # TODO: get this working again
       # - name: ⬇️ Install Playwright
