@@ -27,18 +27,18 @@ jobs:
         run: npm install -g epicshop@latest
 
       - name: 🎊 Configure epicshop
-        run: epicshop config --repos-dir .
+        run: epicshop config --repos-dir ./workshops
 
       - name: ▶️ Add repo
-        run: epicshop add react-fundamentals
+        run: epicshop add ${{ github.event.repository.name }}
 
       - name: ʦ TypeScript
         run: npm run typecheck
-        working-directory: ./workshop
+        working-directory: ./workshops/${{ github.event.repository.name }}
 
       - name: ⬣ ESLint
         run: npm run lint
-        working-directory: ./workshop
+        working-directory: ./workshops/${{ github.event.repository.name }}
 
       # TODO: get this working again
       # - name: ⬇️ Install Playwright
