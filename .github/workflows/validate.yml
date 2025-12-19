@@ -30,7 +30,7 @@ jobs:
         run: epicshop config --repos-dir .
 
       - name: ▶️ Add repo
-        run: epicshop add workshop
+        run: epicshop add react-fundamentals
 
       - name: ʦ TypeScript
         run: npm run typecheck
