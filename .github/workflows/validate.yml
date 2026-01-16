@@ -32,11 +32,11 @@ jobs:
 
       - name: ʦ TypeScript
         run: npm run typecheck
-        working-directory: ./workshop/${{ github.event.repository.name }}
+        working-directory: ./workshop
 
       - name: ⬣ ESLint
         run: npm run lint
-        working-directory: ./workshop/${{ github.event.repository.name }}
+        working-directory: ./workshop
 
       # TODO: get this working again
       # - name: ⬇️ Install Playwright
