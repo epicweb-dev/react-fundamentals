@@ -25,7 +25,7 @@ jobs:
 
       - name: ▶️ Add repo
         run: |
-          npx --yes epicshop@latest add ${{ github.event.repository.name }} ./workshop
+          npx --yes epicshop@latest add ${{ github.event.repository.name }}#${{ github.head_ref || github.ref_name }} ./workshop
         env:
           # Kept getting npm ECOMPROMISED errors on windows. This fixed it.
           npm_config_cache: ${{ runner.temp }}/npm-cache
