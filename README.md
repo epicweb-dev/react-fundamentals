@@ -41,8 +41,7 @@ Here are some resources you can read before taking the workshop to get you up to
 speed on some of the tools and concepts we'll be covering:
 
 - [Get Started with React](https://github.com/epicweb-dev/get-started-with-react)
-- [Beginner's TypeScript](https://www.totaltypescript.com/tutorials/beginners-typescript)
-- [React with TypeScript](https://www.totaltypescript.com/tutorials/react-with-typescript)
+- [Practical TypeScript](https://www.epicweb.dev/practical-typescript) (first two workshops are free)
 
 ## System Requirements
 
