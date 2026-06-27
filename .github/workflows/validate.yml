@@ -5,6 +5,7 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
@@ -13,6 +14,7 @@ on:
       - 'main'
 jobs:
   setup:
+    timeout-minutes: 20
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -29,6 +31,7 @@ jobs:
         env:
           # Kept getting npm ECOMPROMISED errors on windows. This fixed it.
           npm_config_cache: ${{ runner.temp }}/npm-cache
+          SKIP_PLAYWRIGHT: true
 
       - name: ʦ TypeScript
         run: npm run typecheck
@@ -47,6 +50,7 @@ jobs:
 
   deploy:
     name: 🚀 Deploy
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     # only deploy main branch on pushes
     if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
