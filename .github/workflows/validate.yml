@@ -9,12 +9,12 @@ on:
   push:
     branches:
       - 'main'
-  pull_request:
-    branches:
-      - 'main'
+  pull_request: {}
+
 jobs:
   setup:
-    timeout-minutes: 20
+    name: 🔧 Setup
+    timeout-minutes: 10
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -37,23 +37,44 @@ jobs:
         run: npm run typecheck
         working-directory: ./workshop
 
-      - name: ⬣ ESLint
+      - name: ⬣ Oxlint
         run: npm run lint
         working-directory: ./workshop
 
-      # TODO: get this working again
-      # - name: ⬇️ Install Playwright
-      #   run: npm --prefix epicshop run test:setup
+  tests:
+    name: 🧪 Test
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    # Use continue-on-error to ensure this job doesn't fail the workflow
+    continue-on-error: true
 
-      # - name: 🧪 In-browser tests
-      #   run: npm --prefix epicshop test
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 26
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🧪 Run tests
+        id: run_tests
+        run: node ./epicshop/test.ts ..s
 
   deploy:
     name: 🚀 Deploy
-    timeout-minutes: 10
+    # Retries + Fly health waits need headroom beyond a single deploy attempt.
+    timeout-minutes: 30
     runs-on: ubuntu-latest
-    # only deploy main branch on pushes
-    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    # Deploy main on push or manual dispatch (non-forks). Dispatch is needed for
+    # sequenced recovery / re-deploys without inventing empty commits.
+    if:
+      ${{ github.ref == 'refs/heads/main' && github.repository_owner ==
+      'epicweb-dev' && (github.event_name == 'push' || github.event_name ==
+      'workflow_dispatch') }}
 
     steps:
       - name: ⬇️ Checkout repo
@@ -63,7 +84,82 @@ jobs:
         uses: superfly/flyctl-actions/setup-flyctl@1.5
 
       - name: 🚀 Deploy
-        run: flyctl deploy --remote-only
         working-directory: ./epicshop
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # Mass epicshop updates can fan out dozens of Fly deploys at once.
+          # Fly lease contention and machines API health-check waits then flake.
+          # Retry with exponential backoff so a single thundering-herd event does
+          # not leave workshop apps stranded on a failed rolling update.
+          max_attempts=4
+          delay_seconds=45
+          attempt=1
+          # Support both `app: my-app` and `app: 'my-app'` / `app: "my-app"`.
+          app_name="$(
+            awk '
+              /^app:[[:space:]]*/ {
+                value = $0
+                sub(/^app:[[:space:]]*/, "", value)
+                gsub(/^['\''"]|['\''"]$/, "", value)
+                print value
+                exit
+              }
+            ' fly.yaml
+          )"
+          if [ -z "$app_name" ]; then
+            echo "Could not parse app name from fly.yaml" >&2
+            exit 1
+          fi
+
+          while true; do
+            echo "::group::flyctl deploy attempt ${attempt}/${max_attempts}"
+            set +e
+            flyctl deploy --remote-only \
+              --build-arg EPICSHOP_GITHUB_REPO=https://github.com/${{ github.repository }} \
+              --build-arg EPICSHOP_COMMIT_SHA=${{ github.sha }}
+            status=$?
+            set -e
+            echo "::endgroup::"
+
+            if [ "$status" -eq 0 ]; then
+              # flyctl can treat a stopped scale-to-zero machine as "good" without
+              # ever proving the new image boots. Wake the app and require health.
+              echo "::group::post-deploy health check for ${app_name}"
+              healthy=0
+              for probe in 1 2 3 4 5 6 7 8 9 10; do
+                set +e
+                code="$(curl -sS -o /tmp/epicshop-health -w '%{http_code}' --max-time 30 \
+                  "https://${app_name}.fly.dev/resources/healthcheck")"
+                curl_status=$?
+                set -e
+                body="$(tr -d '\n' </tmp/epicshop-health | head -c 80)"
+                echo "probe ${probe}: curl_exit=${curl_status} http=${code} body=${body}"
+                if [ "$curl_status" -eq 0 ] && [ "$code" = "200" ]; then
+                  healthy=1
+                  break
+                fi
+                sleep 15
+              done
+              echo "::endgroup::"
+
+              if [ "$healthy" -eq 1 ]; then
+                exit 0
+              fi
+
+              echo "Deploy reported success but app failed post-deploy health checks" >&2
+              status=1
+            fi
+
+            if [ "$attempt" -ge "$max_attempts" ]; then
+              echo "flyctl deploy failed after ${max_attempts} attempts" >&2
+              exit "$status"
+            fi
+
+            echo "Deploy attempt ${attempt} failed (exit ${status}); retrying in ${delay_seconds}s..."
+            sleep "$delay_seconds"
+            delay_seconds=$((delay_seconds * 2))
+            attempt=$((attempt + 1))
+          done
