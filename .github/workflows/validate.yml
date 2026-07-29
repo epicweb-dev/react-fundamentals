@@ -14,7 +14,7 @@ on:
 jobs:
   setup:
     name: 🔧 Setup
-    timeout-minutes: 10
+    timeout-minutes: 15
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -25,29 +25,51 @@ jobs:
         with:
           node-version: 26
 
+      # SKIP_PLAYGROUND keeps typecheck/lint meaningful: problem playground apps
+      # intentionally fail solution tests/types, which would create false CI red.
       - name: ▶️ Add repo
-        run: |
-          npx --yes epicshop@latest add ${{ github.event.repository.name }}#${{ github.head_ref || github.ref_name }} ./workshop
         env:
           # Kept getting npm ECOMPROMISED errors on windows. This fixed it.
           npm_config_cache: ${{ runner.temp }}/npm-cache
           SKIP_PLAYWRIGHT: true
+          SKIP_PLAYGROUND: true
+        run: |
+          set -euo pipefail
+          attempt=1
+          max_attempts=3
+          delay_seconds=20
+          while true; do
+            echo "::group::epicshop add attempt ${attempt}/${max_attempts}"
+            set +e
+            npx --yes epicshop@latest add ${{ github.event.repository.name }}#${{ github.head_ref || github.ref_name }} ./workshop
+            status=$?
+            set -e
+            echo "::endgroup::"
+            if [ "$status" -eq 0 ]; then
+              exit 0
+            fi
+            if [ "$attempt" -ge "$max_attempts" ]; then
+              echo "epicshop add failed after ${max_attempts} attempts" >&2
+              exit "$status"
+            fi
+            echo "epicshop add failed (exit ${status}); retrying in ${delay_seconds}s..."
+            sleep "$delay_seconds"
+            delay_seconds=$((delay_seconds * 2))
+            attempt=$((attempt + 1))
+          done
 
       - name: ʦ TypeScript
         run: npm run typecheck
         working-directory: ./workshop
 
-      - name: ⬣ Oxlint
+      - name: ⬣ Lint
         run: npm run lint
         working-directory: ./workshop
 
   tests:
     name: 🧪 Test
-    timeout-minutes: 10
+    timeout-minutes: 15
     runs-on: ubuntu-latest
-    # Use continue-on-error to ensure this job doesn't fail the workflow
-    continue-on-error: true
-
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
@@ -60,9 +82,15 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
-      - name: 🧪 Run tests
-        id: run_tests
-        run: node ./epicshop/test.ts ..s
+      # Workshops ship epicshop/test.js (not .ts). `..s` runs solution apps only.
+      - name: 🧪 Run solution tests
+        run: |
+          set -euo pipefail
+          if [ -f ./epicshop/test.js ]; then
+            node ./epicshop/test.js ..s
+          else
+            echo "No epicshop/test.js in this workshop; skipping solution-app test runner."
+          fi
 
   deploy:
     name: 🚀 Deploy
