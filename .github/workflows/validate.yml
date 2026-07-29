@@ -16,6 +16,7 @@ jobs:
     name: 🔧 Setup
     timeout-minutes: 15
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
@@ -27,7 +28,10 @@ jobs:
 
       # SKIP_PLAYGROUND keeps typecheck/lint meaningful: problem playground apps
       # intentionally fail solution tests/types, which would create false CI red.
+      # Use bash explicitly: Windows runners default to PowerShell, which cannot
+      # parse this retry loop.
       - name: ▶️ Add repo
+        shell: bash
         env:
           # Kept getting npm ECOMPROMISED errors on windows. This fixed it.
           npm_config_cache: ${{ runner.temp }}/npm-cache
