@@ -62,8 +62,17 @@ jobs:
             attempt=$((attempt + 1))
           done
 
+      # Some workshops generate React Router route types and Prisma clients for
+      # their exercise apps here. Generate them before the root project-reference
+      # typecheck, while allowing older workshops without this script to proceed.
+      - name: ⚙️ Generate app artifacts
+        run: npm run generate --if-present
+        working-directory: ./workshop
+
+      # Not every workshop has TypeScript. `--if-present` skips only a missing
+      # script; npm still returns a failure when an existing typecheck fails.
       - name: ʦ TypeScript
-        run: npm run typecheck
+        run: npm run typecheck --if-present
         working-directory: ./workshop
 
       - name: ⬣ Lint
@@ -97,7 +106,14 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s globstar nullglob
-          schemas=(./exercises/**/*.solution.*/prisma/schema.prisma)
+          schemas=()
+          for schema in ./exercises/**/prisma/schema.prisma; do
+            app_dir="${schema%/prisma/schema.prisma}"
+            app_name="${app_dir##*/}"
+            if [[ "$app_name" =~ ^[0-9]+\.solution(\..+)?$ ]]; then
+              schemas+=("$schema")
+            fi
+          done
           if [ "${#schemas[@]}" -eq 0 ]; then
             echo "No solution-app Prisma schemas found; skipping Prisma client generation."
             exit 0
