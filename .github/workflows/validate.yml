@@ -83,7 +83,8 @@ jobs:
 
   tests:
     name: 🧪 Test
-    timeout-minutes: 15
+    # Browser installation plus solution-app tests can exceed the setup budget.
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
