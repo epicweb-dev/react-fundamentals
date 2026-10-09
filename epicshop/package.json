@@ -6,9 +6,9 @@
   },
   "dependencies": {
     "@epic-web/config": "^1.21.3",
-    "@epic-web/workshop-app": "^6.90.32",
-    "@epic-web/workshop-utils": "^6.90.32",
-    "epicshop": "^6.90.32",
+    "@epic-web/workshop-app": "^6.90.34",
+    "@epic-web/workshop-utils": "^6.90.34",
+    "epicshop": "^6.90.34",
     "execa": "^9.6.0",
     "fs-extra": "^11.3.2"
   }
